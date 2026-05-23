@@ -120,6 +120,6 @@ pnpm-debug.log*
 *.tmp
 *.temp
 
-# Local Environment & Artifacts
-revision_*
+# Response to Reviewer Artifacts
+revision_report.md
 

@@ -1,4 +1,4 @@
-# Bridging the Semantic Gap in Deep Learning
+# SEMTRA: Semantic Transition Matrix and Rough-Set Rules for Explainable AI
 
 <p align="center">
   <img src="figs/framework_animation.svg" alt="XAI Decision Support System Framework" width="100%">
@@ -8,7 +8,7 @@
 
 This repository contains the official reproduction package, computed result artifacts, figure and table generators, and auditing manifests for the research study:
 
-> **Bridging the Semantic Gap in Deep Learning: A Transition-Matrix and Rough-Set Rule Induction Framework for Explainable AI**
+> **SEMTRA: Semantic Transition Matrix and Rough-Set Rules for Explainable AI**
 > 
 > *An explainable AI paradigm that maps continuous deep latent representations onto human-understandable concept attributes, resolves vagueness using rough-set theory, and induces discrete, noise-robust decision rules.*
 

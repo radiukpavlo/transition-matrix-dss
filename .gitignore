@@ -121,5 +121,5 @@ pnpm-debug.log*
 *.temp
 
 # Response to Reviewer Artifacts
-revision_report.md
+source_notes/
 

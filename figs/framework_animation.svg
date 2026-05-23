@@ -37,7 +37,8 @@
   </defs>
 
   <style>
-    /* CSS Animations & Interactivity */
+    <![CDATA[
+    /* CSS Animations and Interactivity */
     .flow-line {
       stroke: url(#lineGrad);
       stroke-width: 1.5;
@@ -152,6 +153,7 @@
       transform: translateX(10px);
       fill: #00ffcc;
     }
+    ]]>
   </style>
 
   <!-- Background base -->

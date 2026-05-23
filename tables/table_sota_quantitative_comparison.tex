@@ -1,0 +1,28 @@
+\begin{table}[H]
+\caption{Contextual quantitative comparison with published AwA2 zero-shot baselines on the proposed split. Published values are class-averaged multiclass accuracies from the official AwA2 benchmark summary; proposed rows are computed from the package's official xlsa17 Protocol B artifacts. The comparison is contextual because this work optimizes an auditable explanation layer rather than a dedicated zero-shot classifier.\label{tab:sota_quantitative_comparison}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{llcl}
+\toprule
+Method & Family & Accuracy (\%) & Source and scope\\
+\midrule
+DAP & Attribute transfer & 46.10 & Published ZSL baseline\\
+IAP & Attribute transfer & 35.90 & Published ZSL baseline\\
+CONSE & Semantic embedding & 44.50 & Published ZSL baseline\\
+CMT & Cross-modal transfer & 37.90 & Published ZSL baseline\\
+SSE & Semantic similarity embedding & 61.00 & Published ZSL baseline\\
+LATEM & Latent embedding & 55.80 & Published ZSL baseline\\
+ALE & Label embedding & 62.50 & Published ZSL baseline\\
+DEVISE & Visual-semantic embedding & 59.70 & Published ZSL baseline\\
+SJE & Structured joint embedding & 61.90 & Published ZSL baseline\\
+ESZSL & Linear semantic embedding & 58.60 & Published ZSL baseline\\
+SYNC & Synthesized classifiers & 46.60 & Published ZSL baseline\\
+SAE & Semantic autoencoder & 54.10 & Published ZSL baseline\\
+GFZSL & Generative semantic framework & 63.80 & Published ZSL baseline\\
+Ours: transition prototype & Post-hoc semantic bridge & 48.43 & This package; class-averaged\\
+Ours: symbolic template & Post-hoc rule template & 39.93 & This package; class-averaged\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

@@ -1,0 +1,9 @@
+rule_id,antecedent_text,consequent_name,support,confidence,source
+R0001,paws=s2 AND hunter=s2 AND small=s0 AND yellow=s2,tiger,115,0.8956521739130435,strict_lower
+R0002,stripes=s2 AND hooves=s1 AND paws=s3 AND hands=s1 AND small=s0 AND furry=s2,tiger,63,0.873015873015873,boundary_high_confidence
+R0003,stripes=s1 AND hooves=s3 AND paws=s0 AND hands=s0 AND small=s1 AND yellow=s1,antelope,132,0.8712121212121212,boundary_high_confidence
+R0004,hunter=s0 AND water=s0 AND small=s0 AND jungle=s2 AND yellow=s1,zebra,434,0.8663594470046083,strict_lower
+R0005,hooves=s1 AND swims=s0 AND paws=s2 AND small=s0 AND furry=s1,tiger,163,0.8650306748466258,boundary_high_confidence
+R0006,paws=s3 AND hunter=s1 AND water=s1 AND small=s1 AND furry=s3,giant panda,160,0.8625,strict_lower
+R0007,hooves=s3 AND longneck=s2 AND hunter=s0 AND yellow=s2,zebra,146,0.8561643835616438,strict_lower
+R0008,paws=s1 AND water=s0 AND small=s3 AND yellow=s0,rabbit,247,0.854251012145749,strict_lower

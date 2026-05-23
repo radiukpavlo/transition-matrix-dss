@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-05-19T19:49:58Z",
+  "manuscript_word_count_estimate": 10515,
+  "word_count_requirement_met": true,
+  "pdf_pages": 42,
+  "figures_pdf_count": 24,
+  "tables_tex_count": 24,
+  "new_script": "scripts/generate_enhanced_results.py",
+  "new_figures": [
+    "fig17_results_dashboard.pdf",
+    "fig18_sota_awA2_context.pdf",
+    "fig19_baseline_tradeoff_scatter.pdf",
+    "fig20_explainability_quality_matrix.pdf",
+    "fig21_rule_inference_flow_funnel.pdf",
+    "fig22_synthetic_uncertainty_bands.pdf",
+    "fig23_protocol_b_perclass_errors.pdf",
+    "fig24_attribute_salience_error_scatter.pdf"
+  ],
+  "new_tables": [
+    "table_main_quantitative_results.tex",
+    "table_sota_quantitative_comparison.tex",
+    "table_enhanced_baseline_synthesis.tex",
+    "table_figure_table_placement_map.tex",
+    "table_results_interpretation_matrix.tex"
+  ],
+  "compile_sequence": [
+    "pdflatex",
+    "bibtex8",
+    "pdflatex",
+    "pdflatex"
+  ],
+  "compile_status": "success",
+  "unresolved_citations_or_references": false,
+  "render_contact_sheet": "audit/enhanced_render_contact_sheet.png"
+}

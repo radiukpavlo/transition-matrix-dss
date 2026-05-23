@@ -1,0 +1,29 @@
+{
+  "holdout_class_indices_zero_based": [
+    24,
+    38,
+    14,
+    5,
+    41,
+    13,
+    17,
+    47,
+    33,
+    23
+  ],
+  "holdout_class_names": [
+    "chimpanzee",
+    "giant panda",
+    "leopard",
+    "persian cat",
+    "pig",
+    "hippopotamus",
+    "humpback whale",
+    "raccoon",
+    "rat",
+    "seal"
+  ],
+  "note": "The supplied local AwA2 archive did not include the separate xlsa17 split file; this run uses the documented ten-class semantic hold-out split below.",
+  "seen_class_count": 40,
+  "unseen_object_count": 6985
+}

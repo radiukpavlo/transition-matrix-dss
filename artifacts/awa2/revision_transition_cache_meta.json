@@ -1,0 +1,50 @@
+{
+  "cache_file": "revision_transition_cache.npz",
+  "cache_note": "Variance-screened auxiliary cache for reviewer-response baselines.",
+  "n_components": 64,
+  "seed": 42,
+  "test_size": 7465,
+  "train_size": 22393,
+  "transition_metrics": {
+    "compression": "top_variance_coordinates_for_revision_auxiliary_baselines",
+    "n_components": 64,
+    "ridge_grid": [
+      {
+        "ridge_alpha": 0.01,
+        "val_mae": 0.1078679097909913,
+        "val_rmse": 0.15768828286149947
+      },
+      {
+        "ridge_alpha": 0.1,
+        "val_mae": 0.10786796600326078,
+        "val_rmse": 0.15768833499046245
+      },
+      {
+        "ridge_alpha": 1.0,
+        "val_mae": 0.10786853339041907,
+        "val_rmse": 0.15768885888958858
+      },
+      {
+        "ridge_alpha": 10.0,
+        "val_mae": 0.1078742134434082,
+        "val_rmse": 0.1576941230129411
+      },
+      {
+        "ridge_alpha": 100.0,
+        "val_mae": 0.10793304251481194,
+        "val_rmse": 0.15774955716264316
+      }
+    ],
+    "selected_ridge_alpha": 0.01,
+    "test_mae": 0.10756219753375405,
+    "test_rmse": 0.15732655997826175,
+    "test_semantic_correlation_mean": 0.7759178439637273,
+    "train_mae": 0.10700680243998922,
+    "train_rmse": 0.15632562160862842,
+    "train_semantic_correlation_mean": 0.7784716687037585,
+    "val_mae": 0.1078679097909913,
+    "val_rmse": 0.15768828286149947,
+    "val_semantic_correlation_mean": 0.7746875704429586
+  },
+  "val_size": 7464
+}

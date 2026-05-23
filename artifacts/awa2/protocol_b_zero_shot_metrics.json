@@ -1,0 +1,94 @@
+{
+  "mae_unseen": 0.18627863026935013,
+  "n_components": 32,
+  "protocol": "official_xlsa17_proposed_split",
+  "prototype_seen_accuracy": 0.3898333900034002,
+  "prototype_unseen_accuracy": 0.4644256287122457,
+  "prototype_unseen_macro_f1": 0.3654990703104618,
+  "ridge_alpha": 100.0,
+  "ridge_grid": [
+    {
+      "alpha": 0.01,
+      "val_mae": 0.19512862502851058
+    },
+    {
+      "alpha": 0.1,
+      "val_mae": 0.19512858522232257
+    },
+    {
+      "alpha": 1,
+      "val_mae": 0.19512817515287548
+    },
+    {
+      "alpha": 10,
+      "val_mae": 0.1951241232720141
+    },
+    {
+      "alpha": 100,
+      "val_mae": 0.19508880527875955
+    }
+  ],
+  "rmse_unseen": 0.26051155146853017,
+  "seen_classes": [
+    "killer whale",
+    "beaver",
+    "dalmatian",
+    "persian cat",
+    "german shepherd",
+    "siamese cat",
+    "skunk",
+    "mole",
+    "tiger",
+    "hippopotamus",
+    "leopard",
+    "spider monkey",
+    "elephant",
+    "gorilla",
+    "ox",
+    "chimpanzee",
+    "hamster",
+    "fox",
+    "squirrel",
+    "rabbit",
+    "wolf",
+    "chihuahua",
+    "weasel",
+    "otter",
+    "buffalo",
+    "zebra",
+    "giant panda",
+    "pig",
+    "lion",
+    "polar bear",
+    "collie",
+    "cow",
+    "deer",
+    "mouse",
+    "humpback whale",
+    "antelope",
+    "grizzly bear",
+    "rhinoceros",
+    "raccoon",
+    "moose"
+  ],
+  "symbolic_template_mean_hamming": 0.494579945799458,
+  "symbolic_template_unseen_accuracy": 0.3377985593327436,
+  "symbolic_template_unseen_macro_f1": 0.30097181004355555,
+  "test_seen_objects": 5882,
+  "test_unseen_objects": 7913,
+  "train_objects": 16187,
+  "trainval_objects": 23527,
+  "unseen_classes": [
+    "sheep",
+    "dolphin",
+    "bat",
+    "seal",
+    "blue whale",
+    "rat",
+    "horse",
+    "walrus",
+    "giraffe",
+    "bobcat"
+  ],
+  "validation_objects": 7340
+}

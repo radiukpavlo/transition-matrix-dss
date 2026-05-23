@@ -1,0 +1,22 @@
+\begin{table}[H]
+\caption{Comparison of XAI method families.\label{tab:related_work}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXXXXXXX}
+\toprule
+Method & Post-hoc & Scope & Artifact & Retraining & Concepts & Rules & Typical limitation \\
+\midrule
+LIME & Yes & Local & Weighted local surrogate & No & Optional & No & Stability and locality depend on perturbations \\
+SHAP & Yes & Local & Additive feature attributions & No & Optional & No & Can be costly and not a rulebook \\
+TCAV & Yes & Global/local & Concept directional sensitivity & No & Yes & No & Requires concept examples and layer choice \\
+CBM & No/partial & Global & Concept bottleneck predictions & Usually yes & Yes & No & Requires concept supervision or retraining \\
+Decision trees & No/yes & Global & Tree paths & Yes & No & Implicit rules & May become large or unstable \\
+RIPPER & No/yes & Global & Separate-and-conquer rules & Yes & No & Yes & Sensitive to discretization and order \\
+Rough sets & Yes & Global & Reducts and lower approximations & No & Yes if table semantic & Yes & Needs symbolic decision table \\
+Transition matrices & Yes & Global & Semantic reconstruction matrix & No & Yes & No & Continuous concepts are not yet rules \\
+Proposed framework & Yes & Global plus instance traces & Transition, WEDD, rough-set rules & No & Yes & Yes & Trades accuracy for auditability and abstention \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

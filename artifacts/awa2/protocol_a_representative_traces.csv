@@ -1,0 +1,4 @@
+case_type,object_index,filename,true_class,predicted_class,mode,activated_rules,semantic_states_sample
+correct_exact,5083,collie_10468.jpg,collie,collie,exact,R0027;R0032;R0033;R0053,stripes=s0; hooves=s0; swims=s1; paws=s3; longneck=s0; hunter=s1; ocean=s1; quadrapedal=s3
+abstention,24024,ox_10075.jpg,ox,abstain,exact,R0029;R0030;R0040;R0042;R0048,stripes=s0; hooves=s2; swims=s1; paws=s0; longneck=s1; hunter=s0; ocean=s1; quadrapedal=s2
+fallback_error_or_boundary,16781,hamster_10426.jpg,hamster,mole,fallback,,stripes=s0; hooves=s1; swims=s1; paws=s2; longneck=s0; hunter=s0; ocean=s1; quadrapedal=s2

@@ -1,0 +1,8 @@
+{
+  "status": "ok",
+  "methods": [
+    "Proposed rough-set rulebook",
+    "CART decision tree",
+    "Separate-and-conquer rule learner"
+  ]
+}

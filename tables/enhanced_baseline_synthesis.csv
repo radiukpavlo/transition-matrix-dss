@@ -1,0 +1,10 @@
+Component or baseline,Type,Primary score,Secondary score,Tertiary score,Semantic MAE,Semantic correlation,Main interpretation
+Base predictor,Frozen representation classifier,0.7115874079035499,0.9291359678499665,0.5434248769511797,,,Predictive reference model
+Transition bridge,Linear ridge semantic reconstruction,,,,0.12949999789459912,0.6828477685033985,Auditable global semantic map
+Frozen-feature CBM,Concept predictor plus label predictor,0.7232417950435365,0.9361018084393838,0.5507723193853752,0.10756219753375405,0.7759178439637273,Concept baseline
+TCAV at released layer,Concept directions,0.484987,,,,,1.0000 overlap with selected attributes
+Rough-set rulebook,WEDD + reducts + conflict-aware rules,0.40728682170542635,,0.3202575105323407,,,Covered cases only; abstentions explicit
+CART decision tree,Symbolic baseline,0.4128600133958472,,0.2830431395574532,,,coverage=1.0000; rules=53
+Separate-and-conquer rule learner,Symbolic baseline,0.6334355828220859,,0.517630231755871,,,coverage=0.2620; rules=197
+LIME-style,Local attribution agreement,0.2609833333333333,,0.0222360100113166,,,direction agreement=0.5907; n=1000
+SHAP-style,Local attribution agreement,0.3213,,0.1270897559494783,,,direction agreement=0.6071; n=1000

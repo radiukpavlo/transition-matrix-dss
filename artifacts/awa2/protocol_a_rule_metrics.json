@@ -1,0 +1,22 @@
+{
+  "test": {
+    "abstention_rate": 0.13596784996651035,
+    "accuracy_all_with_abstention_wrong": 0.35190890823844606,
+    "accuracy_non_abstain": 0.40728682170542635,
+    "conflict_rate": 0.13543201607501673,
+    "coverage": 0.8640321500334897,
+    "exact_rate": 0.8680509042196919,
+    "fallback_rate": 0.1319490957803081,
+    "macro_f1_non_abstain": 0.3202575105323407
+  },
+  "validation": {
+    "abstention_rate": 0.142550911039657,
+    "accuracy_all_with_abstention_wrong": 0.34632904608788856,
+    "accuracy_non_abstain": 0.40390625,
+    "conflict_rate": 0.1422829581993569,
+    "coverage": 0.857449088960343,
+    "exact_rate": 0.8603965702036441,
+    "fallback_rate": 0.13960342979635584,
+    "macro_f1_non_abstain": 0.3149355564805457
+  }
+}

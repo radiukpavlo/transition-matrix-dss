@@ -1,0 +1,22 @@
+{
+  "model": "RidgeClassifier on variance-screened representation cache with softmax-normalized decision scores",
+  "n_components": 64,
+  "ridge_alpha": 1.0,
+  "seed": 42,
+  "test": {
+    "ece_10bin": 0.6645294139824174,
+    "macro_auroc_ovr": 0.9835814746800773,
+    "macro_f1": 0.5434248769511797,
+    "top1_accuracy": 0.7115874079035499,
+    "top5_accuracy": 0.9291359678499665,
+    "weighted_f1": 0.6680753558869329
+  },
+  "validation": {
+    "ece_10bin": 0.662183941127323,
+    "macro_auroc_ovr": 0.9832366244966703,
+    "macro_f1": 0.5398500694055248,
+    "top1_accuracy": 0.7092711682743837,
+    "top5_accuracy": 0.9306002143622722,
+    "weighted_f1": 0.6638548941088056
+  }
+}

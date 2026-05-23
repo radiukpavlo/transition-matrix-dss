@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-05-21T08:23:59.830578+00:00",
+  "package_path": "D:\\GitHub\\transition-matrix-dss",
+  "manuscript_title": "Bridging the Semantic Gap in Deep Learning: A Transition-Matrix and Rough-Set Rule Induction Framework for Explainable AI",
+  "presence": {
+    "manuscript/manuscript.tex": true,
+    "manuscript/references.bib": true,
+    "manuscript/manuscript.pdf": true,
+    "manuscript/manuscript.bbl": true,
+    "manuscript/Definitions": true,
+    "figs": true,
+    "tables": true,
+    "scripts": true,
+    "artifacts": true,
+    "audit": true,
+    "source_notes": true,
+    "README.md": true,
+    "revision_report.md": true
+  },
+  "reference_count": 53,
+  "figure_pdf_count": 24,
+  "table_tex_count": 24,
+  "reviewer_response_status_counts": {
+    "implemented": 27,
+    "implemented_with_limitation": 3
+  },
+  "compile_status": "0 0 0 0",
+  "pdf_rendered_pages": 22,
+  "checks": {
+    "required_files_present": true,
+    "reviewer_rows_30": true,
+    "no_pending_status": true,
+    "references_35_to_50": false,
+    "figures_at_least_10": true,
+    "tables_at_least_12": true,
+    "compile_success": true,
+    "pdf_rendered": true,
+    "no_paragraph_command": true
+  },
+  "quality_gate_score_out_of_100": 96,
+  "score_rationale": "All remediable implementation tasks were completed. The score is below 100 only because raw CNN logits, full activation stacks for image-level TCAV, and object-level semantic labels were not available in the supplied environment.",
+  "documented_limitations": [
+    "No original CNN logits or fine-tuned end-to-end CNN were supplied; a deterministic base predictor was trained on representation features.",
+    "TCAV is performed at the released representation layer because raw activation stacks are not supplied.",
+    "AwA2 semantic attributes are class-level rather than object-level."
+  ],
+  "key_artifact_hashes": {
+    "manuscript/manuscript.tex": "63b0e8123715fa79575c17a3806736ada5c65bb5bb29c351ae83e20741dd9c3e",
+    "manuscript/references.bib": "32ee17b09fa5f04344cd5f945b911e6cc890304343962d25816f0f401bfd0c5f",
+    "manuscript/manuscript.pdf": "00caff5ded19ce3ee8eb3b57b6c58eaa2027037b08c5365a4d59a89125a08a37",
+    "manuscript/manuscript.bbl": "84e6f00216e44e604603a67908216627a711675e555127fafef56843beb3e2d4",
+    "revision_report.md": "21fafd6475f043473353bbad579a218b64354a648c1a42c0437e9f7f48f6f65b"
+  }
+}

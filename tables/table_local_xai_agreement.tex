@@ -1,0 +1,15 @@
+\begin{table}[H]
+\caption{Agreement between local post-hoc explanations and fired global-rule antecedents.\label{tab:local_xai_agreement}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXXXXXX}
+\toprule
+Method & n & Mean rule length & Top-k agreement & Direction agreement & Rank correlation & 95\% CI \\
+\midrule
+LIME-style & 1000 & 3.9380 & 0.2610 & 0.5907 & 0.0222 & [0.2468, 0.2745] \\
+SHAP-style & 1000 & 3.9380 & 0.3213 & 0.6071 & 0.1271 & [0.3050, 0.3386] \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

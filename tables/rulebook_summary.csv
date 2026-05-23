@@ -1,0 +1,9 @@
+quantity,value
+Rules,54.0
+Granules,14130.0
+Deterministic granules,12730.0
+Boundary granules,1400.0
+Test coverage,0.8640321500334897
+Test abstention rate,0.13596784996651035
+Test conflict rate,0.13543201607501673
+"Test accuracy, non-abstained",0.40728682170542635

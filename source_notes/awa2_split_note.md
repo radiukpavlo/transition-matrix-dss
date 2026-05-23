@@ -1,0 +1,1 @@
+Protocol B was revised to use the supplied xlsa17.zip official proposed split files. Indices are converted from MATLAB one-based locations to zero-based Python row indices. The transition, WEDD, and symbolic-template logic are unchanged.

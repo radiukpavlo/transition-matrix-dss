@@ -1,0 +1,5 @@
+class,text,antecedent,thresholds
+1,if b1 is high and b3 is low,"{""1"": ""high"", ""3"": ""low""}","{""b1_high"": 0.7, ""b3_low"": 0.35}"
+2,if b2 is medium and b5 is high,"{""2"": ""medium"", ""5"": ""high""}","{""b2_low"": 0.35, ""b2_high"": 0.65, ""b5_high"": 0.7}"
+3,if b4 is low and b6 is high and b8 is medium,"{""4"": ""low"", ""6"": ""high"", ""8"": ""medium""}","{""b4_low"": 0.35, ""b6_high"": 0.7, ""b8_low"": 0.35, ""b8_high"": 0.65}"
+4,if b7 is high and b9 is low,"{""7"": ""high"", ""9"": ""low""}","{""b7_high"": 0.7, ""b9_low"": 0.35}"

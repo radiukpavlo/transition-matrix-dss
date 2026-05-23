@@ -1,0 +1,4 @@
+Benchmark,Objects,Classes,Semantic attributes,Split
+AwA2 Protocol A,37322,50,85,22393/7464/7465
+AwA2 Protocol B (official xlsa17),37322,40 seen / 10 unseen,85,23527/7340/7913
+Synthetic,10000 per run,5,10,60/20/20 per seed

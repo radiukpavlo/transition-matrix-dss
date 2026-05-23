@@ -1,0 +1,30 @@
+\begin{table}[H]
+\caption{Main quantitative results used to interpret the proposed semantic-bridge and rule-induction pipeline. Values are exported from the experiment artifacts, not typed manually.\label{tab:main_quantitative_results}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{llcl}
+\toprule
+Experiment & Quantity & Value & Interpretation\\
+\midrule
+AwA2 Protocol A & Base predictor Top-1 accuracy & 0.7116 & Higher is better\\
+AwA2 Protocol A & Base predictor Top-5 accuracy & 0.9291 & Higher is better\\
+AwA2 Protocol A & Transition MAE & 0.1295 & Lower is better\\
+AwA2 Protocol A & Transition RMSE & 0.1826 & Lower is better\\
+AwA2 Protocol A & Mean semantic correlation & 0.6828 & Higher is better\\
+AwA2 Protocol A & Rulebook coverage & 0.8640 & Higher means fewer abstentions\\
+AwA2 Protocol A & Rulebook non-abstained accuracy & 0.4073 & Higher is better\\
+AwA2 Protocol A & Rulebook macro-F1 on covered cases & 0.3203 & Higher is better\\
+AwA2 Protocol A & Conflict rate & 0.1354 & Lower is usually preferred\\
+AwA2 Protocol B & Unseen prototype accuracy, object-weighted & 0.4644 & Higher is better\\
+AwA2 Protocol B & Unseen prototype accuracy, class-averaged & 0.4843 & Comparable to official class-averaged table\\
+AwA2 Protocol B & Unseen symbolic-template accuracy, object-weighted & 0.3378 & Higher is better\\
+AwA2 Protocol B & Unseen symbolic-template accuracy, class-averaged & 0.3993 & Comparable to official class-averaged table\\
+Synthetic benchmark & Macro-F1 mean across noise levels & 0.8668 & Higher is better\\
+Synthetic benchmark & Rule-recovery Jaccard mean & 0.7258 & Higher is better\\
+Synthetic benchmark & Threshold-recovery error mean & 0.0161 & Lower is better\\
+Synthetic benchmark & Coverage mean & 0.9638 & Higher means fewer abstentions\\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

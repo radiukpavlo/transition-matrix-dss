@@ -1,0 +1,411 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 450" width="100%" height="100%" style="background: #0f141c; font-family: 'Inter', system-ui, -apple-system, sans-serif; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.45); overflow: hidden;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#141c2c"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0066ff" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cc00ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#7f00ff" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9900" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff5500" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00ffcc" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#00aa50" stop-opacity="0.8"/>
+    </linearGradient>
+    
+    <!-- Glassmorphic panel filters -->
+    <filter id="glassGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00d2ff" flood-opacity="0.1" id="dynamicGlow"/>
+    </filter>
+
+    <!-- Synapse Line Dash Effect -->
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d2ff" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#7f00ff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ff9900" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    /* CSS Animations & Interactivity */
+    .flow-line {
+      stroke: url(#lineGrad);
+      stroke-width: 1.5;
+      stroke-dasharray: 8 6;
+      animation: dashMove 25s linear infinite;
+    }
+    
+    .pulse-node {
+      animation: nodePulse 3s ease-in-out infinite;
+    }
+    
+    .slow-spin {
+      transform-origin: center;
+      animation: rotateSpin 40s linear infinite;
+    }
+
+    @keyframes dashMove {
+      to {
+        stroke-dashoffset: -1000;
+      }
+    }
+
+    @keyframes nodePulse {
+      0%, 100% {
+        r: 6;
+        fill-opacity: 0.6;
+        filter: drop-shadow(0 0 2px #00d2ff);
+      }
+      50% {
+        r: 9;
+        fill-opacity: 1;
+        filter: drop-shadow(0 0 8px #00d2ff);
+      }
+    }
+
+    @keyframes rotateSpin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Card Hover transitions */
+    .panel-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+    
+    .panel-card:hover {
+      transform: translateY(-8px);
+      filter: drop-shadow(0 12px 24px rgba(0, 210, 255, 0.15));
+    }
+    
+    /* Interactive displays */
+    .info-tooltip {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    
+    .panel-card:hover .info-tooltip {
+      opacity: 1;
+    }
+    
+    .card-title {
+      font-size: 14px;
+      font-weight: 700;
+      fill: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .card-desc {
+      font-size: 11px;
+      fill: #8c9ba5;
+    }
+    
+    /* Dynamic active elements */
+    .matrix-cell {
+      transition: fill 0.3s;
+    }
+    .panel-card:hover .matrix-cell-active {
+      animation: cellBlink 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes cellBlink {
+      0% { fill: #7f00ff; fill-opacity: 0.3; }
+      100% { fill: #cc00ff; fill-opacity: 0.95; filter: drop-shadow(0 0 4px #cc00ff); }
+    }
+
+    /* Approximation Bound highlight */
+    .approx-set {
+      transition: stroke-width 0.3s, stroke-dasharray 0.3s;
+    }
+    .panel-card:hover .approx-set-lower {
+      stroke-width: 3;
+      stroke: #ff9900;
+      filter: drop-shadow(0 0 5px #ff9900);
+    }
+    .panel-card:hover .approx-set-upper {
+      stroke-width: 2;
+      stroke: #ff5500;
+      stroke-dasharray: 4 2;
+      filter: drop-shadow(0 0 4px #ff5500);
+    }
+    
+    /* Rule inducer animations */
+    .rule-card {
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .panel-card:hover .rule-row-1 {
+      transform: translateX(5px);
+      fill: #00ffcc;
+    }
+    .panel-card:hover .rule-row-2 {
+      transform: translateX(10px);
+      fill: #00ffcc;
+    }
+  </style>
+
+  <!-- Background base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle decorative technical lines & grid -->
+  <g opacity="0.05" class="slow-spin" style="transform-origin: 500px 225px;">
+    <circle cx="500" cy="225" r="300" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="5 15"/>
+    <circle cx="500" cy="225" r="200" fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="2 6"/>
+    <line x1="200" y1="225" x2="800" y2="225" stroke="#ffffff" stroke-width="1"/>
+    <line x1="500" y1="-75" x2="500" y2="525" stroke="#ffffff" stroke-width="1"/>
+  </g>
+  
+  <!-- Connecting flow lines with dashes -->
+  <path d="M 190,200 L 290,200" class="flow-line"/>
+  <path d="M 430,200 L 530,200" class="flow-line"/>
+  <path d="M 670,200 L 770,200" class="flow-line"/>
+
+  <!-- TITLE & SUBTITLE HEADER -->
+  <text x="35" y="45" fill="#ffffff" font-size="18" font-weight="800" letter-spacing="-0.5px">EXPLAINABLE AI (XAI) DECISION SUPPORT SYSTEM</text>
+  <text x="35" y="65" fill="#5c6e83" font-size="12" font-weight="500">Bridging the Semantic Gap with Transition-Matrices and Rough-Set Rule Induction</text>
+  <line x1="35" y1="78" x2="965" y2="78" stroke="#1d2636" stroke-width="1.5"/>
+
+  <!-- ==================== CARD 1: DEEP REPRESENTATION ==================== -->
+  <g class="panel-card" transform="translate(0, 0)">
+    <!-- Base Card Container -->
+    <rect x="35" y="100" width="160" height="230" rx="8" fill="#141c2c" fill-opacity="0.6" stroke="#1d2636" stroke-width="1.5" filter="url(#glassGlow)"/>
+    <!-- Colored Header Accent -->
+    <path d="M 35,108 A 8,8 0 0,1 43,100 L 187,100 A 8,8 0 0,1 195,108 L 195,105 L 35,105 Z" fill="url(#blueGrad)"/>
+    
+    <!-- Title -->
+    <text x="50" y="125" class="card-title">Deep Features (X)</text>
+    <text x="50" y="142" class="card-desc">Continuous Representation</text>
+    
+    <!-- Neural Network Node Visualization -->
+    <g transform="translate(50, 160)" opacity="0.85">
+      <!-- Synapses -->
+      <line x1="20" y1="20" x2="60" y2="10" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="20" x2="60" y2="35" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="20" x2="60" y2="60" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="50" x2="60" y2="10" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="50" x2="60" y2="35" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="50" x2="60" y2="60" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="80" x2="60" y2="35" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      <line x1="20" y1="80" x2="60" y2="60" stroke="#0066ff" stroke-width="1" stroke-opacity="0.4"/>
+      
+      <!-- Input Layer Nodes -->
+      <circle cx="20" cy="20" r="4" fill="#00d2ff"/>
+      <circle cx="20" cy="50" r="4" fill="#00d2ff"/>
+      <circle cx="20" cy="80" r="4" fill="#00d2ff"/>
+      
+      <!-- Hidden Layer Nodes -->
+      <circle cx="60" cy="10" r="5" fill="#0066ff" class="pulse-node"/>
+      <circle cx="60" cy="35" r="5" fill="#0066ff" class="pulse-node" style="animation-delay: 0.8s;"/>
+      <circle cx="60" cy="60" r="5" fill="#0066ff" class="pulse-node" style="animation-delay: 1.6s;"/>
+      
+      <text x="12" y="102" fill="#5c6e83" font-size="9" font-family="monospace">ResNet/ViT Latents</text>
+    </g>
+
+    <!-- Formula snippet -->
+    <rect x="50" y="285" width="130" height="30" rx="4" fill="#0d131f" stroke="#1d2636"/>
+    <text x="60" y="304" fill="#00d2ff" font-family="monospace" font-size="11" font-weight="700">X ∈ ℝ^(N × D)</text>
+
+    <!-- Interactive Tooltip Overlay -->
+    <g class="info-tooltip" transform="translate(0, 15)">
+      <rect x="40" y="100" width="150" height="95" rx="6" fill="#0b0f17" stroke="#00d2ff" stroke-width="1" opacity="0.95"/>
+      <text x="50" y="120" fill="#ffffff" font-size="11" font-weight="700">Neural Activations</text>
+      <text x="50" y="138" fill="#8c9ba5" font-size="9">Continuous representation</text>
+      <text x="50" y="152" fill="#8c9ba5" font-size="9">space derived from the base</text>
+      <text x="50" y="166" fill="#8c9ba5" font-size="9">CNN. Highly accurate but</text>
+      <text x="50" y="180" fill="#00d2ff" font-size="9" font-weight="700">conceptually opaque.</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 2: TRANSITION OPERATOR ==================== -->
+  <g class="panel-card" transform="translate(0, 0)">
+    <rect x="275" y="100" width="160" height="230" rx="8" fill="#141c2c" fill-opacity="0.6" stroke="#1d2636" stroke-width="1.5" filter="url(#glassGlow)"/>
+    <path d="M 275,108 A 8,8 0 0,1 283,100 L 427,100 A 8,8 0 0,1 435,108 L 435,105 L 275,105 Z" fill="url(#purpleGrad)"/>
+    
+    <text x="290" y="125" class="card-title">Transition Matrix (T)</text>
+    <text x="290" y="142" class="card-desc">Semantic Concept Mapping</text>
+
+    <!-- Matrix Visualization -->
+    <g transform="translate(305, 160)">
+      <!-- Matrix Box -->
+      <rect x="0" y="0" width="100" height="80" fill="none" stroke="#7f00ff" stroke-width="1.5" stroke-opacity="0.7"/>
+      <!-- Brackets -->
+      <line x1="-3" y1="0" x2="-3" y2="80" stroke="#ffffff" stroke-width="2"/>
+      <line x1="-3" y1="0" x2="3" y2="0" stroke="#ffffff" stroke-width="2"/>
+      <line x1="-3" y1="80" x2="3" y2="80" stroke="#ffffff" stroke-width="2"/>
+      <line x1="103" y1="0" x2="103" y2="80" stroke="#ffffff" stroke-width="2"/>
+      <line x1="103" y1="0" x2="97" y2="0" stroke="#ffffff" stroke-width="2"/>
+      <line x1="103" y1="80" x2="97" y2="80" stroke="#ffffff" stroke-width="2"/>
+      
+      <!-- Cells -->
+      <!-- Row 1 -->
+      <rect x="5" y="5" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+      <rect x="28" y="5" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.4" class="matrix-cell"/>
+      <rect x="51" y="5" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+      <rect x="74" y="5" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.3" class="matrix-cell"/>
+      
+      <!-- Row 2 -->
+      <rect x="5" y="25" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.3" class="matrix-cell"/>
+      <rect x="28" y="25" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.1" class="matrix-cell"/>
+      <rect x="51" y="25" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.8" class="matrix-cell matrix-cell-active"/>
+      <rect x="74" y="25" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+
+      <!-- Row 3 -->
+      <rect x="5" y="45" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+      <rect x="28" y="45" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.9" class="matrix-cell matrix-cell-active" style="animation-delay: 0.5s;"/>
+      <rect x="51" y="45" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+      <rect x="74" y="45" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.4" class="matrix-cell"/>
+
+      <!-- Row 4 -->
+      <rect x="5" y="65" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.7" class="matrix-cell matrix-cell-active" style="animation-delay: 1s;"/>
+      <rect x="28" y="65" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.2" class="matrix-cell"/>
+      <rect x="51" y="65" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.1" class="matrix-cell"/>
+      <rect x="74" y="65" width="20" height="15" rx="2" fill="#7f00ff" fill-opacity="0.5" class="matrix-cell"/>
+      
+      <text x="-5" y="102" fill="#5c6e83" font-size="9" font-family="monospace">Visual-to-Semantic Map</text>
+    </g>
+
+    <!-- Formula snippet -->
+    <rect x="290" y="285" width="130" height="30" rx="4" fill="#0d131f" stroke="#1d2636"/>
+    <text x="315" y="304" fill="#cc00ff" font-family="monospace" font-size="11" font-weight="700">C = X × T</text>
+
+    <!-- Interactive Tooltip Overlay -->
+    <g class="info-tooltip" transform="translate(0, 15)">
+      <rect x="280" y="100" width="150" height="95" rx="6" fill="#0b0f17" stroke="#7f00ff" stroke-width="1" opacity="0.95"/>
+      <text x="290" y="120" fill="#ffffff" font-size="11" font-weight="700">Concept Projection</text>
+      <text x="290" y="138" fill="#8c9ba5" font-size="9">Linear mapping operator</text>
+      <text x="290" y="152" fill="#8c9ba5" font-size="9">aligning visual features to</text>
+      <text x="290" y="166" fill="#8c9ba5" font-size="9">human attributes (e.g.</text>
+      <text x="290" y="180" fill="#7f00ff" font-size="9" font-weight="700">"stripes", "swims").</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 3: ROUGH SET APPROXIMATION ==================== -->
+  <g class="panel-card" transform="translate(0, 0)">
+    <rect x="515" y="100" width="160" height="230" rx="8" fill="#141c2c" fill-opacity="0.6" stroke="#1d2636" stroke-width="1.5" filter="url(#glassGlow)"/>
+    <path d="M 515,108 A 8,8 0 0,1 523,100 L 667,100 A 8,8 0 0,1 675,108 L 675,105 L 515,105 Z" fill="url(#amberGrad)"/>
+    
+    <text x="530" y="125" class="card-title">Rough Sets (B)</text>
+    <text x="530" y="142" class="card-desc">Granular Approximations</text>
+
+    <!-- Rough-Set Venn Diagram -->
+    <g transform="translate(545, 155)">
+      <!-- Universe boundaries (Grid cells) -->
+      <g opacity="0.25" stroke="#ff9900" stroke-width="0.5">
+        <line x1="0" y1="20" x2="100" y2="20" stroke-dasharray="2 2"/>
+        <line x1="0" y1="40" x2="100" y2="40" stroke-dasharray="2 2"/>
+        <line x1="0" y1="60" x2="100" y2="60" stroke-dasharray="2 2"/>
+        <line x1="25" y1="0" x2="25" y2="80" stroke-dasharray="2 2"/>
+        <line x1="50" y1="0" x2="50" y2="80" stroke-dasharray="2 2"/>
+        <line x1="75" y1="0" x2="75" y2="80" stroke-dasharray="2 2"/>
+      </g>
+      
+      <!-- Target Set X (Vague) -->
+      <path d="M 15,35 Q 25,10 65,15 Q 90,30 85,55 Q 60,85 30,70 Q 5,55 15,35 Z" fill="#ff9900" fill-opacity="0.1" stroke="#ff9900" stroke-width="1" stroke-dasharray="3 3"/>
+      <text x="65" y="28" fill="#ff9900" font-size="9" font-style="italic">Target (X)</text>
+      
+      <!-- Lower Approximation B_ (Solid orange) -->
+      <path d="M 28,42 Q 35,28 55,30 Q 72,38 70,52 Q 52,65 38,58 Q 24,50 28,42 Z" fill="#ff5500" fill-opacity="0.25" stroke="#ff9900" stroke-width="1.5" class="approx-set approx-set-lower"/>
+      <text x="35" y="47" fill="#ffffff" font-size="8" font-weight="700">Lower ̲BX</text>
+
+      <!-- Upper Approximation B^ (Outer ring) -->
+      <path d="M 10,32 Q 22,5 72,10 Q 95,25 90,60 Q 65,90 25,75 Q 0,50 10,32 Z" fill="none" stroke="#ff5500" stroke-width="1.2" stroke-dasharray="3 2" class="approx-set approx-set-upper"/>
+      <text x="12" y="77" fill="#ff5500" font-size="8" font-weight="500">Upper B̄X</text>
+      
+      <text x="-5" y="107" fill="#5c6e83" font-size="9" font-family="monospace">Boundary Region filtering</text>
+    </g>
+
+    <!-- Formula snippet -->
+    <rect x="530" y="285" width="130" height="30" rx="4" fill="#0d131f" stroke="#1d2636"/>
+    <text x="548" y="304" fill="#ff9900" font-family="monospace" font-size="11" font-weight="700">̲BX ⊆ X ⊆ B̄X</text>
+
+    <!-- Interactive Tooltip Overlay -->
+    <g class="info-tooltip" transform="translate(0, 15)">
+      <rect x="520" y="100" width="150" height="95" rx="6" fill="#0b0f17" stroke="#ff9900" stroke-width="1" opacity="0.95"/>
+      <text x="530" y="120" fill="#ffffff" font-size="11" font-weight="700">Rough-Set Bounds</text>
+      <text x="530" y="138" fill="#8c9ba5" font-size="9">Resolves vagueness in concept</text>
+      <text x="530" y="152" fill="#8c9ba5" font-size="9">activations by establishing</text>
+      <text x="530" y="166" fill="#8c9ba5" font-size="9">strict lower/upper boundaries</text>
+      <text x="530" y="180" fill="#ff9900" font-size="9" font-weight="700">for rule induction induction.</text>
+    </g>
+  </g>
+
+  <!-- ==================== CARD 4: INDUCED RULES ==================== -->
+  <g class="panel-card" transform="translate(0, 0)">
+    <rect x="755" y="100" width="210" height="230" rx="8" fill="#141c2c" fill-opacity="0.6" stroke="#1d2636" stroke-width="1.5" filter="url(#glassGlow)"/>
+    <path d="M 755,108 A 8,8 0 0,1 763,100 L 957,100 A 8,8 0 0,1 965,108 L 965,105 L 755,105 Z" fill="url(#emeraldGrad)"/>
+    
+    <text x="770" y="125" class="card-title">Explainable Rules</text>
+    <text x="770" y="142" class="card-desc">Inductive Logic Rules</text>
+
+    <!-- Rule List -->
+    <g transform="translate(770, 160)" font-size="9" font-family="monospace">
+      <!-- Rule 1 -->
+      <g class="rule-card rule-row-1">
+        <rect x="0" y="0" width="180" height="22" rx="3" fill="#0d131f" stroke="#1d2636"/>
+        <text x="8" y="14" fill="#00ffcc" font-weight="700">RULE 1 (Whale)</text>
+        <text x="105" y="14" fill="#8c9ba5">swims ∧ flippers</text>
+      </g>
+
+      <!-- Rule 2 -->
+      <g class="rule-card rule-row-2" transform="translate(0, 28)">
+        <rect x="0" y="0" width="180" height="22" rx="3" fill="#0d131f" stroke="#1d2636"/>
+        <text x="8" y="14" fill="#00ffcc" font-weight="700">RULE 2 (Zebra)</text>
+        <text x="105" y="14" fill="#8c9ba5">stripes ∧ hooves</text>
+      </g>
+      
+      <!-- Rule 3 -->
+      <g class="rule-card" transform="translate(0, 56)" opacity="0.6">
+        <rect x="0" y="0" width="180" height="22" rx="3" fill="#0d131f" stroke="#1d2636"/>
+        <text x="8" y="14" fill="#8c9ba5" font-weight="700">RULE 3 (Lion)</text>
+        <text x="105" y="14" fill="#5c6e83">furry ∧ hunter</text>
+      </g>
+
+      <text x="5" y="98" fill="#5c6e83" font-size="9" font-family="sans-serif">Global Symbolic Interpretability</text>
+    </g>
+
+    <!-- Formula snippet -->
+    <rect x="770" y="285" width="180" height="30" rx="4" fill="#0d131f" stroke="#1d2636"/>
+    <text x="785" y="304" fill="#00ffcc" font-family="monospace" font-size="11" font-weight="700">IF C_active ⇒ CLASS</text>
+
+    <!-- Interactive Tooltip Overlay -->
+    <g class="info-tooltip" transform="translate(0, 15)">
+      <rect x="760" y="100" width="200" height="95" rx="6" fill="#0b0f17" stroke="#00ffcc" stroke-width="1" opacity="0.95"/>
+      <text x="770" y="120" fill="#ffffff" font-size="11" font-weight="700">Induced Decision Rules</text>
+      <text x="770" y="138" fill="#8c9ba5" font-size="9">Boolean classification rules</text>
+      <text x="770" y="152" fill="#8c9ba5" font-size="9">induced directly from rough</text>
+      <text x="770" y="166" fill="#8c9ba5" font-size="9">approximations. Fully traceable,</text>
+      <text x="770" y="180" fill="#00ffcc" font-size="9" font-weight="700">verified, and noise-tolerant.</text>
+    </g>
+  </g>
+
+  <!-- Technical stats footer -->
+  <line x1="35" y1="365" x2="965" y2="365" stroke="#1d2636" stroke-width="1"/>
+  
+  <text x="35" y="390" fill="#5c6e83" font-size="10" font-weight="600">STABILITY BENCHMARK STATUS</text>
+  
+  <!-- Indicator 1 -->
+  <circle cx="230" cy="386" r="4" fill="#00ffcc"/>
+  <text x="242" y="390" fill="#ffffff" font-size="10" font-weight="700">Quality score: 94.2%</text>
+
+  <!-- Indicator 2 -->
+  <circle cx="390" cy="386" r="4" fill="#00d2ff"/>
+  <text x="402" y="390" fill="#ffffff" font-size="10" font-weight="700">Noise recovery rate: 98.7%</text>
+
+  <!-- Indicator 3 -->
+  <circle cx="590" cy="386" r="4" fill="#cc00ff"/>
+  <text x="602" y="390" fill="#ffffff" font-size="10" font-weight="700">Ablation fidelity: High</text>
+
+  <!-- Dynamic hint -->
+  <text x="965" y="390" fill="#00ffcc" font-size="9" font-weight="700" text-anchor="end" opacity="0.8">★ HOVER BLOCKS FOR DETAIL DETAILS</text>
+
+</svg>

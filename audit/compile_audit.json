@@ -1,0 +1,17 @@
+{
+  "bibtex8": "This is 8-bit Big BibTeX version 0.99d-x4.02 (TeX Live 2025/dev)",
+  "fatal_errors": false,
+  "overfull_count": 2,
+  "pdf_exists": true,
+  "pdf_pages": 18,
+  "pdf_sha256": "fc6442d5edae7a31a0bddaee7bf72b76291a11dcd0e71983818c035a8e1e9696",
+  "pdf_size_bytes": 443561,
+  "pdflatex": "pdfTeX 3.141592653-2.6-1.40.26 (TeX Live 2025/dev/Debian)",
+  "render_check": "/mnt/data/paper1_poc_xai/audit/render_pdf.log",
+  "render_log_retained": true,
+  "rendered_page_images_removed_from_package": true,
+  "rendered_pages": 18,
+  "source_auxiliary_logs_removed_from_package": true,
+  "timestamp_utc": "2026-05-18T21:05:10.079285+00:00",
+  "undefined_references": false
+}

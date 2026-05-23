@@ -1,0 +1,10 @@
+/opt/pyvenv/lib/python3.13/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (25) reached and the optimization hasn't converged yet.
+  warnings.warn(
+{
+  "status": "ok",
+  "operators": [
+    "Linear ridge transition",
+    "RBF kernel ridge (Nystroem)",
+    "Two-layer MLP regressor"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "seed": 42,
+  "test": {
+    "concept_correlation_mean": 0.7759178439637273,
+    "macro_auroc_ovr": 0.985229250599922,
+    "macro_f1": 0.5507723193853752,
+    "semantic_mae": 0.10756219753375405,
+    "semantic_rmse": 0.15732655997826175,
+    "top1_accuracy": 0.7232417950435365,
+    "top5_accuracy": 0.9361018084393838,
+    "weighted_f1": 0.6789828214945878
+  },
+  "variant": "frozen-feature concept bottleneck using cached transition concepts"
+}

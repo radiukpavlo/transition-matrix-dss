@@ -1,0 +1,122 @@
+# Local environments
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Additional Python/Conda environments and logs
+.tox/
+.nox/
+.pyre/
+.dmypy.json
+dmypy.json
+pip-log.txt
+poetry.lock.bak
+__pypackages__/
+.pdm-build/
+.pdm-plugins/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+
+# Private credentials, cloud config, and databases
+credentials*.json
+token.json
+secrets.json
+secrets.yaml
+*.keystore
+*.jks
+.aws/
+.gcloud/
+.azure/
+.firebase/
+.firebaserc
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+db.sqlite3
+db.sqlite3-journal
+
+# Private and source data
+data/raw/
+data/private/
+data/derived_private/
+data/tmp/
+data/**/*.zip
+data/**/*.tar
+data/**/*.tar.gz
+data/**/*.tgz
+data/**/*.7z
+data/**/*.rar
+
+# Temporary experiment extraction/cache folders
+artifacts/_tmp/
+artifacts/_tmp_awa2/
+artifacts/_tmp_xlsa17/
+artifacts/**/_tmp/
+
+# Manuscript (ignore all files and folders related to the manuscript)
+manuscript/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Additional OS & Editor configurations
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sublime-project
+*.sublime-workspace
+.history/
+*~
+ehthumbs.db
+Icon\r
+._*
+
+# Web/Node developer files (if applicable)
+node_modules/
+dist/
+build/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# General archives and compression
+*.zip
+*.tar
+*.gz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.tgz
+
+# Generic Temporary and Backup Files
+*.bak
+*.backup
+*.tmp
+*.temp
+

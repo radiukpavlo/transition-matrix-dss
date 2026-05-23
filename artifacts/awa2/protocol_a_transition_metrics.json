@@ -1,0 +1,41 @@
+{
+  "explained_variance_ratio_sum": 0.2951740622520447,
+  "n_components": 16,
+  "ridge_grid": [
+    {
+      "ridge_alpha": 0.01,
+      "val_mae": 0.12993730666193962,
+      "val_rmse": 0.1832060696080865
+    },
+    {
+      "ridge_alpha": 0.1,
+      "val_mae": 0.12993730851754973,
+      "val_rmse": 0.18320607087433344
+    },
+    {
+      "ridge_alpha": 1.0,
+      "val_mae": 0.1299373279609712,
+      "val_rmse": 0.1832060849047864
+    },
+    {
+      "ridge_alpha": 10.0,
+      "val_mae": 0.12993751229022996,
+      "val_rmse": 0.18320621932748835
+    },
+    {
+      "ridge_alpha": 100.0,
+      "val_mae": 0.12993936835044076,
+      "val_rmse": 0.18320757092080028
+    }
+  ],
+  "selected_ridge_alpha": 0.01,
+  "test_mae": 0.12949999789459912,
+  "test_rmse": 0.18263791770479734,
+  "test_semantic_correlation_mean": 0.6828477685033985,
+  "train_mae": 0.12921520615664475,
+  "train_rmse": 0.1822051997765851,
+  "train_semantic_correlation_mean": 0.6843034176266787,
+  "val_mae": 0.12993730666193962,
+  "val_rmse": 0.1832060696080865,
+  "val_semantic_correlation_mean": 0.6806510402805926
+}

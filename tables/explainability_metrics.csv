@@ -1,0 +1,14 @@
+Metric,Value
+Number of rules,54
+Average conditions per rule,4.037037037037037
+Median conditions per rule,4.0
+Sparsity score,0.7757201646090535
+Coverage,0.8640321500334897
+Abstention,0.13596784996651035
+Conflict rate,0.13543201607501673
+Mean support,1237.111111111111
+Mean confidence,0.3911662667286612
+Covered fidelity,0.3829457364341085
+All-object fidelity,0.33087742799732084
+Top-1 accuracy (all),0.35190890823844606
+Top-5 accuracy,--

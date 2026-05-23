@@ -1,0 +1,61 @@
+{
+  "evaluated_rule_covered_samples": 1000,
+  "sample_size_requested": 1000,
+  "seed": 42,
+  "summary": [
+    {
+      "ci95_high": 0.27453416666666663,
+      "ci95_low": 0.24683,
+      "mean": 0.26098333333333334,
+      "mean_rule_length": 3.938,
+      "method": "LIME-style",
+      "metric": "topk_antecedent_agreement",
+      "n": 1000
+    },
+    {
+      "ci95_high": 0.60458375,
+      "ci95_low": 0.5769629166666667,
+      "mean": 0.5907166666666667,
+      "mean_rule_length": 3.938,
+      "method": "LIME-style",
+      "metric": "signed_direction_agreement",
+      "n": 1000
+    },
+    {
+      "ci95_high": 0.041734218547857055,
+      "ci95_low": 0.002347043214485789,
+      "mean": 0.022236010011316646,
+      "mean_rule_length": 3.938,
+      "method": "LIME-style",
+      "metric": "spearman_rule_salience",
+      "n": 1000
+    },
+    {
+      "ci95_high": 0.3386020833333333,
+      "ci95_low": 0.30501,
+      "mean": 0.3213,
+      "mean_rule_length": 3.938,
+      "method": "SHAP-style",
+      "metric": "topk_antecedent_agreement",
+      "n": 1000
+    },
+    {
+      "ci95_high": 0.6232920833333333,
+      "ci95_low": 0.5913799999999999,
+      "mean": 0.6070999999999999,
+      "mean_rule_length": 3.938,
+      "method": "SHAP-style",
+      "metric": "signed_direction_agreement",
+      "n": 1000
+    },
+    {
+      "ci95_high": 0.1459045964057361,
+      "ci95_low": 0.1088558833125967,
+      "mean": 0.12708975594947838,
+      "mean_rule_length": 3.938,
+      "method": "SHAP-style",
+      "metric": "spearman_rule_salience",
+      "n": 1000
+    }
+  ]
+}

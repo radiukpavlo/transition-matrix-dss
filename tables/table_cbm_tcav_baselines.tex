@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Concept-based baselines on AwA2.\label{tab:cbm_tcav_baselines}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXXXXXX}
+\toprule
+Baseline & MAE & RMSE & Concept corr. & Score/Top-1 & Overlap/Top-5 & Macro-F1/Sensitivity \\
+\midrule
+Frozen-feature CBM & 0.1076 & 0.1573 & 0.7759 & 0.7232 & 0.9361 & 0.5508 \\
+TCAV at released representation layer & -- & -- & -- & 0.4850 & 1.0000 & -0.0021 \\
+\bottomrule
+\end{tabularx}
+\noindent\footnotesize{For TCAV, the score column reports mean positive directional sensitivity; the overlap column reports overlap with transition-selected attributes.}
+\end{adjustwidth}
+\end{table}

@@ -1,0 +1,12 @@
+{
+  "artifacts_json": 15,
+  "figures_pdf": 24,
+  "key_file_hashes": {
+    "artifacts\\awa2\\protocol_a_summary.json": "3c33b7afdc30b29232b7d6ad2e272d3731a81e5436da5773a000d2c627740136",
+    "artifacts\\awa2\\protocol_b_summary.json": "490943f858188bd17a93030dc68c893f3ba39839a106ad1208ad6b5f478930e9",
+    "artifacts\\synthetic\\synthetic_summary.json": "e11e4e1f4d67dfc98a2d29fe9f7c2b91174f5dcfd86c591eee3b6a5ada06fac1",
+    "manuscript\\manuscript.tex": "c03a0edf0be7fdca1fc129bb18a570d578ac144a9dc462edc2ff074c8993f888",
+    "manuscript\\references.bib": "32ee17b09fa5f04344cd5f945b911e6cc890304343962d25816f0f401bfd0c5f"
+  },
+  "tables_tex": 24
+}

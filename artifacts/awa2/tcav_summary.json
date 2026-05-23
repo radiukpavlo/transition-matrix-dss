@@ -1,0 +1,6 @@
+{
+  "n_concepts": 7,
+  "overlap_fraction_with_selected_attributes": 1.0,
+  "representation_layer": "released ResNet-101 feature layer / revision compressed coordinates",
+  "seed": 42
+}

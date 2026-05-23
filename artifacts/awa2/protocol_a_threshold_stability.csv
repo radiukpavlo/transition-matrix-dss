@@ -1,0 +1,4 @@
+method,alpha,mean_abs_threshold_shift,median_abs_threshold_shift,mean_threshold_count,bootstrap_repeats
+entropy_only,1.0,,,,0
+wedd,0.65,,,,0
+density_only,0.0,,,,0

@@ -1,0 +1,16 @@
+{
+  "abstention_rate_mean": 0.03623333333333333,
+  "coverage_mean": 0.9637666666666665,
+  "macro_f1_mean": 0.8668359108087971,
+  "noise_levels": [
+    0.0,
+    0.02,
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "rule_recovery_jaccard_mean": 0.7258333333333333,
+  "seeds_per_noise": 5,
+  "threshold_recovery_error_mean": 0.016090776462121207
+}

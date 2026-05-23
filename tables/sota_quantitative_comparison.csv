@@ -1,0 +1,16 @@
+Method,Family,AwA2 proposed-split class-averaged accuracy (%),Source and scope
+DAP,Attribute transfer,46.1,Published ZSL baseline
+IAP,Attribute transfer,35.9,Published ZSL baseline
+CONSE,Semantic embedding,44.5,Published ZSL baseline
+CMT,Cross-modal transfer,37.9,Published ZSL baseline
+SSE,Semantic similarity embedding,61.0,Published ZSL baseline
+LATEM,Latent embedding,55.8,Published ZSL baseline
+ALE,Label embedding,62.5,Published ZSL baseline
+DEVISE,Visual-semantic embedding,59.7,Published ZSL baseline
+SJE,Structured joint embedding,61.9,Published ZSL baseline
+ESZSL,Linear semantic embedding,58.6,Published ZSL baseline
+SYNC,Synthesized classifiers,46.6,Published ZSL baseline
+SAE,Semantic autoencoder,54.1,Published ZSL baseline
+GFZSL,Generative semantic framework,63.8,Published ZSL baseline
+Ours: transition prototype,Post-hoc semantic bridge,48.432271226142895,This package; class-averaged
+Ours: symbolic template,Post-hoc rule template,39.932463189796586,This package; class-averaged

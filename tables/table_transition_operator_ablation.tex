@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Semantic reconstruction and rule-transfer ablation for linear and nonlinear operators.\label{tab:transition_operator_ablation}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXXXXXXX}
+\toprule
+Operator & MAE & RMSE & Corr. & Proto. acc. & Rule cov. & Rule acc. & Runtime (s) \\
+\midrule
+Linear ridge transition & 0.1076 & 0.1573 & 0.7759 & 0.6252 & 0.8718 & 0.1941 & 0.0000 \\
+RBF kernel ridge (Nystroem) & 0.1958 & 0.2583 & 0.1176 & 0.0190 & 1.0000 & 0.0027 & 2.8573 \\
+Two-layer MLP regressor & 0.1685 & 0.2355 & 0.4497 & 0.2494 & 0.8390 & 0.0915 & 0.6914 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

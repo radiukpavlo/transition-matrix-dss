@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "unseen_accuracy": 0.4644256287122457,
+  "unseen_classes": [
+    "sheep",
+    "dolphin",
+    "bat",
+    "seal",
+    "blue whale",
+    "rat",
+    "horse",
+    "walrus",
+    "giraffe",
+    "bobcat"
+  ]
+}

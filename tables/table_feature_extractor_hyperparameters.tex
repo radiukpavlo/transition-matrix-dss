@@ -1,0 +1,21 @@
+\begin{table}[H]
+\caption{Feature extractor, base predictor, and revision-experiment hyperparameters.\label{tab:feature_hyperparameters}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{lXX}
+\toprule
+Component & Value & Implementation detail \\
+\midrule
+Feature extractor & ResNet-101 features released with AwA2 & ILSVRC-pretrained representation layer; no image-level augmentation in this package \\
+Feature dimension & 2048 & Global average/penultimate representation coordinates \\
+Auxiliary compression & 64 & Variance-screened auxiliary cache for reviewer-response baselines. \\
+Base predictor & Ridge classifier & Trained on variance-screened representation coordinates \\
+Random seed & 42 & Used for all stochastic revision experiments \\
+Semantic bridge & Ridge regression & Grid alpha in \{0.01, 0.1, 1, 10, 100\} \\
+Rule thresholds & WEDD & alpha=0.65, max\_depth=2, min\_bin\_size=30, min\_gain=0.002 \\
+Rule induction & Greedy reducts & tau=0.84, s\_min=18 for AwA2 Protocol A \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

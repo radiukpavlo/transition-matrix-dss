@@ -38,9 +38,9 @@ METHOD_COLORS = [
 def apply_nature_style() -> None:
     """Apply compact Nature-family plotting defaults."""
     mpl.rcParams.update({
-        "font.family": "serif",
-        "font.serif": ["Palatino Linotype", "Palatino", "Book Antiqua", "DejaVu Serif", "serif"],
-        "mathtext.fontset": "stix",
+        "font.family": "sans-serif",
+        "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "Liberation Sans", "sans-serif"],
+        "mathtext.fontset": "dejavusans",
         "svg.fonttype": "none",
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
@@ -89,7 +89,7 @@ def style_axis(ax, grid_axis: str | None = None) -> None:
         ax.set_axisbelow(True)
 
 
-def add_panel_label(ax, label: str, x: float = -0.08, y: float = 1.02) -> None:
+def add_panel_label(ax, label: str, x: float = -0.08, y: float = 1.02, fontsize: float = 8) -> None:
     ax.text(
         x,
         y,
@@ -97,7 +97,7 @@ def add_panel_label(ax, label: str, x: float = -0.08, y: float = 1.02) -> None:
         transform=ax.transAxes,
         ha="left",
         va="bottom",
-        fontsize=8,
+        fontsize=fontsize,
         fontweight="bold",
         color=PALETTE["black"],
     )
@@ -149,11 +149,11 @@ def annotate_bars(
 def save_nature_figure(
     fig,
     path: Path | str,
-    formats: Sequence[str] = ("pdf", "svg", "tiff"),
+    formats: Sequence[str] = ("pdf", "svg"),
     dpi: int = 600,
     close: bool = True,
 ) -> list[str]:
-    """Save one figure stem to PDF/SVG/TIFF with editable vector text."""
+    """Save one figure stem with editable vector text."""
     base = Path(path)
     if base.suffix:
         stem = base.with_suffix("")

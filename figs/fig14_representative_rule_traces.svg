@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="523.340157pt" height="220.033071pt" viewBox="0 0 523.340157 220.033071" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="516.503795pt" height="213.196708pt" viewBox="0 0 516.503795 213.196708" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-05-22T22:56:02.274178</dc:date>
+    <dc:date>2026-05-24T20:56:48.774879</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,9 +21,9 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 220.033071 
-L 523.340157 220.033071 
-L 523.340157 0 
+   <path d="M 0 213.196708 
+L 516.503795 213.196708 
+L 516.503795 0 
 L 0 0 
 z
 " style="fill: #ffffff"/>
@@ -31,230 +31,230 @@ z
   <g id="axes_1">
    <g id="table_1">
     <g id="patch_2">
-     <path d="M 7.2 83.240664 
-L 47.915213 83.240664 
-L 47.915213 56.464792 
-L 7.2 56.464792 
+     <path d="M 7.2 80.712658 
+L 47.368304 80.712658 
+L 47.368304 54.826963 
+L 7.2 54.826963 
 z
 " style="fill: #ddecf7; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_1">
-     <text style="font-weight: 700; font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="11.271521" y="71.223822" transform="rotate(-0 11.271521 71.223822)">Object</text>
+     <text style="font-weight: 700; font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="11.21683" y="70.475596" transform="rotate(-0 11.21683 70.475596)">Object</text>
     </g>
     <g id="patch_3">
-     <path d="M 47.915213 83.240664 
-L 108.988031 83.240664 
-L 108.988031 56.464792 
-L 47.915213 56.464792 
+     <path d="M 47.368304 80.712658 
+L 107.620759 80.712658 
+L 107.620759 54.826963 
+L 47.368304 54.826963 
 z
 " style="fill: #ddecf7; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_2">
-     <text style="font-weight: 700; font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="54.022494" y="71.238353" transform="rotate(-0 54.022494 71.238353)">True</text>
+     <text style="font-weight: 700; font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="53.393549" y="70.480498" transform="rotate(-0 53.393549 70.480498)">True</text>
     </g>
     <g id="patch_4">
-     <path d="M 108.988031 83.240664 
-L 170.06085 83.240664 
-L 170.06085 56.464792 
-L 108.988031 56.464792 
+     <path d="M 107.620759 80.712658 
+L 167.873214 80.712658 
+L 167.873214 54.826963 
+L 107.620759 54.826963 
 z
 " style="fill: #ddecf7; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_3">
-     <text style="font-weight: 700; font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="115.095313" y="71.238353" transform="rotate(-0 115.095313 71.238353)">Pred.</text>
+     <text style="font-weight: 700; font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="113.646004" y="70.480498" transform="rotate(-0 113.646004 70.480498)">Pred.</text>
     </g>
     <g id="patch_5">
-     <path d="M 170.06085 83.240664 
-L 236.223071 83.240664 
-L 236.223071 56.464792 
-L 170.06085 56.464792 
+     <path d="M 167.873214 80.712658 
+L 233.146708 80.712658 
+L 233.146708 54.826963 
+L 167.873214 54.826963 
 z
 " style="fill: #ddecf7; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_4">
-     <text style="font-weight: 700; font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="176.677072" y="71.238353" transform="rotate(-0 176.677072 71.238353)">Mode</text>
+     <text style="font-weight: 700; font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="174.400564" y="70.480498" transform="rotate(-0 174.400564 70.480498)">Mode</text>
     </g>
     <g id="patch_6">
-     <path d="M 236.223071 83.240664 
-L 516.140157 83.240664 
-L 516.140157 56.464792 
-L 236.223071 56.464792 
+     <path d="M 233.146708 80.712658 
+L 509.303795 80.712658 
+L 509.303795 54.826963 
+L 233.146708 54.826963 
 z
 " style="fill: #ddecf7; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_5">
-     <text style="font-weight: 700; font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="264.21478" y="71.238353" transform="rotate(-0 264.21478 71.238353)">Semantic states</text>
+     <text style="font-weight: 700; font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="260.762416" y="70.480498" transform="rotate(-0 260.762416 70.480498)">Semantic states</text>
     </g>
     <g id="patch_7">
-     <path d="M 7.2 110.016535 
-L 47.915213 110.016535 
-L 47.915213 83.240664 
-L 7.2 83.240664 
+     <path d="M 7.2 106.598354 
+L 47.368304 106.598354 
+L 47.368304 80.712658 
+L 7.2 80.712658 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_6">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="11.271521" y="97.954225" transform="rotate(-0 11.271521 97.954225)">5083</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="11.21683" y="96.358841" transform="rotate(-0 11.21683 96.358841)">5083</text>
     </g>
     <g id="patch_8">
-     <path d="M 47.915213 110.016535 
-L 108.988031 110.016535 
-L 108.988031 83.240664 
-L 47.915213 83.240664 
+     <path d="M 47.368304 106.598354 
+L 107.620759 106.598354 
+L 107.620759 80.712658 
+L 47.368304 80.712658 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_7">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="54.022494" y="97.954225" transform="rotate(-0 54.022494 97.954225)">collie</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="53.393549" y="96.358841" transform="rotate(-0 53.393549 96.358841)">collie</text>
     </g>
     <g id="patch_9">
-     <path d="M 108.988031 110.016535 
-L 170.06085 110.016535 
-L 170.06085 83.240664 
-L 108.988031 83.240664 
+     <path d="M 107.620759 106.598354 
+L 167.873214 106.598354 
+L 167.873214 80.712658 
+L 107.620759 80.712658 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_8">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="115.095313" y="97.954225" transform="rotate(-0 115.095313 97.954225)">collie</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="113.646004" y="96.358841" transform="rotate(-0 113.646004 96.358841)">collie</text>
     </g>
     <g id="patch_10">
-     <path d="M 170.06085 110.016535 
-L 236.223071 110.016535 
-L 236.223071 83.240664 
-L 170.06085 83.240664 
+     <path d="M 167.873214 106.598354 
+L 233.146708 106.598354 
+L 233.146708 80.712658 
+L 167.873214 80.712658 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_9">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="176.677072" y="97.954225" transform="rotate(-0 176.677072 97.954225)">exact</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="174.400564" y="96.358841" transform="rotate(-0 174.400564 96.358841)">exact</text>
     </g>
     <g id="patch_11">
-     <path d="M 236.223071 110.016535 
-L 516.140157 110.016535 
-L 516.140157 83.240664 
-L 236.223071 83.240664 
+     <path d="M 233.146708 106.598354 
+L 509.303795 106.598354 
+L 509.303795 80.712658 
+L 233.146708 80.712658 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_10">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 91.060225)">stripes=s0; hooves=s0; swims=s1;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 97.954225)">paws=s3; longneck=s0; hunter=s1;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 104.848225)">ocean=s1; quadrapedal=s3</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 85.215449)">stripes=s0; hooves=s0; swims=s1;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 96.313091)">paws=s3; longneck=s0; hunter=s1;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 107.533278)">ocean=s1; quadrapedal=s3</text>
     </g>
     <g id="patch_12">
-     <path d="M 7.2 136.792407 
-L 47.915213 136.792407 
-L 47.915213 110.016535 
-L 7.2 110.016535 
+     <path d="M 7.2 132.48405 
+L 47.368304 132.48405 
+L 47.368304 106.598354 
+L 7.2 106.598354 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_11">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="11.271521" y="124.730096" transform="rotate(-0 11.271521 124.730096)">24024</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="11.21683" y="122.244537" transform="rotate(-0 11.21683 122.244537)">24024</text>
     </g>
     <g id="patch_13">
-     <path d="M 47.915213 136.792407 
-L 108.988031 136.792407 
-L 108.988031 110.016535 
-L 47.915213 110.016535 
+     <path d="M 47.368304 132.48405 
+L 107.620759 132.48405 
+L 107.620759 106.598354 
+L 47.368304 106.598354 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_12">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="54.022494" y="124.730096" transform="rotate(-0 54.022494 124.730096)">ox</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="53.393549" y="122.244537" transform="rotate(-0 53.393549 122.244537)">ox</text>
     </g>
     <g id="patch_14">
-     <path d="M 108.988031 136.792407 
-L 170.06085 136.792407 
-L 170.06085 110.016535 
-L 108.988031 110.016535 
+     <path d="M 107.620759 132.48405 
+L 167.873214 132.48405 
+L 167.873214 106.598354 
+L 107.620759 106.598354 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_13">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="115.095313" y="124.730096" transform="rotate(-0 115.095313 124.730096)">abstain</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="113.646004" y="122.244537" transform="rotate(-0 113.646004 122.244537)">abstain</text>
     </g>
     <g id="patch_15">
-     <path d="M 170.06085 136.792407 
-L 236.223071 136.792407 
-L 236.223071 110.016535 
-L 170.06085 110.016535 
+     <path d="M 167.873214 132.48405 
+L 233.146708 132.48405 
+L 233.146708 106.598354 
+L 167.873214 106.598354 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_14">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="176.677072" y="124.730096" transform="rotate(-0 176.677072 124.730096)">exact</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="174.400564" y="122.244537" transform="rotate(-0 174.400564 122.244537)">exact</text>
     </g>
     <g id="patch_16">
-     <path d="M 236.223071 136.792407 
-L 516.140157 136.792407 
-L 516.140157 110.016535 
-L 236.223071 110.016535 
+     <path d="M 233.146708 132.48405 
+L 509.303795 132.48405 
+L 509.303795 106.598354 
+L 233.146708 106.598354 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_15">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 117.836096)">stripes=s0; hooves=s2; swims=s1;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 124.730096)">paws=s0; longneck=s1; hunter=s0;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 131.624096)">ocean=s1; quadrapedal=s2</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 111.101144)">stripes=s0; hooves=s2; swims=s1;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 122.198787)">paws=s0; longneck=s1; hunter=s0;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 133.418973)">ocean=s1; quadrapedal=s2</text>
     </g>
     <g id="patch_17">
-     <path d="M 7.2 163.568278 
-L 47.915213 163.568278 
-L 47.915213 136.792407 
-L 7.2 136.792407 
+     <path d="M 7.2 158.369746 
+L 47.368304 158.369746 
+L 47.368304 132.48405 
+L 7.2 132.48405 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_16">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="11.271521" y="151.505968" transform="rotate(-0 11.271521 151.505968)">16781</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="11.21683" y="148.130232" transform="rotate(-0 11.21683 148.130232)">16781</text>
     </g>
     <g id="patch_18">
-     <path d="M 47.915213 163.568278 
-L 108.988031 163.568278 
-L 108.988031 136.792407 
-L 47.915213 136.792407 
+     <path d="M 47.368304 158.369746 
+L 107.620759 158.369746 
+L 107.620759 132.48405 
+L 47.368304 132.48405 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_17">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="54.022494" y="151.505968" transform="rotate(-0 54.022494 151.505968)">hamster</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="53.393549" y="148.130232" transform="rotate(-0 53.393549 148.130232)">hamster</text>
     </g>
     <g id="patch_19">
-     <path d="M 108.988031 163.568278 
-L 170.06085 163.568278 
-L 170.06085 136.792407 
-L 108.988031 136.792407 
+     <path d="M 107.620759 158.369746 
+L 167.873214 158.369746 
+L 167.873214 132.48405 
+L 107.620759 132.48405 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_18">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="115.095313" y="151.505968" transform="rotate(-0 115.095313 151.505968)">mole</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="113.646004" y="148.130232" transform="rotate(-0 113.646004 148.130232)">mole</text>
     </g>
     <g id="patch_20">
-     <path d="M 170.06085 163.568278 
-L 236.223071 163.568278 
-L 236.223071 136.792407 
-L 170.06085 136.792407 
+     <path d="M 167.873214 158.369746 
+L 233.146708 158.369746 
+L 233.146708 132.48405 
+L 167.873214 132.48405 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_19">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif; text-anchor: start" x="176.677072" y="151.505968" transform="rotate(-0 176.677072 151.505968)">fallback</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif; text-anchor: start" x="174.400564" y="148.130232" transform="rotate(-0 174.400564 148.130232)">fallback</text>
     </g>
     <g id="patch_21">
-     <path d="M 236.223071 163.568278 
-L 516.140157 163.568278 
-L 516.140157 136.792407 
-L 236.223071 136.792407 
+     <path d="M 233.146708 158.369746 
+L 509.303795 158.369746 
+L 509.303795 132.48405 
+L 233.146708 132.48405 
 z
 " style="fill: #ffffff; stroke: #d8d8d8; stroke-width: 0.35; stroke-linejoin: miter"/>
     </g>
     <g id="text_20">
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 144.611968)">stripes=s0; hooves=s1; swims=s1;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 151.505968)">paws=s2; longneck=s0; hunter=s0;</text>
-     <text style="font-size: 6px; font-family: 'Palatino Linotype', 'Palatino', 'Book Antiqua', 'DejaVu Serif', serif" transform="translate(264.21478 158.399968)">ocean=s1; quadrapedal=s2</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 136.98684)">stripes=s0; hooves=s1; swims=s1;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 148.084482)">paws=s2; longneck=s0; hunter=s0;</text>
+     <text style="font-size: 10.457142px; font-family: 'Arial', 'Helvetica', 'DejaVu Sans', 'Liberation Sans', sans-serif" transform="translate(260.762416 159.304669)">ocean=s1; quadrapedal=s2</text>
     </g>
    </g>
   </g>

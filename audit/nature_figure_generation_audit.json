@@ -2,215 +2,462 @@
   "backend": "python/matplotlib",
   "formats": [
     "pdf",
-    "svg",
-    "tiff"
+    "svg"
   ],
   "dpi": 600,
   "style": {
-    "font_family": "Palatino Linotype / Palatino serif fallback",
+    "font_family": "Arial/Helvetica/DejaVu Sans fallback",
     "pdf_fonttype": 42,
     "svg_fonttype": "none",
-    "text_size_pt": "manuscript-fit Nature pass: 5.8-7.5 base, schematic emphasis up to 13",
+    "text_size_pt": "unique manuscript-fit targets 8.44-8.79 pt after LaTeX scaling",
+    "textwidth_mm": 138.600008,
     "palette": "Nature/Wong-inspired accessible palette"
   },
-  "figure_count": 24,
+  "figure_count": 25,
   "figures": [
+    {
+      "figure": "82_fig_1_orig.pdf",
+      "exports": [
+        "figs\\82_fig_1_orig.pdf",
+        "figs\\82_fig_1_orig.svg"
+      ],
+      "sources": [],
+      "font_profile": {
+        "figure": "82_fig_1_orig.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.45,
+        "source_base_pt": 11.621797669737507,
+        "tick_pt": 9.065002182395256,
+        "legend_pt": 9.065002182395256,
+        "small_pt": 8.367694322211005,
+        "annotation_pt": 9.529874089184755,
+        "panel_label_pt": 11.040707786250632,
+        "emphasis_pt": 13.365067320198133,
+        "operator_pt": 19.175966155066885,
+        "table_pt": 10.227181949369006
+      },
+      "note": "vector replacement for manuscript framework figure"
+    },
     {
       "figure": "fig01_framework_pipeline.pdf",
       "exports": [
         "figs\\fig01_framework_pipeline.pdf",
-        "figs\\fig01_framework_pipeline.svg",
-        "figs\\fig01_framework_pipeline.tiff"
+        "figs\\fig01_framework_pipeline.svg"
       ],
       "sources": [],
-      "note": "schematic-led composite"
+      "font_profile": {
+        "figure": "fig01_framework_pipeline.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.44,
+        "source_base_pt": 11.60804406302776,
+        "tick_pt": 9.054274369161654,
+        "legend_pt": 9.054274369161654,
+        "small_pt": 8.357791725379988,
+        "annotation_pt": 9.518596131682763,
+        "panel_label_pt": 11.027641859876372,
+        "emphasis_pt": 13.349250672481924,
+        "operator_pt": 19.153272703995803,
+        "table_pt": 10.215078775464429
+      },
+      "note": "legacy compatibility export"
     },
     {
       "figure": "fig02_matrix_alignment.pdf",
       "exports": [
         "figs\\fig02_matrix_alignment.pdf",
-        "figs\\fig02_matrix_alignment.svg",
-        "figs\\fig02_matrix_alignment.tiff"
+        "figs\\fig02_matrix_alignment.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_summary.json"
       ],
+      "font_profile": {
+        "figure": "fig02_matrix_alignment.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.46,
+        "source_base_pt": 11.63555127644726,
+        "tick_pt": 9.075729995628862,
+        "legend_pt": 9.075729995628862,
+        "small_pt": 8.377596919042027,
+        "annotation_pt": 9.541152046686753,
+        "panel_label_pt": 11.053773712624896,
+        "emphasis_pt": 13.380883967914347,
+        "operator_pt": 19.198659606137976,
+        "table_pt": 10.239285123273588
+      },
       "note": ""
     },
     {
       "figure": "fig03_awa2_class_distribution.pdf",
       "exports": [
         "figs\\fig03_awa2_class_distribution.pdf",
-        "figs\\fig03_awa2_class_distribution.svg",
-        "figs\\fig03_awa2_class_distribution.tiff"
+        "figs\\fig03_awa2_class_distribution.svg"
       ],
       "sources": [
         "artifacts\\awa2\\awa2_protocol_a_splits.csv"
       ],
+      "font_profile": {
+        "figure": "fig03_awa2_class_distribution.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.84,
+        "target_rendered_pt": 8.48,
+        "source_base_pt": 13.329209702704862,
+        "tick_pt": 10.396783568109793,
+        "legend_pt": 10.396783568109793,
+        "small_pt": 9.5970309859475,
+        "annotation_pt": 10.929951956217986,
+        "panel_label_pt": 12.662749217569619,
+        "emphasis_pt": 15.32859115811059,
+        "operator_pt": 21.99319600946302,
+        "table_pt": 11.729704538380279
+      },
       "note": ""
     },
     {
       "figure": "fig04_svd_retained_variance.pdf",
       "exports": [
         "figs\\fig04_svd_retained_variance.pdf",
-        "figs\\fig04_svd_retained_variance.svg",
-        "figs\\fig04_svd_retained_variance.tiff"
+        "figs\\fig04_svd_retained_variance.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_transition_metrics.json"
       ],
+      "font_profile": {
+        "figure": "fig04_svd_retained_variance.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.49,
+        "source_base_pt": 6.648452789094338,
+        "tick_pt": 5.1857931754935835,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.451731287057357,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.645720707458488,
+        "operator_pt": 10.969947102005657,
+        "table_pt": 6.0
+      },
       "note": "curve reconstructed from retained total because component-wise variance was not stored"
     },
     {
       "figure": "fig05_transition_salience.pdf",
       "exports": [
         "figs\\fig05_transition_salience.pdf",
-        "figs\\fig05_transition_salience.svg",
-        "figs\\fig05_transition_salience.tiff"
+        "figs\\fig05_transition_salience.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"
       ],
+      "font_profile": {
+        "figure": "fig05_transition_salience.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.88,
+        "target_rendered_pt": 8.51,
+        "source_base_pt": 6.209743180862258,
+        "tick_pt": 5.0,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.3,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.141204657991596,
+        "operator_pt": 10.246076248422725,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig06_attribute_error.pdf",
       "exports": [
         "figs\\fig06_attribute_error.pdf",
-        "figs\\fig06_attribute_error.svg",
-        "figs\\fig06_attribute_error.tiff"
+        "figs\\fig06_attribute_error.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"
       ],
+      "font_profile": {
+        "figure": "fig06_attribute_error.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.88,
+        "target_rendered_pt": 8.52,
+        "source_base_pt": 6.217040176374435,
+        "tick_pt": 5.0,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.3,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.149596202830599,
+        "operator_pt": 10.258116291017817,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig07_wedd_threshold_example.pdf",
       "exports": [
         "figs\\fig07_wedd_threshold_example.pdf",
-        "figs\\fig07_wedd_threshold_example.svg",
-        "figs\\fig07_wedd_threshold_example.tiff"
+        "figs\\fig07_wedd_threshold_example.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_wedd_thresholds.csv"
       ],
+      "font_profile": {
+        "figure": "fig07_wedd_threshold_example.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.84,
+        "target_rendered_pt": 8.54,
+        "source_base_pt": 6.528378651560636,
+        "tick_pt": 5.092135348217296,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.353270494279721,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.507635449294731,
+        "operator_pt": 10.771824775075048,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig08_granules_summary.pdf",
       "exports": [
         "figs\\fig08_granules_summary.pdf",
-        "figs\\fig08_granules_summary.svg",
-        "figs\\fig08_granules_summary.tiff"
+        "figs\\fig08_granules_summary.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_summary.json"
       ],
+      "font_profile": {
+        "figure": "fig08_granules_summary.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.84,
+        "target_rendered_pt": 8.55,
+        "source_base_pt": 6.536023123049584,
+        "tick_pt": 5.098098035978675,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.359538960900658,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.516426591507021,
+        "operator_pt": 10.784438153031813,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig09_rule_support_confidence.pdf",
       "exports": [
         "figs\\fig09_rule_support_confidence.pdf",
-        "figs\\fig09_rule_support_confidence.svg",
-        "figs\\fig09_rule_support_confidence.tiff"
+        "figs\\fig09_rule_support_confidence.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_rulebook.csv"
       ],
+      "font_profile": {
+        "figure": "fig09_rule_support_confidence.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.84,
+        "target_rendered_pt": 8.57,
+        "source_base_pt": 6.551312066027477,
+        "tick_pt": 5.110023411501432,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.372075894142531,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.534008875931598,
+        "operator_pt": 10.809664908945336,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig10_awa2_ablation_accuracy.pdf",
       "exports": [
         "figs\\fig10_awa2_ablation_accuracy.pdf",
-        "figs\\fig10_awa2_ablation_accuracy.svg",
-        "figs\\fig10_awa2_ablation_accuracy.tiff"
+        "figs\\fig10_awa2_ablation_accuracy.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_wedd_rule_ablation.csv"
       ],
+      "font_profile": {
+        "figure": "fig10_awa2_ablation_accuracy.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.58,
+        "source_base_pt": 13.815330213031306,
+        "tick_pt": 10.775957566164418,
+        "legend_pt": 10.775957566164418,
+        "small_pt": 9.94703775338254,
+        "annotation_pt": 11.32857077468567,
+        "panel_label_pt": 13.12456370237974,
+        "emphasis_pt": 15.887629744986,
+        "operator_pt": 22.795294851501655,
+        "table_pt": 12.15749058746755
+      },
       "note": ""
     },
     {
       "figure": "fig11_protocol_b_unseen_accuracy.pdf",
       "exports": [
         "figs\\fig11_protocol_b_unseen_accuracy.pdf",
-        "figs\\fig11_protocol_b_unseen_accuracy.svg",
-        "figs\\fig11_protocol_b_unseen_accuracy.tiff"
+        "figs\\fig11_protocol_b_unseen_accuracy.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_b_unseen_per_class.csv"
       ],
+      "font_profile": {
+        "figure": "fig11_protocol_b_unseen_accuracy.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.6,
+        "source_base_pt": 13.847533779961449,
+        "tick_pt": 10.80107634836993,
+        "legend_pt": 10.80107634836993,
+        "small_pt": 9.970224321572243,
+        "annotation_pt": 11.354977699568387,
+        "panel_label_pt": 13.155157090963376,
+        "emphasis_pt": 15.924663846955665,
+        "operator_pt": 22.84843073693639,
+        "table_pt": 12.185829726366075
+      },
       "note": ""
     },
     {
       "figure": "fig12_synthetic_degradation.pdf",
       "exports": [
         "figs\\fig12_synthetic_degradation.pdf",
-        "figs\\fig12_synthetic_degradation.svg",
-        "figs\\fig12_synthetic_degradation.tiff"
+        "figs\\fig12_synthetic_degradation.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
       ],
+      "font_profile": {
+        "figure": "fig12_synthetic_degradation.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.61,
+        "source_base_pt": 6.7424238532511485,
+        "tick_pt": 5.259090605535896,
+        "legend_pt": 5.259090605535896,
+        "small_pt": 5.0,
+        "annotation_pt": 5.5287875596659415,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.75378743123882,
+        "operator_pt": 11.124999357864395,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig13_synthetic_threshold_recovery.pdf",
       "exports": [
         "figs\\fig13_synthetic_threshold_recovery.pdf",
-        "figs\\fig13_synthetic_threshold_recovery.svg",
-        "figs\\fig13_synthetic_threshold_recovery.tiff"
+        "figs\\fig13_synthetic_threshold_recovery.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
       ],
+      "font_profile": {
+        "figure": "fig13_synthetic_threshold_recovery.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.63,
+        "source_base_pt": 6.758085697277284,
+        "tick_pt": 5.271306843876282,
+        "legend_pt": 5.271306843876282,
+        "small_pt": 5.0,
+        "annotation_pt": 5.541630271767373,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.771798551868876,
+        "operator_pt": 11.150841400507518,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig14_representative_rule_traces.pdf",
       "exports": [
         "figs\\fig14_representative_rule_traces.pdf",
-        "figs\\fig14_representative_rule_traces.svg",
-        "figs\\fig14_representative_rule_traces.tiff"
+        "figs\\fig14_representative_rule_traces.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_representative_traces.csv"
       ],
+      "font_profile": {
+        "figure": "fig14_representative_rule_traces.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.64,
+        "source_base_pt": 11.883116197222732,
+        "tick_pt": 9.268830633833732,
+        "legend_pt": 9.268830633833732,
+        "small_pt": 8.555843662000367,
+        "annotation_pt": 9.74415528172264,
+        "panel_label_pt": 11.288960387361595,
+        "emphasis_pt": 13.665583626806141,
+        "operator_pt": 19.607141725417506,
+        "table_pt": 10.457142253556004
+      },
       "note": ""
     },
     {
       "figure": "fig15_coverage_abstention_tradeoff.pdf",
       "exports": [
         "figs\\fig15_coverage_abstention_tradeoff.pdf",
-        "figs\\fig15_coverage_abstention_tradeoff.svg",
-        "figs\\fig15_coverage_abstention_tradeoff.tiff"
+        "figs\\fig15_coverage_abstention_tradeoff.svg"
       ],
       "sources": [
         "artifacts\\awa2\\coverage_abstention_tradeoff.csv"
       ],
+      "font_profile": {
+        "figure": "fig15_coverage_abstention_tradeoff.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.66,
+        "source_base_pt": 6.781578463316487,
+        "tick_pt": 5.28963120138686,
+        "legend_pt": 5.28963120138686,
+        "small_pt": 5.0,
+        "annotation_pt": 5.560894339919519,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.7988152328139595,
+        "operator_pt": 11.189604464472204,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig16_rule_stability_noise.pdf",
       "exports": [
         "figs\\fig16_rule_stability_noise.pdf",
-        "figs\\fig16_rule_stability_noise.svg",
-        "figs\\fig16_rule_stability_noise.tiff"
+        "figs\\fig16_rule_stability_noise.svg"
       ],
       "sources": [
         "artifacts\\awa2\\rule_stability_noise.csv"
       ],
+      "font_profile": {
+        "figure": "fig16_rule_stability_noise.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.67,
+        "source_base_pt": 13.960246264216948,
+        "tick_pt": 10.88899208608922,
+        "legend_pt": 10.88899208608922,
+        "small_pt": 10.051377310236203,
+        "annotation_pt": 11.447401936657897,
+        "panel_label_pt": 13.2622339510061,
+        "emphasis_pt": 16.05428320384949,
+        "operator_pt": 23.034406335957964,
+        "table_pt": 12.285016712510915
+      },
       "note": ""
     },
     {
       "figure": "fig17_results_dashboard.pdf",
       "exports": [
         "figs\\fig17_results_dashboard.pdf",
-        "figs\\fig17_results_dashboard.svg",
-        "figs\\fig17_results_dashboard.tiff"
+        "figs\\fig17_results_dashboard.svg"
       ],
       "sources": [
         "artifacts\\awa2\\base_predictor_metrics.json",
@@ -219,97 +466,211 @@
         "artifacts\\awa2\\protocol_b_zero_shot_metrics.json",
         "artifacts\\synthetic\\synthetic_summary.json"
       ],
+      "font_profile": {
+        "figure": "fig17_results_dashboard.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.69,
+        "source_base_pt": 11.951884230771473,
+        "tick_pt": 9.322469700001749,
+        "legend_pt": 9.322469700001749,
+        "small_pt": 8.60535664615546,
+        "annotation_pt": 9.800545069232607,
+        "panel_label_pt": 11.354290019232899,
+        "emphasis_pt": 13.744666865387194,
+        "operator_pt": 19.72060898077293,
+        "table_pt": 10.517658123078895
+      },
       "note": ""
     },
     {
       "figure": "fig18_sota_awA2_context.pdf",
       "exports": [
         "figs\\fig18_sota_awA2_context.pdf",
-        "figs\\fig18_sota_awA2_context.svg",
-        "figs\\fig18_sota_awA2_context.tiff"
+        "figs\\fig18_sota_awA2_context.svg"
       ],
       "sources": [
         "tables\\sota_quantitative_comparison.csv"
       ],
+      "font_profile": {
+        "figure": "fig18_sota_awA2_context.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.88,
+        "target_rendered_pt": 8.71,
+        "source_base_pt": 6.35568309110579,
+        "tick_pt": 5.0,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.3,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.309035554771659,
+        "operator_pt": 10.486877100324554,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig19_baseline_tradeoff_scatter.pdf",
       "exports": [
         "figs\\fig19_baseline_tradeoff_scatter.pdf",
-        "figs\\fig19_baseline_tradeoff_scatter.svg",
-        "figs\\fig19_baseline_tradeoff_scatter.tiff"
+        "figs\\fig19_baseline_tradeoff_scatter.svg"
       ],
       "sources": [
         "artifacts\\awa2\\symbolic_baselines_metrics.csv"
       ],
+      "font_profile": {
+        "figure": "fig19_baseline_tradeoff_scatter.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.78,
+        "target_rendered_pt": 8.72,
+        "source_base_pt": 7.178746764389501,
+        "tick_pt": 5.599422476223811,
+        "legend_pt": 5.599422476223811,
+        "small_pt": 5.168697670360441,
+        "annotation_pt": 5.886572346799391,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 8.255558779047925,
+        "operator_pt": 11.844932161242676,
+        "table_pt": 6.3172971526627615
+      },
       "note": ""
     },
     {
       "figure": "fig20_explainability_quality_matrix.pdf",
       "exports": [
         "figs\\fig20_explainability_quality_matrix.pdf",
-        "figs\\fig20_explainability_quality_matrix.svg",
-        "figs\\fig20_explainability_quality_matrix.tiff"
+        "figs\\fig20_explainability_quality_matrix.svg"
       ],
       "sources": [
         "artifacts\\awa2\\symbolic_baselines_metrics.csv"
       ],
+      "font_profile": {
+        "figure": "fig20_explainability_quality_matrix.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.73,
+        "source_base_pt": 14.056856965007379,
+        "tick_pt": 10.964348432705755,
+        "legend_pt": 10.964348432705755,
+        "small_pt": 10.120937014805312,
+        "annotation_pt": 11.52662271130605,
+        "panel_label_pt": 13.354014116757009,
+        "emphasis_pt": 16.165385509758483,
+        "operator_pt": 23.193813992262175,
+        "table_pt": 12.370034129206493
+      },
       "note": ""
     },
     {
       "figure": "fig21_rule_inference_flow_funnel.pdf",
       "exports": [
         "figs\\fig21_rule_inference_flow_funnel.pdf",
-        "figs\\fig21_rule_inference_flow_funnel.svg",
-        "figs\\fig21_rule_inference_flow_funnel.tiff"
+        "figs\\fig21_rule_inference_flow_funnel.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_rule_metrics.json",
         "artifacts\\awa2\\protocol_a_test_rule_predictions.csv"
       ],
+      "font_profile": {
+        "figure": "fig21_rule_inference_flow_funnel.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.75,
+        "source_base_pt": 14.089060531937522,
+        "tick_pt": 10.989467214911267,
+        "legend_pt": 10.989467214911267,
+        "small_pt": 10.144123582995014,
+        "annotation_pt": 11.553029636188766,
+        "panel_label_pt": 13.384607505340645,
+        "emphasis_pt": 16.20241961172815,
+        "operator_pt": 23.24694987769691,
+        "table_pt": 12.398373268105018
+      },
       "note": ""
     },
     {
       "figure": "fig22_synthetic_uncertainty_bands.pdf",
       "exports": [
         "figs\\fig22_synthetic_uncertainty_bands.pdf",
-        "figs\\fig22_synthetic_uncertainty_bands.svg",
-        "figs\\fig22_synthetic_uncertainty_bands.tiff"
+        "figs\\fig22_synthetic_uncertainty_bands.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
       ],
+      "font_profile": {
+        "figure": "fig22_synthetic_uncertainty_bands.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.82,
+        "target_rendered_pt": 8.76,
+        "source_base_pt": 6.859887683447162,
+        "tick_pt": 5.350712393088786,
+        "legend_pt": 5.350712393088786,
+        "small_pt": 5.0,
+        "annotation_pt": 5.625107900426672,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.888870835964235,
+        "operator_pt": 11.318814677687817,
+        "table_pt": 6.036701161433502
+      },
       "note": ""
     },
     {
       "figure": "fig23_protocol_b_perclass_errors.pdf",
       "exports": [
         "figs\\fig23_protocol_b_perclass_errors.pdf",
-        "figs\\fig23_protocol_b_perclass_errors.svg",
-        "figs\\fig23_protocol_b_perclass_errors.tiff"
+        "figs\\fig23_protocol_b_perclass_errors.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_b_unseen_per_class.csv"
       ],
+      "font_profile": {
+        "figure": "fig23_protocol_b_perclass_errors.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.86,
+        "target_rendered_pt": 8.78,
+        "source_base_pt": 6.555756526195468,
+        "tick_pt": 5.113490090432466,
+        "legend_pt": 5.2,
+        "small_pt": 5.0,
+        "annotation_pt": 5.375720351480283,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 7.539120005124788,
+        "operator_pt": 10.816998268222521,
+        "table_pt": 6.0
+      },
       "note": ""
     },
     {
       "figure": "fig24_attribute_salience_error_scatter.pdf",
       "exports": [
         "figs\\fig24_attribute_salience_error_scatter.pdf",
-        "figs\\fig24_attribute_salience_error_scatter.svg",
-        "figs\\fig24_attribute_salience_error_scatter.tiff"
+        "figs\\fig24_attribute_salience_error_scatter.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"
       ],
+      "font_profile": {
+        "figure": "fig24_attribute_salience_error_scatter.pdf",
+        "export_width_mm": 89,
+        "include_fraction": 0.8,
+        "target_rendered_pt": 8.79,
+        "source_base_pt": 7.055464960723521,
+        "tick_pt": 5.5032626693643465,
+        "legend_pt": 5.5032626693643465,
+        "small_pt": 5.079934771720935,
+        "annotation_pt": 5.785481267793287,
+        "panel_label_pt": 7.0,
+        "emphasis_pt": 8.113784704832048,
+        "operator_pt": 11.641517185193809,
+        "table_pt": 6.208809165436699
+      },
       "note": ""
     }
   ],
   "notes": [
     "PDF filenames are retained for manuscript compatibility.",
-    "SVG and TIFF companion exports use matching stems.",
+    "SVG companion exports use matching stems; TIFF export is intentionally omitted.",
+    "82_fig_1_orig.pdf/svg is a vector replacement for the manuscript framework figure; the original JPG is retained as source/archive.",
     "fig04 uses the audited retained variance total because per-component SVD variance was not stored in public artifacts."
   ]
 }

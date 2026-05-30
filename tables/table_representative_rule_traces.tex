@@ -1,0 +1,16 @@
+\begin{table}[H]
+\caption{Representative rule inference traces with object ID, prediction, matched rule evidence, and antecedent states.\label{tab:traces}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\scriptsize
+\begin{tabularx}{\fulllength}{lrrlllrrX}
+\toprule
+Case & Object & True & Pred. & Mode & Rule & Support & Conf. & Antecedent states \\
+\midrule
+correct exact & 5083 & collie & collie & exact & R0027 & 1675 & 0.208 & stripes=s0; hooves=s0; swims=s1; paws=s3; longneck=s0; hunter=s1; ocean=s1; quadrapedal=s3 \\
+abstention & 24024 & ox & abstain & exact & R0029 & 2820 & 0.195 & stripes=s0; hooves=s2; swims=s1; paws=s0; longneck=s1; hunter=s0; ocean=s1; quadrapedal=s2 \\
+fallback error or boundary & 16781 & hamster & mole & fallback & -- & -- & -- & stripes=s0; hooves=s1; swims=s1; paws=s2; longneck=s0; hunter=s0; ocean=s1; quadrapedal=s2 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

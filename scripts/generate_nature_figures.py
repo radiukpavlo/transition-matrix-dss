@@ -500,14 +500,14 @@ class NatureFigureGenerator:
         df = pd.read_csv(self.source("artifacts", "awa2", "symbolic_baselines_metrics.csv"))
         fig, ax = plt.subplots(figsize=nature_size(89, 66))
         sizes = np.clip(df["rule_count"], 28, 180)
-        ax.scatter(df["coverage"], df["accuracy_covered"], s=sizes, color=[PALETTE["teal"], PALETTE["blue"], PALETTE["orange"]][: len(df)], alpha=0.78, edgecolor=PALETTE["black"], linewidth=0.35)
+        ax.scatter(df["coverage"], df["covered_fidelity_to_base"], s=sizes, color=[PALETTE["teal"], PALETTE["blue"], PALETTE["orange"]][: len(df)], alpha=0.78, edgecolor=PALETTE["black"], linewidth=0.35)
         offsets = [(-22, 14), (-60, -18), (10, 10)]
         for offset, (_, row) in zip(offsets, df.iterrows()):
-            ax.annotate(clean_label(format_method(row["method"]), 14), (row["coverage"], row["accuracy_covered"]), xytext=offset, textcoords="offset points", fontsize=profile.annotation_pt, arrowprops=dict(arrowstyle="-", linewidth=0.45, color=PALETTE["mid"]))
-        ax.set_xlabel("Coverage")
-        ax.set_ylabel("Accuracy on covered cases")
+            ax.annotate(clean_label(format_method(row["method"]), 14), (row["coverage"], row["covered_fidelity_to_base"]), xytext=offset, textcoords="offset points", fontsize=profile.annotation_pt, arrowprops=dict(arrowstyle="-", linewidth=0.45, color=PALETTE["mid"]))
+        ax.set_xlabel(r"Rulebook Coverage ($\mathrm{Cov}$)")
+        ax.set_ylabel(r"Covered Fidelity ($\mathrm{F}_{\text{cov}}$)")
         ax.set_xlim(0, 1.04)
-        ax.set_ylim(0, max(df["accuracy_covered"]) + 0.12)
+        ax.set_ylim(0, max(df["covered_fidelity_to_base"]) + 0.12)
         style_axis(ax, "y")
         self.save(fig, "fig19_baseline_tradeoff_scatter.pdf", [self.source("artifacts", "awa2", "symbolic_baselines_metrics.csv")])
 

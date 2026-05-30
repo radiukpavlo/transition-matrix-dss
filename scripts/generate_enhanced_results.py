@@ -325,7 +325,7 @@ def fig_baseline_tradeoff(root: Path) -> None:
     sym = pd.read_csv(root / "artifacts/awa2/symbolic_baselines_metrics.csv")
     fig, ax = plt.subplots(figsize=(7.2, 5.2))
     sizes = np.clip(sym["rule_count"].to_numpy(), 20, 220)
-    ax.scatter(sym["coverage"], sym["accuracy_covered"], s=sizes, alpha=0.75)
+    ax.scatter(sym["coverage"], sym["covered_fidelity_to_base"], s=sizes, alpha=0.75)
     label_map = {
         "Proposed rough-set rulebook": ("Rough-set", (-62, -16)),
         "CART decision tree": ("CART", (-28, 12)),
@@ -333,12 +333,12 @@ def fig_baseline_tradeoff(root: Path) -> None:
     }
     for _, r in sym.iterrows():
         label, offset = label_map.get(r["method"], (str(r["method"]), (4, 4)))
-        ax.annotate(label, (r["coverage"], r["accuracy_covered"]), xytext=offset, textcoords="offset points", fontsize=8, arrowprops=dict(arrowstyle="-", linewidth=0.5, alpha=0.5))
-    ax.set_xlabel("Coverage")
-    ax.set_ylabel("Accuracy on covered cases")
-    ax.set_title("Symbolic baseline tradeoff: coverage versus covered-case accuracy")
+        ax.annotate(label, (r["coverage"], r["covered_fidelity_to_base"]), xytext=offset, textcoords="offset points", fontsize=8, arrowprops=dict(arrowstyle="-", linewidth=0.5, alpha=0.5))
+    ax.set_xlabel(r"Rulebook Coverage ($\mathrm{Cov}$)")
+    ax.set_ylabel(r"Covered Fidelity ($\mathrm{F}_{\text{cov}}$)")
+    ax.set_title("Symbolic baseline tradeoff: coverage versus covered fidelity")
     ax.set_xlim(0, 1.05)
-    ax.set_ylim(0, max(sym["accuracy_covered"]) + 0.12)
+    ax.set_ylim(0, max(sym["covered_fidelity_to_base"]) + 0.12)
     style_axes(ax)
     savefig(figs / "fig19_baseline_tradeoff_scatter.pdf")
 

@@ -1,0 +1,39 @@
+dataset,artifact,metric,unit,n,mean,ci_low,ci_high,n_boot,note
+awa2,awa2/awa2_protocol_a_seedwise.csv,coverage,seed,5,0.8480107166778298,0.8042866711319491,0.8855123911587408,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,covered_accuracy,seed,5,0.3972928762238557,0.38826769493017943,0.4051545552042227,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,covered_fidelity_to_base,seed,5,0.4048344197979127,0.3984629456959158,0.41128648924854944,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,all_object_accuracy,seed,5,0.3372538513060951,0.31504353650368383,0.3587066309444072,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,conflict_rate,seed,5,0.1375217682518419,0.09819156061620893,0.17935833891493633,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,abstention_rate,seed,5,0.15198928332217013,0.11265907568653714,0.1930609511051574,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_protocol_a_seedwise.csv,test_mae,seed,5,0.1028752994416913,0.10245269127884457,0.1032672622564655,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,coverage,seed,1,0.075968992248062,0.075968992248062,0.075968992248062,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,covered_accuracy,seed,1,0.0714285714285714,0.0714285714285714,0.0714285714285714,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,covered_fidelity_to_base,seed,1,0.0918367346938775,0.0918367346938775,0.0918367346938775,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,all_object_accuracy,seed,1,0.0054263565891472,0.0054263565891472,0.0054263565891472,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,conflict_rate,seed,1,0.9236434108527132,0.9236434108527132,0.9236434108527132,1000,seed-wise nonparametric bootstrap over completed v1 runs
+sun,sun/sun_rulebook_seedwise.csv,abstention_rate,seed,1,0.924031007751938,0.924031007751938,0.924031007751938,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,coverage,seed,1,0.9240506329113924,0.9240506329113924,0.9240506329113924,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,covered_accuracy,seed,1,0.421917808219178,0.421917808219178,0.421917808219178,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,covered_fidelity_to_base,seed,1,0.5287671232876713,0.5287671232876713,0.5287671232876713,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,all_object_accuracy,seed,1,0.389873417721519,0.389873417721519,0.389873417721519,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,conflict_rate,seed,1,0.0050632911392405,0.0050632911392405,0.0050632911392405,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,abstention_rate,seed,1,0.0759493670886075,0.0759493670886075,0.0759493670886075,1000,seed-wise nonparametric bootstrap over completed v1 runs
+derm7pt,derm7pt/derm7pt_rulebook_seedwise.csv,test_mae,seed,1,0.2433048374281725,0.2433048374281725,0.2433048374281725,1000,seed-wise nonparametric bootstrap over completed v1 runs
+awa2,awa2/awa2_rule_predictions_seed42.csv,coverage,object,7465,0.8468854655056932,0.839511051574012,0.8547890154052243,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+awa2,awa2/awa2_rule_predictions_seed42.csv,abstention_rate,object,7465,0.15311453449430676,0.14534494306764903,0.16128600133958473,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+awa2,awa2/awa2_rule_predictions_seed42.csv,conflict_rate,object,7465,0.13784326858673812,0.1302076356329538,0.14588077695914267,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+awa2,awa2/awa2_rule_predictions_seed42.csv,fallback_rate,object,7465,0.09296718017414601,0.08720696584058941,0.10007032819825853,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+awa2,awa2/awa2_rule_predictions_seed42.csv,exact_rate,object,7465,0.9070328198258539,0.9000669792364367,0.9135967849966511,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+awa2,awa2/awa2_rule_predictions_seed42.csv,n_activated,object,7465,4.025987943737442,3.962742799732083,4.086413261888815,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,coverage,object,2580,0.07596899224806201,0.06627906976744186,0.08643410852713178,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,abstention_rate,object,2580,0.924031007751938,0.9143313953488372,0.9341182170542636,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,conflict_rate,object,2580,0.9236434108527132,0.9131782945736434,0.9337306201550387,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,fallback_rate,object,2580,0.01434108527131783,0.010077519379844961,0.018992248062015504,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,exact_rate,object,2580,0.9856589147286822,0.9806201550387597,0.9899321705426357,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+sun,sun/sun_rule_predictions.csv,n_activated,object,2580,72.54031007751938,69.7781492248062,75.06077519379845,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,coverage,object,395,0.9240506329113924,0.8962025316455696,0.9468354430379747,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,abstention_rate,object,395,0.0759493670886076,0.053101265822784814,0.10132911392405057,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,conflict_rate,object,395,0.005063291139240506,0.0,0.012658227848101266,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,fallback_rate,object,395,0.4708860759493671,0.4227215189873417,0.5215189873417722,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,exact_rate,object,395,0.529113924050633,0.4809493670886076,0.579746835443038,1000,object-level bootstrap for prediction-state metrics available in v1 predictions
+derm7pt,derm7pt/derm7pt_rule_predictions.csv,n_activated,object,395,0.6278481012658228,0.5670253164556962,0.6936708860759494,1000,object-level bootstrap for prediction-state metrics available in v1 predictions

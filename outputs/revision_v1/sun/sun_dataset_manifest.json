@@ -1,0 +1,12 @@
+{
+  "n_attributes": 102,
+  "n_classes": 717,
+  "n_objects": 14340,
+  "official_database_note": "SUN Attribute Database reports 102 attributes and 14,340 images; this xlsa17 release exposes 717 scene class entries.",
+  "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\xlsa17\\data\\SUN",
+  "split_source": "xlsa17 proposed splits",
+  "test_seen_objects": 2580,
+  "test_unseen_objects": 1440,
+  "train_objects": 9280,
+  "validation_objects": 1040
+}

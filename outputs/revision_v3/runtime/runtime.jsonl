@@ -1,0 +1,14 @@
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 13.255867958068848, "seed": 42, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 12.180939197540283, "seed": 43, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 11.141351699829102, "seed": 44, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 11.793910503387451, "seed": 45, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 10.210449695587158, "seed": 46, "status": "ok"}
+{"dataset": "SUN", "phase": "v3_enhanced_seen_test", "seconds": 31.341065168380737, "seed": 42, "status": "ok"}
+{"dataset": "Derm7pt", "phase": "v3_resnet50_rulebook", "seconds": 267.19171619415283, "seed": 42, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 15.581461906433105, "seed": 42, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 15.069995641708374, "seed": 43, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 16.096025705337524, "seed": 44, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 14.090384721755981, "seed": 45, "status": "ok"}
+{"dataset": "AwA2", "phase": "v3_enhanced_protocol_a", "seconds": 13.745457649230957, "seed": 46, "status": "ok"}
+{"dataset": "SUN", "phase": "v3_enhanced_seen_test", "seconds": 34.28434896469116, "seed": 42, "status": "ok"}
+{"dataset": "Derm7pt", "phase": "v3_resnet50_rulebook", "seconds": 1.3298518657684326, "seed": 42, "status": "ok"}

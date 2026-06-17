@@ -1,0 +1,232 @@
+{
+  "bundle_root": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle",
+  "downloaded_model_weights_excluded": true,
+  "files": [
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\manuscript\\main.tex",
+      "role": "manuscript_source",
+      "sha256": "ea4eef4ff919a952701796f469c697315fab3c8444f98e00669062157ce6ff9b",
+      "size": 100412
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\manuscript\\supply.tex",
+      "role": "manuscript_source",
+      "sha256": "873169651197742cea59542a3a0164ad37489e5945d1c69423a0d26635afd6b0",
+      "size": 10680
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\manuscript\\references.bib",
+      "role": "manuscript_source",
+      "sha256": "61fe5b2332fcdf574b66372a679a263584f88995f86aa4300bbc3eccf6f1b2af",
+      "size": 18995
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_bat_diagnostic.tex",
+      "role": "generated_table_v1",
+      "sha256": "027ad1a3805118c35720b281fee5a5e903551938cf2b8722963ff3700b4a52a3",
+      "size": 337
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_cross_domain_generalization.tex",
+      "role": "generated_table_v1",
+      "sha256": "66eeeca9ed90575aef4651a9487dbc670db3e9e9383ffdff072a6cf3599ca1bd",
+      "size": 824
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_derm7pt_summary.tex",
+      "role": "generated_table_v1",
+      "sha256": "ec0dc5f2688d8663d602484a509afc4d427086498e2208480d5d06107bb2dec3",
+      "size": 410
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_discretizer_comparison_main.tex",
+      "role": "generated_table_v1",
+      "sha256": "804830190e15677001c6ae13b5e7c910c52f0fb1844c9ea6226765e92c2e8451",
+      "size": 646
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_protocol_b_seedwise.tex",
+      "role": "generated_table_v1",
+      "sha256": "57bf50d1caed35ef9060fa9f1632b0c73549f6158a7f9411d4fcd8c66a73f2ef",
+      "size": 455
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_q_sensitivity.tex",
+      "role": "generated_table_v1",
+      "sha256": "cedc094d2f268fdc5a7b5c4c071f490d92af693ff1527b442ca6480a0278ff1e",
+      "size": 541
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_runtime_breakdown.tex",
+      "role": "generated_table_v1",
+      "sha256": "ae1298cea122410fcb439843c6350f1854010e202736566bb9146622842aed8a",
+      "size": 845
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_sun_summary.tex",
+      "role": "generated_table_v1",
+      "sha256": "9975a8449a7c3e72f26890b54f148a1c5e20c6adf7803e646bdc15d1b881c1b7",
+      "size": 409
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v1\\tables\\table_svd_rank_sensitivity.tex",
+      "role": "generated_table_v1",
+      "sha256": "8afdf689891994ed4e1fb0eadf864904836bf80b08ae22b7c78b15dd107ff10b",
+      "size": 525
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v3\\tables\\table_derm7pt_v3_resnet_summary.tex",
+      "role": "generated_table_v3",
+      "sha256": "ae5d4dae700a43ee12067550a7ddea107a552dde6358bf9c09a0ca5cdb98593c",
+      "size": 465
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v3\\tables\\table_sun_v3_category_diagnostics.tex",
+      "role": "generated_table_v3",
+      "sha256": "cab486184309e43fff8f1e6b9469e7f6aa7ae35f79d667da97c0567473df2013",
+      "size": 542
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v3\\tables\\table_v3_object_level_intervals.tex",
+      "role": "generated_table_v3",
+      "sha256": "24de0c7b1615f2722435490a4e81566a12dfbba376549c5313ea6b1225ea0c5c",
+      "size": 1618
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\main.pdf",
+      "role": "latex_output",
+      "sha256": "a9a3cd82c63f1ab525153f6737324fb058ca25451fae89895b7b260034dde6b3",
+      "size": 10758455
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\main.log",
+      "role": "latex_output",
+      "sha256": "5c94c2d12f9eb4759c51df1ae04e0dd3884c12422f0a0fd4eae9e13fe6440091",
+      "size": 81414
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\main.bbl",
+      "role": "latex_output",
+      "sha256": "14e9b8cbdb51c5d36700229cb0e80b4483b55c569571dd1e91964b5bdce4b645",
+      "size": 16198
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\main.blg",
+      "role": "latex_output",
+      "sha256": "e03d632f54071272bb6208ee083716efdb357d1d270301fb5339495c91c7f4f8",
+      "size": 1068
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\supply.pdf",
+      "role": "latex_output",
+      "sha256": "35b5a0200aef6027241e10f5834052d4cdf98089d75a095dc69c68157017cda8",
+      "size": 114164
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\supply.log",
+      "role": "latex_output",
+      "sha256": "3f929c28cb62251a55c34e67c49ee228cedbe9e4055f82ba0f8a887150943292",
+      "size": 58312
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\supply.bbl",
+      "role": "latex_output",
+      "sha256": "b3ba90103f97aab32fcba590a26fe2f3cc7ebc9bb9f4cb6118654645f3ba4a1f",
+      "size": 1872
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\latex\\supply.blg",
+      "role": "latex_output",
+      "sha256": "ec95a1d07b6e452b451868fbabb72cf6b456107b562bbedb38b5a1ab354fa9d3",
+      "size": 1037
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v3\\manifest_revision_v3.json",
+      "role": "v3_index",
+      "sha256": "d4b7b6a0a32bc38ee6cf2e20a4a4b91a406932044c16ee675c27bb2613cd4de2",
+      "size": 26714
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\outputs\\revision_v3\\artifact_index_revision_v3.csv",
+      "role": "v3_index",
+      "sha256": "8748773d8411d7556664bcb246c1f929f39ad75bf04e25ccf489e988bfc77f89",
+      "size": 16820
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig01_semtra.jpg",
+      "role": "referenced_figure",
+      "sha256": "0d19515accfb713ffc3f6e358e9faadcd6c42f6ed05e831edd56a3423eb182e2",
+      "size": 7860746
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig05_transition_salience.pdf",
+      "role": "referenced_figure",
+      "sha256": "5a024418165f444bd27f965f6a1fa795605bdf63b314079219de87ab98ef303e",
+      "size": 25635
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig06_attribute_error.pdf",
+      "role": "referenced_figure",
+      "sha256": "9492e09ce93d8e6c1bc9f52f82324a63946dab83678517cd6562dab5884f37b5",
+      "size": 26705
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig24_attribute_salience_error_scatter.pdf",
+      "role": "referenced_figure",
+      "sha256": "9c313ede1c83019c34e6ed92b1d8161a6752244cefd5c56f5cdfab6aee05301c",
+      "size": 27321
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig19_baseline_tradeoff_scatter.pdf",
+      "role": "referenced_figure",
+      "sha256": "7352220112d6edcbbd4009fc54e27e713bde1f0903585e017b2041f8a8921dcd",
+      "size": 33149
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig07_wedd_threshold_example.pdf",
+      "role": "referenced_figure",
+      "sha256": "fd973d45f1e083dbaaffd48706187e6d02a24fb9f498a00929343eaf7b20b821",
+      "size": 27900
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig09_rule_support_confidence.pdf",
+      "role": "referenced_figure",
+      "sha256": "8929afb908f2b0c1429e7f52aea4cb6227133de2eee0d223c7cf9aceecfbaf5d",
+      "size": 30824
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig15_coverage_abstention_tradeoff.pdf",
+      "role": "referenced_figure",
+      "sha256": "b45280a37c59422a4d2c070b30125be2aa0c4f05a792f06271bbb1dcda0008c9",
+      "size": 27442
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig05_use-case.jpg",
+      "role": "referenced_figure",
+      "sha256": "1e3d9f7b248a66428dfc39f84cc2e6de1be32719209e0134c84fe52a202f7e5d",
+      "size": 2260875
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig22_synthetic_uncertainty_bands.pdf",
+      "role": "referenced_figure",
+      "sha256": "1685ecc0e50f41186f326090ea67185b3acc7902cedadda97de56987da4f9d1c",
+      "size": 28300
+    },
+    {
+      "path": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\submission_bundle\\figs\\fig13_synthetic_threshold_recovery.pdf",
+      "role": "referenced_figure",
+      "sha256": "ab277df12715589281f4d448ee9c86eb51d6d782d5d3caa99bfa2dd1f307891f",
+      "size": 24774
+    }
+  ],
+  "generated_at": "2026-06-17T11:45:19Z",
+  "raw_private_data_excluded": true,
+  "required_present": {
+    "main_pdf": true,
+    "main_tex": true,
+    "references_bib": true,
+    "supply_pdf": true,
+    "supply_tex": true,
+    "v3_tables": 3
+  }
+}

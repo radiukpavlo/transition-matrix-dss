@@ -1,0 +1,2 @@
+dataset,seed,scope,coverage,abstention_rate,conflict_rate,fallback_rate,exact_rate,covered_accuracy,covered_macro_f1,all_object_accuracy,rule_count,granule_count,mean_rule_length,mean_rule_confidence,threshold_count,covered_fidelity_to_base,all_object_fidelity_to_base,seconds
+SUN,42,closed_world_seen_test,0.07596899224806201,0.924031007751938,0.9236434108527132,0.01434108527131783,0.9856589147286822,0.07142857142857142,0.0071720527534481025,0.005426356589147287,580,7248,4.008620689655173,0.026197630642971193,54,0.09183673469387756,0.0069767441860465115,32.277761697769165

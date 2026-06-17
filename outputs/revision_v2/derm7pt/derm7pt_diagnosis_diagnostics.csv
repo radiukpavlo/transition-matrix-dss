@@ -1,0 +1,8 @@
+group,n_cases,coverage,covered_accuracy,covered_fidelity,conflict_rate,abstention_rate,fallback_rate,exact_rate,note
+basal_cell_carcinoma,16,0.875,0.07142857142857142,,0.0625,0.125,0.3125,0.6875,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+dermatofibroma,7,1.0,0.0,,0.0,0.0,0.0,1.0,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+melanoma,101,0.8514851485148515,0.20930232558139536,,0.0,0.1485148514851485,0.6435643564356436,0.3564356435643564,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+nevus,219,0.958904109589041,0.6095238095238096,,0.0045662100456621,0.0410958904109589,0.4246575342465753,0.5753424657534246,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+other,20,0.95,0.15789473684210525,,0.0,0.05,0.35,0.65,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+seborrheic_keratosis,19,0.8421052631578947,0.125,,0.0,0.15789473684210525,0.42105263157894735,0.5789473684210527,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels
+vascular_lesion,13,1.0,0.15384615384615385,,0.0,0.0,0.6153846153846154,0.38461538461538464,retrospective technical validation diagnostic; covered_fidelity omitted because v1 predictions do not include base-model labels

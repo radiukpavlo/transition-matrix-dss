@@ -1,0 +1,68 @@
+{
+  "concept_columns": [
+    "pigment_network",
+    "streaks",
+    "pigmentation",
+    "regression_structures",
+    "dots_and_globules",
+    "blue_whitish_veil",
+    "vascular_structures"
+  ],
+  "concept_encoding": "categorical values encoded on full metadata and scaled to [0,1]; missing values encoded as an explicit category",
+  "concept_maps": {
+    "blue_whitish_veil": {
+      "absent": 0,
+      "present": 1
+    },
+    "dots_and_globules": {
+      "absent": 0,
+      "irregular": 1,
+      "regular": 2
+    },
+    "pigment_network": {
+      "absent": 0,
+      "atypical": 1,
+      "typical": 2
+    },
+    "pigmentation": {
+      "absent": 0,
+      "diffuse irregular": 1,
+      "diffuse regular": 2,
+      "localized irregular": 3,
+      "localized regular": 4
+    },
+    "regression_structures": {
+      "absent": 0,
+      "blue areas": 1,
+      "combinations": 2,
+      "white areas": 3
+    },
+    "streaks": {
+      "absent": 0,
+      "irregular": 1,
+      "regular": 2
+    },
+    "vascular_structures": {
+      "absent": 0,
+      "arborizing": 1,
+      "comma": 2,
+      "dotted": 3,
+      "hairpin": 4,
+      "linear irregular": 5,
+      "within regression": 6,
+      "wreath": 7
+    }
+  },
+  "diagnosis_grouping": "melanoma variants collapsed to melanoma; nevus variants collapsed to nevus; infrequent diagnoses grouped as other unless named major category",
+  "generated_at": "2026-06-16T17:28:20Z",
+  "image_modality": "dermoscopic image path from derm column",
+  "n_cases": 1011,
+  "n_grouped_diagnosis_classes": 7,
+  "n_images_missing_or_unreadable": 0,
+  "official_split_sizes": {
+    "test": 395,
+    "train": 413,
+    "val": 203
+  },
+  "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\Derm7pt"
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "SUN class/category-level stress-test diagnostics.",
+  "family": "sun_diagnostics",
+  "format": "csv",
+  "required_columns": [
+    "class_index",
+    "class_name",
+    "n_objects",
+    "coverage",
+    "covered_accuracy",
+    "covered_fidelity",
+    "conflict_rate",
+    "abstention_rate"
+  ],
+  "semtra_revision": "2.0"
+}

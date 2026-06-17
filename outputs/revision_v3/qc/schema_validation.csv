@@ -1,0 +1,10 @@
+family,artifact,status,detail
+enhanced_prediction,outputs/revision_v3/awa2/awa2_rule_predictions_enhanced_seed42.csv,pass,
+enhanced_prediction,outputs/revision_v3/sun/sun_rule_predictions_enhanced.csv,pass,
+enhanced_prediction,outputs/revision_v3/derm7pt/derm7pt_rule_predictions_enhanced.csv,pass,
+object_level_bootstrap,outputs/revision_v3/statistics/object_level_bootstrap_intervals.csv,pass,
+object_level_metric_summary,outputs/revision_v3/statistics/object_level_metric_summary.csv,pass,
+sun_metadata,outputs/revision_v3/sun/sun_image_metadata.csv,pass,
+sun_category_diagnostics,outputs/revision_v3/sun/sun_category_diagnostics_v3.csv,pass,
+derm_diagnosis_diagnostics,outputs/revision_v3/derm7pt/derm7pt_diagnosis_diagnostics_v3.csv,pass,
+derm_encoder_manifest,outputs/revision_v3/derm7pt/derm7pt_encoder_manifest.json,pass,

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Traceable list of files included in the clean submission bundle.",
+  "family": "submission_bundle_manifest",
+  "format": "json",
+  "required_keys": [
+    "generated_at",
+    "bundle_root",
+    "files",
+    "raw_private_data_excluded"
+  ],
+  "semtra_revision": "2.0"
+}

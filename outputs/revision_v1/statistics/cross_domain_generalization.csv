@@ -1,0 +1,5 @@
+dataset,scope,objects,attributes,transition_mae,coverage,covered_fidelity,covered_accuracy,status
+AwA2,Protocol A closed-world audit,7465,85,0.10287529944169131,0.8480107166778298,0.4048344197979127,0.39729287622385573,completed
+AwA2 Protocol B,official xlsa17 semantic-transfer validation,7913,85,0.18877985682939885,,,0.4401870339946923,completed; semantic-transfer metric only
+SUN,xlsa17 SUN unseen transfer and seen-test audit,1440,102,0.06829570243753186,0.07596899224806201,0.09183673469387756,0.07142857142857142,completed with xlsa17 SUN release
+Derm7pt,official test split; retrospective technical validation,395,7,0.24330483742817255,0.9240506329113924,0.5287671232876713,0.42191780821917807,completed; not clinical validation

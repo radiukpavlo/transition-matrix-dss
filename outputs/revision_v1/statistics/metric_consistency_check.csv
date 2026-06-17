@@ -1,0 +1,9 @@
+claim,artifact,value,status
+abstract_awA2_test_mae,D:\GitHub\transition-matrix-dss\outputs\revision_v1\awa2\awa2_protocol_a_summary.csv,0.1029 +/- 0.0005,matched
+abstract_awA2_coverage_percent,D:\GitHub\transition-matrix-dss\outputs\revision_v1\awa2\awa2_protocol_a_summary.csv,84.80,matched
+abstract_awA2_covered_accuracy_percent,D:\GitHub\transition-matrix-dss\outputs\revision_v1\awa2\awa2_protocol_a_summary.csv,39.73,matched
+abstract_awA2_covered_fidelity_percent,D:\GitHub\transition-matrix-dss\outputs\revision_v1\awa2\awa2_protocol_a_summary.csv,40.48,matched
+abstract_protocol_b_accuracy_percent,D:\GitHub\transition-matrix-dss\outputs\revision_v1\awa2\awa2_protocol_b_seedwise.csv,44.02 +/- 1.22,matched
+abstract_synthetic_zero_noise_macro_f1,D:\GitHub\transition-matrix-dss\outputs\revision_v1\synthetic\synthetic_summary.json,0.8788,matched
+abstract_synthetic_high_noise_macro_f1,D:\GitHub\transition-matrix-dss\outputs\revision_v1\synthetic\synthetic_summary.json,0.8381,matched
+abstract_synthetic_mean_macro_f1,D:\GitHub\transition-matrix-dss\outputs\revision_v1\synthetic\synthetic_summary.json,0.8668,matched

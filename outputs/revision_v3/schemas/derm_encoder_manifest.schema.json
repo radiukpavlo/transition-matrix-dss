@@ -1,0 +1,11 @@
+{
+  "format": "json",
+  "required_keys": [
+    "encoder",
+    "weights",
+    "feature_dim",
+    "n_cases",
+    "feature_sha256"
+  ],
+  "semtra_revision": "3.0"
+}

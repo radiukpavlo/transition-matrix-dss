@@ -1,0 +1,19 @@
+{
+  "artifact_root": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v1",
+  "claim_gate": {
+    "derm7pt_claimable": true,
+    "sun_claimable": true,
+    "synthetic_claimable": true
+  },
+  "generated_at": "2026-06-16T17:28:20Z",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "seed_request": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "smoke_mode": false
+}

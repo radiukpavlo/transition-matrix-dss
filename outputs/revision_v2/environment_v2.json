@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-06-16T21:30:18Z",
+  "git_rev_parse_head": "42a4ba98f63ff281418de6bd4bcef24da1ee6430",
+  "git_status": "M data/README.md\n M figs/fig01_semtra.jpg\n M requirements.txt\n D revision_report.md\n?? implementation_strategy_v1.md\n?? implementation_strategy_v2.md\n?? outputs/\n?? reports/\n?? revision_report_v2.md\n?? scripts/run_revision_v1.py\n?? scripts/run_revision_v2.py\n?? scripts/semtra_revision.ps1",
+  "package_versions": {
+    "Pillow": "12.2.0",
+    "h5py": "3.16.0",
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pyarrow": "24.0.0",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "semtra_revision": "2.0",
+  "v1_root": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v1",
+  "v2_root": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v2"
+}

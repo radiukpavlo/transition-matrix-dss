@@ -1,0 +1,7 @@
+{"dataset": "SUN", "phase": "transition_and_rulebook", "seconds": 11.561664819717407, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 10, "seconds": 7.686663389205933, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 20, "seconds": 10.16656231880188, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 40, "seconds": 16.99972367286682, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 60, "seconds": 24.269052028656006, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 80, "seconds": 33.288580894470215, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 102, "seconds": 39.616204261779785, "seed": 42}

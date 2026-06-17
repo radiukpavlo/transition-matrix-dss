@@ -1,0 +1,2 @@
+class_index,class_name,n_objects,prototype_accuracy,symbolic_template_accuracy,mean_hamming,diagnostic_interpretation
+29,bat,383,0.007832898172323759,0.05483028720626632,0.3829416884247171,Semantic-transfer rupture: the frozen feature representation and AwA2 attribute dictionary do not support stable continuous or symbolic transfer for this unseen class.

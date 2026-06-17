@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Dataset provenance, scope, split, and status manifest.",
+  "family": "dataset_manifest",
+  "format": "json",
+  "recommended_keys": [
+    "dataset",
+    "status"
+  ],
+  "required_keys": [
+    "source"
+  ],
+  "semtra_revision": "2.0"
+}

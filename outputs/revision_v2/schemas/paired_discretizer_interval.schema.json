@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Paired bootstrap intervals for WEDD-minus-MDLP seed-wise differences.",
+  "family": "paired_discretizer_interval",
+  "format": "csv",
+  "required_columns": [
+    "metric",
+    "n_pairs",
+    "mean_difference_wedd_minus_mdlp",
+    "ci_low",
+    "ci_high",
+    "n_boot",
+    "note"
+  ],
+  "semtra_revision": "2.0"
+}

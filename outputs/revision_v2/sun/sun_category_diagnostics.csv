@@ -1,0 +1,646 @@
+class_index,class_name,n_objects,coverage,covered_accuracy,covered_fidelity,conflict_rate,abstention_rate,fallback_rate,exact_rate,mean_n_activated,scope,note
+0,abbey,4,0.0,,,1.0,1.0,0.0,1.0,37.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+1,access road,4,0.0,,,1.0,1.0,0.0,1.0,20.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+2,airfield,4,0.0,,,1.0,1.0,0.0,1.0,25.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+4,airplane cabin,4,0.0,,,1.0,1.0,0.0,1.0,133.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+5,airport airport,4,0.0,,,1.0,1.0,0.0,1.0,8.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+6,airport entrance,4,0.0,,,1.0,1.0,0.0,1.0,44.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+7,airport terminal,4,0.0,,,1.0,1.0,0.0,1.0,123.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+8,airport ticket counter,4,0.25,0.0,,0.75,0.75,0.25,0.75,81.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+9,alcove,4,0.0,,,1.0,1.0,0.0,1.0,145.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+11,amphitheater,4,0.25,0.0,,0.75,0.75,0.0,1.0,45.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+12,amusement arcade,4,0.0,,,1.0,1.0,0.0,1.0,177.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+13,amusement park,4,0.0,,,1.0,1.0,0.0,1.0,24.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+14,anechoic chamber,4,0.0,,,1.0,1.0,0.0,1.0,106.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+15,apartment building outdoor,4,0.0,,,1.0,1.0,0.0,1.0,28.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+16,apse indoor,4,0.5,0.0,,0.5,0.5,0.0,1.0,55.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+17,apse outdoor,4,0.0,,,1.0,1.0,0.0,1.0,55.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+18,aquarium,4,0.75,0.0,,0.25,0.25,0.5,0.5,0.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+19,aquatic theater,4,0.25,1.0,,0.75,0.75,0.0,1.0,21.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+20,aqueduct,4,0.0,,,1.0,1.0,0.0,1.0,20.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+21,arch,4,0.25,0.0,,0.75,0.75,0.0,1.0,12.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+22,archaelogical excavation,4,0.25,0.0,,0.75,0.75,0.0,1.0,21.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+25,arena hockey,4,0.0,,,1.0,1.0,0.0,1.0,14.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+26,arena performance,4,0.25,0.0,,0.75,0.75,0.0,1.0,66.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+27,armory,4,0.0,,,1.0,1.0,0.0,1.0,210.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+28,arrival gate outdoor,4,0.25,1.0,,0.75,0.75,0.0,1.0,35.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+29,art gallery,4,0.0,,,1.0,1.0,0.0,1.0,142.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+30,art school,4,0.25,0.0,,0.75,0.75,0.0,1.0,146.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+31,art studio,4,0.0,,,1.0,1.0,0.0,1.0,121.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+33,assembly line,4,0.0,,,1.0,1.0,0.0,1.0,124.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+34,athletic field outdoor,4,0.5,0.0,,0.5,0.5,0.0,1.0,34.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+35,atrium home,4,0.0,,,1.0,1.0,0.0,1.0,103.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+36,atrium public,4,0.0,,,1.0,1.0,0.0,1.0,86.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+37,attic,4,0.25,0.0,,0.75,0.75,0.0,1.0,110.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+39,auto factory,4,0.0,,,1.0,1.0,0.0,1.0,51.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+40,auto mechanics indoor,4,0.0,,,1.0,1.0,0.0,1.0,160.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+41,auto racing paddock,4,0.0,,,1.0,1.0,0.0,1.0,23.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+42,auto showroom,4,0.0,,,1.0,1.0,0.0,1.0,76.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+43,backstage,4,0.0,,,1.0,1.0,0.0,1.0,208.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+44,badlands,4,0.0,,,1.0,1.0,0.0,1.0,37.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+45,badminton court indoor,4,0.0,,,1.0,1.0,0.0,1.0,72.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+46,badminton court outdoor,4,0.0,,,1.0,1.0,0.0,1.0,41.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+47,baggage claim,4,0.0,,,1.0,1.0,0.0,1.0,79.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+48,bakery kitchen,4,0.0,,,1.0,1.0,0.0,1.0,69.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+49,bakery shop,4,0.25,0.0,,0.75,0.75,0.25,0.75,143.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+50,balcony exterior,4,0.0,,,1.0,1.0,0.0,1.0,62.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+51,balcony interior,4,0.0,,,1.0,1.0,0.0,1.0,66.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+52,ball pit,4,0.25,0.0,,0.75,0.75,0.0,1.0,136.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+54,bamboo forest,4,0.5,0.0,,0.5,0.5,0.5,0.5,16.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+55,bank indoor,4,0.0,,,1.0,1.0,0.0,1.0,110.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+56,bank outdoor,4,0.0,,,1.0,1.0,0.0,1.0,76.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+58,banquet hall,4,0.0,,,1.0,1.0,0.0,1.0,179.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+59,baptistry indoor,4,0.5,0.0,,0.5,0.5,0.25,0.75,38.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+60,baptistry outdoor,4,0.0,,,1.0,1.0,0.0,1.0,44.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+61,bar,4,0.0,,,1.0,1.0,0.0,1.0,144.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+62,barn,4,0.0,,,1.0,1.0,0.0,1.0,26.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+63,barndoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,67.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+64,baseball field,4,0.25,0.0,,0.75,0.75,0.0,1.0,7.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+65,basement,4,0.0,,,1.0,1.0,0.0,1.0,83.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+66,basilica,4,0.25,0.0,,0.75,0.75,0.25,0.75,39.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+67,basketball court indoor,4,0.0,,,1.0,1.0,0.0,1.0,134.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+68,basketball court outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,35.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+69,bathroom,4,0.0,,,1.0,1.0,0.0,1.0,182.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+70,batters box,4,0.0,,,1.0,1.0,0.0,1.0,71.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+71,batting cage indoor,4,0.0,,,1.0,1.0,0.0,1.0,121.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+73,bayou,4,0.0,,,1.0,1.0,0.0,1.0,43.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+76,beach,4,0.25,0.0,,0.75,0.75,0.0,1.0,36.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+77,beach house,4,0.0,,,1.0,1.0,0.0,1.0,33.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+78,beauty salon,4,0.25,0.0,,0.75,0.75,0.25,0.75,43.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+79,bedchamber,4,0.0,,,1.0,1.0,0.0,1.0,173.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+80,bedroom,4,0.0,,,1.0,1.0,0.0,1.0,86.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+81,beer garden,4,0.5,0.0,,0.5,0.5,0.25,0.75,16.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+82,beer hall,4,0.0,,,1.0,1.0,0.0,1.0,137.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+83,bell foundry,4,0.0,,,1.0,1.0,0.0,1.0,23.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+84,berth,4,0.0,,,1.0,1.0,0.0,1.0,128.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+86,bicycle racks,4,0.0,,,1.0,1.0,0.0,1.0,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+87,bindery,4,0.0,,,1.0,1.0,0.0,1.0,154.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+88,biology laboratory,4,0.0,,,1.0,1.0,0.0,1.0,242.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+89,bistro indoor,4,0.0,,,1.0,1.0,0.0,1.0,194.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+90,bistro outdoor,4,0.0,,,1.0,1.0,0.0,1.0,95.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+91,bleachers outdoor,4,0.0,,,1.0,1.0,0.0,1.0,25.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+92,boardwalk,4,0.25,0.0,,0.75,0.75,0.0,1.0,15.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+93,boat deck,4,0.0,,,1.0,1.0,0.0,1.0,23.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+94,boathouse,4,0.25,0.0,,0.75,0.75,0.0,1.0,34.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+96,bookstore,4,0.0,,,1.0,1.0,0.0,1.0,90.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+97,booth indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+98,botanical garden,4,0.0,,,1.0,1.0,0.0,1.0,44.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+100,bow window outdoor,4,0.0,,,1.0,1.0,0.0,1.0,98.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+101,bowling alley,4,0.0,,,1.0,1.0,0.0,1.0,152.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+102,boxing ring,4,0.0,,,1.0,1.0,0.0,1.0,85.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+104,brewery outdoor,4,0.0,,,1.0,1.0,0.0,1.0,95.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+105,brickyard outdoor,4,0.0,,,1.0,1.0,0.0,1.0,51.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+106,bridge,4,0.0,,,0.75,1.0,0.25,0.75,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+107,building complex,4,0.0,,,1.0,1.0,0.0,1.0,23.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+108,building facade,4,0.0,,,1.0,1.0,0.0,1.0,70.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+109,bullpen,4,0.0,,,1.0,1.0,0.0,1.0,68.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+110,bullring,4,0.0,,,1.0,1.0,0.0,1.0,21.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+111,burial chamber,4,0.5,0.0,,0.5,0.5,0.0,1.0,15.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+113,bus interior,4,0.0,,,1.0,1.0,0.0,1.0,78.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+114,bus shelter,4,0.0,,,1.0,1.0,0.0,1.0,79.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+115,bus station outdoor,4,0.0,,,1.0,1.0,0.0,1.0,61.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+116,butchers shop,4,0.25,0.0,,0.75,0.75,0.25,0.75,28.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+117,butte,4,0.0,,,1.0,1.0,0.0,1.0,51.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+118,cabana,4,0.25,0.0,,0.75,0.75,0.0,1.0,17.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+119,cabin outdoor,4,0.0,,,1.0,1.0,0.0,1.0,46.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+120,cafeteria,4,0.0,,,1.0,1.0,0.0,1.0,144.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+121,call center,4,0.0,,,1.0,1.0,0.0,1.0,160.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+122,campsite,4,0.0,,,1.0,1.0,0.0,1.0,35.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+123,campus,4,0.0,,,1.0,1.0,0.0,1.0,30.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+125,canal urban,4,0.25,0.0,,0.75,0.75,0.0,1.0,30.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+126,candy store,4,0.0,,,1.0,1.0,0.0,1.0,139.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+127,canteen,4,0.0,,,1.0,1.0,0.0,1.0,197.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+128,canyon,4,0.0,,,1.0,1.0,0.0,1.0,45.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+129,car interior backseat,4,0.0,,,1.0,1.0,0.0,1.0,90.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+131,caravansary,4,0.0,,,1.0,1.0,0.0,1.0,14.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+132,cardroom,4,0.0,,,1.0,1.0,0.0,1.0,163.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+133,cargo deck airplane,4,0.0,,,1.0,1.0,0.0,1.0,128.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+134,carport freestanding,4,0.0,,,1.0,1.0,0.0,1.0,49.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+135,carport outdoor,4,0.0,,,1.0,1.0,0.0,1.0,72.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+136,carrousel,4,0.0,,,1.0,1.0,0.0,1.0,118.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+137,casino indoor,4,0.0,,,1.0,1.0,0.0,1.0,104.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+139,castle,4,0.0,,,1.0,1.0,0.0,1.0,41.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+140,catacomb,4,0.25,0.0,,0.75,0.75,0.0,1.0,15.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+141,cathedral indoor,4,0.0,,,1.0,1.0,0.0,1.0,71.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+142,cathedral outdoor,4,0.0,,,1.0,1.0,0.0,1.0,47.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+143,catwalk,4,0.75,0.0,,0.25,0.25,0.25,0.75,59.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+144,cavern indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,18.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+146,chalet,4,0.0,,,1.0,1.0,0.0,1.0,45.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+147,chaparral,4,0.0,,,1.0,1.0,0.0,1.0,69.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+148,chapel,4,0.0,,,1.0,1.0,0.0,1.0,146.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+149,checkout counter,4,0.0,,,1.0,1.0,0.0,1.0,173.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+150,cheese factory,4,0.25,0.0,,0.75,0.75,0.25,0.75,76.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+151,chemical plant,4,0.0,,,1.0,1.0,0.0,1.0,24.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+153,chicken coop indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,71.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+154,chicken coop outdoor,4,0.0,,,1.0,1.0,0.0,1.0,62.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+155,chicken farm indoor,4,0.0,,,1.0,1.0,0.0,1.0,66.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+156,chicken farm outdoor,4,0.25,0.0,,0.75,0.75,0.25,0.75,69.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+157,childs room,4,0.0,,,1.0,1.0,0.0,1.0,134.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+159,church outdoor,4,0.0,,,1.0,1.0,0.0,1.0,42.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+160,circus tent indoor,4,0.0,,,1.0,1.0,0.0,1.0,63.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+161,circus tent outdoor,4,0.0,,,1.0,1.0,0.0,1.0,30.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+162,city,4,0.0,,,1.0,1.0,0.0,1.0,27.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+163,classroom,4,0.0,,,1.0,1.0,0.0,1.0,139.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+164,clean room,4,0.0,,,1.0,1.0,0.0,1.0,169.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+165,cliff,4,0.0,,,1.0,1.0,0.0,1.0,39.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+166,cloister indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,33.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+167,cloister outdoor,4,0.0,,,1.0,1.0,0.0,1.0,23.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+168,closet,4,0.25,0.0,,0.75,0.75,0.0,1.0,119.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+169,clothing store,4,0.0,,,1.0,1.0,0.0,1.0,95.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+170,coast,4,0.0,,,1.0,1.0,0.0,1.0,53.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+171,cockpit,4,0.0,,,1.0,1.0,0.0,1.0,143.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+172,coffee shop,4,0.0,,,1.0,1.0,0.0,1.0,169.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+173,computer room,4,0.0,,,1.0,1.0,0.0,1.0,182.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+174,conference center,4,0.0,,,1.0,1.0,0.0,1.0,130.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+175,conference hall,4,0.0,,,1.0,1.0,0.0,1.0,246.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+176,conference room,4,0.0,,,1.0,1.0,0.0,1.0,215.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+177,confessional,4,0.25,0.0,,0.75,0.75,0.0,1.0,122.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+178,construction site,4,0.0,,,1.0,1.0,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+179,control room,4,0.0,,,1.0,1.0,0.0,1.0,119.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+180,control tower indoor,4,0.0,,,1.0,1.0,0.0,1.0,8.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+181,control tower outdoor,4,0.0,,,1.0,1.0,0.0,1.0,26.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+182,convenience store indoor,4,0.0,,,1.0,1.0,0.0,1.0,160.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+183,corn field,4,0.0,,,1.0,1.0,0.0,1.0,28.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+185,corridor,4,0.0,,,1.0,1.0,0.0,1.0,114.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+186,cottage,4,0.0,,,1.0,1.0,0.0,1.0,31.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+187,cottage garden,4,0.0,,,1.0,1.0,0.0,1.0,43.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+188,courthouse,4,0.0,,,1.0,1.0,0.0,1.0,68.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+189,courtroom,4,0.0,,,1.0,1.0,0.0,1.0,218.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+190,courtyard,4,0.0,,,1.0,1.0,0.0,1.0,38.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+191,covered bridge exterior,4,0.0,,,1.0,1.0,0.0,1.0,27.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+192,crawl space,4,0.0,,,1.0,1.0,0.0,1.0,79.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+193,creek,4,0.0,,,1.0,1.0,0.0,1.0,48.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+194,crevasse,4,0.5,0.0,,0.5,0.5,0.0,1.0,16.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+195,crosswalk,4,0.25,0.0,,0.75,0.75,0.0,1.0,44.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+197,cybercafe,4,0.0,,,1.0,1.0,0.0,1.0,179.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+198,dacha,4,0.0,,,1.0,1.0,0.0,1.0,41.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+199,dairy indoor,4,0.0,,,1.0,1.0,0.0,1.0,40.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+200,dam,4,0.5,0.0,,0.5,0.5,0.0,1.0,31.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+201,darkroom,4,0.25,0.0,,0.75,0.75,0.0,1.0,64.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+202,day care center,4,0.0,,,1.0,1.0,0.0,1.0,172.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+203,delicatessen,4,0.25,0.0,,0.75,0.75,0.0,1.0,187.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+204,dentists office,4,0.0,,,1.0,1.0,0.0,1.0,164.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+205,departure lounge,4,0.0,,,1.0,1.0,0.0,1.0,137.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+206,desert road,4,0.0,,,1.0,1.0,0.0,1.0,37.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+207,desert sand,4,0.0,,,1.0,1.0,0.0,1.0,34.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+208,desert vegetation,4,0.0,,,1.0,1.0,0.0,1.0,62.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+209,diner indoor,4,0.0,,,1.0,1.0,0.0,1.0,111.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+210,diner outdoor,4,0.0,,,1.0,1.0,0.0,1.0,66.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+211,dinette home,4,0.0,,,1.0,1.0,0.0,1.0,167.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+212,dinette vehicle,4,0.0,,,1.0,1.0,0.0,1.0,130.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+213,dining car,4,0.0,,,1.0,1.0,0.0,1.0,201.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+214,dining hall,4,0.25,0.0,,0.75,0.75,0.0,1.0,131.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+215,dining room,4,0.0,,,1.0,1.0,0.0,1.0,167.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+217,discotheque,4,0.25,0.0,,0.75,0.75,0.0,1.0,72.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+218,dock,4,0.0,,,1.0,1.0,0.0,1.0,32.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+219,dolmen,4,0.0,,,1.0,1.0,0.0,1.0,55.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+220,donjon,4,0.0,,,1.0,1.0,0.0,1.0,27.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+222,doorway outdoor,4,0.0,,,1.0,1.0,0.0,1.0,107.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+223,dorm room,4,0.0,,,1.0,1.0,0.0,1.0,169.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+224,downtown,4,0.0,,,1.0,1.0,0.0,1.0,41.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+225,drainage ditch,4,0.0,,,1.0,1.0,0.0,1.0,51.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+226,drill rig,4,0.25,1.0,,0.75,0.75,0.0,1.0,21.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+227,driveway,4,0.25,0.0,,0.75,0.75,0.0,1.0,12.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+228,driving range outdoor,4,0.5,0.0,,0.5,0.5,0.0,1.0,32.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+229,drugstore,4,0.25,0.0,,0.75,0.75,0.25,0.75,116.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+230,dry dock,4,0.25,0.0,,0.75,0.75,0.0,1.0,8.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+231,dugout,4,0.0,,,1.0,1.0,0.0,1.0,48.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+232,earth fissure,4,0.25,0.0,,0.75,0.75,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+233,editing room,4,0.0,,,1.0,1.0,0.0,1.0,128.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+234,electrical substation,4,0.25,0.0,,0.75,0.75,0.0,1.0,35.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+235,elevator door,4,0.0,,,1.0,1.0,0.0,1.0,126.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+236,elevator freight elevator,4,0.0,,,1.0,1.0,0.0,1.0,125.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+238,elevator lobby,4,0.0,,,1.0,1.0,0.0,1.0,138.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+239,elevator shaft,4,0.0,,,1.0,1.0,0.0,1.0,33.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+240,embassy,4,0.0,,,1.0,1.0,0.0,1.0,89.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+241,engine room,4,0.0,,,1.0,1.0,0.0,1.0,91.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+242,escalator indoor,4,0.0,,,1.0,1.0,0.0,1.0,64.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+243,escalator outdoor,4,0.0,,,1.0,1.0,0.0,1.0,31.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+244,estuary,4,0.0,,,1.0,1.0,0.0,1.0,46.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+247,factory indoor,4,0.0,,,1.0,1.0,0.0,1.0,99.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+248,factory outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,42.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+249,fairway,4,0.5,0.0,,0.5,0.5,0.0,1.0,31.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+250,farm,4,0.0,,,1.0,1.0,0.0,1.0,35.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+251,fastfood restaurant,4,0.0,,,1.0,1.0,0.0,1.0,197.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+252,fence,4,0.0,,,1.0,1.0,0.0,1.0,38.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+253,ferryboat outdoor,4,0.0,,,1.0,1.0,0.0,1.0,19.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+255,field road,4,0.0,,,1.0,1.0,0.0,1.0,31.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+256,field wild,4,0.0,,,1.0,1.0,0.0,1.0,35.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+257,fire escape,4,0.0,,,1.0,1.0,0.0,1.0,31.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+258,fire station,4,0.0,,,1.0,1.0,0.0,1.0,85.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+260,firing range outdoor,4,0.0,,,1.0,1.0,0.0,1.0,43.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+261,fish farm,4,0.25,0.0,,0.75,0.75,0.0,1.0,22.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+263,fjord,4,0.0,,,1.0,1.0,0.0,1.0,50.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+264,flea market indoor,4,0.0,,,1.0,1.0,0.0,1.0,140.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+265,flea market outdoor,4,0.0,,,1.0,1.0,0.0,1.0,53.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+266,flight of stairs natural,4,0.25,0.0,,0.75,0.75,0.25,0.75,24.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+267,flight of stairs urban,4,0.0,,,1.0,1.0,0.0,1.0,49.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+268,flood,4,0.0,,,1.0,1.0,0.0,1.0,29.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+269,florist shop indoor,4,0.0,,,1.0,1.0,0.0,1.0,138.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+270,fly bridge,4,0.0,,,1.0,1.0,0.0,1.0,28.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+271,food court,4,0.0,,,1.0,1.0,0.0,1.0,84.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+272,football field,4,0.5,0.0,,0.5,0.5,0.0,1.0,72.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+273,forest broadleaf,4,0.0,,,1.0,1.0,0.0,1.0,39.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+274,forest needleleaf,4,0.0,,,1.0,1.0,0.0,1.0,56.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+275,forest path,4,0.25,0.0,,0.75,0.75,0.25,0.75,33.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+276,forest road,4,0.0,,,1.0,1.0,0.0,1.0,59.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+277,formal garden,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+278,fort,4,0.0,,,1.0,1.0,0.0,1.0,33.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+279,fortress,4,0.0,,,1.0,1.0,0.0,1.0,51.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+280,foundry indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,116.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+281,foundry outdoor,4,0.0,,,1.0,1.0,0.0,1.0,43.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+282,fountain,4,0.25,0.0,,0.75,0.75,0.0,1.0,11.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+283,freeway,4,0.0,,,1.0,1.0,0.0,1.0,73.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+284,funeral chapel,4,0.25,0.0,,0.75,0.75,0.0,1.0,92.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+285,furnace room,4,0.25,0.0,,0.75,0.75,0.0,1.0,145.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+287,game room,4,0.0,,,1.0,1.0,0.0,1.0,141.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+288,gangplank,4,0.0,,,1.0,1.0,0.0,1.0,4.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+289,garage indoor,4,0.0,,,1.0,1.0,0.0,1.0,96.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+290,garage outdoor,4,0.0,,,1.0,1.0,0.0,1.0,55.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+291,garbage dump,4,0.25,0.0,,0.75,0.75,0.25,0.75,9.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+292,gas station,4,0.0,,,1.0,1.0,0.0,1.0,77.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+293,gasworks,4,0.0,,,1.0,1.0,0.0,1.0,32.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+294,gatehouse,4,0.0,,,1.0,1.0,0.0,1.0,47.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+295,gazebo exterior,4,0.0,,,1.0,1.0,0.0,1.0,45.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+296,general store indoor,4,0.0,,,1.0,1.0,0.0,1.0,198.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+297,general store outdoor,4,0.0,,,1.0,1.0,0.0,1.0,52.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+299,geodesic dome outdoor,4,0.0,,,1.0,1.0,0.0,1.0,45.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+300,ghost town,4,0.0,,,1.0,1.0,0.0,1.0,56.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+301,gift shop,4,0.0,,,1.0,1.0,0.0,1.0,128.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+302,glacier,4,0.0,,,1.0,1.0,0.0,1.0,58.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+303,golf course,4,0.5,0.0,,0.5,0.5,0.0,1.0,33.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+304,gorge,4,0.0,,,1.0,1.0,0.0,1.0,57.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+305,great hall,4,0.25,0.0,,0.75,0.75,0.0,1.0,90.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+306,greenhouse indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,11.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+307,greenhouse outdoor,4,0.0,,,1.0,1.0,0.0,1.0,52.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+308,grotto,4,0.5,0.0,,0.5,0.5,0.0,1.0,21.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+309,guardhouse,4,0.0,,,1.0,1.0,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+310,gulch,4,0.0,,,1.0,1.0,0.0,1.0,26.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+311,gun deck indoor,4,0.0,,,1.0,1.0,0.0,1.0,131.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+312,gymnasium indoor,4,0.0,,,1.0,1.0,0.0,1.0,150.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+313,hacienda,4,0.0,,,1.0,1.0,0.0,1.0,16.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+314,hallway,4,0.5,0.0,,0.5,0.5,0.25,0.75,105.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+316,hangar outdoor,4,0.0,,,1.0,1.0,0.0,1.0,37.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+317,harbor,4,0.0,,,1.0,1.0,0.0,1.0,26.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+318,hayfield,4,0.25,1.0,,0.75,0.75,0.0,1.0,16.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+319,heath,4,0.0,,,1.0,1.0,0.0,1.0,44.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+320,hedge maze,4,0.25,0.0,,0.75,0.75,0.0,1.0,45.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+321,hedgerow,4,0.0,,,1.0,1.0,0.0,1.0,45.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+322,heliport,4,0.25,0.0,,0.75,0.75,0.0,1.0,29.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+323,herb garden,4,0.0,,,1.0,1.0,0.0,1.0,60.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+324,highway,4,0.0,,,1.0,1.0,0.0,1.0,32.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+325,hill,4,0.0,,,1.0,1.0,0.0,1.0,38.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+326,home office,4,0.0,,,1.0,1.0,0.0,1.0,183.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+327,home theater,4,0.0,,,1.0,1.0,0.0,1.0,172.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+329,hospital,4,0.0,,,1.0,1.0,0.0,1.0,78.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+330,hospital room,4,0.0,,,1.0,1.0,0.0,1.0,114.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+331,hot spring,4,0.0,,,1.0,1.0,0.0,1.0,32.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+332,hot tub indoor,4,0.0,,,1.0,1.0,0.0,1.0,92.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+333,hot tub outdoor,4,0.25,0.0,,0.75,0.75,0.25,0.75,16.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+334,hotel breakfast area,4,0.0,,,1.0,1.0,0.0,1.0,228.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+335,hotel outdoor,4,0.0,,,1.0,1.0,0.0,1.0,83.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+337,house,4,0.0,,,1.0,1.0,0.0,1.0,37.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+338,hunting lodge indoor,4,0.0,,,1.0,1.0,0.0,1.0,176.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+339,hunting lodge outdoor,4,0.0,,,1.0,1.0,0.0,1.0,34.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+340,hut,4,0.0,,,1.0,1.0,0.0,1.0,43.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+341,ice floe,4,0.0,,,1.0,1.0,0.0,1.0,17.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+343,ice skating rink indoor,4,0.0,,,1.0,1.0,0.0,1.0,88.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+344,ice skating rink outdoor,4,0.0,,,1.0,1.0,0.0,1.0,23.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+345,iceberg,4,0.0,,,1.0,1.0,0.0,1.0,34.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+346,igloo,4,0.25,0.0,,0.75,0.75,0.0,1.0,15.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+347,industrial area,4,0.25,0.0,,0.75,0.75,0.0,1.0,16.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+348,industrial park,4,0.0,,,1.0,1.0,0.0,1.0,42.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+349,inn indoor,4,0.0,,,1.0,1.0,0.0,1.0,229.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+350,inn outdoor,4,0.0,,,1.0,1.0,0.0,1.0,54.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+351,irrigation ditch,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+352,islet,4,0.0,,,1.0,1.0,0.0,1.0,44.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+354,jacuzzi outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,13.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+355,jail cell,4,0.25,0.0,,0.75,0.75,0.0,1.0,102.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+356,jail indoor,4,0.0,,,1.0,1.0,0.0,1.0,182.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+357,jail outdoor,4,0.0,,,1.0,1.0,0.0,1.0,43.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+359,jewelry shop,4,0.0,,,1.0,1.0,0.0,1.0,211.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+360,joss house,4,0.25,0.0,,0.75,0.75,0.0,1.0,60.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+361,junk pile,4,0.0,,,1.0,1.0,0.0,1.0,36.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+362,junkyard,4,0.0,,,1.0,1.0,0.0,1.0,29.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+363,jury box,4,0.0,,,1.0,1.0,0.0,1.0,114.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+364,kasbah,4,0.0,,,1.0,1.0,0.0,1.0,34.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+365,kennel indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,113.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+366,kennel outdoor,4,0.0,,,1.0,1.0,0.0,1.0,34.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+367,kindergarden classroom,4,0.0,,,1.0,1.0,0.0,1.0,188.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+368,kiosk indoor,4,0.0,,,1.0,1.0,0.0,1.0,166.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+369,kiosk outdoor,4,0.0,,,1.0,1.0,0.0,1.0,66.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+370,kitchen,4,0.0,,,1.0,1.0,0.0,1.0,102.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+371,kitchenette,4,0.0,,,1.0,1.0,0.0,1.0,94.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+372,lab classroom,4,0.0,,,1.0,1.0,0.0,1.0,157.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+373,labyrinth indoor,4,0.0,,,1.0,1.0,0.0,1.0,21.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+374,labyrinth outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,31.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+375,lagoon,4,0.0,,,1.0,1.0,0.0,1.0,51.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+376,lake artificial,4,0.25,0.0,,0.75,0.75,0.0,1.0,32.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+377,lake natural,4,0.0,,,1.0,1.0,0.0,1.0,49.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+378,landfill,4,0.5,0.0,,0.5,0.5,0.0,1.0,8.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+380,laundromat,4,0.0,,,1.0,1.0,0.0,1.0,134.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+382,lean-to,4,0.0,,,1.0,1.0,0.0,1.0,42.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+383,lecture room,4,0.0,,,1.0,1.0,0.0,1.0,181.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+384,levee,4,0.0,,,1.0,1.0,0.0,1.0,19.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+385,library indoor,4,0.0,,,1.0,1.0,0.0,1.0,110.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+386,library outdoor,4,0.0,,,1.0,1.0,0.0,1.0,63.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+387,lido deck outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,17.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+388,lift bridge,4,0.25,0.0,,0.75,0.75,0.0,1.0,30.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+389,lighthouse,4,0.0,,,1.0,1.0,0.0,1.0,21.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+390,limousine interior,4,0.0,,,1.0,1.0,0.0,1.0,113.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+391,liquor store indoor,4,0.0,,,1.0,1.0,0.0,1.0,156.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+392,liquor store outdoor,4,0.0,,,1.0,1.0,0.0,1.0,106.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+393,living room,4,0.0,,,1.0,1.0,0.0,1.0,122.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+394,loading dock,4,0.0,,,1.0,1.0,0.0,1.0,82.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+395,lobby,4,0.0,,,1.0,1.0,0.0,1.0,181.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+396,lock chamber,4,0.0,,,1.0,1.0,0.0,1.0,26.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+397,locker room,4,0.0,,,1.0,1.0,0.0,1.0,120.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+398,lookout station outdoor,4,0.0,,,1.0,1.0,0.0,1.0,26.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+399,machine shop,4,0.0,,,1.0,1.0,0.0,1.0,163.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+400,manhole,4,0.0,,,1.0,1.0,0.0,1.0,40.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+401,mansion,4,0.25,0.0,,0.75,0.75,0.0,1.0,29.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+402,manufactured home,4,0.0,,,1.0,1.0,0.0,1.0,50.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+403,market indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,138.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+404,market outdoor,4,0.0,,,1.0,1.0,0.0,1.0,67.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+405,marsh,4,0.0,,,1.0,1.0,0.0,1.0,65.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+406,martial arts gym,4,0.5,0.0,,0.5,0.5,0.0,1.0,77.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+407,mastaba,4,0.0,,,1.0,1.0,0.0,1.0,52.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+408,mausoleum,4,0.0,,,1.0,1.0,0.0,1.0,35.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+409,medina,4,0.0,,,1.0,1.0,0.0,1.0,80.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+410,mesa,4,0.0,,,1.0,1.0,0.0,1.0,42.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+411,military hospital,4,0.0,,,1.0,1.0,0.0,1.0,96.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+412,military hut,4,0.0,,,1.0,1.0,0.0,1.0,67.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+413,mine,4,0.75,0.0,,0.25,0.25,0.25,0.75,33.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+414,mineshaft,4,0.25,0.0,,0.75,0.75,0.0,1.0,22.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+415,mini golf course outdoor,4,0.75,0.0,,0.25,0.25,0.25,0.75,13.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+416,mission,4,0.0,,,1.0,1.0,0.0,1.0,39.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+417,moat dry,4,0.0,,,1.0,1.0,0.0,1.0,42.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+418,moat water,4,0.25,0.0,,0.75,0.75,0.25,0.75,20.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+419,mobile home,4,0.0,,,1.0,1.0,0.0,1.0,46.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+421,moor,4,0.0,,,1.0,1.0,0.0,1.0,56.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+422,morgue,4,0.0,,,1.0,1.0,0.0,1.0,166.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+424,mosque outdoor,4,0.0,,,1.0,1.0,0.0,1.0,62.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+426,mountain,4,0.0,,,1.0,1.0,0.0,1.0,53.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+427,mountain path,4,0.0,,,1.0,1.0,0.0,1.0,65.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+428,mountain road,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+429,mountain snowy,4,0.0,,,1.0,1.0,0.0,1.0,35.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+430,movie theater indoor,4,0.0,,,1.0,1.0,0.0,1.0,182.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+431,movie theater outdoor,4,0.0,,,1.0,1.0,0.0,1.0,78.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+432,museum indoor,4,0.0,,,1.0,1.0,0.0,1.0,87.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+433,museum outdoor,4,0.0,,,1.0,1.0,0.0,1.0,71.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+434,music store,4,0.0,,,1.0,1.0,0.0,1.0,164.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+435,music studio,4,0.0,,,1.0,1.0,0.0,1.0,116.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+436,natural history museum,4,0.0,,,1.0,1.0,0.0,1.0,82.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+437,naval base,4,0.25,0.0,,0.75,0.75,0.0,1.0,13.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+438,newsroom,4,0.0,,,1.0,1.0,0.0,1.0,146.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+439,newsstand outdoor,4,0.0,,,1.0,1.0,0.0,1.0,114.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+441,nuclear power plant indoor,4,0.0,,,1.0,1.0,0.0,1.0,85.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+442,nuclear power plant outdoor,4,0.0,,,1.0,1.0,0.0,1.0,36.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+443,nursery,4,0.0,,,1.0,1.0,0.0,1.0,200.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+444,nursing home,4,0.0,,,1.0,1.0,0.0,1.0,115.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+445,oasis,4,0.0,,,1.0,1.0,0.0,1.0,60.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+446,oast house,4,0.0,,,1.0,1.0,0.0,1.0,30.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+447,observatory indoor,4,0.0,,,1.0,1.0,0.0,1.0,22.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+449,ocean,4,0.0,,,1.0,1.0,0.0,1.0,36.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+450,office,4,0.0,,,1.0,1.0,0.0,1.0,210.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+451,office building,4,0.0,,,1.0,1.0,0.0,1.0,84.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+452,office cubicles,4,0.0,,,1.0,1.0,0.0,1.0,161.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+453,oil refinery outdoor,4,0.0,,,1.0,1.0,0.0,1.0,34.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+454,oilrig,4,0.25,0.0,,0.75,0.75,0.0,1.0,16.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+455,operating room,4,0.0,,,1.0,1.0,0.0,1.0,113.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+456,optician,4,0.0,,,1.0,1.0,0.0,1.0,151.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+457,orchard,4,0.0,,,1.0,1.0,0.0,1.0,79.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+458,organ loft exterior,4,0.0,,,1.0,1.0,0.0,1.0,184.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+459,ossuary,4,0.5,0.0,,0.5,0.5,0.25,0.75,13.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+460,outcropping,4,0.0,,,1.0,1.0,0.0,1.0,61.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+461,outhouse outdoor,4,0.0,,,1.0,1.0,0.0,1.0,45.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+462,overpass,4,0.0,,,1.0,1.0,0.0,1.0,37.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+463,packaging plant,4,0.0,,,1.0,1.0,0.0,1.0,112.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+464,pagoda,4,0.0,,,1.0,1.0,0.0,1.0,33.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+465,palace,4,0.0,,,1.0,1.0,0.0,1.0,42.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+466,pantry,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+467,parade ground,4,0.25,0.0,,0.75,0.75,0.0,1.0,26.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+468,park,4,0.25,0.0,,0.75,0.75,0.0,1.0,18.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+469,parking garage indoor,4,0.25,0.0,,0.75,0.75,0.25,0.75,27.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+470,parking garage outdoor,4,0.0,,,1.0,1.0,0.0,1.0,53.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+472,parlor,4,0.25,0.0,,0.75,0.75,0.0,1.0,116.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+473,particle accelerator,4,0.25,0.0,,0.75,0.75,0.0,1.0,113.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+474,pasture,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+475,patio,4,0.0,,,1.0,1.0,0.0,1.0,39.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+476,pavilion,4,0.0,,,1.0,1.0,0.0,1.0,45.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+477,pedestrian overpass outdoor,4,0.0,,,1.0,1.0,0.0,1.0,14.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+478,pet shop,4,0.0,,,1.0,1.0,0.0,1.0,122.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+479,pharmacy,4,0.0,,,1.0,1.0,0.0,1.0,168.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+480,phone booth,4,0.25,0.0,,0.75,0.75,0.0,1.0,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+481,physics laboratory,4,0.0,,,1.0,1.0,0.0,1.0,192.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+483,picnic area,4,0.0,,,1.0,1.0,0.0,1.0,25.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+484,pier,4,0.0,,,1.0,1.0,0.0,1.0,37.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+485,pig farm,4,0.25,0.0,,0.75,0.75,0.0,1.0,27.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+486,pilothouse indoor,4,0.0,,,1.0,1.0,0.0,1.0,175.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+487,pilothouse outdoor,4,0.0,,,1.0,1.0,0.0,1.0,49.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+488,pitchers mound,4,0.0,,,1.0,1.0,0.0,1.0,49.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+489,pizzeria,4,0.25,0.0,,0.75,0.75,0.0,1.0,170.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+490,planetarium indoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,71.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+491,planetarium outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+492,plantation house,4,0.0,,,1.0,1.0,0.0,1.0,17.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+494,playroom,4,0.0,,,1.0,1.0,0.0,1.0,194.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+495,plaza,4,0.0,,,1.0,1.0,0.0,1.0,63.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+496,podium indoor,4,0.0,,,1.0,1.0,0.0,1.0,29.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+497,podium outdoor,4,0.0,,,1.0,1.0,0.0,1.0,50.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+498,pond,4,0.0,,,1.0,1.0,0.0,1.0,63.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+499,poolroom establishment,4,0.0,,,1.0,1.0,0.0,1.0,82.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+500,poolroom home,4,0.0,,,1.0,1.0,0.0,1.0,56.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+501,porch,4,0.0,,,1.0,1.0,0.0,1.0,39.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+502,portico,4,0.0,,,1.0,1.0,0.0,1.0,20.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+503,power plant indoor,4,0.0,,,1.0,1.0,0.0,1.0,87.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+504,power plant outdoor,4,0.0,,,1.0,1.0,0.0,1.0,35.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+505,print shop,4,0.0,,,1.0,1.0,0.0,1.0,165.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+506,priory,4,0.0,,,1.0,1.0,0.0,1.0,35.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+507,promenade,4,0.0,,,1.0,1.0,0.0,1.0,17.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+510,pub outdoor,4,0.0,,,1.0,1.0,0.0,1.0,101.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+511,pulpit,4,0.25,0.0,,0.75,0.75,0.0,1.0,40.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+512,pump room,4,0.0,,,1.0,1.0,0.0,1.0,162.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+513,putting green,4,0.25,0.0,,0.75,0.75,0.0,1.0,15.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+514,quadrangle,4,0.0,,,1.0,1.0,0.0,1.0,27.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+515,quay,4,0.25,0.0,,0.75,0.75,0.0,1.0,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+516,quonset hut outdoor,4,0.0,,,1.0,1.0,0.0,1.0,50.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+518,raceway,4,0.0,,,1.0,1.0,0.0,1.0,22.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+519,raft,4,0.0,,,1.0,1.0,0.0,1.0,16.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+520,railroad track,4,0.25,0.0,,0.75,0.75,0.25,0.75,21.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+521,railway yard,4,0.25,0.0,,0.75,0.75,0.25,0.75,25.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+522,rainforest,4,0.0,,,1.0,1.0,0.0,1.0,37.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+523,ramp,4,0.0,,,1.0,1.0,0.0,1.0,16.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+524,ranch,4,0.0,,,1.0,1.0,0.0,1.0,30.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+525,ranch house,4,0.0,,,1.0,1.0,0.0,1.0,33.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+526,reading room,4,0.0,,,1.0,1.0,0.0,1.0,214.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+527,reception,4,0.0,,,1.0,1.0,0.0,1.0,63.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+528,recreation room,4,0.0,,,1.0,1.0,0.0,1.0,106.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+530,recycling plant indoor,4,0.0,,,1.0,1.0,0.0,1.0,124.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+531,recycling plant outdoor,4,0.0,,,1.0,1.0,0.0,1.0,33.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+532,repair shop,4,0.25,0.0,,0.75,0.75,0.0,1.0,104.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+533,residential neighborhood,4,0.0,,,1.0,1.0,0.0,1.0,26.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+534,resort,4,0.0,,,1.0,1.0,0.0,1.0,36.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+535,restaurant,4,0.0,,,1.0,1.0,0.0,1.0,136.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+536,restaurant kitchen,4,0.0,,,1.0,1.0,0.0,1.0,109.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+537,restaurant patio,4,0.0,,,1.0,1.0,0.0,1.0,52.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+538,restroom indoor,4,0.0,,,1.0,1.0,0.0,1.0,172.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+539,restroom outdoor,4,0.0,,,1.0,1.0,0.0,1.0,47.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+540,revolving door,4,0.0,,,1.0,1.0,0.0,1.0,66.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+541,rice paddy,4,0.0,,,1.0,1.0,0.0,1.0,28.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+542,riding arena,4,0.25,0.0,,0.75,0.75,0.25,0.75,42.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+543,river,4,0.0,,,1.0,1.0,0.0,1.0,59.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+544,road cut,4,0.0,,,1.0,1.0,0.0,1.0,48.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+545,rock arch,4,0.0,,,1.0,1.0,0.0,1.0,30.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+546,rolling mill,4,0.0,,,1.0,1.0,0.0,1.0,146.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+547,roof,4,0.0,,,1.0,1.0,0.0,1.0,25.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+548,root cellar,4,0.25,0.0,,0.75,0.75,0.0,1.0,47.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+549,rope bridge,4,0.5,0.5,,0.5,0.5,0.0,1.0,20.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+550,roundabout,4,0.0,,,1.0,1.0,0.0,1.0,63.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+551,rubble,4,0.0,,,1.0,1.0,0.0,1.0,39.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+552,ruin,4,0.0,,,1.0,1.0,0.0,1.0,40.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+553,runway,4,0.25,0.0,,0.75,0.75,0.25,0.75,17.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+554,sacristy,4,0.0,,,1.0,1.0,0.0,1.0,93.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+555,salt plain,4,0.0,,,1.0,1.0,0.0,1.0,32.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+556,sand trap,4,0.5,0.0,,0.5,0.5,0.0,1.0,30.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+557,sandbar,4,0.25,0.0,,0.75,0.75,0.0,1.0,39.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+559,sauna,4,0.0,,,1.0,1.0,0.0,1.0,94.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+561,sawmill,4,0.0,,,1.0,1.0,0.0,1.0,99.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+562,schoolhouse,4,0.0,,,1.0,1.0,0.0,1.0,31.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+563,schoolyard,4,0.0,,,1.0,1.0,0.0,1.0,76.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+564,science museum,4,0.0,,,1.0,1.0,0.0,1.0,187.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+565,sea cliff,4,0.0,,,1.0,1.0,0.0,1.0,61.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+566,seawall,4,0.0,,,1.0,1.0,0.0,1.0,27.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+567,server room,4,0.0,,,1.0,1.0,0.0,1.0,127.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+568,sewing room,4,0.0,,,1.0,1.0,0.0,1.0,162.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+569,shed,4,0.0,,,1.0,1.0,0.0,1.0,23.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+570,shipping room,4,0.0,,,1.0,1.0,0.0,1.0,185.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+571,shipyard outdoor,4,0.0,,,1.0,1.0,0.0,1.0,15.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+572,shoe shop,4,0.0,,,1.0,1.0,0.0,1.0,159.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+573,shopfront,4,0.0,,,1.0,1.0,0.0,1.0,48.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+574,shopping mall indoor,4,0.0,,,1.0,1.0,0.0,1.0,148.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+575,shower,4,0.0,,,1.0,1.0,0.0,1.0,181.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+576,signal box,4,0.0,,,1.0,1.0,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+577,skatepark,4,0.25,0.0,,0.75,0.75,0.25,0.75,18.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+578,ski jump,4,0.25,0.0,,0.75,0.75,0.0,1.0,12.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+579,ski lodge,4,0.0,,,1.0,1.0,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+581,ski slope,4,0.0,,,1.0,1.0,0.0,1.0,24.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+582,sky,4,0.0,,,1.0,1.0,0.0,1.0,21.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+583,skyscraper,4,0.25,0.0,,0.75,0.75,0.0,1.0,39.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+584,slum,4,0.0,,,1.0,1.0,0.0,1.0,19.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+585,snowfield,4,0.0,,,1.0,1.0,0.0,1.0,42.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+586,soccer field,4,0.5,1.0,,0.5,0.5,0.0,1.0,26.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+587,spillway,4,0.0,,,1.0,1.0,0.0,1.0,36.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+588,squash court,4,0.0,,,1.0,1.0,0.0,1.0,78.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+589,stable,4,0.0,,,1.0,1.0,0.0,1.0,105.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+590,stadium baseball,4,0.0,,,1.0,1.0,0.0,1.0,16.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+591,stadium football,4,0.0,,,1.0,1.0,0.0,1.0,19.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+592,stadium outdoor,4,0.0,,,1.0,1.0,0.0,1.0,43.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+593,stadium soccer,4,0.0,,,1.0,1.0,0.0,1.0,30.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+594,stage indoor,4,0.0,,,1.0,1.0,0.0,1.0,74.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+595,stage outdoor,4,0.0,,,1.0,1.0,0.0,1.0,52.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+596,staircase,4,0.0,,,1.0,1.0,0.0,1.0,141.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+597,steel mill indoor,4,0.25,0.0,,0.75,0.75,0.25,0.75,84.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+598,steel mill outdoor,4,0.0,,,1.0,1.0,0.0,1.0,37.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+599,stilt house water,4,0.25,0.0,,0.75,0.75,0.0,1.0,37.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+600,stone circle,4,0.0,,,1.0,1.0,0.0,1.0,56.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+601,street,4,0.0,,,1.0,1.0,0.0,1.0,40.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+602,strip mall,4,0.0,,,1.0,1.0,0.0,1.0,56.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+603,strip mine,4,0.0,,,1.0,1.0,0.0,1.0,47.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+604,submarine interior,4,0.0,,,1.0,1.0,0.0,1.0,118.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+605,subway interior,4,0.0,,,1.0,1.0,0.0,1.0,152.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+606,subway station corridor,4,0.0,,,1.0,1.0,0.0,1.0,61.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+607,subway station platform,4,0.0,,,1.0,1.0,0.0,1.0,91.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+608,sun deck,4,0.25,0.0,,0.75,0.75,0.0,1.0,13.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+609,supermarket,4,0.25,0.0,,0.75,0.75,0.0,1.0,69.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+610,sushi bar,4,0.0,,,1.0,1.0,0.0,1.0,146.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+611,swamp,4,0.0,,,1.0,1.0,0.0,1.0,40.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+612,swimming hole,4,0.0,,,1.0,1.0,0.0,1.0,35.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+613,swimming pool indoor,4,0.25,0.0,,0.75,0.75,0.25,0.75,27.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+614,swimming pool outdoor,4,0.25,0.0,,0.75,0.75,0.0,1.0,16.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+615,synagogue indoor,4,0.0,,,1.0,1.0,0.0,1.0,150.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+616,synagogue outdoor,4,0.0,,,1.0,1.0,0.0,1.0,64.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+617,tea garden,4,0.0,,,1.0,1.0,0.0,1.0,51.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+618,tearoom,4,0.0,,,1.0,1.0,0.0,1.0,183.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+619,teashop,4,0.0,,,1.0,1.0,0.0,1.0,203.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+620,television studio,4,0.0,,,1.0,1.0,0.0,1.0,149.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+621,temple east asia,4,0.0,,,1.0,1.0,0.0,1.0,20.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+623,temple western,4,0.0,,,1.0,1.0,0.0,1.0,48.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+624,tennis court indoor,4,0.0,,,1.0,1.0,0.0,1.0,127.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+625,tennis court outdoor,4,0.75,0.0,,0.25,0.25,0.0,1.0,33.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+626,tent indoor,4,0.25,1.0,,0.75,0.75,0.0,1.0,59.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+627,tent outdoor,4,0.5,0.0,,0.5,0.5,0.0,1.0,26.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+628,terrace farm,4,0.0,,,1.0,1.0,0.0,1.0,40.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+629,theater indoor procenium,4,0.0,,,1.0,1.0,0.0,1.0,206.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+630,theater indoor round,4,0.0,,,1.0,1.0,0.0,1.0,185.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+632,theater outdoor,4,0.0,,,1.0,1.0,0.0,1.0,32.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+633,thriftshop,4,0.0,,,1.0,1.0,0.0,1.0,136.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+634,throne room,4,0.0,,,1.0,1.0,0.0,1.0,90.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+636,ticket window outdoor,4,0.0,,,1.0,1.0,0.0,1.0,82.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+637,toll plaza,4,0.0,,,1.0,1.0,0.0,1.0,44.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+638,tollbooth,4,0.0,,,1.0,1.0,0.0,1.0,73.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+639,topiary garden,4,0.25,0.0,,0.75,0.75,0.25,0.75,20.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+640,tower,4,0.0,,,1.0,1.0,0.0,1.0,24.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+641,town house,4,0.0,,,1.0,1.0,0.0,1.0,22.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+642,toyshop,4,0.0,,,1.0,1.0,0.0,1.0,181.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+643,track indoor,4,0.0,,,1.0,1.0,0.0,1.0,77.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+644,track outdoor,4,0.5,0.0,,0.5,0.5,0.0,1.0,26.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+646,trailer park,4,0.0,,,1.0,1.0,0.0,1.0,50.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+647,train depot,4,0.0,,,1.0,1.0,0.0,1.0,50.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+648,train railway,4,0.0,,,1.0,1.0,0.0,1.0,32.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+649,train station outdoor,4,0.0,,,1.0,1.0,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+651,train station station,4,0.0,,,1.0,1.0,0.0,1.0,83.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+652,tree farm,4,0.0,,,1.0,1.0,0.0,1.0,45.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+653,tree house,4,0.25,0.0,,0.75,0.75,0.0,1.0,16.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+654,trench,4,0.25,0.0,,0.75,0.75,0.0,1.0,46.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+655,trestle bridge,4,0.0,,,1.0,1.0,0.0,1.0,40.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+657,tunnel rail outdoor,4,0.0,,,1.0,1.0,0.0,1.0,40.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+659,underwater coral reef,4,0.25,0.0,,0.75,0.75,0.0,1.0,8.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+660,underwater ice,4,0.5,0.0,,0.5,0.5,0.0,1.0,6.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+661,underwater kelp forest,4,0.75,1.0,,0.25,0.25,0.0,1.0,7.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+662,underwater ocean deep,4,1.0,0.25,,0.0,0.0,0.0,1.0,15.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+663,underwater ocean shallow,4,1.0,0.0,,0.0,0.0,0.0,1.0,4.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+664,underwater pool,4,1.0,0.5,,0.0,0.0,0.5,0.5,4.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+665,underwater wreck,4,0.75,0.0,,0.25,0.25,0.0,1.0,6.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+666,utility room,4,0.0,,,1.0,1.0,0.0,1.0,113.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+667,valley,4,0.0,,,1.0,1.0,0.0,1.0,48.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+668,van interior,4,0.0,,,1.0,1.0,0.0,1.0,114.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+669,vegetable garden,4,0.0,,,1.0,1.0,0.0,1.0,44.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+670,velodrome indoor,4,0.0,,,1.0,1.0,0.0,1.0,32.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+671,velodrome outdoor,4,0.0,,,1.0,1.0,0.0,1.0,25.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+672,ventilation shaft,4,0.25,0.0,,0.75,0.75,0.0,1.0,23.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+673,veranda,4,0.0,,,1.0,1.0,0.0,1.0,29.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+675,veterinarians office,4,0.5,0.0,,0.5,0.5,0.25,0.75,40.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+676,viaduct,4,0.0,,,1.0,1.0,0.0,1.0,24.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+677,videostore,4,0.0,,,1.0,1.0,0.0,1.0,176.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+678,village,4,0.0,,,1.0,1.0,0.0,1.0,23.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+680,volcano,4,0.5,0.0,,0.5,0.5,0.0,1.0,37.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+682,voting booth,4,0.0,,,1.0,1.0,0.0,1.0,81.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+683,waiting room,4,0.0,,,1.0,1.0,0.0,1.0,115.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+684,warehouse indoor,4,0.0,,,1.0,1.0,0.0,1.0,149.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+685,watchtower,4,0.0,,,1.0,1.0,0.0,1.0,34.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+686,water mill,4,0.0,,,1.0,1.0,0.0,1.0,55.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+687,water tower,4,0.0,,,1.0,1.0,0.0,1.0,60.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+688,water treatment plant indoor,4,0.0,,,1.0,1.0,0.0,1.0,121.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+689,water treatment plant outdoor,4,0.0,,,1.0,1.0,0.0,1.0,14.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+690,waterfall block,4,0.25,0.0,,0.75,0.75,0.0,1.0,23.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+691,waterfall cascade,4,0.0,,,1.0,1.0,0.0,1.0,40.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+692,waterfall cataract,4,0.0,,,1.0,1.0,0.0,1.0,25.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+693,waterfall fan,4,0.0,,,1.0,1.0,0.0,1.0,46.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+694,waterfall plunge,4,0.0,,,1.0,1.0,0.0,1.0,31.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+696,wave,4,0.0,,,1.0,1.0,0.0,1.0,54.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+697,weighbridge,4,0.0,,,1.0,1.0,0.0,1.0,59.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+698,wet bar,4,0.25,0.0,,0.75,0.75,0.0,1.0,95.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+699,wharf,4,0.25,0.0,,0.75,0.75,0.0,1.0,24.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+700,wheat field,4,0.0,,,1.0,1.0,0.0,1.0,32.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+701,wind farm,4,0.0,,,1.0,1.0,0.0,1.0,14.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+702,windmill,4,0.25,0.0,,0.75,0.75,0.0,1.0,11.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+703,window seat,4,0.0,,,1.0,1.0,0.0,1.0,123.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+704,wine cellar barrel storage,4,0.0,,,1.0,1.0,0.0,1.0,80.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+705,wine cellar bottle storage,4,0.0,,,1.0,1.0,0.0,1.0,137.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+706,winery,4,0.0,,,1.0,1.0,0.0,1.0,130.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+707,witness stand,4,0.0,,,1.0,1.0,0.0,1.0,157.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+708,woodland,4,0.0,,,1.0,1.0,0.0,1.0,50.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+709,workroom,4,0.0,,,1.0,1.0,0.0,1.0,185.0,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+713,youth hostel,4,0.0,,,1.0,1.0,0.0,1.0,219.5,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+714,zen garden,4,0.0,,,1.0,1.0,0.0,1.0,26.75,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels
+716,zoo,4,0.25,0.0,,0.75,0.75,0.0,1.0,22.25,seen-test stress-test diagnostics,covered_fidelity omitted because v1 prediction exports do not include base-model labels

@@ -1,0 +1,563 @@
+{
+  "claim_gate": {
+    "derm7pt_completed": true,
+    "smoke_mode": false,
+    "sun_completed": true
+  },
+  "code_hashes": {
+    "scripts/paper1_core.py": "17495209c76596513e04dade07ada4e6320215eeb617af3c6c4876ef523a2015",
+    "scripts/run_revision_v1.py": "897919463c726d72d55c600c99c061332f35f87535800dadd643bb91685e7360"
+  },
+  "datasets": {
+    "awa2/awa2_dataset_manifest.json": {
+      "generated_at": "2026-06-16T17:20:58Z",
+      "n_attributes": 85,
+      "n_classes": 50,
+      "n_objects": 37322,
+      "seeds": [
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\awa2\\Features\\xlsa17"
+    },
+    "derm7pt/derm7pt_dataset_manifest.json": {
+      "concept_columns": [
+        "pigment_network",
+        "streaks",
+        "pigmentation",
+        "regression_structures",
+        "dots_and_globules",
+        "blue_whitish_veil",
+        "vascular_structures"
+      ],
+      "concept_encoding": "categorical values encoded on full metadata and scaled to [0,1]; missing values encoded as an explicit category",
+      "concept_maps": {
+        "blue_whitish_veil": {
+          "absent": 0,
+          "present": 1
+        },
+        "dots_and_globules": {
+          "absent": 0,
+          "irregular": 1,
+          "regular": 2
+        },
+        "pigment_network": {
+          "absent": 0,
+          "atypical": 1,
+          "typical": 2
+        },
+        "pigmentation": {
+          "absent": 0,
+          "diffuse irregular": 1,
+          "diffuse regular": 2,
+          "localized irregular": 3,
+          "localized regular": 4
+        },
+        "regression_structures": {
+          "absent": 0,
+          "blue areas": 1,
+          "combinations": 2,
+          "white areas": 3
+        },
+        "streaks": {
+          "absent": 0,
+          "irregular": 1,
+          "regular": 2
+        },
+        "vascular_structures": {
+          "absent": 0,
+          "arborizing": 1,
+          "comma": 2,
+          "dotted": 3,
+          "hairpin": 4,
+          "linear irregular": 5,
+          "within regression": 6,
+          "wreath": 7
+        }
+      },
+      "diagnosis_grouping": "melanoma variants collapsed to melanoma; nevus variants collapsed to nevus; infrequent diagnoses grouped as other unless named major category",
+      "generated_at": "2026-06-16T17:28:20Z",
+      "image_modality": "dermoscopic image path from derm column",
+      "n_cases": 1011,
+      "n_grouped_diagnosis_classes": 7,
+      "n_images_missing_or_unreadable": 0,
+      "official_split_sizes": {
+        "test": 395,
+        "train": 413,
+        "val": 203
+      },
+      "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\Derm7pt"
+    },
+    "sun/sun_dataset_manifest.json": {
+      "n_attributes": 102,
+      "n_classes": 717,
+      "n_objects": 14340,
+      "official_database_note": "SUN Attribute Database reports 102 attributes and 14,340 images; this xlsa17 release exposes 717 scene class entries.",
+      "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\xlsa17\\data\\SUN",
+      "split_source": "xlsa17 proposed splits",
+      "test_seen_objects": 2580,
+      "test_unseen_objects": 1440,
+      "train_objects": 9280,
+      "validation_objects": 1040
+    }
+  },
+  "feature_extractors": {
+    "AwA2": "xlsa17 ResNet-101 features",
+    "Derm7pt": "local dermoscopic image color/histogram feature proxy generated from official derm image paths",
+    "SUN": "xlsa17 ResNet-101 features"
+  },
+  "generated_at": "2026-06-16T17:29:46Z",
+  "git_commit": "42a4ba98f63ff281418de6bd4bcef24da1ee6430",
+  "git_status_short": "M data/README.md\n M requirements.txt\n D revision_report.md\n?? implementation_strategy_v1.md\n?? outputs/\n?? reports/\n?? revision_report_v1.md\n?? scripts/run_revision_v1.py",
+  "hardware": {
+    "cpu_count": 8,
+    "gpu": "not queried by runner",
+    "machine": "AMD64",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 142 Stepping 10, GenuineIntel",
+    "ram_gb": "not queried by runner"
+  },
+  "hyperparameter_grids": {
+    "AwA2_q": [
+      8,
+      12,
+      18,
+      24,
+      32
+    ],
+    "AwA2_svd_rank": [
+      16,
+      32,
+      64,
+      128
+    ],
+    "Derm7pt_q": [
+      3,
+      5,
+      7
+    ],
+    "SUN_q": [
+      10,
+      20,
+      40,
+      60,
+      80,
+      102
+    ],
+    "confidence_threshold": [
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "manuscript_hashes": {
+    "manuscript/main.tex": "1db5ece1f2f2ba2fb3c2efdbe47cfbf90d144ab40fd4c9dcff83e4fafa16fb41",
+    "manuscript/references.bib": "61fe5b2332fcdf574b66372a679a263584f88995f86aa4300bbc3eccf6f1b2af",
+    "manuscript/supply.tex": "f738a38e03fcab1772130b58de461961cef443851144edfac0ffdc9d25316e14"
+  },
+  "manuscript_title": "SEMTRA: Global Semantic Transition and Rough-Set Rules for Auditable Post-hoc Explainability",
+  "output_artifact_index": [
+    {
+      "bytes": 2097,
+      "path": "audit/claim_audit.csv",
+      "sha256": "8d3a0043097c349f7fef5543781cca56355cd85abe66e868eda4f6296bf30b7b"
+    },
+    {
+      "bytes": 932,
+      "path": "audit/latex_insertion_map.md",
+      "sha256": "1b02b5e1b246787136854f54a1a870d905c84163d904900930f047ecab8f0664"
+    },
+    {
+      "bytes": 359,
+      "path": "awa2/awa2_bat_diagnostic.csv",
+      "sha256": "e22611248a7078bd3e60c505bfd679babdcaca10499441d30aea8c115508976d"
+    },
+    {
+      "bytes": 261,
+      "path": "awa2/awa2_dataset_manifest.json",
+      "sha256": "0556d2ccce3b89adba86e4fca5821dd10647faf55489559cdd29ca42cf61f39a"
+    },
+    {
+      "bytes": 10809,
+      "path": "awa2/awa2_discretizer_comparison_seedwise.csv",
+      "sha256": "5431996f0befd89ddfeb7088f405c1bacd42a38ea7cf335777dd7e3dfd4a2e1c"
+    },
+    {
+      "bytes": 1592,
+      "path": "awa2/awa2_discretizer_comparison_summary.csv",
+      "sha256": "c6d6901078113f00d3ec1269acdb47945e7b205ed268f16106d9f11298dc4677"
+    },
+    {
+      "bytes": 3132,
+      "path": "awa2/awa2_protocol_a_seedwise.csv",
+      "sha256": "e8f0139faff3edc72517371723626e58566450a8adc832040e98b102901d9647"
+    },
+    {
+      "bytes": 665,
+      "path": "awa2/awa2_protocol_a_summary.csv",
+      "sha256": "8fe02d29a6aa9b20d1cd8bf1a771e7347c07dc421b550e4c69b0e6cd86b91d49"
+    },
+    {
+      "bytes": 824,
+      "path": "awa2/awa2_protocol_b_per_class_seed42.csv",
+      "sha256": "f45ab31c364fa7d9fc49480a72e573d73f3d3baee9bc65b3e846664a4d9d8c4d"
+    },
+    {
+      "bytes": 1262,
+      "path": "awa2/awa2_protocol_b_seedwise.csv",
+      "sha256": "f46bd8b5b8c8875fd745ecc0bfc11ed697f5f975b7747479c8a3a58d9e95672e"
+    },
+    {
+      "bytes": 394436,
+      "path": "awa2/awa2_rule_predictions_seed42.csv",
+      "sha256": "179b654319c7a37a9555cbb9366301be1406f18ee0447ce3d35070bf42c169b8"
+    },
+    {
+      "bytes": 15951,
+      "path": "awa2/awa2_rulebook_seed42.csv",
+      "sha256": "aacf299ed83220364cf81ad761d5343def0acf8cb22bc2465d0435d26ae9910f"
+    },
+    {
+      "bytes": 1339,
+      "path": "awa2/awa2_selected_attributes_seed42.csv",
+      "sha256": "fa83ac3b2ac62230aa4b78cc43b722b6b3b7929339540cf2594b4aca697b6d53"
+    },
+    {
+      "bytes": 8737,
+      "path": "awa2/awa2_wedd_thresholds_seed42.csv",
+      "sha256": "b1b261695cf70accde35643db3897242b3466cbf41b47b0c46df7a2cf2d0a9cd"
+    },
+    {
+      "bytes": 592,
+      "path": "awa2/awa2_wedd_vs_mdlp_paired_stats.csv",
+      "sha256": "643c7a99e7b4a898d36738f9c70a286bc99fa02ae257897bc0e98a89f1671fe6"
+    },
+    {
+      "bytes": 562,
+      "path": "derm7pt/derm7pt_concept_conflict_diagnostics.csv",
+      "sha256": "7ad59fd828154897cd1d5e99a5de7aead402bdf7dec90159f5e648c8c315078b"
+    },
+    {
+      "bytes": 1789,
+      "path": "derm7pt/derm7pt_dataset_manifest.json",
+      "sha256": "d7656152a630d970cc7d747785b255fc50c6fcd5a140c31bb7dd5b303a1d9df8"
+    },
+    {
+      "bytes": 1104,
+      "path": "derm7pt/derm7pt_q_sensitivity.csv",
+      "sha256": "b8a152f9c4763c78d52f4427a441897f3bb73dbc436ce9b13adb3a39051d1d12"
+    },
+    {
+      "bytes": 12859,
+      "path": "derm7pt/derm7pt_rule_predictions.csv",
+      "sha256": "7aac3d453000a490e5489e50856c63569197b86300023f270e74f63ca23586df"
+    },
+    {
+      "bytes": 2066,
+      "path": "derm7pt/derm7pt_rulebook.csv",
+      "sha256": "5140481a281ea5abc94c5d8c2fdc0103d09e788a4760aaf706fab5e1f5517b08"
+    },
+    {
+      "bytes": 664,
+      "path": "derm7pt/derm7pt_rulebook_seedwise.csv",
+      "sha256": "f1c5995058ede4883c7cef5395e6004acbab16b4e4cd850aa0c1798f2365b524"
+    },
+    {
+      "bytes": 408,
+      "path": "derm7pt/derm7pt_runtime.jsonl",
+      "sha256": "cb9691b44698ecba5234b746c4c881b1c7a276e9d794f3c719c9af6bdb1c7086"
+    },
+    {
+      "bytes": 424,
+      "path": "derm7pt/derm7pt_summary_table.tex",
+      "sha256": "45e1dd426151063fea58c17ef4076b72a29671552807dd0e170cdf5f5e10cdd1"
+    },
+    {
+      "bytes": 85,
+      "path": "derm7pt/derm7pt_transition_seedwise.csv",
+      "sha256": "b81f5f15886d517c6ee6bff9751c4ce27ad104c8297c0e98727a5c54aac67349"
+    },
+    {
+      "bytes": 3088,
+      "path": "derm7pt/derm7pt_wedd_thresholds.csv",
+      "sha256": "5e05cc1021cb7be0fbf54618ee59264c2761c97449ebf45871ca4483907d4ba3"
+    },
+    {
+      "bytes": 318,
+      "path": "environment.json",
+      "sha256": "ec37a98f3a5257d6e066298dce048776bf0d5beaaef1669998bab1e9849b8635"
+    },
+    {
+      "bytes": 721,
+      "path": "latex/diff_summary.md",
+      "sha256": "0954615cac896f5fd98c92eb88ac29a545f9f3180bd5ec3693a983a9c95f4a87"
+    },
+    {
+      "bytes": 1068,
+      "path": "latex/main.blg",
+      "sha256": "e03d632f54071272bb6208ee083716efdb357d1d270301fb5339495c91c7f4f8"
+    },
+    {
+      "bytes": 81413,
+      "path": "latex/main.log",
+      "sha256": "3eb1155efd277df693d698439f087b0065256bbe8d45df7060bda1a620c703bc"
+    },
+    {
+      "bytes": 5491494,
+      "path": "latex/main.pdf",
+      "sha256": "a818661a6d9eba1bc736274182c0c7ae6283d63855fd0e5fb6d9a4dcfb5a0418"
+    },
+    {
+      "bytes": 1037,
+      "path": "latex/supply.blg",
+      "sha256": "ec95a1d07b6e452b451868fbabb72cf6b456107b562bbedb38b5a1ab354fa9d3"
+    },
+    {
+      "bytes": 57778,
+      "path": "latex/supply.log",
+      "sha256": "b06836923e19e68b968818741380909da6058b181ffaf70f9370449018728401"
+    },
+    {
+      "bytes": 107997,
+      "path": "latex/supply.pdf",
+      "sha256": "42279ae36c831bbfbd9a7199337a34b224653fd67e40b845279f68d9b26557c0"
+    },
+    {
+      "bytes": 687,
+      "path": "literature/added_references.md",
+      "sha256": "5b2bd726627cf9e3d2251d7070b342773b4e3b716b8ac0c8a0594e9c18262b4e"
+    },
+    {
+      "bytes": 366,
+      "path": "literature/bibtex_validation.log",
+      "sha256": "4d76f81c08af7fa4c90802ac8484f7860af2062bc9690b57fdc31e3c9ace9813"
+    },
+    {
+      "bytes": 18066,
+      "path": "manifest_revision_v1.json",
+      "sha256": "b43ee25c4ff2fcb42b612689cd1f942ffc9cbd8b7fea9ae78cbfa58d3abe6bac"
+    },
+    {
+      "bytes": 379,
+      "path": "qc/compile_log.txt",
+      "sha256": "522f97d7183ff72955562db866706f31f15996e80628c19702694dafdd213d2e"
+    },
+    {
+      "bytes": 39,
+      "path": "qc/no_paragraph_check.log",
+      "sha256": "0177feb17f486749cc5ad132570e422c143524f147339ae0d54ce4bc83c7e34d"
+    },
+    {
+      "bytes": 479,
+      "path": "qc/qc_checklist.json",
+      "sha256": "a131f453d9b311674c4493dbc8b50fafa533114d5d2d78bd63581bdab16f1aaa"
+    },
+    {
+      "bytes": 352,
+      "path": "qc/qc_checklist.md",
+      "sha256": "82a889ef1a7a99e712c146e428a55c894dadb4d55b5dca5678a7ae34130c82b9"
+    },
+    {
+      "bytes": 100,
+      "path": "qc/unresolved_refs.log",
+      "sha256": "08a9d69864095360f50c593a25b1caf73fdda8547f45c5dffaecdcb9ea0d9c88"
+    },
+    {
+      "bytes": 451,
+      "path": "revision_v1_run_summary.json",
+      "sha256": "fcb8d8772f182523106454dfd795ce72423123b3e76dd7ce114530946fd5fcbb"
+    },
+    {
+      "bytes": 4522,
+      "path": "runtime/runtime.jsonl",
+      "sha256": "073f6eb42c968e9ba34cca897d5d02c9f27e92019106bc00500c3ff533dada85"
+    },
+    {
+      "bytes": 767,
+      "path": "runtime/runtime_summary.csv",
+      "sha256": "7dc0f95760051af2689b872b725b55fe3a50d85736f99cf7eaa45ec85fa77776"
+    },
+    {
+      "bytes": 5723,
+      "path": "sensitivity/awa2_confidence_threshold_frontier.csv",
+      "sha256": "b823568a3a100985e14e137fd9739f317fb0892c1cd5a44e94ab8fd7e0d7ee60"
+    },
+    {
+      "bytes": 3098,
+      "path": "sensitivity/awa2_q_sensitivity.csv",
+      "sha256": "ad3824dfb4c395ce8205c548d47da20df2274a8496544f20dfc61f33a13753f9"
+    },
+    {
+      "bytes": 2613,
+      "path": "sensitivity/awa2_svd_rank_sensitivity.csv",
+      "sha256": "31f7a08d34f1fca6808cc6c7d87041dad6aae86f50ab208045dc040e6d11f76f"
+    },
+    {
+      "bytes": 742,
+      "path": "statistics/cross_domain_generalization.csv",
+      "sha256": "68bf4543823ff635bb3238d7c50f93d2817dc42e5906326ec62a3f64844ad3d9"
+    },
+    {
+      "bytes": 1134,
+      "path": "statistics/metric_consistency_check.csv",
+      "sha256": "112ade36fcd78c1c1ee80f2796084cdcca754003bb26897169ab890dd727a5e7"
+    },
+    {
+      "bytes": 1102,
+      "path": "statistics/statistical_summary.md",
+      "sha256": "293e6e24719e52c988b2077085b3d762ce6cf2c0c9a20e1c384609ef4fee7f8b"
+    },
+    {
+      "bytes": 465,
+      "path": "sun/sun_dataset_manifest.json",
+      "sha256": "98a4240e6161289e9f0313dda4feca1dee80791c0825062ecb4f6deab971888c"
+    },
+    {
+      "bytes": 1394,
+      "path": "sun/sun_discretizer_comparison.csv",
+      "sha256": "66fafff8841e7bec3697ba56f18fb1296bde5c52ee133daee095d8c8cbe6e639"
+    },
+    {
+      "bytes": 2075,
+      "path": "sun/sun_q_sensitivity.csv",
+      "sha256": "e04ab240454682f5bc09ceaa492e9b2757031b803d5a07293f37c13e5adedc78"
+    },
+    {
+      "bytes": 216946,
+      "path": "sun/sun_rule_predictions.csv",
+      "sha256": "7e0725bbeaafd7888e7c9e19a1fde50df1bdf4fb7c899038efda736daf53c380"
+    },
+    {
+      "bytes": 185882,
+      "path": "sun/sun_rulebook.csv",
+      "sha256": "3aa3ef45a61df30b6b00384dd937b77ef2a3e0f8525bd1335b8b4f3728c2ac8a"
+    },
+    {
+      "bytes": 553,
+      "path": "sun/sun_rulebook_seedwise.csv",
+      "sha256": "00431fcd70b53641df920808004368b1fd1cea77b99144f6d5d3742cda2e7ad3"
+    },
+    {
+      "bytes": 685,
+      "path": "sun/sun_runtime.jsonl",
+      "sha256": "6f824fefbf2582a996b7800ff6eada346d1a626e29e1898b4053cd1868964b9c"
+    },
+    {
+      "bytes": 1548,
+      "path": "sun/sun_selected_attributes.csv",
+      "sha256": "1b46ae1107e5dd109a3139c2bb0780755e262c6aa8a969ec837ec0f20d2327b1"
+    },
+    {
+      "bytes": 423,
+      "path": "sun/sun_summary_table.tex",
+      "sha256": "3b0f4cd3b5bc70851e291da0c524b00f37f2632a400662e3c33e726b1329fe72"
+    },
+    {
+      "bytes": 213,
+      "path": "sun/sun_transition_seedwise.csv",
+      "sha256": "96156ae87e016c7093a78c4f80fcd7cbf1c4f2d195a28291165fec47a9fd9df9"
+    },
+    {
+      "bytes": 8617,
+      "path": "sun/sun_wedd_thresholds.csv",
+      "sha256": "6e528bdfd856e7a9f7ded31aeaf9921dc329e814928e6984e9f395546cb177c7"
+    },
+    {
+      "bytes": 341,
+      "path": "synthetic/synthetic_summary.json",
+      "sha256": "24d36cbf076c4762188df960a9945ee3f9c0b17fd9790880d4094006004e7157"
+    },
+    {
+      "bytes": 2114,
+      "path": "synthetic/synthetic_summary_by_noise.csv",
+      "sha256": "4b81d11a3f9f5551f4cdea33b4e476586c80a0429350916f676dd18f42caebe4"
+    },
+    {
+      "bytes": 337,
+      "path": "tables/table_bat_diagnostic.tex",
+      "sha256": "027ad1a3805118c35720b281fee5a5e903551938cf2b8722963ff3700b4a52a3"
+    },
+    {
+      "bytes": 824,
+      "path": "tables/table_cross_domain_generalization.tex",
+      "sha256": "66eeeca9ed90575aef4651a9487dbc670db3e9e9383ffdff072a6cf3599ca1bd"
+    },
+    {
+      "bytes": 410,
+      "path": "tables/table_derm7pt_summary.tex",
+      "sha256": "ec0dc5f2688d8663d602484a509afc4d427086498e2208480d5d06107bb2dec3"
+    },
+    {
+      "bytes": 646,
+      "path": "tables/table_discretizer_comparison_main.tex",
+      "sha256": "804830190e15677001c6ae13b5e7c910c52f0fb1844c9ea6226765e92c2e8451"
+    },
+    {
+      "bytes": 455,
+      "path": "tables/table_protocol_b_seedwise.tex",
+      "sha256": "57bf50d1caed35ef9060fa9f1632b0c73549f6158a7f9411d4fcd8c66a73f2ef"
+    },
+    {
+      "bytes": 541,
+      "path": "tables/table_q_sensitivity.tex",
+      "sha256": "cedc094d2f268fdc5a7b5c4c071f490d92af693ff1527b442ca6480a0278ff1e"
+    },
+    {
+      "bytes": 845,
+      "path": "tables/table_runtime_breakdown.tex",
+      "sha256": "ae1298cea122410fcb439843c6350f1854010e202736566bb9146622842aed8a"
+    },
+    {
+      "bytes": 409,
+      "path": "tables/table_sun_summary.tex",
+      "sha256": "9975a8449a7c3e72f26890b54f148a1c5e20c6adf7803e646bdc15d1b881c1b7"
+    },
+    {
+      "bytes": 525,
+      "path": "tables/table_svd_rank_sensitivity.tex",
+      "sha256": "8afdf689891994ed4e1fb0eadf864904836bf80b08ae22b7c78b15dd107ff10b"
+    }
+  ],
+  "package_versions": {
+    "Pillow": "12.2.0",
+    "h5py": "3.16.0",
+    "matplotlib": "3.11.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.3",
+    "pyarrow": "24.0.0",
+    "scikit-learn": "1.9.0",
+    "scipy": "1.17.1"
+  },
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "root": "D:\\GitHub\\transition-matrix-dss",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "split_definitions": {
+    "AwA2 Protocol A": "five seed stratified closed-world train/validation/test split",
+    "AwA2 Protocol B": "official xlsa17 seen/unseen semantic-transfer split",
+    "Derm7pt": "official train/valid/test index CSV files",
+    "SUN": "official xlsa17 SUN split fields"
+  }
+}

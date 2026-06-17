@@ -1,0 +1,10 @@
+{
+  "category_diagnostic_rows": 645,
+  "generated_at": "2026-06-17T06:12:42Z",
+  "n_images": 14340,
+  "n_official_attribute_matches": 14340,
+  "n_seen_prediction_rows": 2580,
+  "n_unmatched_official_attribute_rows": 0,
+  "official_sun_archive": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\sun\\SUNAttributeDB.tar.gz",
+  "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\xlsa17\\data\\SUN"
+}

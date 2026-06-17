@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-06-16T17:20:57Z",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]",
+  "root": "D:\\GitHub\\transition-matrix-dss",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "smoke": false
+}

@@ -1,0 +1,8 @@
+Revision v1 compile summary
+Generated: 2026-06-16T17:29:46Z
+LaTeX plugin auto compile: attempted; MiKTeX latexmk path requires unavailable Perl in this environment.
+Fallback compile: direct pdflatex/bibtex passes completed for main.tex and supply.tex when logs/PDFs are present.
+main.pdf present: True
+supply.pdf present: True
+unresolved log entries: 0
+paragraph hits: 0

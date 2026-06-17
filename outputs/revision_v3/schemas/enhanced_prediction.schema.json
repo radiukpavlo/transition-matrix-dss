@@ -1,0 +1,22 @@
+{
+  "format": "csv",
+  "required_columns": [
+    "eval_position",
+    "source_row_index",
+    "true_label",
+    "true_class",
+    "base_prediction",
+    "base_class",
+    "prediction",
+    "rule_class",
+    "mode",
+    "abstained",
+    "conflict",
+    "activated_rules",
+    "n_activated",
+    "covered",
+    "correct_when_covered",
+    "faithful_to_base_when_covered"
+  ],
+  "semtra_revision": "3.0"
+}

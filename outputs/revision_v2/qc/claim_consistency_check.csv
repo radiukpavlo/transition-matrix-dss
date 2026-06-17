@@ -1,0 +1,8 @@
+claim_id,source,expected,observed,status,severity,discipline
+awa2_test_mae,manuscript/main.tex,0.1029 \\pm 0.0005,matched,pass,error,numeric
+coverage_accuracy_fidelity,manuscript/main.tex,"84.80%, 39.73%, 40.48%",matched,pass,error,numeric
+protocol_b_uncertainty,manuscript/main.tex,44.02% +/- 1.22% and not competitive ZSL,matched,pass,error,claim_gate
+synthetic_macro_f1,manuscript/main.tex,"0.879, 0.838, 0.8668",matched,pass,error,numeric
+derm7pt_not_clinical,manuscript/main.tex,retrospective technical validation and no clinical readiness,matched,pass,error,claim_gate
+wedd_not_universal_superiority,manuscript/main.tex,WEDD not unconditionally superior,matched,pass,error,claim_gate
+no_competitive_zsl_framing,manuscript/main.tex,no competitive zero-shot learning framing,matched,pass,error,claim_gate

@@ -1,0 +1,8 @@
+{
+  "highest_noise_macro_f1": 0.8380942538079401,
+  "highest_noise_sigma": 0.2,
+  "mean_macro_f1_across_noise_levels": 0.866835910808797,
+  "source": "D:\\GitHub\\transition-matrix-dss\\artifacts\\synthetic\\synthetic_summary_by_noise.csv",
+  "status": "copied_from_checked_in_artifacts",
+  "zero_noise_macro_f1": 0.8788227080715176
+}

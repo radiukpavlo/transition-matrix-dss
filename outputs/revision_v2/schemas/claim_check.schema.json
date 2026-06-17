@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Machine-readable manuscript claim consistency checks.",
+  "family": "claim_check",
+  "format": "csv",
+  "required_columns": [
+    "claim_id",
+    "source",
+    "expected",
+    "observed",
+    "status",
+    "severity"
+  ],
+  "semtra_revision": "2.0"
+}

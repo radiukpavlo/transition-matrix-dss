@@ -1,0 +1,18 @@
+{
+  "batch_size": 16,
+  "clinical_scope": "retrospective technical validation only; ImageNet encoder is not a clinical dermatology model",
+  "device": "cpu",
+  "encoder": "torchvision.models.resnet50",
+  "feature_dim": 2048,
+  "feature_file": "D:\\GitHub\\transition-matrix-dss\\outputs\\revision_v3\\derm7pt\\derm7pt_resnet50_imagenet1k_v2_features.parquet",
+  "feature_sha256": "8866cfa2c629ae8ebbd4509239bd33d42c7bea812b01840558cdf0d7148fb652",
+  "generated_at": "2026-06-17T05:59:45Z",
+  "image_column": "derm",
+  "image_modality": "dermoscopic",
+  "missing_image_indices": [],
+  "n_cases": 1011,
+  "seconds": 245.88921308517456,
+  "torch_version": "2.12.0+cpu",
+  "torchvision_version": "0.27.0",
+  "weights": "ResNet50_Weights.IMAGENET1K_V2"
+}

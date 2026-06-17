@@ -1,0 +1,10 @@
+{
+  "format": "csv",
+  "required_columns": [
+    "source_row_index",
+    "normalized_image_path",
+    "scene_category",
+    "official_attribute_match"
+  ],
+  "semtra_revision": "3.0"
+}

@@ -1,0 +1,7 @@
+metric,n_pairs,mean_difference_wedd_minus_mdlp,ci_low,ci_high,n_boot,note
+coverage,5,0.014574681848626914,-0.04013395847287342,0.08506363027461483,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.
+covered_accuracy,5,0.006112306127601263,-0.007446154136780547,0.019670766391983074,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.
+covered_fidelity_to_base,5,0.007317661793609931,-0.007814589454941701,0.023196012971844104,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.
+all_object_accuracy,5,0.011118553248492957,-0.005840589417280639,0.03927662424648358,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.
+conflict_rate,5,-0.010663094440723376,-0.08380442062960483,0.047849966510381814,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.
+abstention_rate,5,-0.014574681848626914,-0.07823174815807102,0.04332217012726058,1000,Paired seed bootstrap: WEDD minus MDLP-like entropy; positive values do not imply universal superiority.

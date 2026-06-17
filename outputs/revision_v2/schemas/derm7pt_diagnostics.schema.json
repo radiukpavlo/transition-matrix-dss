@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Derm7pt diagnosis/concept diagnostic summaries.",
+  "family": "derm7pt_diagnostics",
+  "format": "csv",
+  "required_columns": [
+    "group",
+    "n_cases",
+    "coverage",
+    "covered_accuracy",
+    "covered_fidelity",
+    "conflict_rate",
+    "abstention_rate"
+  ],
+  "semtra_revision": "2.0"
+}

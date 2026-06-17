@@ -1,0 +1,10 @@
+{
+  "format": "json",
+  "required_keys": [
+    "generated_at",
+    "bundle_root",
+    "files",
+    "raw_private_data_excluded"
+  ],
+  "semtra_revision": "3.0"
+}

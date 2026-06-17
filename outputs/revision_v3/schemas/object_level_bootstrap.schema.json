@@ -1,0 +1,14 @@
+{
+  "format": "csv",
+  "required_columns": [
+    "dataset",
+    "artifact",
+    "metric",
+    "mean",
+    "ci_low",
+    "ci_high",
+    "n_boot",
+    "unit"
+  ],
+  "semtra_revision": "3.0"
+}

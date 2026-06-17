@@ -1,0 +1,73 @@
+{
+  "claim_checks": [
+    {
+      "claim_id": "awa2_test_mae",
+      "discipline": "numeric",
+      "expected": "0.1029 \\\\pm 0.0005",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "coverage_accuracy_fidelity",
+      "discipline": "numeric",
+      "expected": "84.80%, 39.73%, 40.48%",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "protocol_b_uncertainty",
+      "discipline": "claim_gate",
+      "expected": "44.02% +/- 1.22% and not competitive ZSL",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "synthetic_macro_f1",
+      "discipline": "numeric",
+      "expected": "0.879, 0.838, 0.8668",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "derm7pt_not_clinical",
+      "discipline": "claim_gate",
+      "expected": "retrospective technical validation and no clinical readiness",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "wedd_not_universal_superiority",
+      "discipline": "claim_gate",
+      "expected": "WEDD not unconditionally superior",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    },
+    {
+      "claim_id": "no_competitive_zsl_framing",
+      "discipline": "claim_gate",
+      "expected": "no competitive zero-shot learning framing",
+      "observed": "matched",
+      "severity": "error",
+      "source": "manuscript/main.tex",
+      "status": "pass"
+    }
+  ],
+  "claim_checks_passed": true,
+  "derm7pt_claim_scope": "retrospective technical validation only",
+  "generated_at": "2026-06-16T21:30:21Z",
+  "protocol_b_claim_scope": "semantic-transfer validation only; not competitive ZSL",
+  "sun_claim_scope": "stress-test/portability diagnostics",
+  "wedd_claim_scope": "tunable discretization option; no universal superiority claim"
+}

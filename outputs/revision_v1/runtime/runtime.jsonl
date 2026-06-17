@@ -1,0 +1,45 @@
+{"dataset": "AwA2", "phase": "protocol_a_WEDD", "seconds": 8.158218383789062, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_a_MDLP-like entropy", "seconds": 8.217000722885132, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_a_Equal frequency", "seconds": 5.298162937164307, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_a_Equal width", "seconds": 5.316706895828247, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_a_WEDD", "seconds": 6.806609869003296, "seed": 43}
+{"dataset": "AwA2", "phase": "protocol_a_MDLP-like entropy", "seconds": 7.084449291229248, "seed": 43}
+{"dataset": "AwA2", "phase": "protocol_a_Equal frequency", "seconds": 5.474876642227173, "seed": 43}
+{"dataset": "AwA2", "phase": "protocol_a_Equal width", "seconds": 5.184062242507935, "seed": 43}
+{"dataset": "AwA2", "phase": "protocol_a_WEDD", "seconds": 7.280609130859375, "seed": 44}
+{"dataset": "AwA2", "phase": "protocol_a_MDLP-like entropy", "seconds": 7.535909652709961, "seed": 44}
+{"dataset": "AwA2", "phase": "protocol_a_Equal frequency", "seconds": 5.734850883483887, "seed": 44}
+{"dataset": "AwA2", "phase": "protocol_a_Equal width", "seconds": 5.203312873840332, "seed": 44}
+{"dataset": "AwA2", "phase": "protocol_a_WEDD", "seconds": 6.823044300079346, "seed": 45}
+{"dataset": "AwA2", "phase": "protocol_a_MDLP-like entropy", "seconds": 6.932234764099121, "seed": 45}
+{"dataset": "AwA2", "phase": "protocol_a_Equal frequency", "seconds": 5.388881206512451, "seed": 45}
+{"dataset": "AwA2", "phase": "protocol_a_Equal width", "seconds": 5.657726287841797, "seed": 45}
+{"dataset": "AwA2", "phase": "protocol_a_WEDD", "seconds": 6.906229496002197, "seed": 46}
+{"dataset": "AwA2", "phase": "protocol_a_MDLP-like entropy", "seconds": 6.8424906730651855, "seed": 46}
+{"dataset": "AwA2", "phase": "protocol_a_Equal frequency", "seconds": 5.369676113128662, "seed": 46}
+{"dataset": "AwA2", "phase": "protocol_a_Equal width", "seconds": 5.216413497924805, "seed": 46}
+{"dataset": "AwA2", "phase": "q_sensitivity", "q": 8, "seconds": 5.791628360748291, "seed": 42}
+{"dataset": "AwA2", "phase": "q_sensitivity", "q": 12, "seconds": 5.95114541053772, "seed": 42}
+{"dataset": "AwA2", "phase": "q_sensitivity", "q": 18, "seconds": 6.811885118484497, "seed": 42}
+{"dataset": "AwA2", "phase": "q_sensitivity", "q": 24, "seconds": 7.576277017593384, "seed": 42}
+{"dataset": "AwA2", "phase": "q_sensitivity", "q": 32, "seconds": 8.720843076705933, "seed": 42}
+{"dataset": "AwA2", "phase": "svd_rank_sensitivity", "rank": 16, "seconds": 7.443177938461304, "seed": 42}
+{"dataset": "AwA2", "phase": "svd_rank_sensitivity", "rank": 32, "seconds": 7.242645978927612, "seed": 42}
+{"dataset": "AwA2", "phase": "svd_rank_sensitivity", "rank": 64, "seconds": 6.837857484817505, "seed": 42}
+{"dataset": "AwA2", "phase": "svd_rank_sensitivity", "rank": 128, "seconds": 6.802057981491089, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_b_semantic_validation", "seconds": 2.363511562347412, "seed": 42}
+{"dataset": "AwA2", "phase": "protocol_b_semantic_validation", "seconds": 3.8130545616149902, "seed": 43}
+{"dataset": "AwA2", "phase": "protocol_b_semantic_validation", "seconds": 2.7491297721862793, "seed": 44}
+{"dataset": "AwA2", "phase": "protocol_b_semantic_validation", "seconds": 3.305666208267212, "seed": 45}
+{"dataset": "AwA2", "phase": "protocol_b_semantic_validation", "seconds": 2.842210292816162, "seed": 46}
+{"dataset": "SUN", "phase": "transition_and_rulebook", "seconds": 11.561664819717407, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 10, "seconds": 7.686663389205933, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 20, "seconds": 10.16656231880188, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 40, "seconds": 16.99972367286682, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 60, "seconds": 24.269052028656006, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 80, "seconds": 33.288580894470215, "seed": 42}
+{"dataset": "SUN", "phase": "q_sensitivity", "q": 102, "seconds": 39.616204261779785, "seed": 42}
+{"dataset": "Derm7pt", "phase": "transition_and_rulebook", "seconds": 7.797166347503662, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 3, "seconds": 0.05929255485534668, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 5, "seconds": 0.08996725082397461, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 7, "seconds": 0.11965823173522949, "seed": 42}

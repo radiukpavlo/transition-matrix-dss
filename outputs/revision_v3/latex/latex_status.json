@@ -1,0 +1,20 @@
+﻿{
+    "generated_at":  "2026-06-17T11:45:07.1255605Z",
+    "plugin_attempted_first":  true,
+    "fallback_attempted":  true,
+    "note":  "If local fallback times out, existing successful revision LaTeX PDFs/logs are reused for the active archive.",
+    "records":  [
+                    {
+                        "stem":  "main",
+                        "plugin_exit_code":  0,
+                        "fallback_status":  "pass",
+                        "fallback_error":  ""
+                    },
+                    {
+                        "stem":  "supply",
+                        "plugin_exit_code":  0,
+                        "fallback_status":  "pass",
+                        "fallback_error":  ""
+                    }
+                ]
+}

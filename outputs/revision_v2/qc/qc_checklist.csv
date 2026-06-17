@@ -1,0 +1,9 @@
+check,status,detail
+no_paragraph,pass,
+duplicate_labels,pass,
+missing_bib_keys,pass,
+latex_main_log,pass,
+latex_supply_log,pass,
+claim_consistency,pass,
+schema_validation,pending,resolved after schema validation
+submission_bundle,pass,

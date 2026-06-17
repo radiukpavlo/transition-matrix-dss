@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "JSONL runtime and stage log records.",
+  "family": "runtime_log",
+  "format": "jsonl",
+  "required_keys": [
+    "dataset",
+    "stage",
+    "seconds",
+    "status"
+  ],
+  "semtra_revision": "2.0"
+}

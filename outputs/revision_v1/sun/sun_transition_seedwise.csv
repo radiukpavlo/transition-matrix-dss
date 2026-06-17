@@ -1,0 +1,2 @@
+dataset,seed,mae_unseen,rmse_unseen,prototype_unseen_accuracy,prototype_unseen_macro_f1,unseen_classes,unseen_objects
+SUN,42,0.06829570243753186,0.11461572757997852,0.2465277777777778,0.2282581166801461,72,1440

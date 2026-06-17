@@ -1,0 +1,4 @@
+{"dataset": "Derm7pt", "phase": "transition_and_rulebook", "seconds": 7.797166347503662, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 3, "seconds": 0.05929255485534668, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 5, "seconds": 0.08996725082397461, "seed": 42}
+{"dataset": "Derm7pt", "phase": "q_sensitivity", "q": 7, "seconds": 0.11965823173522949, "seed": 42}

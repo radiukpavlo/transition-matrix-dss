@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Seed-wise or aggregate audit metric table.",
+  "family": "metric_summary",
+  "format": "csv",
+  "recommended_columns": [
+    "seed",
+    "coverage",
+    "covered_accuracy",
+    "covered_fidelity_to_base"
+  ],
+  "required_columns": [
+    "dataset"
+  ],
+  "semtra_revision": "2.0"
+}

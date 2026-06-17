@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-06-17T06:10:49Z",
+  "n_attributes": 85,
+  "n_classes": 50,
+  "n_objects": 37322,
+  "prediction_export": "enhanced",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "source": "D:\\GitHub\\transition-matrix-dss\\data\\raw\\awa2\\Features\\xlsa17"
+}

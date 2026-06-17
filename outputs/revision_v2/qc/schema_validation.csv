@@ -1,0 +1,13 @@
+family,schema,artifact,status,detail
+dataset_manifest,dataset_manifest.schema.json,outputs/revision_v1/sun/sun_dataset_manifest.json,pass,
+dataset_manifest,dataset_manifest.schema.json,outputs/revision_v1/derm7pt/derm7pt_dataset_manifest.json,pass,
+metric_summary,metric_summary.schema.json,outputs/revision_v1/awa2/awa2_protocol_a_seedwise.csv,pass,
+metric_summary,metric_summary.schema.json,outputs/revision_v1/sun/sun_rulebook_seedwise.csv,pass,
+metric_summary,metric_summary.schema.json,outputs/revision_v1/derm7pt/derm7pt_rulebook_seedwise.csv,pass,
+claim_check,claim_check.schema.json,outputs/revision_v2/qc/claim_consistency_check.csv,pass,
+bootstrap_interval,bootstrap_interval.schema.json,outputs/revision_v2/statistics/bootstrap_intervals.csv,pass,
+paired_discretizer_interval,paired_discretizer_interval.schema.json,outputs/revision_v2/statistics/paired_discretizer_intervals.csv,pass,
+sun_diagnostics,sun_diagnostics.schema.json,outputs/revision_v2/sun/sun_category_diagnostics.csv,pass,
+derm7pt_diagnostics,derm7pt_diagnostics.schema.json,outputs/revision_v2/derm7pt/derm7pt_diagnosis_diagnostics.csv,pass,
+derm7pt_diagnostics,derm7pt_diagnostics.schema.json,outputs/revision_v2/derm7pt/derm7pt_concept_diagnostics_v2.csv,pass,
+submission_bundle_manifest,submission_bundle_manifest.schema.json,outputs/revision_v2/submission_bundle/manifest.json,pass,

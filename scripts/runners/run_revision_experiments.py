@@ -25,16 +25,16 @@ def main():
     args=ap.parse_args()
     out=Path(args.out).resolve(); audit=out/'audit'; py=sys.executable
     commands=[
-        [py,'scripts/train_base_predictor.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_local_xai_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed),'--sample_size',str(args.local_sample_size)],
-        [py,'scripts/run_cbm_tcav_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_symbolic_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_discretizer_ablation.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_transition_operator_ablation.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_rule_stability.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/run_official_xlsa_protocol.py','--awa2_zip',args.awa2_zip,'--xlsa17_zip',args.xlsa17_zip,'--out',str(out),'--seed',str(args.seed)],
-        [py,'scripts/generate_revision_tables.py'],
-        [py,'scripts/generate_revision_figures.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/train_base_predictor.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_local_xai_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed),'--sample_size',str(args.local_sample_size)],
+        [py,'scripts/experiments/run_cbm_tcav_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_symbolic_baselines.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_discretizer_ablation.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_transition_operator_ablation.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_rule_stability.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/experiments/run_official_xlsa_protocol.py','--awa2_zip',args.awa2_zip,'--xlsa17_zip',args.xlsa17_zip,'--out',str(out),'--seed',str(args.seed)],
+        [py,'scripts/generators/generate_revision_tables.py'],
+        [py,'scripts/generators/generate_revision_figures.py','--awa2_zip',args.awa2_zip,'--out',str(out),'--seed',str(args.seed)],
     ]
     results=[]
     for i,cmd in enumerate(commands,1):

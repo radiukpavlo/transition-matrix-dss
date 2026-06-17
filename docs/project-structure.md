@@ -16,7 +16,14 @@ The manuscript intentionally imports figures from `../figs/` and tables from `..
 
 ## Reproduction Code
 
-`scripts/` contains all experiment, figure-generation, table-generation, and audit scripts. Most scripts accept `--out .` so outputs are written to the repository-level artifact folders.
+* `run_experiments.py` at the root acts as the unified command-line entry point.
+* `scripts/` houses the codebase, categorized into the following subfolders:
+  * `core/`: Common utility algorithms (`paper1_core.py`, `revision_common.py`, `figure_style.py`).
+  * `experiments/`: Specific baseline, ablation, and diagnostic evaluation runners.
+  * `generators/`: PDF figure, LaTeX table, and visual asset generators.
+  * `runners/`: Global orchestration pipelines (including v1, v2, v3 scripts).
+  * `utils/`: Auditing and data preparation tools.
+  * `legacy/`: Historical proof-of-concept scripts.
 
 ## Public Outputs
 
@@ -31,3 +38,8 @@ The manuscript intentionally imports figures from `../figs/` and tables from `..
 ## Private Data
 
 `data/` is a local workspace. Raw archives, downloaded datasets, sensitive notes, and private derived files should remain in ignored subfolders such as `data/raw/` and `data/private/`.
+
+## Revision Reports & Outputs
+
+* `reports/` stores historical walkthrough response logs and design documentation locally.
+* `outputs/` holds raw caches, intermediate log matrices, and compilation steps for revision cycles.

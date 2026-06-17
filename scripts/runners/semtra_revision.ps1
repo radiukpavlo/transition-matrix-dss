@@ -182,7 +182,7 @@ function Invoke-RunV1 {
         Write-Host "revision_v1 already present; preserving existing v1 artifacts."
         return
     }
-    $args = @((Join-Path $Root "scripts\run_revision_v1.py"))
+    $args = @((Join-Path $Root "scripts\runners\run_revision_v1.py"))
     if ($Force) {
         $args += "--force-rebuild"
     }
@@ -194,7 +194,7 @@ function Invoke-RunV1 {
 
 function Invoke-RunV2 {
     $py = Get-Python
-    $args = @((Join-Path $Root "scripts\run_revision_v2.py"))
+    $args = @((Join-Path $Root "scripts\runners\run_revision_v2.py"))
     if ($Force) {
         $args += "--force-rebuild"
     }
@@ -218,7 +218,7 @@ function Get-VisionPython {
 
 function Invoke-RunV3 {
     $py = Get-VisionPython
-    $args = @((Join-Path $Root "scripts\run_revision_v3.py"))
+    $args = @((Join-Path $Root "scripts\runners\run_revision_v3.py"))
     if ($Force) {
         $args += "--force-rebuild"
     }
@@ -301,7 +301,7 @@ function Invoke-LatexV3 {
 
 function Invoke-QC {
     $py = Get-Python
-    & $py (Join-Path $Root "scripts\run_revision_v2.py") --validate-only --require-v2
+    & $py (Join-Path $Root "scripts\runners\run_revision_v2.py") --validate-only --require-v2
     if ($LASTEXITCODE -ne 0) {
         throw "revision_v2 validation failed with exit code $LASTEXITCODE"
     }
@@ -309,7 +309,7 @@ function Invoke-QC {
 
 function Invoke-QCV3 {
     $py = Get-VisionPython
-    & $py (Join-Path $Root "scripts\run_revision_v3.py") --validate-only
+    & $py (Join-Path $Root "scripts\runners\run_revision_v3.py") --validate-only
     if ($LASTEXITCODE -ne 0) {
         throw "revision_v3 validation failed with exit code $LASTEXITCODE"
     }

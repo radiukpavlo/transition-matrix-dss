@@ -9,7 +9,8 @@ from sklearn.linear_model import Ridge
 from sklearn.neural_network import MLPRegressor
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import accuracy_score, f1_score
-SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0,str(SCRIPT_DIR))
+SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from revision_common import load_cache, read_thresholds, read_rulebook, load_names
 from paper1_core import ensure_dir, nearest_prototype_predict, quantize, infer_rules, class_mode_signatures
 

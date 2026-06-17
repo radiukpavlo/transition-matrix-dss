@@ -32,14 +32,14 @@ This repository is designed to separate reproducible source code and auditable p
 
 ### 🟢 Tracked in Version Control
 These directories house the public-facing reproducibility package:
-* [scripts/](./scripts) — Full experiment runners, figure/table generation, and package audits.
+* [run_experiments.py](./run_experiments.py) — Unified root-level CLI wrapper to run experiments.
+* [scripts/](./scripts) — Core codebase organized into subfolders (`core`, `experiments`, `generators`, `runners`, `utils`, `legacy`).
 * [artifacts/](./artifacts) — Public computed result metrics, rulebooks, and thresholds.
 * [figs/](./figs) — Publication-ready vector diagrams (PDF, SVG) and dynamic assets.
 * [tables/](./tables) — Output LaTeX tables and raw CSV summaries.
 * [audit/](./audit) — Comprehensive logs, manifests, PDF renders, and quality gate metrics.
 * [docs/](./docs) — Detailed project structures and user manuals.
 * [source_notes/](./source_notes) — Technical details regarding dataset boundaries and AwA2 split handling.
-* `revision_report.md` — Matrix detailing response to reviewer issues.
 
 ### 🔴 Ignored Local Workspace (Local Only)
 These folders are configured in `.gitignore` and are **never** committed to version control:
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ### Option A: Quick Rebuild (Generates Figures & Tables from Artifacts)
 If you wish to regenerate the enhanced figures and tables using the pre-computed public results (stored under `artifacts/`):
 ```bash
-python scripts/generate_enhanced_results.py --root .
+python scripts/generators/generate_enhanced_results.py --root .
 ```
 This script reads the checked-in metrics and saves updated publication-ready figures to `figs/` and LaTeX tables to `tables/`.
 
@@ -86,9 +86,9 @@ To rerun all baseline comparisons, ablations, stability benchmarks, and rule ind
 * `data/raw/awa2.zip` (Animals with Attributes 2 dataset)
 * `data/raw/xlsa17.zip` (Standard Zero-Shot learning benchmarks)
 
-Then execute the orchestration pipeline:
+Then execute the orchestration pipeline using the root-level wrapper:
 ```bash
-python scripts/run_revision_experiments.py \
+python run_experiments.py \
   --awa2_zip data/raw/awa2.zip \
   --xlsa17_zip data/raw/xlsa17.zip \
   --out . \
@@ -110,5 +110,5 @@ To maintain high scientific integrity, this package implements automated reprodu
 
 You can verify the package integrity at any time by running:
 ```bash
-python scripts/audit_revision_package.py
+python scripts/utils/audit_revision_package.py
 ```

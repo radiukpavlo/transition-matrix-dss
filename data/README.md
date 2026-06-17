@@ -57,7 +57,7 @@ The project utilizes several standard datasets to validate semantic projection, 
     * `test_seen_loc` / `test_unseen_loc`: Indexes for seen and unseen classes in the test partition.
   * Split text files: Class listings separating seen (`trainvalclasses.txt`) from unseen (`testclasses.txt`).
 * **Python Indexing Conversion**:
-  The script [run_official_xlsa_protocol.py](../scripts/run_official_xlsa_protocol.py) maps the 1-based MATLAB indices in `att_splits.mat` to 0-based Python row indices, matching them against the corresponding parquet feature rows.
+  The script [run_official_xlsa_protocol.py](../scripts/experiments/run_official_xlsa_protocol.py) maps the 1-based MATLAB indices in `att_splits.mat` to 0-based Python row indices, matching them against the corresponding parquet feature rows.
 * **Usage**: Used to run Protocol B under the official evaluation split proposed by Xian et al.
 
 ### 3. Dermatology 7-Point Checklist (Derm7pt)
@@ -108,9 +108,9 @@ To reproduce all experiments from scratch:
    * `data/raw/xlsa17.zip`
 
 3. **Execution**:
-   Run the full replication suite using the orchestration script:
+   Run the full replication suite using the orchestration wrapper:
    ```bash
-   python scripts/run_revision_experiments.py \
+   python run_experiments.py \
      --awa2_zip data/raw/awa2.zip \
      --xlsa17_zip data/raw/xlsa17.zip \
      --out .

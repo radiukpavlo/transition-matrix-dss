@@ -8,7 +8,8 @@ from scipy.stats import spearmanr
 from sklearn.linear_model import Ridge, RidgeClassifier
 
 SCRIPT_DIR=Path(__file__).resolve().parent
-sys.path.insert(0,str(SCRIPT_DIR))
+sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from revision_common import load_cache, bootstrap_ci, read_rulebook
 from paper1_core import ensure_dir
 

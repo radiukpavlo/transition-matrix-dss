@@ -5,7 +5,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from sklearn.metrics import accuracy_score, f1_score
-SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0,str(SCRIPT_DIR))
+SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from revision_common import load_cache, read_thresholds, read_rulebook, load_names
 from paper1_core import ensure_dir, quantize, fit_discretizers, induce_rules, class_mode_signatures, infer_rules
 

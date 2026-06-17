@@ -4,6 +4,11 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 import pandas as pd
+import sys
+from pathlib import Path
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR.parent / "core") not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from paper1_core import maybe_extract_awa2, load_awa2, write_json, ensure_dir
 
 

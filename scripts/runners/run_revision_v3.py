@@ -27,6 +27,7 @@ from scipy.io import loadmat
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 
 from paper1_core import class_mode_signatures, fit_discretizers, fit_transition, quantize  # noqa: E402
 from run_revision_v1 import (  # noqa: E402

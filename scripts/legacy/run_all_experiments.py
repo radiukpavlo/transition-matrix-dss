@@ -25,6 +25,7 @@ from sklearn.tree import DecisionTreeClassifier
 # Local imports
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from paper1_core import (  # noqa: E402
     ensure_dir, write_json, tex_escape, clean_name,
     maybe_extract_awa2, load_awa2, fit_transition,

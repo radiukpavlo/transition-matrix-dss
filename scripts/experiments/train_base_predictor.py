@@ -9,7 +9,8 @@ from sklearn.metrics import accuracy_score, f1_score, top_k_accuracy_score, roc_
 from sklearn.preprocessing import label_binarize
 
 SCRIPT_DIR=Path(__file__).resolve().parent
-sys.path.insert(0,str(SCRIPT_DIR))
+sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from revision_common import load_cache, load_names
 from paper1_core import ensure_dir
 

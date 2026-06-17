@@ -9,7 +9,8 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score, f1_score
 
 SCRIPT_DIR=Path(__file__).resolve().parent
-sys.path.insert(0,str(SCRIPT_DIR))
+sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from revision_common import load_cache, read_thresholds, read_rulebook
 from paper1_core import ensure_dir, quantize
 

@@ -11,6 +11,11 @@ from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 import pandas as pd
+import sys
+from pathlib import Path
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR.parent / "core") not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from paper1_core import read_json, maybe_extract_awa2, load_awa2
 from run_all_experiments import generate_figures, generate_tables
 

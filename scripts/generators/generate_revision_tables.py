@@ -4,7 +4,8 @@ import json, math, sys
 from pathlib import Path
 import numpy as np
 import pandas as pd
-SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0,str(SCRIPT_DIR))
+SCRIPT_DIR=Path(__file__).resolve().parent; sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from paper1_core import ensure_dir, tex_escape
 
 def fmt(x):

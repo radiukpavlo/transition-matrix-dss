@@ -18,6 +18,7 @@ import pandas as pd
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR.parent / "core") not in sys.path: sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 
 from figure_style import PALETTE, apply_nature_style, clean_label, nature_size, save_nature_figure, style_axis
 from paper1_core import (

@@ -1,8 +1,8 @@
 # SEMTRA: Semantic Transition Matrix and Rough-Set Rules for Explainable AI
 
-<p align="center">
+<!-- <p align="center">
   <img src="figs/framework_animation.svg" alt="XAI Decision Support System Framework" width="100%">
-</p>
+</p> -->
 
 ## A Transition-Matrix and Rough-Set Rule Induction Framework for Explainable AI (XAI)
 

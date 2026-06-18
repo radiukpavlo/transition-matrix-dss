@@ -10,22 +10,26 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Rectangle
+from matplotlib.text import Text
 
 
 plt.rcParams["font.family"] = "sans-serif"
 plt.rcParams["font.sans-serif"] = ["Arial", "DejaVu Sans", "Liberation Sans"]
+plt.rcParams["svg.fonttype"] = "none"
 plt.rcParams["pdf.fonttype"] = 42
-plt.rcParams["font.size"] = 7
+plt.rcParams["font.size"] = 7.8
 plt.rcParams["axes.spines.right"] = False
 plt.rcParams["axes.spines.top"] = False
 plt.rcParams["axes.linewidth"] = 0.8
 plt.rcParams["legend.frameon"] = False
+plt.rcParams["legend.fontsize"] = 6.8
 plt.rcParams["xtick.major.width"] = 0.6
 plt.rcParams["ytick.major.width"] = 0.6
 
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "figs_main"
+TEXT_SCALE = 1.12
 
 PALETTE = {
     "blue": "#0F4D92",
@@ -136,16 +140,27 @@ def style_axis(ax, xlabel: str | None = None, ylabel: str | None = None) -> None
         ax.set_xlabel(xlabel, labelpad=4)
     if ylabel:
         ax.set_ylabel(ylabel, labelpad=4)
-    ax.tick_params(axis="both", labelsize=6, length=2.5)
+    ax.tick_params(axis="both", labelsize=6.8, length=2.5)
 
 
 def set_title(ax, title: str) -> None:
-    ax.set_title(title, fontsize=8, pad=12)
+    ax.set_title("")
+
+
+def polish_figure(fig) -> None:
+    for ax in fig.axes:
+        ax.set_title("")
+        for text in ax.findobj(Text):
+            text.set_fontsize(text.get_fontsize() * TEXT_SCALE)
+        legend = ax.get_legend()
+        if legend is not None:
+            legend.set_frame_on(False)
 
 
 def save(fig, stem: str, conclusion: str, source_data: str, archetype: str) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     base = OUT / stem
+    polish_figure(fig)
     fig.savefig(base.with_suffix(".pdf"), bbox_inches="tight")
     plt.close(fig)
     FIGURES.append(
@@ -283,8 +298,8 @@ def fig26_subfigures() -> None:
         ax.bar(x + (j - 1) * width, vals, width=width, label=metric_title(metric), color=color, edgecolor=PALETTE["black"], linewidth=0.5)
     ax.set_xticks(x)
     ax.set_xticklabels(datasets)
-    ax.set_ylim(0, 1.05)
-    ax.legend(fontsize=6, loc="center left", bbox_to_anchor=(1.02, 0.5), borderaxespad=0)
+    ax.set_ylim(0, 1.22)
+    ax.legend(fontsize=6, loc="upper center", ncol=1)
     set_title(ax, "Object-level audit outcomes")
     style_axis(ax, ylabel="Rate")
     save(fig, "fig26_a_object_level_audit_outcomes", "Enhanced prediction exports expose object-level coverage, accuracy, and fidelity.", "outputs/revision_v3/statistics/object_level_metric_summary.csv; outputs/revision_v3/statistics/object_level_bootstrap_intervals.csv", "quantitative subfigure")
@@ -295,8 +310,8 @@ def fig26_subfigures() -> None:
         ax.bar(x + (j - 0.5) * 0.32, vals, width=0.30, label=metric_title(metric), color=color, edgecolor=PALETTE["black"], linewidth=0.5)
     ax.set_xticks(x)
     ax.set_xticklabels(datasets)
-    ax.set_ylim(0, 1.05)
-    ax.legend(fontsize=6, loc="center left", bbox_to_anchor=(1.02, 0.5), borderaxespad=0)
+    ax.set_ylim(0, 1.22)
+    ax.legend(fontsize=6, loc="upper center", ncol=2)
     set_title(ax, "Conflict and abstention expose audit limits")
     style_axis(ax, ylabel="Rate")
     save(fig, "fig26_b_conflict_abstention_limits", "Conflict and abstention reveal where symbolic auditing does not cover the base model.", "outputs/revision_v3/statistics/object_level_metric_summary.csv", "quantitative subfigure")
@@ -369,7 +384,8 @@ def fig28_subfigures() -> None:
     fig, ax = fig_ax(4.4, 3.0, left=0.14, right=0.78, bottom=0.16, top=0.84)
     for metric, color in [("coverage", PALETTE["blue"]), ("covered_fidelity_to_base", PALETTE["teal"]), ("conflict_rate", PALETTE["red_soft"])]:
         ax.plot(q["q"], q[metric], marker="o", lw=1.5, color=color, label=metric_title(metric))
-    ax.legend(fontsize=6, loc="center left", bbox_to_anchor=(1.02, 0.5), borderaxespad=0)
+    ax.set_ylim(0, 1.12)
+    ax.legend(fontsize=6, loc="upper center", ncol=1)
     set_title(ax, "Quantile granularity sensitivity")
     style_axis(ax, xlabel="q", ylabel="Rate")
     save(fig, "fig28_a_q_sensitivity", "q sensitivity makes the granularity tradeoff inspectable.", "outputs/revision_v1/sensitivity/awa2_q_sensitivity.csv", "quantitative subfigure")
@@ -382,14 +398,16 @@ def fig28_subfigures() -> None:
     style_axis(ax, xlabel="SVD rank", ylabel="Transition MAE")
     ax2.set_ylabel("Coverage", fontsize=7, labelpad=4)
     ax2.tick_params(axis="y", labelsize=6, length=2.5)
-    ax.legend(loc="upper center", bbox_to_anchor=(0.30, -0.18), fontsize=6, ncol=1)
-    ax2.legend(loc="upper center", bbox_to_anchor=(0.70, -0.18), fontsize=6, ncol=1)
+    handles, labels = ax.get_legend_handles_labels()
+    handles2, labels2 = ax2.get_legend_handles_labels()
+    ax.legend(handles + handles2, labels + labels2, loc="upper center", fontsize=6, ncol=2)
     save(fig, "fig28_b_svd_rank_sensitivity", "SVD rank changes both reconstruction and rule coverage.", "outputs/revision_v1/sensitivity/awa2_svd_rank_sensitivity.csv", "quantitative subfigure")
 
     fig, ax = fig_ax(4.5, 3.0, left=0.14, right=0.78, bottom=0.16, top=0.84)
     for metric, color in [("coverage", PALETTE["blue"]), ("covered_accuracy", PALETTE["green_dark"]), ("covered_fidelity_to_base", PALETTE["teal"])]:
         ax.plot(conf["confidence_threshold"], conf[metric], marker="o", lw=1.4, color=color, label=metric_title(metric))
-    ax.legend(fontsize=6, loc="center left", bbox_to_anchor=(1.02, 0.5), borderaxespad=0)
+    ax.set_ylim(0, 1.12)
+    ax.legend(fontsize=6, loc="upper center", ncol=1)
     set_title(ax, "Confidence threshold frontier")
     style_axis(ax, xlabel="Rule confidence threshold", ylabel="Rate")
     save(fig, "fig28_c_confidence_threshold_frontier", "Confidence thresholds expose coverage, accuracy, and fidelity tradeoffs.", "outputs/revision_v1/sensitivity/awa2_confidence_threshold_frontier.csv", "quantitative subfigure")
@@ -445,8 +463,9 @@ def fig29_subfigures() -> None:
             ax.text(0.78, yi, "bat rupture", fontsize=6, va="center", color=PALETTE["red"])
     ax.set_yticks(y)
     ax.set_yticklabels(pc["class_name"], fontsize=6)
-    ax.set_xlim(0, 1.02)
-    ax.legend(fontsize=6, loc="lower right")
+    ax.set_xlim(0, 1.25)
+    ax.set_ylim(-0.6, len(pc) + 0.9)
+    ax.legend(fontsize=6, loc="upper right")
     set_title(ax, "Per-class semantic-transfer rupture")
     style_axis(ax, xlabel="Accuracy")
     save(fig, "fig29_c_per_class_protocol_b_failures", "Per-class diagnostics localize semantic-transfer failures such as bat.", "outputs/revision_v1/awa2/awa2_protocol_b_per_class_seed42.csv; outputs/revision_v1/awa2/awa2_bat_diagnostic.csv", "quantitative subfigure")
@@ -510,8 +529,8 @@ def fig31_subfigures() -> None:
         ax.bar(x + (i - 1.5) * width, grouped[col], width=width, color=color, edgecolor=PALETTE["black"], linewidth=0.4, label=metric_title(col))
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
-    ax.set_ylim(0, 1.05)
-    ax.legend(fontsize=5.8, loc="center left", bbox_to_anchor=(1.02, 0.5), borderaxespad=0)
+    ax.set_ylim(0, 1.25)
+    ax.legend(fontsize=5.8, loc="upper center", ncol=2)
     set_title(ax, "v3 cross-domain object metrics")
     style_axis(ax, ylabel="Rate")
     save(fig, "fig31_c_cross_domain_object_metrics", "v3 stress tests preserve scoped interpretation across AwA2, SUN, and Derm7pt.", "outputs/revision_v3/statistics/object_level_metric_summary.csv", "quantitative subfigure")
@@ -525,7 +544,8 @@ def fig32_subfigures() -> None:
     bins = np.linspace(0, 1, 11)
     ax.hist(sun["coverage"], bins=bins, color=PALETTE["teal"], edgecolor="white", linewidth=0.5, alpha=0.92, label="Coverage")
     ax.hist(sun["conflict_rate"], bins=bins, color=PALETTE["red_soft"], edgecolor="white", linewidth=0.5, alpha=0.65, label="Conflict")
-    ax.legend(fontsize=6, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
+    ax.set_ylim(0, ax.get_ylim()[1] * 1.18)
+    ax.legend(fontsize=6, loc="upper right", ncol=1)
     set_title(ax, "SUN category coverage and conflict")
     style_axis(ax, xlabel="Rate", ylabel="Number of categories")
     save(fig, "fig32_a_sun_category_histograms", "SUN category diagnostics are dominated by abstention and conflict.", "outputs/revision_v3/sun/sun_category_diagnostics_v3.csv", "quantitative subfigure")
@@ -537,7 +557,7 @@ def fig32_subfigures() -> None:
     ax.text(0.04, 0.90, f"zero coverage: {(sun.coverage == 0).mean():.1%}", fontsize=6.3, color=PALETTE["black"])
     ax.set_xlim(-0.02, 1.02)
     ax.set_ylim(-0.02, 1.02)
-    ax.legend(fontsize=5.7, loc="lower left")
+    ax.legend(fontsize=5.7, loc="upper right")
     set_title(ax, "SUN coverage-conflict map")
     style_axis(ax, xlabel="Coverage", ylabel="Conflict rate")
     save(fig, "fig32_b_sun_coverage_conflict_map", "SUN categories show high-conflict, low-coverage portability failure modes.", "outputs/revision_v3/sun/sun_category_diagnostics_v3.csv", "quantitative subfigure")
@@ -549,8 +569,9 @@ def fig32_subfigures() -> None:
     ax.barh(y + 0.17, top["covered_fidelity_to_base"], height=0.32, color=PALETTE["blue"], label="Covered fidelity", edgecolor=PALETTE["black"], linewidth=0.4)
     ax.set_yticks(y)
     ax.set_yticklabels([clean_label(x, 34) for x in top["scene_category"]], fontsize=5.5)
-    ax.set_xlim(0, 1.05)
-    ax.legend(fontsize=6, loc="lower right")
+    ax.set_xlim(0, 1.25)
+    ax.set_ylim(-0.6, len(top) + 0.9)
+    ax.legend(fontsize=6, loc="upper right")
     set_title(ax, "Best-covered SUN categories")
     style_axis(ax, xlabel="Rate")
     save(fig, "fig32_c_sun_best_covered_categories", "Best-covered SUN categories are narrow exceptions, not broad portability proof.", "outputs/revision_v3/sun/sun_category_diagnostics_v3.csv", "quantitative subfigure")
@@ -568,8 +589,9 @@ def fig33_subfigures() -> None:
     ax.barh(y + 0.15, d["covered_fidelity_to_base"], height=0.28, color=PALETTE["violet"], label="Covered fidelity", edgecolor=PALETTE["black"], linewidth=0.4)
     ax.set_yticks(y)
     ax.set_yticklabels([clean_label(x, 29) for x in d["group"]], fontsize=5.6)
-    ax.set_xlim(0, 1.05)
-    ax.legend(fontsize=5.8, loc="lower right")
+    ax.set_xlim(0, 1.25)
+    ax.set_ylim(-0.6, len(d) + 0.9)
+    ax.legend(fontsize=5.8, loc="upper right")
     set_title(ax, "Derm7pt diagnosis-level diagnostics")
     style_axis(ax, xlabel="Rate")
     save(fig, "fig33_a_derm7pt_diagnosis_diagnostics", "Derm7pt diagnosis strata vary under technical validation only.", "outputs/revision_v3/derm7pt/derm7pt_diagnosis_diagnostics_v3.csv", "quantitative subfigure")
@@ -601,8 +623,9 @@ def fig33_subfigures() -> None:
     ax.barh(y + 0.15, c["covered_fidelity_to_base"], height=0.28, color=PALETTE["violet"], label="Covered fidelity", edgecolor=PALETTE["black"], linewidth=0.4)
     ax.set_yticks(y)
     ax.set_yticklabels([clean_label(x, 38) for x in c["label"]], fontsize=5.4)
-    ax.set_xlim(0, 1.05)
-    ax.legend(fontsize=5.8, loc="lower right")
+    ax.set_xlim(0, 1.25)
+    ax.set_ylim(-0.6, len(c) + 0.9)
+    ax.legend(fontsize=5.8, loc="upper right")
     set_title(ax, "Derm7pt checklist-concept strata")
     style_axis(ax, xlabel="Rate")
     save(fig, "fig33_c_derm7pt_concept_diagnostics", "Checklist-concept diagnostics support retrospective technical interpretation only.", "outputs/revision_v3/derm7pt/derm7pt_concept_diagnostics_v3.csv", "quantitative subfigure")

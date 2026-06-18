@@ -1,0 +1,17 @@
+\begin{table}[H]
+\caption{Cross-domain SEMTRA revision-v1 summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\scriptsize
+\begin{tabularx}{\fulllength}{l>{\raggedright\arraybackslash}Xrcccc}
+\toprule
+Dataset & Scope & Attrs & MAE & Cov. & Fid. & Acc. \\
+\midrule
+AwA2 & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
+AwA2 Protocol B & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
+SUN & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
+Derm7pt & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}

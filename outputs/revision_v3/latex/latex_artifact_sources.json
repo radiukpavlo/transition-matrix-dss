@@ -1,0 +1,89 @@
+{
+  "generated_at": "2026-06-18T17:19:02Z",
+  "records": [
+    {
+      "artifact": "main.pdf",
+      "sha256": "d36d2a0e20f059367b48521a19b8e5426acef4eb0d149b1706a10d13a38d0d58",
+      "size": 741625,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.pdf"
+    },
+    {
+      "artifact": "main.log",
+      "sha256": "06f848cca7aba332c2727b07c3f2ba2977aabccf4de48a6b5654ed9a263cd60c",
+      "size": 79740,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.log"
+    },
+    {
+      "artifact": "main.aux",
+      "sha256": "78a51e93bdcdc12fd9058a82179a435a0b6e0a6948b665cf56642998cfb8c20f",
+      "size": 46392,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.aux"
+    },
+    {
+      "artifact": "main.bbl",
+      "sha256": "ca39331330151718b7b68448005eebf8e86514ba70002166a8589c322a1646a7",
+      "size": 17206,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.bbl"
+    },
+    {
+      "artifact": "main.blg",
+      "sha256": "ecdf237d34aab2fadbee552508fa257885caf65a042f970c4006aed9f4e4deac",
+      "size": 1068,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.blg"
+    },
+    {
+      "artifact": "main.out",
+      "sha256": "5c2a26428823603717276c1c1f68d1e84fb91997a4e757fd1f64ff52a3f487d5",
+      "size": 12236,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\main.out"
+    },
+    {
+      "artifact": "supply.pdf",
+      "sha256": "3616aebb7183a03755a4e466fee3417715399904363982f43db175029811c85b",
+      "size": 621112,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.pdf"
+    },
+    {
+      "artifact": "supply.log",
+      "sha256": "e02a4f3ca0b5e23daaf17e89ac60a1296f194b4565edab8a866c2ceba22c8682",
+      "size": 66965,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.log"
+    },
+    {
+      "artifact": "supply.aux",
+      "sha256": "d522b54930c350546b7449b1b9dcf6b80147236ce2cf2790b6b505991c90729e",
+      "size": 20285,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.aux"
+    },
+    {
+      "artifact": "supply.bbl",
+      "sha256": "c203e05c30337b95cefe567e2844002ea855f0770f25b2685d040f13868d606a",
+      "size": 2146,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.bbl"
+    },
+    {
+      "artifact": "supply.blg",
+      "sha256": "a4d71e3aa1a668148fd983b49bfbcac43b1e27d42e3f355b360e8884c9452013",
+      "size": 1037,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.blg"
+    },
+    {
+      "artifact": "supply.out",
+      "sha256": "a30fa82e607381052d5dca75e77b4c3a26ea984a44fbc42f12164e0d20543b70",
+      "size": 2446,
+      "source": "manuscript_build",
+      "source_path": "D:\\GitHub\\transition-matrix-dss\\manuscript\\supply.out"
+    }
+  ]
+}

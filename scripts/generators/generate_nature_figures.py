@@ -72,6 +72,7 @@ FIGURE_LAYOUTS: dict[str, dict[str, float]] = {
     "fig03_awa2_class_distribution.pdf": {"width_mm": 183, "include_fraction": 0.84, "target_pt": 8.48},
     "fig04_svd_retained_variance.pdf": {"width_mm": 89, "include_fraction": 0.82, "target_pt": 8.49},
     "fig05_transition_salience.pdf": {"width_mm": 89, "include_fraction": 0.88, "target_pt": 8.51},
+    "fig05_use-case.pdf": {"width_mm": 183, "include_fraction": 0.96, "target_pt": 8.54},
     "fig06_attribute_error.pdf": {"width_mm": 89, "include_fraction": 0.88, "target_pt": 8.52},
     "fig07_wedd_threshold_example.pdf": {"width_mm": 89, "include_fraction": 0.84, "target_pt": 8.54},
     "fig08_granules_summary.pdf": {"width_mm": 89, "include_fraction": 0.84, "target_pt": 8.55},
@@ -278,6 +279,56 @@ class NatureFigureGenerator:
         style_axis(ax, "x")
         self.save(fig, "fig05_transition_salience.pdf", [self.source("artifacts", "awa2", "protocol_a_attribute_errors_and_salience.csv")])
 
+    def fig05_use_case(self) -> None:
+        profile = self.set_figure_profile("fig05_use-case.pdf")
+        fig, ax = plt.subplots(figsize=nature_size(183, 96))
+        ax.axis("off")
+        left_x, right_x = 0.05, 0.59
+        panel_w, panel_h = 0.34, 0.66
+        for x0, face, header in [
+            (left_x, PALETTE["pale_orange"], "single-case\nsurrogate"),
+            (right_x, PALETTE["pale_blue"], "global semantic\nrulebook"),
+        ]:
+            ax.add_patch(
+                patches.FancyBboxPatch(
+                    (x0, 0.20),
+                    panel_w,
+                    panel_h,
+                    boxstyle="round,pad=0.014,rounding_size=0.012",
+                    linewidth=0.75,
+                    edgecolor=PALETTE["dark"],
+                    facecolor=face,
+                )
+            )
+            ax.text(x0 + panel_w / 2, 0.79, header, ha="center", va="center", fontsize=profile.source_base_pt * 0.88, fontweight="bold", color=PALETTE["black"])
+
+        rng = np.random.default_rng(2026)
+        heat = rng.normal(0.48, 0.18, size=(9, 9)).clip(0, 1)
+        ax.imshow(heat, extent=(left_x + 0.07, left_x + 0.22, 0.47, 0.68), cmap="Oranges", interpolation="nearest")
+        ax.add_patch(patches.Rectangle((left_x + 0.07, 0.47), 0.15, 0.21, fill=False, edgecolor=PALETTE["dark"], linewidth=0.7))
+        ax.text(left_x + 0.285, 0.61, "local\nheatmap", ha="center", va="center", fontsize=profile.small_pt * 0.82, color=PALETTE["black"])
+        ax.annotate("", xy=(left_x + 0.25, 0.58), xytext=(left_x + 0.22, 0.58), arrowprops=dict(arrowstyle="-|>", lw=0.7, color=PALETTE["dark"]))
+        ax.text(left_x + panel_w / 2, 0.34, "per-case evidence;\nno reusable policy", ha="center", va="center", fontsize=profile.small_pt * 0.82, color=PALETTE["dark"])
+
+        rule_y = [0.66, 0.55, 0.44]
+        rule_text = ["paws, hunter high", "tiger; support/conf.", "conflict -> abstain"]
+        colors = [PALETTE["pale_teal"], PALETTE["pale_blue"], PALETTE["light"]]
+        for y0, text, face in zip(rule_y, rule_text, colors):
+            ax.add_patch(patches.Rectangle((right_x + 0.05, y0 - 0.035), 0.26, 0.07, facecolor=face, edgecolor=PALETTE["dark"], linewidth=0.55))
+            ax.text(right_x + 0.18, y0, text, ha="center", va="center", fontsize=profile.small_pt * 0.78, color=PALETTE["black"])
+        ax.text(right_x + panel_w / 2, 0.30, "dataset policy;\ncoverage/failure explicit", ha="center", va="center", fontsize=profile.small_pt * 0.76, color=PALETTE["dark"])
+
+        ax.annotate(
+            "",
+            xy=(right_x - 0.04, 0.53),
+            xytext=(left_x + panel_w + 0.04, 0.53),
+            arrowprops=dict(arrowstyle="-|>", lw=0.8, color=PALETTE["dark"]),
+        )
+        ax.text(0.50, 0.60, "audit\nshift", ha="center", va="center", fontsize=profile.small_pt * 0.74, color=PALETTE["dark"])
+        ax.set_xlim(0, 1)
+        ax.set_ylim(0, 1)
+        self.save(fig, "fig05_use-case.pdf", [], "programmatic conceptual comparison between local surrogates and global semantic-rule auditing")
+
     def fig06_attribute_error(self) -> None:
         self.set_figure_profile("fig06_attribute_error.pdf")
         df = pd.read_csv(self.source("artifacts", "awa2", "protocol_a_attribute_errors_and_salience.csv")).sort_values("test_mae", ascending=False).head(20)
@@ -378,7 +429,7 @@ class NatureFigureGenerator:
         ax.set_xlabel("Representation noise sigma")
         ax.set_ylabel("Score")
         ax.set_ylim(0.55, 1.02)
-        ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5), fontsize=profile.legend_pt)
+        ax.legend(loc="upper center", ncol=1, fontsize=profile.legend_pt)
         style_axis(ax, "y")
         self.save(fig, "fig12_synthetic_degradation.pdf", [self.source("artifacts", "synthetic", "synthetic_summary_by_noise.csv")])
 
@@ -439,7 +490,8 @@ class NatureFigureGenerator:
         ax.set_xlabel("Minimum rule confidence")
         ax.set_ylabel("Score")
         ax.set_ylim(0, 1.05)
-        ax.legend(ncol=2, fontsize=profile.legend_pt, loc="upper center", bbox_to_anchor=(0.5, -0.28))
+        ax.set_ylim(0, 1.20)
+        ax.legend(ncol=2, fontsize=profile.legend_pt, loc="upper center")
         style_axis(ax, "y")
         self.save(fig, "fig15_coverage_abstention_tradeoff.pdf", [self.source("artifacts", "awa2", "coverage_abstention_tradeoff.csv")])
 
@@ -572,8 +624,8 @@ class NatureFigureGenerator:
             ax.fill_between(x, yy - cc, yy + cc, color=color, alpha=0.13, linewidth=0)
         ax.set_xlabel("Injected semantic noise sigma")
         ax.set_ylabel("Score")
-        ax.set_ylim(0.55, 1.02)
-        ax.legend(loc="center left", bbox_to_anchor=(1.02, 0.5), fontsize=profile.legend_pt)
+        ax.set_ylim(0.55, 1.12)
+        ax.legend(loc="upper center", ncol=1, fontsize=profile.legend_pt)
         style_axis(ax, "y")
         self.save(fig, "fig22_synthetic_uncertainty_bands.pdf", [self.source("artifacts", "synthetic", "synthetic_summary_by_noise.csv")])
 
@@ -587,8 +639,9 @@ class NatureFigureGenerator:
         ax.set_yticks(y)
         ax.set_yticklabels([clean_label(v, 12) for v in df["class_name"]])
         ax.set_xlabel("Unseen-class accuracy")
-        ax.set_xlim(0, 1.0)
-        ax.legend(loc="lower right", fontsize=profile.legend_pt)
+        ax.set_xlim(0, 1.20)
+        ax.set_ylim(-0.6, len(df) + 0.9)
+        ax.legend(loc="upper right", fontsize=profile.legend_pt)
         style_axis(ax, "x")
         self.save(fig, "fig23_protocol_b_perclass_errors.pdf", [self.source("artifacts", "awa2", "protocol_b_unseen_per_class.csv")])
 
@@ -615,6 +668,7 @@ class NatureFigureGenerator:
             self.fig03_class_distribution,
             self.fig04_svd_variance,
             self.fig05_transition_salience,
+            self.fig05_use_case,
             self.fig06_attribute_error,
             self.fig07_wedd,
             self.fig08_granules,

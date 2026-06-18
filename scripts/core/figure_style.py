@@ -6,6 +6,7 @@ from typing import Iterable, Sequence
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from matplotlib.text import Text
 
 
 PALETTE = {
@@ -34,6 +35,8 @@ METHOD_COLORS = [
     PALETTE["vermillion"],
 ]
 
+TEXT_SIZE_BOOST = 1.10
+
 
 def apply_nature_style() -> None:
     """Apply compact Nature-family plotting defaults."""
@@ -44,20 +47,20 @@ def apply_nature_style() -> None:
         "svg.fonttype": "none",
         "pdf.fonttype": 42,
         "ps.fonttype": 42,
-        "font.size": 7.0,
-        "axes.labelsize": 7.0,
-        "axes.titlesize": 7.5,
+        "font.size": 7.6,
+        "axes.labelsize": 7.6,
+        "axes.titlesize": 7.6,
         "axes.linewidth": 0.6,
         "axes.spines.top": False,
         "axes.spines.right": False,
         "axes.grid": False,
-        "xtick.labelsize": 6.2,
-        "ytick.labelsize": 6.2,
+        "xtick.labelsize": 6.8,
+        "ytick.labelsize": 6.8,
         "xtick.major.width": 0.55,
         "ytick.major.width": 0.55,
         "xtick.major.size": 2.5,
         "ytick.major.size": 2.5,
-        "legend.fontsize": 6.2,
+        "legend.fontsize": 6.8,
         "legend.frameon": False,
         "figure.dpi": 180,
         "savefig.bbox": "tight",
@@ -160,6 +163,13 @@ def save_nature_figure(
     else:
         stem = base
     stem.parent.mkdir(parents=True, exist_ok=True)
+    for ax in fig.axes:
+        ax.set_title("")
+        for text in ax.findobj(Text):
+            text.set_fontsize(text.get_fontsize() * TEXT_SIZE_BOOST)
+        legend = ax.get_legend()
+        if legend is not None:
+            legend.set_frame_on(False)
     fig.tight_layout(pad=0.7)
     saved: list[str] = []
     for fmt in formats:

@@ -52,8 +52,8 @@ def main():
     ax.plot(df['confidence_threshold'],df['covered_fidelity'],marker='d',label='Covered fidelity')
     ax.set_xlabel('Minimum rule confidence threshold')
     ax.set_ylabel('Score')
-    ax.set_ylim(0,1.05)
-    ax.legend(frameon=False,ncol=2)
+    ax.set_ylim(0,1.20)
+    ax.legend(frameon=False,ncol=2,loc='upper center')
     save_nature_figure(fig, figs/'fig15_coverage_abstention_tradeoff.pdf')
     # Representative rule trace figure as a compact table-like panel.
     traces=pd.read_csv(art/'protocol_a_representative_traces.csv')
@@ -87,7 +87,6 @@ def main():
         if r==0:
             cell.set_text_props(weight='bold')
             cell.set_facecolor('0.93')
-    ax.set_title('Representative rule inference traces', fontsize=10, pad=10)
     save_nature_figure(fig, figs/'fig14_representative_rule_traces.pdf')
     print({'status':'ok','figures':['fig14_representative_rule_traces.pdf','fig15_coverage_abstention_tradeoff.pdf']})
 if __name__=='__main__': main()

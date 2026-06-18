@@ -13,7 +13,7 @@
     "textwidth_mm": 138.600008,
     "palette": "Nature/Wong-inspired accessible palette"
   },
-  "figure_count": 25,
+  "figure_count": 26,
   "figures": [
     {
       "figure": "82_fig_1_orig.pdf",
@@ -166,6 +166,30 @@
         "table_pt": 6.0
       },
       "note": ""
+    },
+    {
+      "figure": "fig05_use-case.pdf",
+      "exports": [
+        "figs\\fig05_use-case.pdf",
+        "figs\\fig05_use-case.svg"
+      ],
+      "sources": [],
+      "font_profile": {
+        "figure": "fig05_use-case.pdf",
+        "export_width_mm": 183,
+        "include_fraction": 0.96,
+        "target_rendered_pt": 8.54,
+        "source_base_pt": 11.745580130125244,
+        "tick_pt": 9.16155250149769,
+        "legend_pt": 9.16155250149769,
+        "small_pt": 8.456817693690176,
+        "annotation_pt": 9.6313757067027,
+        "panel_label_pt": 11.158301123618982,
+        "emphasis_pt": 13.50741714964403,
+        "operator_pt": 19.38020721470665,
+        "table_pt": 10.336110514510215
+      },
+      "note": "programmatic conceptual comparison between local surrogates and global semantic-rule auditing"
     },
     {
       "figure": "fig06_attribute_error.pdf",

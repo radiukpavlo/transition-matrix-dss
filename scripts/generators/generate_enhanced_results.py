@@ -295,7 +295,6 @@ def fig_results_dashboard(root: Path) -> None:
     bars = ax.bar(labels, values)
     ax.set_ylim(0, 1.0)
     ax.set_ylabel("Score")
-    ax.set_title("Main empirical signals across predictive, semantic, symbolic, and synthetic evaluations")
     style_axes(ax)
     for b, v in zip(bars, values):
         ax.text(b.get_x()+b.get_width()/2, v+0.018, f"{v:.3f}", ha="center", va="bottom", fontsize=8)
@@ -310,7 +309,6 @@ def fig_sota_context(root: Path, sota_df: pd.DataFrame) -> None:
     vals = df["AwA2 proposed-split class-averaged accuracy (%)"].to_numpy()
     bars = ax.barh(df["Method"], vals)
     ax.set_xlabel("Class-averaged accuracy on AwA2 proposed split (%)")
-    ax.set_title("Protocol B transfer in the context of published AwA2 zero-shot baselines")
     ax.set_xlim(0, max(vals) + 8)
     ax.grid(True, axis="x", alpha=0.25, linewidth=0.7)
     ax.spines["top"].set_visible(False)
@@ -336,7 +334,6 @@ def fig_baseline_tradeoff(root: Path) -> None:
         ax.annotate(label, (r["coverage"], r["covered_fidelity_to_base"]), xytext=offset, textcoords="offset points", fontsize=8, arrowprops=dict(arrowstyle="-", linewidth=0.5, alpha=0.5))
     ax.set_xlabel(r"Rulebook Coverage ($\mathrm{Cov}$)")
     ax.set_ylabel(r"Covered Fidelity ($\mathrm{F}_{\text{cov}}$)")
-    ax.set_title("Symbolic baseline tradeoff: coverage versus covered fidelity")
     ax.set_xlim(0, 1.05)
     ax.set_ylim(0, max(sym["covered_fidelity_to_base"]) + 0.12)
     style_axes(ax)
@@ -354,7 +351,6 @@ def fig_explainability_matrix(root: Path) -> None:
     ax.set_yticklabels([m.replace("Proposed ", "") for m in sym["method"]], fontsize=8)
     ax.set_xticks(np.arange(len(metrics)))
     ax.set_xticklabels([m.replace("_", "\n") for m in metrics], fontsize=8)
-    ax.set_title("Multi-metric comparison of symbolic explanation baselines")
     for i in range(data.shape[0]):
         for j in range(data.shape[1]):
             ax.text(j, i, f"{data[i,j]:.2f}", ha="center", va="center", fontsize=7)
@@ -376,7 +372,6 @@ def fig_flow_funnel(root: Path) -> None:
     fig, ax = plt.subplots(figsize=(8.2, 4.6))
     bars = ax.bar(stages, vals)
     ax.set_ylabel("Number of objects")
-    ax.set_title("Rule-inference flow through coverage, exact matching, fallback, correctness, and abstention")
     style_axes(ax)
     for b, v in zip(bars, vals):
         ax.text(b.get_x()+b.get_width()/2, v + max(vals)*0.015, f"{v:,}", ha="center", fontsize=8)
@@ -395,9 +390,9 @@ def fig_synthetic_uncertainty(root: Path) -> None:
         ax.fill_between(x, yy - cc, yy + cc, alpha=0.12)
     ax.set_xlabel("Injected semantic noise sigma")
     ax.set_ylabel("Score")
-    ax.set_title("Synthetic benchmark with 95% confidence bands across seeds")
     ax.set_ylim(0.55, 1.02)
-    ax.legend(frameon=False)
+    ax.set_ylim(0.55, 1.12)
+    ax.legend(frameon=False, loc="upper center", ncol=1)
     style_axes(ax)
     savefig(figs / "fig22_synthetic_uncertainty_bands.pdf")
 
@@ -412,9 +407,8 @@ def fig_protocol_b_perclass_errors(root: Path) -> None:
     ax.set_yticks(y)
     ax.set_yticklabels(df["class_name"], fontsize=8)
     ax.set_xlabel("Unseen-class accuracy")
-    ax.set_title("Protocol B per-class transfer: prototype and symbolic-template behavior")
-    ax.set_xlim(0, 1.0)
-    ax.legend(frameon=False)
+    ax.set_xlim(0, 1.20)
+    ax.legend(frameon=False, loc="upper right")
     ax.grid(True, axis="x", alpha=0.25, linewidth=0.7)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
@@ -431,7 +425,6 @@ def fig_attribute_salience_error(root: Path) -> None:
         ax.annotate(r["attribute"], (r["test_mae"], r["salience"]), xytext=(4, 4), textcoords="offset points", fontsize=7)
     ax.set_xlabel("Attribute test MAE")
     ax.set_ylabel("Transition salience")
-    ax.set_title("Semantic attributes: salience versus reconstruction error")
     style_axes(ax)
     savefig(figs / "fig24_attribute_salience_error_scatter.pdf")
 

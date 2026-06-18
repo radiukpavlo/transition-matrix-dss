@@ -1,0 +1,49 @@
+\begin{thebibliography}{999}
+
+\bibitem[Xian et~al.(2019)Xian, Lampert, Schiele, and Akata]{Xian2019AwA2}
+Xian, Y.; Lampert, C.H.; Schiele, B.; Akata, Z.
+\newblock {Zero-shot learning: A comprehensive evaluation of the good, the bad
+  and the ugly}.
+\newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2019}, {\em
+  41},~2251--2265.
+\newblock {\url{https://doi.org/10.1109/TPAMI.2018.2857768}}.
+
+\bibitem[Lampert et~al.(2017)Lampert, Pucher, and Dostal]{AwA2Website}
+Lampert, C.H.; Pucher, D.; Dostal, J.
+\newblock {Animals with attributes 2}.
+\newblock Dataset web page,  2017.
+\newblock Accessed 22 May 2026.
+
+\bibitem[Patterson et~al.(2014)Patterson, Xu, Su, and Hays]{Patterson2014SUN}
+Patterson, G.; Xu, C.; Su, H.; Hays, J.
+\newblock {The SUN Attribute Database: Beyond Categories for Deeper Scene
+  Understanding}.
+\newblock {\em Int. J. Comput. Vis.} {\bf 2014}, {\em 108},~59--81.
+\newblock {\url{https://doi.org/10.1007/s11263-013-0695-z}}.
+
+\bibitem[Patterson and Hays(2012)]{SUNAttributesWebsite}
+Patterson, G.; Hays, J.
+\newblock {SUN Attribute Database},  2012.
+\newblock Accessed: 17 June 2026.
+
+\bibitem[Kawahara et~al.(2019{\natexlab{a}})Kawahara, Daneshvar, Argenziano,
+  and Hamarneh]{Kawahara2019Derm7pt}
+Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
+\newblock {Seven-point checklist and skin lesion classification using multitask
+  multimodal neural nets}.
+\newblock {\em IEEE J. Biomed. Health Inform.} {\bf 2019}, {\em 23},~538--546.
+\newblock {\url{https://doi.org/10.1109/JBHI.2018.2824327}}.
+
+\bibitem[Kawahara et~al.(2019{\natexlab{b}})Kawahara, Daneshvar, Argenziano,
+  and Hamarneh]{Derm7ptWebsite}
+Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
+\newblock {Seven-Point Checklist Dermatology Dataset Publication Page},  2019.
+\newblock Accessed: 17 June 2026.
+
+\bibitem[Kawahara(2019)]{Derm7ptGitHub}
+Kawahara, J.
+\newblock {derm7pt: Dermatology dataset composed of diagnosis and seven-point
+  checklist criteria labels},  2019.
+\newblock Accessed: 17 June 2026.
+
+\end{thebibliography}

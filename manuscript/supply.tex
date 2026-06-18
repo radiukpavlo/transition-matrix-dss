@@ -1,0 +1,431 @@
+%=================================================================
+% Supplementary Material for the Manuscript
+%=================================================================
+\documentclass[make,supfile,submit,pdftex,moreauthors]{Definitions/mdpi}
+\providecommand{\hreflink}[1]{}
+\providecommand{\AuthorCitation}[1]{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{changepage}
+\usepackage{siunitx}
+\graphicspath{{../}{}}
+
+%=================================================================
+% Revision Markup Commands
+%=================================================================
+\newcommand{\revtag}[2]{[\textbf{R#1-C#2}]}
+\newcommand{\Rone}[1]{\textcolor{red}{#1}}
+\newcommand{\Rtwo}[1]{\textcolor{blue}{#1}}
+\newcommand{\Rthree}[1]{\textcolor{purple}{#1}}
+
+%=================================================================
+%  Section Numbering for Supplementary Material
+%=================================================================
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{S\arabic{section}.\arabic{subsection}}
+
+%=================================================================
+% Preamble and Metadata
+%=================================================================
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{}
+\daterevised{}
+\dateaccepted{}
+\datepublished{}
+\hreflink{https://doi.org/}
+
+\Title{Supplementary Materials for ``SEMTRA: Global Semantic Transition and Rough-Set Rules for Auditable Post-hoc Explainability''}
+
+\Author{Pavlo Radiuk, Oleksander Barmak and Iurii Krak}
+\AuthorNames{Pavlo Radiuk, Oleksander Barmak, Iurii Krak}
+\AuthorCitation{Radiuk, P.; Barmak, O.; Krak, I.}
+
+\begin{document}
+
+% ==================================================================
+% SECTION 1: Reproducibility Scope and Evidence Boundary
+% ==================================================================
+\section{Reproducibility Scope and Evidence Boundary}
+\label{sec:supp_scope}
+
+This supplementary material documents the numerical and procedural evidence supporting the SEMTRA audit claims. It ensures inspectability by detailing source artifacts, dataset-specific capabilities, and summarizing sensitivity, uncertainty, and runtime behavior. SEMTRA functions as an audit framework, extracting a frozen model's logic through discrete semantic predicates. If essential visual cues are missing or the representation lacks linear separability, the framework flags failures via abstention, conflict, or low fidelity. The evaluation spans AwA2 (closed-world and seen/unseen semantic-transfer validation), SUN (scene-understanding stress test), and Derm7pt (retrospective technical validation).
+
+All experiments leverage fixed random seeds (e.g., 42--46 for AwA2) to ensure robust variations. Furthermore, object-level uncertainty is assessed via non-parametric bootstrap intervals. The implementation relies on standard Python libraries, with Derm7pt feature extraction utilizing TorchVision's ResNet-50 ImageNet-1K v2 weights in evaluation mode to ensure traceability without claiming clinical validation.
+
+% ==================================================================
+% SECTION 2: Detailed Implementation Specifications
+% ==================================================================
+\section{Detailed Implementation Specifications}
+\label{sec:implementation_details}
+
+The SEMTRA pipeline features a modular architecture designed for high reproducibility. Feature extraction employs pretrained Convolutional Neural Networks (CNNs) without gradient updates: ResNet-101 for AwA2 and SUN (producing 2048-dimensional feature vectors), and ResNet-50 for Derm7pt. The semantic transition module relies on Singular Value Decomposition (SVD) to project latent features into an interpretable semantic coordinate space, fitted via a regularized linear transformation matrix.
+
+Attribute discretization is performed using the novel Weighted Entropy-Density Discretization (WEDD) algorithm. WEDD computes threshold splits by minimizing class entropy while penalizing high-density regions to prevent unstable, noisy boundaries. Subsequently, the rule induction phase utilizes rough-set theory, computing lower approximations to formulate deterministic, minimal classification rules (reducts) from the discretized semantic decision tables. Finally, the conflict-aware inference engine uses a confidence-based weighted voting mechanism, explicitly outputting conflicts (competing rules) or abstentions (no matching antecedents). Matrix operations are executed using CUDA acceleration on an NVIDIA GPU, while rule induction utilizes CPU multiprocessing.
+
+% ==================================================================
+% SECTION 3: Dataset Protocols
+% ==================================================================
+\section{Dataset Protocols}
+\label{sec:supp_dataset_protocols}
+
+% ------------------------------------------------------------------
+% 3.1 AwA2 and xlsa17
+% ------------------------------------------------------------------
+\subsection{AwA2 and xlsa17}
+\label{subsec:supp_awa2}
+
+The AwA2 dataset provides 2048-dimensional ResNet-101 vectors and semantic prototypes \cite{Xian2019AwA2,AwA2Website}, making it ideal for SEMTRA's closed-world auditing (Protocol A). The base predictor achieves 71.16\% accuracy, while the symbolic rulebook attains 39.73\% covered accuracy and 40.48\% covered fidelity. This gap highlights the "audit tax" incurred during semantic reconstruction and discretization. SEMTRA differentiates covered accuracy (label alignment) from covered fidelity (base model alignment), preventing misleading evaluations. Object-level exports provide detailed trace abilities, measuring abstention and conflict.
+
+\begin{figure}[H]
+%\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\subfloat[\centering\label{fig:supp_object_outcomes}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_a_object_level_audit_outcomes.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_conflict_abstention}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_b_conflict_abstention_limits.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_object_intervals_panel}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_c_object_level_bootstrap_intervals.pdf}}
+%\end{adjustwidth}
+\caption{Object-level audit outcomes computed from enhanced prediction exports. (\textbf{a}) Object-level audit outcomes. (\textbf{b}) Conflict and abstention limits. (\textbf{c}) Object-level bootstrap intervals. The panels separate coverage, conflict, abstention, covered accuracy, covered fidelity, and bootstrap uncertainty so that predictive correctness and faithfulness to the frozen base model are not conflated.\label{fig:supp_object_audit_group}}
+\end{figure}
+
+% ------------------------------------------------------------------
+% 3.2 SUN Attribute Database
+% ------------------------------------------------------------------
+\subsection{SUN Attribute Database}
+\label{subsec:supp_sun}
+
+SUN acts as a scene-understanding stress test, containing 102 attributes over 700+ categories \cite{Patterson2014SUN,SUNAttributesWebsite}. SEMTRA yields low coverage (0.0760) and covered fidelity (0.0918) here (Table~\ref{tab:supp_sun_summary}), exposing the global symbolic template's limitations on fine-grained scene data. High conflict and abstention are prevalent in specific hierarchical categories (Table~\ref{tab:supp_sun_category_diagnostics}, Figure~\ref{fig:supp_sun_conflict_map}), demonstrating that semantic auditability is tightly coupled with concept granularity.
+
+\begin{table}[H]
+\caption{SUN xlsa17 semantic-transition and rulebook audit summary.\label{tab:supp_sun_summary}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{lrrccc}
+\toprule
+\textbf{Scope} & \textbf{Objects} & \textbf{Classes} & \textbf{MAE} & \textbf{Coverage} & \textbf{Covered fidelity} \\
+\midrule
+Unseen prototype transfer & 1440 & 72 & 0.0683 & -- & -- \\
+Seen-test rulebook audit & 2580 & 645 & -- & 0.0760 & 0.0918 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\caption{SUN low-coverage category diagnostics.\label{tab:supp_sun_category_diagnostics}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{lRCCc}
+\toprule
+\textbf{Category} & \textbf{Objects} & \textbf{Coverage} & \textbf{Conflict} & \textbf{Covered fidelity} \\
+\midrule
+abbey & 4 & 0.0000 & 1.0000 & -- \\
+access\_road & 4 & 0.0000 & 1.0000 & -- \\
+airfield & 4 & 0.0000 & 1.0000 & -- \\
+airplane\_cabin & 4 & 0.0000 & 1.0000 & -- \\
+airport/airport & 4 & 0.0000 & 1.0000 & -- \\
+airport/entrance & 4 & 0.0000 & 1.0000 & -- \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+%\centering
+\includegraphics[width=0.7\textwidth]{figs_main/fig32_b_sun_coverage_conflict_map.pdf}
+\caption{SUN category-level coverage and conflict map. The plot highlights the hierarchy-dependent failure modes of the current scene-audit configuration.\label{fig:supp_sun_conflict_map}}
+\end{figure}
+
+% ------------------------------------------------------------------
+% 3.3 Derm7pt
+% ------------------------------------------------------------------
+\subsection{Derm7pt}
+\label{subsec:supp_derm7pt}
+
+Derm7pt tests SEMTRA on medical checklist concepts using retrospective dermoscopic imagery \cite{Kawahara2019Derm7pt,Derm7ptWebsite}. Utilizing a generic ResNet-50 encoder, the framework achieves robust coverage (0.9899) and covered fidelity (0.7417) (Tables~\ref{tab:supp_derm7pt_summary} and \ref{tab:supp_derm7pt_resnet_summary}). Although object-level fidelity is high, this demonstrates technical traceability, not clinical validity. Proper clinical deployment requires domain-specific encoders and prospective validation (Figure~\ref{fig:supp_derm_diagnosis}).
+
+\begin{table}[H]
+\caption{Derm7pt retrospective technical-validation summary using official case-level splits.\label{tab:supp_derm7pt_summary}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{lC}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Test concept MAE & 0.2433 \\
+Rulebook coverage & 0.9241 \\
+Covered fidelity & 0.5288 \\
+Covered accuracy & 0.4219 \\
+Conflict rate & 0.0051 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\caption{Derm7pt retrospective technical-validation summary with locked ResNet-50 features.\label{tab:supp_derm7pt_resnet_summary}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{lC}
+\toprule
+\textbf{Metric} & \textbf{Value} \\
+\midrule
+Encoder & TorchVision ResNet-50 ImageNet-1K v2 \\
+Feature dimension & 2048 \\
+Test concept MAE & 0.2359 \\
+Coverage & 0.9899 \\
+Covered accuracy & 0.5729 \\
+Covered fidelity & 0.7417 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+%\centering
+\includegraphics[width=0.7\textwidth]{figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf}
+\caption{Derm7pt grouped-diagnosis diagnostics under the locked ResNet-50 technical-validation protocol. The figure should not be interpreted as clinical validation.\label{fig:supp_derm_diagnosis}}
+\end{figure}
+
+% ==================================================================
+% SECTION 4: Discretization Evidence
+% ==================================================================
+\section{Discretization Evidence}
+\label{sec:supp_discretization}
+
+The discretization step converts continuous reconstructed attributes into symbolic states. WEDD effectively minimizes dense overlaps, performing competitively against equal-frequency, equal-width, and MDLP-like methods. Averaged over five seeds, WEDD yields 0.8480 coverage and 0.4048 covered fidelity, showing marginal improvements over MDLP (+0.0146 coverage, +0.0073 fidelity) while slightly reducing conflicts (-0.0107) (Figure~\ref{fig:supp_wedd_group}). These metrics present WEDD as a robust, density-aware choice rather than an unconditionally dominant technique, allowing practitioners to optimize for varying tradeoff requirements.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[\centering\label{fig:supp_wedd_cov}]{\includegraphics[width=0.48\linewidth]{figs_main/fig27_a_coverage_by_discretizer.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_wedd_acc}]{\includegraphics[width=0.48\linewidth]{figs_main/fig27_b_accuracy_by_discretizer.pdf}}\\
+\subfloat[\centering\label{fig:supp_wedd_fid}]{\includegraphics[width=0.48\linewidth]{figs_main/fig27_c_fidelity_by_discretizer.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_wedd_conflict}]{\includegraphics[width=0.48\linewidth]{figs_main/fig27_d_conflict_by_discretizer.pdf}}\\
+\subfloat[\centering\label{fig:supp_wedd_mdlp}]{\includegraphics[width=0.48\linewidth]{figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf}}
+\caption{Discretizer evidence across coverage, accuracy, fidelity, conflict, and paired WEDD-minus-MDLP-like entropy intervals. (\textbf{a}) Coverage by discretizer. (\textbf{b}) Accuracy by discretizer. (\textbf{c}) Fidelity by discretizer. (\textbf{d}) Conflict by discretizer. (\textbf{e}) Paired WEDD-MDLP-like entropy intervals. The panels support cautious framing: the observed WEDD advantages are modest and should be treated as operating-point evidence rather than universal dominance.\label{fig:supp_wedd_group}}
+\end{figure}
+
+% ==================================================================
+% SECTION 5: Sensitivity to Attribute Count, Rank, and Confidence
+% ==================================================================
+\section{Sensitivity to Attribute Count, Rank, and Confidence}
+\label{sec:supp_sensitivity_runtime}
+
+SEMTRA provides control over the semantic state dimensionality ($q$), SVD rank ($r$), and rule-confidence thresholds, forming the framework's operational envelope. Table~\ref{tab:supp_q_sensitivity} shows that larger $q$ values expand the combinatorial search space, significantly enhancing coverage and fidelity at the expense of computational complexity. Similarly, higher SVD ranks preserve more variance, boosting fidelity but altering conflict behavior (Table~\ref{tab:supp_svd_rank_sensitivity}). Confidence thresholds mediate rule strictness: lower thresholds boost coverage but risk higher error rates, while higher thresholds prioritize explicit abstentions (Figure~\ref{fig:supp_sensitivity_group}).
+
+\begin{table}[H]
+\caption{Selected-attribute-count sensitivity on AwA2 for the WEDD rulebook.\label{tab:supp_q_sensitivity}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{rCccCC}
+\toprule
+\textbf{q} & \textbf{Coverage} & \textbf{Covered fidelity} & \textbf{Covered accuracy} & \textbf{Conflict} & \textbf{Rules} \\
+\midrule
+8 & 0.7999 & 0.3435 & 0.3422 & 0.1711 & 59 \\
+12 & 0.8251 & 0.4002 & 0.3889 & 0.1522 & 60 \\
+18 & 0.8469 & 0.4109 & 0.4054 & 0.1378 & 57 \\
+24 & 0.8354 & 0.4343 & 0.4266 & 0.1365 & 54 \\
+32 & 0.8719 & 0.5522 & 0.5380 & 0.1027 & 50 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\begin{figure}[!ht]
+\centering
+\subfloat[\centering\label{fig:supp_q_sensitivity_panel}]{\includegraphics[width=0.48\linewidth]{figs_main/fig28_a_q_sensitivity.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_rank_sensitivity_panel}]{\includegraphics[width=0.48\linewidth]{figs_main/fig28_b_svd_rank_sensitivity.pdf}}\\
+\subfloat[\centering\label{fig:supp_confidence_threshold_panel}]{\includegraphics[width=0.48\linewidth]{figs_main/fig28_c_confidence_threshold_frontier.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_runtime_panel}]{\includegraphics[width=0.48\linewidth]{figs_main/fig28_d_runtime_summary.pdf}}
+\caption{Sensitivity and runtime controls for the SEMTRA audit. (\textbf{a}) Selected-attribute count sensitivity. (\textbf{b}) Retained SVD rank sensitivity. (\textbf{c}) Rule-confidence threshold behavior. (\textbf{d}) Phase-level runtime summary.\label{fig:supp_sensitivity_group}}
+\end{figure}
+
+\begin{table}[H]
+\caption{SVD-rank sensitivity on AwA2 for semantic reconstruction and rulebook audit metrics.\label{tab:supp_svd_rank_sensitivity}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{rCCccC}
+\toprule
+\textbf{Rank} & \textbf{MAE} & \textbf{Coverage} & \textbf{Covered fidelity} & \textbf{Covered accuracy} & \textbf{Runtime (s)} \\
+\midrule
+16 & 0.1295 & 0.9037 & 0.3875 & 0.3913 & 7.4 \\
+32 & 0.1150 & 0.9023 & 0.3668 & 0.3695 & 7.2 \\
+64 & 0.1031 & 0.8469 & 0.4109 & 0.4054 & 6.8 \\
+128 & 0.0942 & 0.7893 & 0.4898 & 0.4801 & 6.8 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ==================================================================
+% SECTION 6: Runtime and Reduct Search
+% ==================================================================
+\section{Runtime and Reduct Search}
+\label{sec:supp_runtime}
+
+The practical audit tax encompasses not just accuracy losses, but computational costs associated with matrix transitions, threshold fitting, and reduct searches. AwA2 WEDD protocol execution averages 7.19 seconds per seed, whereas SUN incurs heavier runtime ($\approx$22.0 seconds) due to extensive category scaling and complex rule spaces (Table~\ref{tab:supp_runtime_breakdown}). Runtime logs clarify these computational trade-offs: increasing selected attributes or lowering confidence thresholds expands the reduct search space exponentially, potentially challenging real-time applications.
+
+\begin{table}[H]
+\caption{Per-phase Runtime summary from JSONL instrumentation.\label{tab:supp_runtime_breakdown}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{llRCC}
+\toprule
+\textbf{Dataset} & \textbf{Phase} & \textbf{Runs} & \textbf{Mean (s)} & \textbf{Total (s)} \\
+\midrule
+AwA2 & protocol\_a\_Equal frequency & 5 & 5.5 & 27.3 \\
+AwA2 & protocol\_a\_Equal width & 5 & 5.3 & 26.6 \\
+AwA2 & protocol\_a\_MDLP-like entropy & 5 & 7.3 & 36.6 \\
+AwA2 & protocol\_a\_WEDD & 5 & 7.2 & 36.0 \\
+AwA2 & protocol\_b\_semantic\_validation & 5 & 3.0 & 15.1 \\
+AwA2 & q\_sensitivity & 5 & 7.0 & 34.9 \\
+AwA2 & svd\_rank\_sensitivity & 4 & 7.1 & 28.3 \\
+Derm7pt & q\_sensitivity & 3 & 0.1 & 0.3 \\
+Derm7pt & transition\_and\_rulebook & 1 & 7.8 & 7.8 \\
+SUN & q\_sensitivity & 6 & 22.0 & 132.0 \\
+SUN & transition\_and\_rulebook & 1 & 11.6 & 11.6 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ==================================================================
+% SECTION 7: Protocol B and Per-Class Failure Diagnosis
+% ==================================================================
+\section{Protocol B and Per-Class Failure Diagnosis}
+\label{sec:supp_protocol_b}
+
+Protocol B evaluates semantic transfer across the official xlsa17 seen/unseen split. This experiment is not a zero-shot leaderboard claim. It asks whether the learned semantic transition retains enough class-level structure to map unseen objects toward their semantic prototypes. The result is meaningful because SEMTRA is built around semantic reconstruction. If the transition fails under seen/unseen transfer, the downstream rulebook cannot be expected to provide robust symbolic explanations for unseen classes.
+
+\begin{table}[H]
+\caption{AwA2 Protocol B semantic-transfer validation across seeds. This is not a competitive zero-shot leaderboard.\label{tab:supp_protocol_b_seedwise}}
+\centering
+\small
+\begin{tabularx}{\textwidth}{lC}
+\toprule
+\textbf{Metric} & \textbf{Mean $\pm$ SD} \\
+\midrule
+Prototype unseen accuracy & 0.4402 $\pm$ 0.0122 \\
+Symbolic-template unseen accuracy & 0.2348 $\pm$ 0.0170 \\
+Unseen semantic MAE & 0.1888 $\pm$ 0.0004 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The seed-wise Protocol B summary shows moderate continuous semantic transfer and a much weaker symbolic-template result. The continuous prototype variant preserves more information because it can use distances in the reconstructed semantic space. The symbolic template variant forces the same evidence into discrete rule antecedents and therefore loses additional information. This drop is not presented as competitive zero-shot performance. It is an audit diagnostic that quantifies the information tax caused by converting continuous semantic structure into a rigid symbolic template.
+
+\begin{figure}[H]
+\centering
+\subfloat[\centering\label{fig:supp_protocol_b_seed_metrics}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_a_protocol_b_seed_metrics.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_transfer_accuracy_mae}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_b_transfer_accuracy_vs_mae.pdf}}
+\hfill
+\subfloat[\centering\label{fig:supp_protocol_b_failures}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_c_per_class_protocol_b_failures.pdf}}
+\caption{Protocol B semantic-transfer diagnostics. The panels summarize seed-level variation, accuracy-versus-MAE behavior, and per-class failure modes for bat, giraffe, dolphin, and sheep.\label{fig:supp_protocol_b_group}}
+\end{figure}
+
+The bat failure is particularly informative. Bat has near-zero prototype accuracy but does not simply have the largest mean Hamming distance. This suggests a rupture between the ResNet-101 representation, the class-level AwA2 attribute dictionary, and the visual evidence needed for the class. Bats are visually variable, often appear in unusual poses, and depend on cues such as wings and nocturnal context that are not emphasized by the selected semantic subset. SEMTRA exposes this problem rather than smoothing it away. In a practical audit, this would motivate either a richer attribute dictionary, class-specific concept review, or a domain-specific representation before the symbolic layer is trusted.
+
+The sheep case illustrates a different pattern. The continuous prototype score can be strong while the symbolic template collapses. That means the reconstructed semantic vector contains useful continuous information, but the discretized rule antecedents are too brittle for that class. This is exactly the kind of diagnosis that a post-hoc audit layer should provide. It separates failures of continuous semantic reconstruction from failures introduced by discretization and rule induction.
+
+% ==================================================================
+% SECTION 8: Cross-Domain Portability
+% ==================================================================
+\section{Cross-Domain Portability}
+\label{sec:supp_portability}
+
+Evaluating SEMTRA across domains highlights strong dataset dependencies. AwA2 performs best because its class structure tightly aligns with its semantic attributes. In contrast, SUN's overlapping fine-grained properties significantly degrade symbolic effectiveness, resulting in excessive conflict (Table~\ref{tab:supp_cross_domain_generalization}, Figure~\ref{fig:supp_portability}). Object-level bootstrapping quantifies this operational uncertainty precisely, providing 95\% confidence intervals for rulebook limits without masking low fidelity with summary statistics (Table~\ref{tab:supp_object_intervals}). The trace architecture enables practitioners to investigate individual correct predictions, false assertions, and abstentions, making the framework genuinely auditable.
+
+\begin{table}[H]
+\caption{Cross-domain SEMTRA summary. Derm7pt is retrospective technical validation only.\label{tab:supp_cross_domain_generalization}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\begin{tabularx}{\fulllength}{l>{\raggedright\arraybackslash}Xrcccc}
+\toprule
+\textbf{Dataset} & \textbf{Scope} & \textbf{Attrs} & \textbf{MAE} & \textbf{Cov.} & \textbf{Fid.} & \textbf{Acc.} \\
+\midrule
+AwA2 & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
+AwA2 Protocol B & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
+SUN & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
+Derm7pt & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}
+
+\begin{figure}[H]
+%\centering
+\includegraphics[width=0.7\textwidth]{figs_main/fig31_a_portability_coverage_fidelity.pdf}
+\caption{Cross-domain portability viewed through coverage and fidelity. The figure shows that SEMTRA's audit behavior is strongly dataset-dependent.\label{fig:supp_portability}}
+\end{figure}
+
+\begin{table}[H]
+\caption{Object-level bootstrap intervals from enhanced prediction exports.\label{tab:supp_object_intervals}}
+\centering
+\begin{tabularx}{\textwidth}{llCcR}
+\toprule
+\textbf{Dataset} & \textbf{Metric} & \textbf{Mean} & \textbf{95\% CI} & \textbf{Objects} \\
+\midrule
+AwA2 & coverage & 0.8469 & [0.8394, 0.8547] & 7465 \\
+AwA2 & covered accuracy & 0.4054 & [0.3937, 0.4170] & 7465 \\
+AwA2 & covered fidelity to base & 0.4109 & [0.3990, 0.4228] & 7465 \\
+AwA2 & coverage & 0.8257 & [0.8171, 0.8342] & 7465 \\
+AwA2 & covered accuracy & 0.3824 & [0.3704, 0.3942] & 7465 \\
+AwA2 & covered fidelity to base & 0.3949 & [0.3828, 0.4064] & 7465 \\
+AwA2 & coverage & 0.8926 & [0.8856, 0.8991] & 7465 \\
+AwA2 & covered accuracy & 0.4051 & [0.3937, 0.4161] & 7465 \\
+AwA2 & covered fidelity to base & 0.4070 & [0.3948, 0.4189] & 7465 \\
+AwA2 & coverage & 0.9027 & [0.8966, 0.9094] & 7465 \\
+AwA2 & covered accuracy & 0.4048 & [0.3939, 0.4172] & 7465 \\
+AwA2 & covered fidelity to base & 0.4128 & [0.4010, 0.4244] & 7465 \\
+AwA2 & coverage & 0.7721 & [0.7625, 0.7823] & 7465 \\
+AwA2 & covered accuracy & 0.3888 & [0.3765, 0.4012] & 7465 \\
+AwA2 & covered fidelity to base & 0.3985 & [0.3855, 0.4113] & 7465 \\
+SUN & coverage & 0.0760 & [0.0659, 0.0868] & 2580 \\
+SUN & covered accuracy & 0.0714 & [0.0389, 0.1083] & 2580 \\
+SUN & covered fidelity to base & 0.0918 & [0.0511, 0.1313] & 2580 \\
+Derm7pt & coverage & 0.9899 & [0.9797, 0.9975] & 395 \\
+Derm7pt & covered accuracy & 0.5729 & [0.5229, 0.6218] & 395 \\
+Derm7pt & covered fidelity to base & 0.7417 & [0.6964, 0.7863] & 395 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+% ==================================================================
+% SECTION 9: Claim Discipline and Practical Use
+% ==================================================================
+\section{Claim Discipline and Practical Use}
+\label{sec:supp_claim_discipline}
+
+SEMTRA is most useful when its output is treated as an audit artifact. A practitioner can use it to inspect which semantic attributes drive a rule, how many examples support that rule, how often the rulebook abstains, and where conflicts occur. This is valuable for model documentation, failure analysis, dataset triage, and concept-vocabulary design. It is not sufficient by itself for high-stakes deployment. In high-stakes settings, the audit layer would need to be paired with domain-specific validation, external calibration, subgroup testing, and independent review.
+
+The acceptable audit-tax level is use-case dependent. For a screening classifier, a low-fidelity explanation layer may be unacceptable if users interpret explanations as reliable justifications. For a model-debugging workflow, the same layer may be useful because it identifies classes and semantic regions where the representation fails. For documentation, explicit abstentions may be preferable to plausible but unsupported explanations. SEMTRA's value therefore lies in making the tradeoff explicit. It reports when the symbolic layer works, when it disagrees with the base model, and when it refuses to give a deterministic explanation.
+
+The scope restrictions are encoded in the manuscript language and in the generated artifacts. SUN is described as a portability stress test, not a scene-recognition benchmark victory. Derm7pt is described as retrospective technical validation, not clinical deployment evidence. Protocol B is described as semantic-transfer validation, not a competitive zero-shot learning result. WEDD is described as a density-aware discretization option, not a universally superior discretizer. These restrictions are not rhetorical hedges; they are necessary conditions for making the audit record scientifically defensible.
+
+Future work should improve both sides of the semantic bridge. On the representation side, domain-specific encoders and instance-level concept supervision could reduce the gap between latent features and human concepts. On the symbolic side, search-efficient rough-set variants, differentiable approximations, or structured pruning could reduce runtime and improve stability for large concept dictionaries. On the evaluation side, external validation should report not only accuracy but also fidelity, coverage, conflict, abstention, calibration, and subgroup behavior. The current artifact set provides the baseline against which those improvements can be measured.
+
+A practical SEMTRA deployment should begin with a question about the intended use of explanations. If the user wants a high-accuracy classifier, the rulebook alone is not the correct artifact. If the user wants to know which part of a frozen model can be expressed through named concepts, then the rulebook, coverage, fidelity, and conflict records are directly relevant. If the user wants to debug a representation, the most informative objects may be the failures: covered disagreements, conflicts, high-distance fallback cases, and abstentions. These cases identify where the concept dictionary and the representation no longer align.
+
+The same distinction applies to model comparison. A black-box classifier and a symbolic audit layer should not be ranked only by top-1 accuracy. The classifier is optimized to predict labels. The audit layer is constrained to use reconstructed semantic states and simple rules. The appropriate comparison asks what explanatory information is gained or lost by imposing those constraints. SEMTRA's contribution is to quantify that loss through the audit tax and to preserve the evidence needed to decide whether the loss is acceptable for a specific task.
+
+\begin{adjustwidth}{-\extralength}{0cm}
+\reftitle{References}
+\externalbibliography{yes}
+\bibliography{references}
+\end{adjustwidth}
+
+\end{document}

@@ -1401,7 +1401,7 @@ def run_v2(ctx: RunContext) -> int:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1], help="Repository root.")
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2], help="Repository root.")
     parser.add_argument("--v1", type=Path, default=None, help="Existing revision v1 artifact root.")
     parser.add_argument("--out", type=Path, default=None, help="Revision v2 artifact root.")
     parser.add_argument("--force-rebuild", action="store_true", help="Delete and regenerate outputs/revision_v2.")

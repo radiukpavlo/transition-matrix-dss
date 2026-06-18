@@ -1554,7 +1554,7 @@ def write_strategy_deliverables(out: Path, root: Path, seeds: list[int], smoke: 
 
 def parse_args() -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--root", default=str(Path(__file__).resolve().parents[1]))
+    ap.add_argument("--root", default=str(Path(__file__).resolve().parents[2]))
     ap.add_argument("--out", default=None)
     ap.add_argument("--seeds", default="42,43,44,45,46")
     ap.add_argument("--smoke", action="store_true", help="Run a reduced grid for quick validation.")

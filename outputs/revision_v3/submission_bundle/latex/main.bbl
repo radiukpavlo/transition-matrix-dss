@@ -311,7 +311,7 @@ Patterson, G.; Xu, C.; Su, H.; Hays, J.
 \bibitem[Patterson and Hays(2012)]{SUNAttributesWebsite}
 Patterson, G.; Hays, J.
 \newblock {SUN Attribute Database},  2012.
-\newblock Accessed: 16 June 2026.
+\newblock Accessed: 17 June 2026.
 
 \bibitem[Kawahara et~al.(2019{\natexlab{a}})Kawahara, Daneshvar, Argenziano,
   and Hamarneh]{Kawahara2019Derm7pt}
@@ -325,12 +325,20 @@ Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
   and Hamarneh]{Derm7ptWebsite}
 Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
 \newblock {Seven-Point Checklist Dermatology Dataset Publication Page},  2019.
-\newblock Accessed: 16 June 2026.
+\newblock Accessed: 17 June 2026.
 
 \bibitem[Kawahara(2019)]{Derm7ptGitHub}
 Kawahara, J.
 \newblock {derm7pt: Dermatology dataset composed of diagnosis and seven-point
   checklist criteria labels},  2019.
-\newblock Accessed: 16 June 2026.
+\newblock Accessed: 17 June 2026.
+
+\bibitem[Frome et~al.(2013)Frome, Corrado, Shlens, Bengio, Dean, Ranzato, and
+  Mikolov]{Frome2013DeViSE}
+Frome, A.; Corrado, G.S.; Shlens, J.; Bengio, S.; Dean, J.; Ranzato, M.;
+  Mikolov, T.
+\newblock {{{DeViSE}: A deep visual-semantic embedding model}}.
+\newblock In Proceedings of the Advances in Neural Information Processing
+  Systems,  2013, Vol.~26, pp. 2121--2129.
 
 \end{thebibliography}

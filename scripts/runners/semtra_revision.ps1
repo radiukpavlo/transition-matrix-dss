@@ -7,7 +7,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+$Root = (Resolve-Path (Join-Path $PSScriptRoot "..\..")).Path
 $VenvPython = Join-Path $Root ".venv\Scripts\python.exe"
 $VenvPip = Join-Path $Root ".venv\Scripts\pip.exe"
 $LatexPluginRoot = "C:\Users\radiu\.codex\plugins\cache\openai-bundled\latex\0.2.2"

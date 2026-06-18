@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  17 JUN 2026 14:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  18 JUN 2026 00:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,7 +1183,7 @@ File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 85.
+h' as default language. on input line 93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2026-04-24 v7.01q Hypertext links for LaTeX
@@ -1304,7 +1304,7 @@ Package cleveref Info: always capitalise cross-reference names on input line 78
 Package cleveref Info: no abbreviation of names on input line 7852.
 )
 ==> First Aid for cleveref.sty applied!
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 85
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 93
 .
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1312,24 +1312,24 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -1346,13 +1346,13 @@ ii
 \makeMPintoPDFobject=\count426
 \everyMPtoPDFconversion=\toks65
 )
-LaTeX Info: Redefining \microtypecontext on input line 85.
-Package microtype Info: Applying patch `item' on input line 85.
-Package microtype Info: Applying patch `toc' on input line 85.
-Package microtype Info: Applying patch `eqnum' on input line 85.
-Package microtype Info: Applying patch `footnote' on input line 85.
-Package microtype Info: Applying patch `verbatim' on input line 85.
-LaTeX Info: Redefining \microtypesetup on input line 85.
+LaTeX Info: Redefining \microtypecontext on input line 93.
+Package microtype Info: Applying patch `item' on input line 93.
+Package microtype Info: Applying patch `toc' on input line 93.
+Package microtype Info: Applying patch `eqnum' on input line 93.
+Package microtype Info: Applying patch `footnote' on input line 93.
+Package microtype Info: Applying patch `verbatim' on input line 93.
+LaTeX Info: Redefining \microtypesetup on input line 93.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1372,7 +1372,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 85.
+or `english'. on input line 93.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1420,63 +1420,63 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package newfloat Info: `float' package detected.
-Package hyperref Info: Link coloring ON on input line 85.
+Package hyperref Info: Link coloring ON on input line 93.
 (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 8
-5.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 9
+3.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 8
-5.
+LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 9
+3.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-85.
+93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-85.
+93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-85.
+93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 85.
+(Font)              scaled to size 10.42007pt on input line 93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 85.
+(Font)              scaled to size 7.91925pt on input line 93.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 85.
+(Font)              scaled to size 6.25204pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 85.
+(Font)              scaled to size 10.42007pt on input line 93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 85.
+(Font)              scaled to size 7.91925pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 85.
+(Font)              scaled to size 6.25204pt on input line 93.
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-85.
+93.
 
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -1489,89 +1489,81 @@ Package microtype Info: Loading generic protrusion settings for font family
 (C:\Users\radiu\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-eur.cfg
 File: mt-eur.cfg 2006/07/31 v1.1 microtype config. file: AMS Euler Roman (RS)
 )
-LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 85.
+LaTeX Font Info:    Redeclaring symbol font `AMSb' on input line 93.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `normal'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 85.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 93.
 LaTeX Font Info:    Overwriting symbol font `AMSb' in version `bold'
-(Font)                  U/msb/m/n --> U/msb/m/n on input line 85.
+(Font)                  U/msb/m/n --> U/msb/m/n on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pm' on input line 85.
+(hyperref)                removing `\pm' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\pm' on input line 85.
+(hyperref)                removing `\pm' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
+(hyperref)                removing `math shift' on input line 93.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 85.
-
-Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 85
+Package marginnote Info: Margin note 1.1 is on absolute page 1 on input line 93
 .
-Package marginnote Info: right page because not two side mode on input line 85.
+Package marginnote Info: right page because not two side mode on input line 93.
 
-Package marginnote Info: xpos seems to be 167.01753pt on input line 85.
+Package marginnote Info: xpos seems to be 167.01753pt on input line 93.
 Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    date: 2026-05-18 20:25:22
 (epstopdf)                    size: 563678 bytes
@@ -1581,35 +1573,35 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 (epstopdf)                    size: 13315 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=Definitions/logo-mdp
 i-eps-converted-to.pdf Definitions/logo-mdpi.eps>
-(epstopdf)             \includegraphics on input line 85.
+(epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
 <Definitions/logo-mdpi-eps-converted-to.pdf, id=201, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
 Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on in
-put line 85.
+put line 93.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
 <Definitions/logo-orcid.pdf, id=203, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 85.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 93.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 85.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 93.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
-Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 85.
+Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 93.
 (pdftex.def)             Requested size: 9.10509pt x 9.10466pt.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 85.
+(Font)              scaled to size 8.33606pt on input line 93.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 85.
+(Font)              scaled to size 5.21004pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 85.
+(Font)              scaled to size 8.33606pt on input line 93.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 85.
+(Font)              scaled to size 5.21004pt on input line 93.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -1650,10 +1642,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [4]
-<../figs/fig01_semtra.jpg, id=326, 1325.9136pt x 740.0448pt>
-File: ../figs/fig01_semtra.jpg Graphic file (type jpg)
-<use ../figs/fig01_semtra.jpg>
-Package pdftex.def Info: ../figs/fig01_semtra.jpg  used on input line 183.
+<../figs_main/fig01_semtra.jpg, id=326, 1325.9136pt x 740.0448pt>
+File: ../figs_main/fig01_semtra.jpg Graphic file (type jpg)
+<use ../figs_main/fig01_semtra.jpg>
+Package pdftex.def Info: ../figs_main/fig01_semtra.jpg  used on input line 191.
+
 (pdftex.def)             Requested size: 525.52245pt x 293.31384pt.
 
 
@@ -1663,7 +1656,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[5 <../figs/fig01_semtra.jpg>]
+[5 <../figs_main/fig01_semtra.jpg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1681,7 +1674,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 282.
+put line 290.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1703,108 +1696,108 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.387 \State
+l.400 \State
              \textbf{Input:} Discretized symbolic states $\mathbf{S}$, decis...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.388 \State
+l.401 \State
              \textbf{Output:} Conflict-aware production rulebook $\Rule$ and...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.389 \State
+l.402 \State
              Establish the indiscernibility equivalence relations $IND(P)$ a...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.390 \State
+l.403 \State
              Aggregate objects into information granules and isolate the det...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.391 \State
+l.404 \State
              Formulate the comprehensive discernibility matrix $M$, populati...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.392 \State
+l.405 \State
              Execute the weighted heuristic search to extract constrained re...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.393 \State
+l.406 \State
              Synthesize the discrete granules and reducts into the formal lo...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.394 \State
+l.407 \State
              Compile the accepted rules into the global conflict-aware ruleb...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.395 \For
+l.408 \For
           {\textbf{each} unseen test instance}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.396     \State
+l.409     \State
                  Attempt to match the instance against the rulebook antecede...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.397     \If
+l.410     \If
              {multiple conflicting rules are activated}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.398         \State
+l.411         \State
                      Resolve the boundary conflict by maximizing the integra...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.399     \ElsIf
+l.412     \ElsIf
                 {no exact rule conditions are satisfied}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.400         \State
+l.413         \State
                      Execute soft matching by minimizing the symbolic Hammin...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.401     \EndIf
+l.414     \EndIf
                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.402 \EndFor
+l.415 \EndFor
              
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1831,28 +1824,29 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [12]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 487.
+(Font)              scaled to size 9.37807pt on input line 500.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 487.
-<../figs/fig05_transition_salience.pdf, id=461, 258.78477pt x 249.68118pt>
-File: ../figs/fig05_transition_salience.pdf Graphic file (type pdf)
-<use ../figs/fig05_transition_salience.pdf>
-Package pdftex.def Info: ../figs/fig05_transition_salience.pdf  used on input l
-ine 524.
+(Font)              scaled to size 9.37807pt on input line 500.
+<../figs_main/fig05_transition_salience.pdf, id=462, 258.78477pt x 249.68118pt>
+
+File: ../figs_main/fig05_transition_salience.pdf Graphic file (type pdf)
+<use ../figs_main/fig05_transition_salience.pdf>
+Package pdftex.def Info: ../figs_main/fig05_transition_salience.pdf  used on in
+put line 537.
 (pdftex.def)             Requested size: 189.28882pt x 182.63148pt.
-<../figs/fig06_attribute_error.pdf, id=462, 258.77304pt x 278.12369pt>
-File: ../figs/fig06_attribute_error.pdf Graphic file (type pdf)
-<use ../figs/fig06_attribute_error.pdf>
-Package pdftex.def Info: ../figs/fig06_attribute_error.pdf  used on input line 
-526.
+<../figs_main/fig06_attribute_error.pdf, id=463, 258.77304pt x 278.12369pt>
+File: ../figs_main/fig06_attribute_error.pdf Graphic file (type pdf)
+<use ../figs_main/fig06_attribute_error.pdf>
+Package pdftex.def Info: ../figs_main/fig06_attribute_error.pdf  used on input 
+line 539.
 (pdftex.def)             Requested size: 189.28882pt x 203.44873pt.
-<../figs/fig24_attribute_salience_error_scatter.pdf, id=463, 256.99817pt x 197.
-10527pt>
-File: ../figs/fig24_attribute_salience_error_scatter.pdf Graphic file (type pdf
-)
-<use ../figs/fig24_attribute_salience_error_scatter.pdf>
-Package pdftex.def Info: ../figs/fig24_attribute_salience_error_scatter.pdf  us
-ed on input line 528.
+<../figs_main/fig24_attribute_salience_error_scatter.pdf, id=464, 256.99817pt x
+ 197.10527pt>
+File: ../figs_main/fig24_attribute_salience_error_scatter.pdf Graphic file (typ
+e pdf)
+<use ../figs_main/fig24_attribute_salience_error_scatter.pdf>
+Package pdftex.def Info: ../figs_main/fig24_attribute_salience_error_scatter.pd
+f  used on input line 541.
 (pdftex.def)             Requested size: 236.61554pt x 181.4804pt.
 
 
@@ -1870,17 +1864,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[14 <../figs/fig05_transition_salience.pdf> <../figs/fig06_attribute_error.pdf>
- <../figs/fig24_attribute_salience_error_scatter.pdf>]
-<../figs/fig19_baseline_tradeoff_scatter.pdf, id=510, 257.0971pt x 191.48639pt>
-
-File: ../figs/fig19_baseline_tradeoff_scatter.pdf Graphic file (type pdf)
-<use ../figs/fig19_baseline_tradeoff_scatter.pdf>
-Package pdftex.def Info: ../figs/fig19_baseline_tradeoff_scatter.pdf  used on i
-nput line 596.
+[14 <../figs_main/fig05_transition_salience.pdf> <../figs_main/fig06_attribute_
+error.pdf> <../figs_main/fig24_attribute_salience_error_scatter.pdf>]
+<../figs_main/fig19_baseline_tradeoff_scatter.pdf, id=511, 257.0971pt x 191.486
+39pt>
+File: ../figs_main/fig19_baseline_tradeoff_scatter.pdf Graphic file (type pdf)
+<use ../figs_main/fig19_baseline_tradeoff_scatter.pdf>
+Package pdftex.def Info: ../figs_main/fig19_baseline_tradeoff_scatter.pdf  used
+ on input line 609.
 (pdftex.def)             Requested size: 307.59659pt x 229.09879pt.
 
-(../outputs/revision_v1/tables/table_discretizer_comparison_main.tex)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1888,9 +1881,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[15 <../figs/fig19_baseline_tradeoff_scatter.pdf>]
-(../outputs/revision_v1/tables/table_q_sensitivity.tex)
-(../outputs/revision_v1/tables/table_svd_rank_sensitivity.tex)
+[15]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1898,25 +1889,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[16]
-<../figs/fig07_wedd_threshold_example.pdf, id=546, 258.92043pt x 181.87215pt>
-File: ../figs/fig07_wedd_threshold_example.pdf Graphic file (type pdf)
-<use ../figs/fig07_wedd_threshold_example.pdf>
-Package pdftex.def Info: ../figs/fig07_wedd_threshold_example.pdf  used on inpu
-t line 642.
+[16 <../figs_main/fig19_baseline_tradeoff_scatter.pdf>]
+<../figs_main/fig07_wedd_threshold_example.pdf, id=545, 258.92043pt x 181.87215
+pt>
+File: ../figs_main/fig07_wedd_threshold_example.pdf Graphic file (type pdf)
+<use ../figs_main/fig07_wedd_threshold_example.pdf>
+Package pdftex.def Info: ../figs_main/fig07_wedd_threshold_example.pdf  used on
+ input line 702.
 (pdftex.def)             Requested size: 173.42336pt x 121.82317pt.
-<../figs/fig09_rule_support_confidence.pdf, id=547, 258.89447pt x 187.49911pt>
-File: ../figs/fig09_rule_support_confidence.pdf Graphic file (type pdf)
-<use ../figs/fig09_rule_support_confidence.pdf>
-Package pdftex.def Info: ../figs/fig09_rule_support_confidence.pdf  used on inp
-ut line 643.
+<../figs_main/fig09_rule_support_confidence.pdf, id=546, 258.89447pt x 187.4991
+1pt>
+File: ../figs_main/fig09_rule_support_confidence.pdf Graphic file (type pdf)
+<use ../figs_main/fig09_rule_support_confidence.pdf>
+Package pdftex.def Info: ../figs_main/fig09_rule_support_confidence.pdf  used o
+n input line 703.
 (pdftex.def)             Requested size: 173.42336pt x 125.59799pt.
-<../figs/fig15_coverage_abstention_tradeoff.pdf, id=548, 258.45796pt x 179.2797
-4pt>
-File: ../figs/fig15_coverage_abstention_tradeoff.pdf Graphic file (type pdf)
-<use ../figs/fig15_coverage_abstention_tradeoff.pdf>
-Package pdftex.def Info: ../figs/fig15_coverage_abstention_tradeoff.pdf  used o
-n input line 644.
+<../figs_main/fig15_coverage_abstention_tradeoff.pdf, id=547, 258.45796pt x 179
+.27974pt>
+File: ../figs_main/fig15_coverage_abstention_tradeoff.pdf Graphic file (type pd
+f)
+<use ../figs_main/fig15_coverage_abstention_tradeoff.pdf>
+Package pdftex.def Info: ../figs_main/fig15_coverage_abstention_tradeoff.pdf  u
+sed on input line 704.
 (pdftex.def)             Requested size: 173.42336pt x 120.2946pt.
 
 
@@ -1926,16 +1920,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[17 <../figs/fig07_wedd_threshold_example.pdf> <../figs/fig09_rule_support_conf
-idence.pdf> <../figs/fig15_coverage_abstention_tradeoff.pdf>]
-(../outputs/revision_v1/tables/table_protocol_b_seedwise.tex)
-<../figs/fig05_use-case.jpg, id=602, 662.9568pt x 370.0224pt>
-File: ../figs/fig05_use-case.jpg Graphic file (type jpg)
-<use ../figs/fig05_use-case.jpg>
-Package pdftex.def Info: ../figs/fig05_use-case.jpg  used on input line 723.
-(pdftex.def)             Requested size: 394.35522pt x 220.10677pt.
-
-(../outputs/revision_v1/tables/table_cross_domain_generalization.tex)
+[17]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1943,7 +1928,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[18]
+[18 <../figs_main/fig07_wedd_threshold_example.pdf> <../figs_main/fig09_rule_su
+pport_confidence.pdf> <../figs_main/fig15_coverage_abstention_tradeoff.pdf>]
+<../figs_main/fig05_use-case.pdf, id=639, 662.95679pt x 370.02242pt>
+File: ../figs_main/fig05_use-case.pdf Graphic file (type pdf)
+<use ../figs_main/fig05_use-case.pdf>
+Package pdftex.def Info: ../figs_main/fig05_use-case.pdf  used on input line 80
+7.
+(pdftex.def)             Requested size: 394.35522pt x 220.10678pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1951,7 +1944,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[19 <../figs/fig05_use-case.jpg>]
+[19]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1959,20 +1952,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[20]
-<../figs/fig22_synthetic_uncertainty_bands.pdf, id=633, 257.73137pt x 187.1439p
-t>
-File: ../figs/fig22_synthetic_uncertainty_bands.pdf Graphic file (type pdf)
-<use ../figs/fig22_synthetic_uncertainty_bands.pdf>
-Package pdftex.def Info: ../figs/fig22_synthetic_uncertainty_bands.pdf  used on
- input line 855.
+[20 <../figs_main/fig05_use-case.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[21]
+<../figs_main/fig22_synthetic_uncertainty_bands.pdf, id=670, 257.73137pt x 187.
+1439pt>
+File: ../figs_main/fig22_synthetic_uncertainty_bands.pdf Graphic file (type pdf
+)
+<use ../figs_main/fig22_synthetic_uncertainty_bands.pdf>
+Package pdftex.def Info: ../figs_main/fig22_synthetic_uncertainty_bands.pdf  us
+ed on input line 955.
 (pdftex.def)             Requested size: 323.37416pt x 234.81737pt.
-<../figs/fig13_synthetic_threshold_recovery.pdf, id=635, 258.66351pt x 181.5964
-pt>
-File: ../figs/fig13_synthetic_threshold_recovery.pdf Graphic file (type pdf)
-<use ../figs/fig13_synthetic_threshold_recovery.pdf>
-Package pdftex.def Info: ../figs/fig13_synthetic_threshold_recovery.pdf  used o
-n input line 863.
+<../figs_main/fig13_synthetic_threshold_recovery.pdf, id=672, 258.66351pt x 181
+.5964pt>
+File: ../figs_main/fig13_synthetic_threshold_recovery.pdf Graphic file (type pd
+f)
+<use ../figs_main/fig13_synthetic_threshold_recovery.pdf>
+Package pdftex.def Info: ../figs_main/fig13_synthetic_threshold_recovery.pdf  u
+sed on input line 963.
 (pdftex.def)             Requested size: 323.37416pt x 227.03094pt.
 
 
@@ -1982,7 +1985,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[21 <../figs/fig22_synthetic_uncertainty_bands.pdf>]
+[22 <../figs_main/fig22_synthetic_uncertainty_bands.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1990,7 +1993,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[22 <../figs/fig13_synthetic_threshold_recovery.pdf>]
+[23 <../figs_main/fig13_synthetic_threshold_recovery.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1998,7 +2001,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[23]
+[24]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
@@ -2011,7 +2014,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[24]
+[25]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -2019,8 +2022,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[25]
-Underfull \hbox (badness 10000) in alignment at lines 1056--1056
+[26]
+Underfull \hbox (badness 10000) in alignment at lines 1156--1156
 [][][][][][] 
  []
 
@@ -2031,7 +2034,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[26] (main.bbl
+[27] (main.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -2039,7 +2042,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[27]
+[28]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -2047,7 +2050,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[28])
+[29])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -2055,7 +2058,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[29] 
+[30] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (main.aux)
  ***********
@@ -2066,32 +2069,31 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CFF824E03DC86BF2B88E7C3EA7EA6655;12236.
  ) 
 Here is how much of TeX's memory you used:
- 36887 strings out of 467509
- 700172 string characters out of 5408780
- 1201024 words of memory out of 5000000
- 64724 multiletter control sequences out of 15000+600000
- 716506 words of font info for 503 fonts, out of 8000000 for 9000
+ 36889 strings out of 467509
+ 699003 string characters out of 5408780
+ 1202046 words of memory out of 5000000
+ 64716 multiletter control sequences out of 15000+600000
+ 717260 words of font info for 519 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,14n,121p,1707b,943s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,14n,121p,1797b,945s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1000.pk> <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ectt0900.pk> <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec
-/dpi375\ecss0800.pk><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmex10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/font
-s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/radiu/AppData/Local/Programs/Mi
-KTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/radiu/AppData/Local/Pro
-grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/radiu/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/radiu/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/rad
-iu/AppData/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Use
-rs/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm
-10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/u
-plb8a.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatin
-o/uplr8a.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/pala
-tino/uplri8a.pfb>
-Output written on main.pdf (29 pages, 10758455 bytes).
+0900.pk> <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi37
+5\ecss0800.pk><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmex10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/radiu/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/radiu/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/mathpazo/fplmbi.pfb><C:/Users/radiu/AppData/
+Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/radiu/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/mathpazo/fplmri.pfb><C:/Users/rad
+iu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.
+pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr
+8a.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/u
+plri8a.pfb>
+Output written on main.pdf (30 pages, 8998954 bytes).
 PDF statistics:
- 923 PDF objects out of 1000 (max. 8388607)
- 201 named destinations out of 1000 (max. 500000)
- 113102 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 940 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
+ 112590 words of extra memory for PDF output out of 128383 (max. 10000000)
 

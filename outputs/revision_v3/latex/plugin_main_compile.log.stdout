@@ -1,8 +1,0 @@
-Root: D:\GitHub\transition-matrix-dss\manuscript\main.tex
-Compiler: texlive
-Command: C:\Users\radiu\AppData\Local\Programs\MiKTeX\miktex\bin\x64\latexmk.EXE -norc -pdf -interaction=nonstopmode -halt-on-error -synctex=1 D:\GitHub\transition-matrix-dss\manuscript\main.tex
-Exit code: 0
-PDF: D:\GitHub\transition-matrix-dss\manuscript\main.pdf
-
-Attempts:
-- texlive: passed (exit 0)

@@ -1125,7 +1125,7 @@ def package_existing_v3(ctx: RunContext) -> int:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument("--root", type=Path, default=Path(__file__).resolve().parents[2])
     parser.add_argument("--v1", type=Path, default=None)
     parser.add_argument("--v2", type=Path, default=None)
     parser.add_argument("--out", type=Path, default=None)

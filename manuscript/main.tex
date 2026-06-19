@@ -104,30 +104,7 @@ Current approaches addressing this transparency demand fall into diverse methodo
 
 To construct this required bridge, the proposed SEMTRA framework explicitly implements a post-hoc continuous semantic transition. Early analytical studies validated the efficacy of transition matrices for interpreting complex networks within structured visual analytics environments \cite{Radiuk2024TransitionMatrix}. These matrix structures were subsequently adapted and refined to extract understandable features in specialized healthcare informatics contexts \cite{Barmak2024TowardTransition}. Furthermore, theoretical research extended linear translation operators to manage continuous geometric symmetries via equivariant algebraic manifolds \cite{Radiuk2026EquivariantTransition}. SEMTRA advances this trajectory by converting the extracted continuous semantic variables into verifiable logical predicates using established rough-set principles. Decades ago, initial mathematical formalizations introduced the concept of bounding uncertainty through precise indiscernibility relations \cite{Pawlak1982RoughSets}. Comprehensive theoretical extensions eventually solidified the applicability of rough sets in structured reasoning about inconsistent data \cite{Pawlak1991RoughSets}.
 
-\revtag{1}{3} \Rone{The present manuscript is distinct from the prior Equivariant Transition Matrix (ETM) study. ETM targets symmetry-aware transition operators and Lie-group linearization, with the central objective of preserving geometric consistency under specified transformations \cite{Radiuk2026EquivariantTransition}. SEMTRA is not an equivariance method and does not claim Lie-group structural consistency. Its contribution is the semantic-to-symbolic audit sequence: semantic reconstruction, discretization, rough-set granulation, conflict-aware rule induction, abstention, and quantitative audit-tax reporting. Table~\ref{tab:etm_semtra_comparison} summarizes this separation.}
-
-\begin{table}[!ht]
-\caption{Comparison of the prior ETM framework and the present SEMTRA framework.\label{tab:etm_semtra_comparison}}
-\begin{adjustwidth}{-\extralength}{0cm}
-\centering
-\small
-\begin{tabularx}{\fulllength}{L L L L}
-\toprule
-\textbf{Dimension} & \textbf{ETM paper} & \textbf{SEMTRA manuscript} & \textbf{Relationship} \\
-\midrule
-Core problem & Symmetry-consistent explanation mapping & Semantic auditability of frozen representations & Complementary post-hoc transition goals \\
-Mathematical operator & Lie-group-constrained transition matrix & Ridge semantic transition plus rough-set rules & Shared transition family, different constraints \\
-Constraint & Equivariance and Lie-algebra intertwining & Discretization stability, support, confidence, and abstention & Non-overlapping objective functions \\
-Semantic layer & Geometric mental-model coordinates & Human-interpretable semantic attributes & SEMTRA makes semantics the rule substrate \\
-Discretization & Not central & WEDD, entropy, quantile, and width comparisons & SEMTRA adds symbolic state construction \\
-Symbolic rule induction & Not included & Rough-set granules, reducts, and production rules & SEMTRA adds auditable rulebooks \\
-Conflict/abstention & Not primary output & Explicit conflict and structural abstention metrics & SEMTRA exposes unverifiable regions \\
-Primary output & Symmetry-aware transition explainer & Coverage-aware semantic rulebook & Different audit artifacts \\
-Evaluation focus & Geometric consistency and reconstruction & Fidelity, coverage, accuracy, conflict, runtime, and sensitivity & Distinct empirical questions \\
-\bottomrule
-\end{tabularx}
-\end{adjustwidth}
-\end{table}
+\revtag{1}{3} \Rone{The present manuscript is distinct from the prior Equivariant Transition Matrix (ETM) study. ETM targets symmetry-aware transition operators and Lie-group linearization, with the central objective of preserving geometric consistency under specified transformations \cite{Radiuk2026EquivariantTransition}. SEMTRA is not an equivariance method and does not claim Lie-group structural consistency. Its contribution is the semantic-to-symbolic audit sequence: semantic reconstruction, discretization, rough-set granulation, conflict-aware rule induction, abstention, and quantitative audit-tax reporting. Table~\ref{tab:etm_semtra_comparison} in Appendix~\ref{sec:etm_vs_semtra} summarizes this separation.}
 
 The goal of this study is to improve the auditability, transparency, and logical verifiability of pre-trained deep learning representations by applying a continuous semantic transition coupled with rigorous rough-set knowledge granulation.
 
@@ -153,7 +130,7 @@ The remainder of this paper is organized as follows. Section~\ref{sec:related} d
 \subsection{Local post-hoc explanation}
 \label{subsec:local_explanation}
 
-Local post-hoc interpretation approaches estimate decision boundaries in the immediate vicinity of individual input samples to generate explanations. Highly ubiquitous frameworks, such as Shapley Additive Explanations (SHAP) and Local Interpretable Model-agnostic Explanations (LIME), heavily rely on perturbed neighborhood samples to construct sparse additive feature attributions \cite{Salih2025SHAPLIME}. Despite their widespread acceptance, these instance-specific models output fragmented attribution heatmaps rather than unified global policies. Recent advancements in local explainability address logical consistency by deploying universal rule-based explainers designed to maintain high local precision via conditional extraction paths \cite{Bobek2025LUX}. Additionally, novel fusion methodologies combine independent feature importance rankings with structured local rule induction to stabilize the underlying attribution logic \cite{Kozielski2025RuleConsistency}. However, even optimized local methodologies fail to yield the exhaustive, dataset-wide conflict resolution protocols essential for comprehensive diagnostic auditing.
+Local post-hoc interpretation approaches estimate decision boundaries in the immediate vicinity of individual input samples to generate explanations. Highly ubiquitous frameworks, such as Shapley Additive Explanations (SHAP) and Local Interpretable Model-agnostic Explanations (LIME), heavily rely on perturbed neighborhood samples to construct sparse additive feature attributions \cite{Salih2025SHAPLIME}. Despite their widespread acceptance, these instance-specific models output fragmented attribution heatmaps rather than unified global policies. In high-stakes medical domains, recent advancements deploy specialized explainable deep learning layers to make complex time-series predictions such as ECG arrhythmia detection transparent \cite{Kovalchuk2025Transparent}. Concurrently, in critical industrial monitoring scenarios, novel fusion methodologies integrate multispectral UAV observation rankings with fuzzy logic to evaluate defect severity \cite{Radiuk2025Criticality}. However, even optimized local methodologies fail to yield the exhaustive, dataset-wide conflict resolution protocols essential for comprehensive diagnostic auditing.
 
 % ------------------------------------------------------------------
 % 2.2 Concept-based and Ante-hoc models
@@ -514,7 +491,7 @@ To isolate core mathematical machinery from the inherent indiscernibility of rea
 \subsubsection{Diagnostic Tracking and Inference Stability}
 \label{subsubsec:diagnostic_tracking}
 
-A rigorous suite of visual and statistical diagnostics clarifies the proposed algorithms, assessing the balance between logical determinism and coverage via fidelity-coverage tradeoff projections. At the attribute level, target transition salience is mapped against test reconstruction errors to justify semantic selection, differentiating robust physical descriptors from high-variance semantic concepts. Real-time analytical inference is audited by generating precise rule traces mapping unseen objects to active logical antecedents, confidence parameters, source decisions, true labels, and base-predictor decisions. The enhanced prediction exports make these fields explicit so that object-level accuracy and fidelity confidence intervals can be recomputed directly from CSV artifacts. The structural robustness of inference pathways is systematically evaluated against semantic-representation perturbations; resultant decision consistency, coverage deviation, and rule matching stability metrics are cataloged in Appendix~\ref{sec:app_stability}.
+A rigorous suite of visual and statistical diagnostics clarifies the proposed algorithms, assessing the balance between logical determinism and coverage via fidelity-coverage tradeoff projections. At the attribute level, target transition salience is mapped against test reconstruction errors to justify semantic selection, differentiating robust physical descriptors from high-variance semantic concepts. Real-time analytical inference is audited by generating precise rule traces mapping unseen objects to active logical antecedents, confidence parameters, source decisions, true labels, and base-predictor decisions. The structural robustness of inference pathways is evaluated against semantic-representation perturbations; resultant decision consistency, coverage deviation, and rule matching stability metrics are cataloged in Appendix~\ref{sec:app_stability}.
 
 
 % ==================================================================
@@ -800,7 +777,7 @@ Specialized embedding and generative frameworks achieve higher accuracy because 
 \caption{AwA2 Protocol B semantic-transfer validation across seeds. This is not a competitive zero-shot leaderboard.\label{tab:protocol_b_seedwise}}
 \centering
 %\small
-\begin{tabularx}{\textwidth}{lc}
+\begin{tabularx}{\textwidth}{l C}
 \toprule
 \textbf{Metric} & \textbf{Mean $\pm$ SD} \\
 \midrule
@@ -823,7 +800,7 @@ Unseen semantic MAE & 0.1888 $\pm$ 0.0004 \\
 \caption{Official AwA2 xlsa17 unseen-class transfer results (SEMTRA).\label{tab:protocol_b}}
 \centering
 %\small
-\begin{tabularx}{\textwidth}{L l l l}
+\begin{tabularx}{\textwidth}{l l l l}
 \toprule
 \textbf{Unseen class} & \textbf{Prototype acc.} & \textbf{Symbolic template acc.} & \textbf{Mean Hamming} \\
 \midrule
@@ -861,7 +838,7 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 \revtag{1}{4}\revtag{2}{3} \Rone{\Rtwo{The audit protocol is evaluated beyond AwA2 using SUN and Derm7pt. Table~\ref{tab:cross_domain_generalization} summarizes the generated outputs. The SUN row uses the xlsa17 SUN release with 102 scene attributes; the official SUN Attribute Database paper reports 14,340 images and 707 scene categories, while the xlsa17 release exposes 717 class entries. The Derm7pt row uses dermoscopic images, official case-level splits, grouped diagnosis labels, and seven checklist concepts. Derm7pt is reported only as retrospective technical validation.}}
 
 \begin{table}[!ht]
-\caption{Cross-domain SEMTRA revision-v1 summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
+\caption{Cross-domain SEMTRA summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
 %\scriptsize
@@ -1114,7 +1091,7 @@ Future research should address these challenges by adding instance-level semanti
 
 \institutionalreview{Not applicable for the computational experiments reported here. AwA2 and SUN are public benchmark datasets; Derm7pt is a public, de-identified retrospective dermatology dataset used only for technical validation.}
 
-\informedconsent{Not applicable for this secondary analysis of public benchmark data. No new human participants were recruited and no new clinical data were collected.}
+\informedconsent{Not applicable for the analysis of public benchmark data. No human participants were recruited and no clinical data were collected.}
 
 \dataavailability{AwA2 is available from the official Animals with Attributes 2 dataset page~\cite{AwA2Website}; xlsa17 AwA2/SUN features are available from the MPI zero-shot benchmark resources~\cite{Xian2019AwA2}; SUN Attribute Database metadata are available from the official SUN Attribute Database page~\cite{SUNAttributesWebsite}; Derm7pt metadata and official split files are available from the authors' public resources~\cite{Derm7ptWebsite}. The GitHub repository (https://github.com/radiukpavlo/transition-matrix-dss) includes scripts and generated artifacts; the bundle contains prediction exports, SUN category metadata, locked Derm7pt encoder manifests, and object-level bootstrap intervals.}
 
@@ -1170,6 +1147,35 @@ ZSL & Zero-Shot Learning
 
 % ==================================================================
 % APPENDIX A
+% ==================================================================
+\section{ETM vs SEMTRA comparison}
+\label{sec:etm_vs_semtra}
+
+\begin{table}[!ht]
+\caption{Comparison of the prior ETM framework and the present SEMTRA framework.\label{tab:etm_semtra_comparison}}
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\small
+\begin{tabularx}{\fulllength}{l L L L}
+\toprule
+\textbf{Dimension} & \textbf{ETM \cite{Radiuk2026EquivariantTransition}} & \textbf{SEMTRA} & \textbf{Relationship} \\
+\midrule
+Core problem & Symmetry-consistent explanation mapping & Semantic auditability of frozen representations & Complementary post-hoc transition goals \\
+Mathematical operator & Lie-group-constrained transition matrix & Ridge semantic transition plus rough-set rules & Shared transition family, different constraints \\
+Constraint & Equivariance and Lie-algebra intertwining & Discretization stability, support, confidence, and abstention & Non-overlapping objective functions \\
+Semantic layer & Geometric mental-model coordinates & Human-interpretable semantic attributes & SEMTRA makes semantics the rule substrate \\
+Discretization & Not central & WEDD, entropy, quantile, and width comparisons & SEMTRA adds symbolic state construction \\
+Symbolic rule induction & Not included & Rough-set granules, reducts, and production rules & SEMTRA adds auditable rulebooks \\
+Conflict/abstention & Not primary output & Explicit conflict and structural abstention metrics & SEMTRA exposes unverifiable regions \\
+Primary output & Symmetry-aware transition explainer & Coverage-aware semantic rulebook & Different audit artifacts \\
+Evaluation focus & Geometric consistency and reconstruction & Fidelity, coverage, accuracy, conflict, runtime, and sensitivity & Distinct empirical questions \\
+\bottomrule
+\end{tabularx}
+\end{adjustwidth}
+\end{table}
+
+% ==================================================================
+% APPENDIX B
 % ==================================================================
 \section{Experimental Protocol and Hyperparameters}
 \label{sec:app_hyperparameters}
@@ -1238,14 +1244,6 @@ $\lambda_H$ & 0.90 & 53 & 0.8977 & 0.4349 & 0.4205 \\
 \end{table}
 
 % ==================================================================
-% APPENDIX B
-% ==================================================================
-\section{Full Semantic Attribute Discretization Diagnostics}
-\label{sec:app_discretization}
-
-The WEDD-vs-MDLP-like entropy comparison appears in the main Results section because it directly affects the central discretization claim (Table~\ref{tab:discretizer_comparison_main}). The full machine-readable seed-wise and paired-statistics CSV artifacts are stored with the AwA2 generated outputs. These artifacts preserve the complete numerical basis for the reported conclusion: WEDD is a density-aware, stability-oriented option, not an unconditionally superior discretizer.
-
-% ==================================================================
 % APPENDIX C
 % ==================================================================
 \section{Rule Inference Traces and Structural Perturbation Stability}
@@ -1271,9 +1269,9 @@ fallback error or boundary & 16781 & hamster & mole & fallback & -- & -- & -- & 
 \end{table}
 
 % ------------------------------------------------------------------
-% C.1 Trace Walkthrough for a Zebra Instance
+% Trace Walkthrough for a Zebra Instance
 % ------------------------------------------------------------------
-\subsection{Trace Walkthrough for a Zebra Instance}
+\subsection*{Trace Walkthrough for a Zebra Instance}
 \label{subsec:zebra_trace_walkthrough}
 
 For test object 36914 (zebra), the 2048-dimensional ResNet representation $\mathbf{a}_{36914}$ is mapped through the transition matrix $\matT$ to obtain the reconstructed continuous semantic vector $\hat{\mathbf{b}}_{36914}$. The relevant WEDD-discretized components are $\hat{b}_{\mathrm{hunter}}=0.0000$, $\hat{b}_{\mathrm{water}}=0.0501$, $\hat{b}_{\mathrm{small}}=0.0000$, $\hat{b}_{\mathrm{jungle}}=0.2632$, and $\hat{b}_{\mathrm{yellow}}=0.0879$. Using the learned WEDD thresholds, these values become hunter=$s_0$, water=$s_0$, small=$s_0$, jungle=$s_2$, and yellow=$s_1$. This state vector exactly satisfies Rule R0004, whose antecedent is hunter=$s_0$ AND water=$s_0$ AND small=$s_0$ AND jungle=$s_2$ AND yellow=$s_1$, yielding a verified zebra prediction with support 434 and confidence 0.866.

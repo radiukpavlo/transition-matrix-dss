@@ -86,7 +86,7 @@
 % ==================================================================
 % ABSTRACT AND KEYWORDS
 % ==================================================================
-\abstract{Deep learning architectures produce effective but difficult-to-audit latent representations, creating a practical gap between predictive performance and verifiable explanation. We propose Global Semantic Transition (SEMTRA), a post-hoc framework that maps frozen representation features into semantic attributes, discretizes those attributes, and induces rough-set production rules with explicit coverage, conflict, fidelity, and abstention reporting. In five-seed AwA2 Protocol A experiments, the semantic transition achieved a test mean absolute error of 0.1029 Â± 0.0005. The extracted rulebook covered 84.80\% of test instances, with covered accuracy of 39.73\% and covered fidelity to the base predictor of 40.48\%. Under the official xlsa17 Protocol B split, continuous semantic-prototype transfer reached 44.02\% Â± 1.22\% unseen-object accuracy; this result is reported as semantic-transfer validation rather than as a competitive zero-shot learning claim. Cross-domain SUN and Derm7pt technical validations further show that the same audit protocol is portable but strongly dataset-dependent. \revtag{1}{2} \Rone{In the controlled synthetic benchmark, SEMTRA achieved macro-F1 of 0.879 at zero semantic noise and degraded to 0.838 at the highest evaluated noise level.} These results support SEMTRA as an audit layer for exposing the verifiable subset of a model's semantic logic, not as a replacement for the underlying predictor.}
+\abstract{Deep learning architectures produce effective but difficult-to-audit latent representations, creating a practical gap between predictive performance and verifiable explanation. We propose Global Semantic Transition (SEMTRA), a post-hoc framework that maps frozen representation features into semantic attributes, discretizes those attributes, and induces rough-set production rules with explicit coverage, conflict, fidelity, and abstention reporting. In five-seed AwA2 Protocol A experiments, the semantic transition achieved a test mean absolute error of 0.1029 ± 0.0005. The extracted rulebook covered 84.80\% of test instances, with covered accuracy of 39.73\% and covered fidelity to the base predictor of 40.48\%. Under the official xlsa17 Protocol B split, continuous semantic-prototype transfer reached 44.02\% ± 1.22\% unseen-object accuracy; this result is reported as semantic-transfer validation rather than as a competitive zero-shot learning claim. Cross-domain SUN and Derm7pt technical validations further show that the same audit protocol is portable but strongly dataset-dependent. \revtag{1}{2} \Rone{In the controlled synthetic benchmark, SEMTRA achieved macro-F1 of 0.879 at zero semantic noise and degraded to 0.838 at the highest evaluated noise level.} These results support SEMTRA as an audit layer for exposing the verifiable subset of a model's semantic logic, not as a replacement for the underlying predictor.}
 
 \keyword{explainable artificial intelligence; transition matrix; semantic attributes; rough sets; production rules; discretization; zero-shot learning}
 
@@ -106,7 +106,7 @@ To construct this required bridge, the proposed SEMTRA framework explicitly impl
 
 \revtag{1}{3} \Rone{The present manuscript is distinct from the prior Equivariant Transition Matrix (ETM) study. ETM targets symmetry-aware transition operators and Lie-group linearization, with the central objective of preserving geometric consistency under specified transformations \cite{Radiuk2026EquivariantTransition}. SEMTRA is not an equivariance method and does not claim Lie-group structural consistency. Its contribution is the semantic-to-symbolic audit sequence: semantic reconstruction, discretization, rough-set granulation, conflict-aware rule induction, abstention, and quantitative audit-tax reporting. Table~\ref{tab:etm_semtra_comparison} summarizes this separation.}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Comparison of the prior ETM framework and the present SEMTRA framework.\label{tab:etm_semtra_comparison}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -136,7 +136,7 @@ The primary objective of this study is to formulate and empirically evaluate the
     \item A dimensionally explicit transition-matrix formulation that maps compressed deep representations to interpretable semantic attributes without retraining the underlying feature extractor.
     \item A discretization module, instantiated by WEDD and benchmarked against entropy and quantile alternatives, for converting reconstructed semantics into symbolic states.
     \item A rough-set rule-induction mechanism that constructs a global, conflict-aware production rulebook, featuring explicit handling of structural abstentions and boundary regions.
-    \item A multi-domain evaluation on AwA2, SUN, Derm7pt, and controlled synthetic data, demonstrating how coverage, fidelity, accuracy, conflict, sensitivity, and runtime jointly define the audit tax.
+    \item A multi-domain evaluation on several benchmark datasets, and controlled synthetic data, demonstrating how coverage, fidelity, accuracy, conflict, sensitivity, and runtime jointly define the audit tax.
 \end{itemize}
 
 The remainder of this paper is organized as follows. Section~\ref{sec:related} details the related works covering explainable methods and symbolic rules. Section~\ref{sec:methods} outlines the proposed framework methodology, the continuous transition bridge, and the subsequent rough-set extraction mechanisms. Section~\ref{sec:results} presents the qualitative and quantitative evaluations. Section~\ref{sec:discussion} analyzes the implications of the structural explanation tradeoff. Finally, Section~\ref{sec:conclusions} concludes the manuscript.
@@ -535,11 +535,11 @@ The first stage of the experimental validation verifies the integrity of the Neu
 
 The performance of the linear transition operator under Protocol A is summarized in Table~\ref{tab:transition_metrics}. On the test set, the five-seed regeneration achieved an MAE of $0.1029 \pm 0.0005$ and a mean semantic correlation of $0.8070 \pm 0.0018$ across five seeds. These results indicate that the global transition matrix consistently aligns the compressed representation with the target semantic descriptors under the released AwA2 feature protocol.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{AwA2 Protocol A transition reconstruction metrics. Metrics are reported as mean $\pm$ standard deviation across five seeds.\label{tab:transition_metrics}}
 \centering
 %\small
-\begin{tabularx}{\textwidth}{L L L L}
+\begin{tabularx}{\textwidth}{l L L L}
 \toprule
 \textbf{Split} & \textbf{MAE} & \textbf{RMSE} & \textbf{Mean semantic correlation} \\
 \midrule
@@ -552,11 +552,11 @@ test & $0.1029 \pm 0.0005$ & $0.1484 \pm 0.0007$ & $0.8070 \pm 0.0018$ \\
 
 To justify the choice of a linear operator over more complex alternatives, an ablation study was performed (Table~\ref{tab:transition_operator_ablation}). While non-linear regressors (e.g., two-layer MLP) marginally improve reconstruction in some metrics, they introduce significant black-box opacity into the transition itself. The linear ridge transition maintains a high correlation (0.7759) and significantly higher rule coverage ($0.8718 \pm 0.0075$) compared to non-linear variants, establishing it as the most defensible choice for an auditable framework. The near-zero rule accuracy (0.0027) for the RBF kernel ridge indicates that severe overfitting in the high-dimensional latent space collapsed the global semantic mapping entirely, underscoring the fragility of unregularized non-linear projections.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Semantic reconstruction and rule-transfer ablation for linear and nonlinear operators. Means $\pm$ standard deviations across 5 seeds are provided for the proposed linear operator.\label{tab:transition_operator_ablation}}
 %\centering
 \small
-\begin{tabularx}{\textwidth}{L l l l l l l}
+\begin{tabularx}{\textwidth}{l c C C c C C}
 \toprule
 \textbf{Operator} & \textbf{MAE} & \textbf{RMSE} & \textbf{Corr.} & \textbf{Rule cov.} & \textbf{Rule acc.} & \textbf{Runtime (s)} \\
 \midrule
@@ -577,14 +577,14 @@ Detailed attribute-wise diagnostics, visualized in Figure~\ref{fig:salience_and_
 \hfill
 \subfloat[\centering\label{fig:attribute_error}]{\includegraphics[width=0.48\linewidth]{figs_main/fig06_attribute_error.pdf}}
 \hfill
-\subfloat[\centering\label{fig:attribute_salience_error_scatter}]{\includegraphics[width=0.60\linewidth]{figs_main/fig24_attribute_salience_error_scatter.pdf}}
+\subfloat[\centering\label{fig:attribute_salience_error_scatter}]{\includegraphics[width=0.48\linewidth]{figs_main/fig24_attribute_salience_error_scatter.pdf}}
 %\end{adjustwidth}
 \caption{Semantic attribute diagnostics: (\textbf{a}) transition salience by semantic attribute; (\textbf{b}) attribute-wise semantic reconstruction error on AwA2; and (\textbf{c}) transition salience against test reconstruction error; labeled points are high-score selected attributes.\label{fig:salience_and_error}}
 \end{figure}
 
 As shown in Table~\ref{tab:selected_attributes}, the composite selection score effectively isolates the top $q$ attributes that offer the best balance between neural signal strength and reconstruction precision. For brevity, the top 12 selected attributes are shown in Table~\ref{tab:selected_attributes}.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Selected semantic attributes used for rough-set rule induction (first 12 shown).\label{tab:selected_attributes}}
 \centering
 %\small
@@ -616,7 +616,7 @@ plankton & 0.016 & 0.043 & 0.257 \\
 
 The core objective of the SEMTRA framework is to transform the continuous semantic bridge into a globally consistent, symbolic rulebook that a human auditor can inspect and verify. The properties of the generated rulebook under Protocol A are summarized in Table~\ref{tab:rulebook_summary}, providing a comprehensive view of the framework's explanatory power.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{General rulebook properties and symbolic baseline comparison. Point estimates are reported alongside standard deviations evaluated over 5 random seeds for the proposed method.\label{tab:rulebook_summary}}
 \centering
 %\small
@@ -645,13 +645,13 @@ Test conflict rate & $0.1375 \pm 0.0532$ & 0.0000 & 0.2301 \\
 
 \begin{figure}[!ht]
 %\centering
-\includegraphics[width=0.78\textwidth]{figs_main/fig19_baseline_tradeoff_scatter.pdf}
+\includegraphics[width=0.7\textwidth]{figs_main/fig19_baseline_tradeoff_scatter.pdf}
 \caption{Symbolic baseline tradeoff between Cov and Covered Fidelity ($\mathrm{F}_{\text{cov}}$). Marker size is proportional to rule count. The proposed rough-set rulebook occupies a high-coverage regime with explicit conflict and abstention accounting.\label{fig:baseline_tradeoff}}
 \end{figure}
 
 \revtag{1}{5}\revtag{2}{2} \Rone{\Rtwo{As visualized in Figure~\ref{fig:baseline_tradeoff}, SEMTRA maintains high Cov while explicitly accounting for structural uncertainty. The reduction in covered accuracy compared with the base model is a transparent audit tax--the cost of enforcing strict discretization and logical consistency on a high-dimensional non-linear system. For an auditor, the 39.73\% covered accuracy and 40.48\% Covered Fidelity jointly quantify the portion of the model's logic that is currently verifiable and reproducible through simple semantic predicates. This tradeoff is most appropriate for diagnostic auditing, dataset triage, and model documentation, where a conservative explanation layer is useful precisely because it exposes the cases that cannot be reduced to simple semantic rules.}}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{AwA2 discretizer comparison using the same reconstructed semantics and rough-set inference logic. Values are means across seeds. Cov. stands for coverage.\label{tab:discretizer_comparison_main}}
 \centering
 %\small
@@ -669,7 +669,7 @@ WEDD & 0.8480 & 0.4048 & 0.3973 & 0.3373 & 0.1375 & 59.0 \\
 
 \revtag{1}{1}\revtag{1}{9} \Rone{Table~\ref{tab:discretizer_comparison_main} places the WEDD-vs-MDLP-like entropy ablation in the main Results section because discretization directly affects the central audit claim. Across the five-seed regeneration, WEDD has slightly higher mean coverage and covered fidelity than MDLP-like entropy, but the paired differences are small: $+0.0146$ coverage, $+0.0073$ covered fidelity, $+0.0061$ covered accuracy, and $-0.0107$ conflict rate. Therefore, WEDD should be interpreted as a density-aware, stability-oriented discretization option rather than as a universally superior discretizer. A visual breakdown of paired confidence intervals and dataset-level tradeoffs between WEDD and MDLP-like entropy is provided in Section~S4 of the Supplementary Materials.}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Selected-attribute-count sensitivity on AwA2 for the WEDD rulebook.\label{tab:q_sensitivity}}
 \centering
 %\small
@@ -689,10 +689,10 @@ WEDD & 0.8480 & 0.4048 & 0.3973 & 0.3373 & 0.1375 & 59.0 \\
 
 \revtag{1}{6} \Rone{The selected attribute count $q$ is a direct control on rulebook granularity. The sensitivity grid presented in Table~\ref{tab:q_sensitivity} shows that increasing $q$ enlarges the symbolic search space and can improve covered fidelity, but it also changes rule compactness and the number of induced granules. The default should therefore be treated as a reproducible operating point rather than as an intrinsic constant of the method.}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{SVD-rank sensitivity on AwA2 for semantic reconstruction and rulebook audit metrics.\label{tab:svd_rank_sensitivity}}
 \centering
-\scriptsize
+%\small
 \begin{tabularx}{\textwidth}{CCCccc}
 \toprule
 \textbf{Rank} & \textbf{MAE} & \textbf{Coverage} & \textbf{Covered fidelity} & \textbf{Covered accuracy} & \textbf{Runtime (s)} \\
@@ -717,7 +717,7 @@ A key advantage of the rough-set approach is the explicit management of boundary
 
 The look and feel of the resulting audit is demonstrated in Table~\ref{tab:example_rules}, which presents representative induced rules. For example, the rule for the class tiger (R0001) relies on a stable combination of paws, hunter, and yellow attributes with a high confidence of 0.896. 
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Representative induced production rules from AwA2 Protocol A.\label{tab:example_rules}}
 \centering
 \scriptsize
@@ -737,12 +737,14 @@ R0004 & hunter=s0 AND water=s0 AND small=s0 AND jungle=s2 AND yellow=s1 & hunter
 The diagnostic distributions of rule support and confidence, shown in Figure~\ref{fig:rulebook_threshold_opt}a, along with WEDD threshold and coverage tradeoff examples depicted in Figure~\ref{fig:rulebook_threshold_opt}b and Figure~\ref{fig:rulebook_threshold_opt}c, further confirm that the majority of rules are anchored in statistically significant clusters of the semantic space.
 
 \begin{figure}[!ht]
+%\begin{adjustwidth}{-\extralength}{0cm}
 \centering
-\begin{adjustwidth}{-\extralength}{0cm}
-\subfloat[\centering\label{fig:wedd_example}]{\includegraphics[width=0.33\linewidth]{figs_main/fig07_wedd_threshold_example.pdf}}
-\subfloat[\centering\label{fig:rule_support_confidence}]{\includegraphics[width=0.33\linewidth]{figs_main/fig09_rule_support_confidence.pdf}}
-\subfloat[\centering\label{fig:coverage_tradeoff}]{\includegraphics[width=0.33\linewidth]{figs_main/fig15_coverage_abstention_tradeoff.pdf}}
-\end{adjustwidth}
+\subfloat[\centering\label{fig:wedd_example}]{\includegraphics[width=0.48\linewidth]{figs_main/fig07_wedd_threshold_example.pdf}}
+\hfill
+\subfloat[\centering\label{fig:rule_support_confidence}]{\includegraphics[width=0.48\linewidth]{figs_main/fig09_rule_support_confidence.pdf}}
+\hfill
+\subfloat[\centering\label{fig:coverage_tradeoff}]{\includegraphics[width=0.48\linewidth]{figs_main/fig15_coverage_abstention_tradeoff.pdf}}
+%\end{adjustwidth}
 \caption{Rulebook and threshold optimization. (\textbf{a}) WEDD threshold example on a selected AwA2 semantic attribute. The plot shows how entropy and density jointly determine an interpretable threshold. (\textbf{b}) Rule support and confidence distribution for the AwA2 Protocol A rulebook. (\textbf{c}) Coverage, abstention, covered accuracy, and covered fidelity as the minimum rule-confidence threshold varies.\label{fig:rulebook_threshold_opt}}
 \end{figure}
 
@@ -764,7 +766,7 @@ To test whether the transition matrix $\matT$ transfers semantic structure beyon
 
 \revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{The semantic-transfer result is contextualized against established and more recent ZSL baselines in Table~\ref{tab:sota_quantitative_comparison}. The SEMTRA continuous prototype variant achieved $44.02\% \pm 1.22\%$ unseen-object accuracy across five seeds under the object-level xlsa17 split, and the class-averaged contextual table reports $48.43\%$ for the transition prototype. Because SEMTRA is optimized for auditability and not for predictive ZSL optimization, the baseline values are included only to orient the difficulty of the split.}}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Contextual quantitative comparison with published AwA2 zero-shot baselines. Source and scope: published ZSL for baselines and object accuracy across five seeds for our approach. SEMTRA values are semantic-transfer validation outputs, not leaderboard claims. \label{tab:sota_quantitative_comparison}}
 %\begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -794,7 +796,7 @@ Ours: symbolic template & Post-hoc rule & $23.48 \pm 1.70$ \\
 
 Specialized embedding and generative frameworks achieve higher accuracy because they optimize predictive transfer directly. SEMTRA instead uses Protocol B to audit whether a simple semantic transition can retain class-level structure across seen/unseen boundaries. The symbolic template variant drops to $23.48\% \pm 1.70\%$, quantifying the additional information tax incurred when continuous predictions are forced into rigid symbolic templates.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{AwA2 Protocol B semantic-transfer validation across seeds. This is not a competitive zero-shot leaderboard.\label{tab:protocol_b_seedwise}}
 \centering
 %\small
@@ -817,7 +819,7 @@ Unseen semantic MAE & 0.1888 $\pm$ 0.0004 \\
 
 \revtag{1}{14} \Rone{A deeper audit of the seed-42 transfer performance, detailed in Table~\ref{tab:protocol_b}, reveals taxonomic strengths and blind spots. The transition matrix recovered strong visual-semantic structure for blue whale, bobcat, sheep, and rat, while giraffe, dolphin, and bat remained weak under the continuous prototype metric. Table~\ref{tab:protocol_b_seedwise} reports the corresponding seed-wise dispersion for the SEMTRA variants so the zero-shot validation is not presented as a single unqualified point estimate.}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Official AwA2 xlsa17 unseen-class transfer results (SEMTRA).\label{tab:protocol_b}}
 \centering
 %\small
@@ -858,7 +860,7 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 
 \revtag{1}{4}\revtag{2}{3} \Rone{\Rtwo{The audit protocol is evaluated beyond AwA2 using SUN and Derm7pt. Table~\ref{tab:cross_domain_generalization} summarizes the generated outputs. The SUN row uses the xlsa17 SUN release with 102 scene attributes; the official SUN Attribute Database paper reports 14,340 images and 707 scene categories, while the xlsa17 release exposes 717 class entries. The Derm7pt row uses dermoscopic images, official case-level splits, grouped diagnosis labels, and seven checklist concepts. Derm7pt is reported only as retrospective technical validation.}}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Cross-domain SEMTRA revision-v1 summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -894,7 +896,7 @@ To contextualize the scientific value of the SEMTRA rulebook, we compare its per
 
 Local methods like LIME and SHAP provide instance-specific sensitivity rankings, typically visualized as heatmaps. However, as shown in Table~\ref{tab:local_xai_agreement}, there is only a moderate agreement (0.2610--0.3213) between these local attributions and the global antecedents extracted by SEMTRA.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Agreement between local post-hoc explanations and fired global-rule antecedents.\label{tab:local_xai_agreement}}
 \centering
 %%\small
@@ -918,7 +920,7 @@ This divergence highlights the fragmentation gap: local methods are highly sensi
 
 We further compared SEMTRA against CBMs, which are specifically trained to predict concepts before labels. As summarized in Table~\ref{tab:cbm_tcav_baselines}, SEMTRA's post-hoc reconstruction error (MAE 0.1076) is virtually identical to that of a dedicated frozen-feature CBM.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Consolidated comparison of SEMTRA against concept-based baselines.\label{tab:cbm_tcav_baselines}}
 \centering
 %\small
@@ -953,7 +955,7 @@ To isolate the framework's internal logic from the noise and ambiguity of real-w
 
 The synthetic environment consisted of a 10-dimensional feature space with a rule dictionary of known logical structures (Table~\ref{tab:synthetic_ground_truth}). 
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Synthetic benchmark ground-truth rule dictionary.\label{tab:synthetic_ground_truth}}
 \centering
 %\small
@@ -970,7 +972,7 @@ The synthetic environment consisted of a 10-dimensional feature space with a rul
 
 As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000$), the framework achieved a macro-F1 score of 0.879 and a rule Jaccard similarity of 0.700, with a near-perfect operational coverage of 97.10\%. The minor baseline threshold error (0.014) observed at zero noise stems from the Gaussian Kernel Density Estimation (KDE) bandwidth smoothing used in the WEDD algorithm, rather than an extraction failure.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Synthetic stress-test results averaged over random seeds.\label{tab:synthetic_noise}}
 \centering
 %\small
@@ -991,20 +993,37 @@ As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000
 \subsubsection{Robustness Under Controlled Noise}
 \label{subsubsec:robustness}
 
-The stability of the framework was tested by injecting increasing levels of semantic noise ($\sigma \in [0,0.20]$). As visualized in Figure~\ref{fig:synthetic_uncertainty}, the operational coverage remained relatively stable as noise increased, indicating that the WEDD thresholds were not dominated by small perturbations in this synthetic setting.
+The stability of the framework was tested by injecting increasing levels of semantic noise ($\sigma \in [0,0.20]$). As visualized in Figure~\ref{fig:synthetic_diagnosis}a, the operational coverage remained relatively stable as noise increased, indicating that the WEDD thresholds were not dominated by small perturbations in this synthetic setting. While the exact threshold recovery error inevitably fluctuates (Figure~\ref{fig:synthetic_diagnosis}b), the framework maintained a macro-F1 score above 0.838 throughout the tested noise range.
+
+% \begin{figure}[!ht]
+% %\centering
+% \includegraphics[width=0.82\textwidth]{figs_main/fig22_synthetic_uncertainty_bands.pdf}
+% \caption{Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range.\label{fig:synthetic_uncertainty}}
+% \end{figure}
+
+% \begin{figure}[H]
+% \centering
+% \subfloat[\centering\label{fig:a_synthetic_macro_f1}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_a_synthetic_macro_f1.pdf}}
+% \hfill
+% \subfloat[\centering\label{fig:b_synthetic_rule_recovery}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_b_synthetic_rule_recovery.pdf}}\\
+% \subfloat[\centering\label{fig:c_synthetic_coverage}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_c_synthetic_coverage.pdf}}
+% \hfill
+% \subfloat[\centering\label{fig:d_synthetic_threshold_error}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_d_synthetic_threshold_error.pdf}}
+% \caption{Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range.\label{fig:synthetic_uncertainty}}
+% \end{figure}
+
+% \begin{figure}[!ht]
+% %\centering
+% \includegraphics[width=0.82\textwidth]{figs_main/fig13_synthetic_threshold_recovery.pdf}
+% \caption{Synthetic threshold recovery error across noise levels.\label{fig:threshold_recovery}}
+% \end{figure}
 
 \begin{figure}[!ht]
-%\centering
-\includegraphics[width=0.82\textwidth]{figs_main/fig22_synthetic_uncertainty_bands.pdf}
-\caption{Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range.\label{fig:synthetic_uncertainty}}
-\end{figure}
-
-While the exact threshold recovery error inevitably fluctuates (Figure~\ref{fig:threshold_recovery}), the framework maintained a macro-F1 score above 0.838 throughout the tested noise range.
-
-\begin{figure}[!ht]
-%\centering
-\includegraphics[width=0.82\textwidth]{figs_main/fig13_synthetic_threshold_recovery.pdf}
-\caption{Synthetic threshold recovery error across noise levels.\label{fig:threshold_recovery}}
+\centering
+\subfloat[\centering\label{fig:synthetic_uncertainty}]{\includegraphics[width=0.48\linewidth]{figs_main/fig22_synthetic_uncertainty_bands.pdf}}
+\hfill
+\subfloat[\centering\label{fig:threshold_recovery}]{\includegraphics[width=0.48\linewidth]{figs_main/fig13_synthetic_threshold_recovery.pdf}}
+\caption{(\textbf{a}) Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range. (\textbf{b}) Synthetic threshold recovery error across noise levels.\label{fig:synthetic_diagnosis}}
 \end{figure}
 
 The synthetic results demonstrate that the core mathematical machinery of SEMTRA, specifically the ability to translate continuous variables into discrete granules and extract minimal reducts, behaves predictably when the semantic signal is controlled. For an auditor, this is a useful finding: it suggests that the lower fidelity observed in the real-world AwA2 experiments is driven at least partly by semantic indiscernibility in the frozen features and class-level attributes, rather than by an isolated failure of the rule-induction routine. Consequently, SEMTRA is best viewed as a diagnostic audit engine that reports the verifiable portion of a model's semantic logic, including the portions where that logic fragments or becomes noisy.
@@ -1157,7 +1176,7 @@ ZSL & Zero-Shot Learning
 
 The feature extractor utilizes the released ResNet-101 representation natively provided with the AwA2 dataset The base predictor is systematically trained on the representation matrix to provide reproducible probabilities, robust class predictions, and explicit fidelity targets. Table~\ref{tab:feature_hyperparameters} outlines the detailed feature and classifier configurations, while Table~\ref{tab:base_predictor_performance} reports the corresponding validation and test performance metrics, including the Area Under the Receiver Operating Characteristic (AUROC) and Expected Calibration Error (ECE).
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Feature extractor, base predictor, and experiment hyperparameters.\label{tab:feature_hyperparameters}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -1180,7 +1199,7 @@ Soft matching threshold & $\tau_H = 0.25$ & Maximum allowed masked Hamming dista
 \end{adjustwidth}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Base predictor performance on AwA2 Protocol A.\label{tab:base_predictor_performance}}
 \centering
 %\small
@@ -1198,7 +1217,7 @@ It is noted that the selected $\alpha$ hit the lower bound of the grid search sp
 
 Table~\ref{tab:control_knob_sensitivity} reports the one-factor sensitivity grid for the two auditor-facing control knobs. The results show that increasing $\lambda_s$ changes the selected semantic basis and modifies rulebook compactness, while increasing $\lambda_H$ shifts WEDD toward entropy-dominant thresholds and affects the coverage--fidelity balance.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Sensitivity of the auditor control knobs on rulebook compactness, coverage, fidelity, and covered accuracy. The $\lambda_s$ sweep varies semantic-attribute selection while holding $\lambda_H=0.65$; the $\lambda_H$ sweep varies WEDD thresholding using the released default attribute set corresponding to $\lambda_s=0.50$.\label{tab:control_knob_sensitivity}}
 %\begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -1234,7 +1253,7 @@ The WEDD-vs-MDLP-like entropy comparison appears in the main Results section bec
 
 \revtag{1}{10} \Rone{Detailed rule inference traces, structural stability analyses, and per-phase runtime logs are retained as essential programmatic audit artifacts. Table~\ref{tab:traces} illustrates representative inference traces successfully mapping individual objects to explicit rule antecedents, while Sections S4 and S5 of the Supplementary Materials report the full diagnostic frontiers for q-sensitivity, rank-sensitivity, rule-confidence thresholds, and detailed reduct-search runtime components.}
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Representative rule inference traces with object ID, prediction, matched rule evidence, and antecedent states.\label{tab:traces}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
@@ -1268,10 +1287,10 @@ Furthermore, Table~\ref{tab:rule_stability} rigorously reports the operational r
 \end{equation}
 where $\widehat{s}_j$ is the empirical standard deviation of reconstructed semantic attribute $j$ on the test split.
 
-\begin{table}[H]
+\begin{table}[!ht]
 \caption{Rule consistency under semantic-representation perturbations. Cov. stands for coverage.\label{tab:rule_stability}}
 \centering
-\scriptsize
+%\small
 \begin{tabularx}{\textwidth}{c CCCCCC}
 \toprule
 \textbf{Sigma} & \textbf{Rule consistency} & \textbf{Decision consistency} & \textbf{Cov.} & \textbf{Cov. change} & \textbf{Abstention} & \textbf{Conflict} \\

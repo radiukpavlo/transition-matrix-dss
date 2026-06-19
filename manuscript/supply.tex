@@ -59,10 +59,10 @@
 \begin{document}
 
 % ==================================================================
-% SECTION 1: Reproducibility Scope and Evidence Boundary
+% SECTION 1: Introduction
 % ==================================================================
-\section{Reproducibility Scope and Evidence Boundary}
-\label{sec:supp_scope}
+\section{Introduction}
+\label{sec:intro}
 
 This supplementary material documents the numerical and procedural evidence supporting the SEMTRA audit claims. It ensures inspectability by detailing source artifacts, dataset-specific capabilities, and summarizing sensitivity, uncertainty, and runtime behavior. SEMTRA functions as an audit framework, extracting a frozen model's logic through discrete semantic predicates. If essential visual cues are missing or the representation lacks linear separability, the framework flags failures via abstention, conflict, or low fidelity. The evaluation spans AwA2 (closed-world and seen/unseen semantic-transfer validation), SUN (scene-understanding stress test), and Derm7pt (retrospective technical validation).
 
@@ -95,11 +95,11 @@ The AwA2 dataset provides 2048-dimensional ResNet-101 vectors and semantic proto
 \begin{figure}[H]
 %\begin{adjustwidth}{-\extralength}{0cm}
 \centering
-\subfloat[\centering\label{fig:supp_object_outcomes}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_a_object_level_audit_outcomes.pdf}}
+\subfloat[\centering\label{fig:supp_object_outcomes}]{\includegraphics[width=0.48\linewidth]{figs_main/fig26_a_object_level_audit_outcomes.pdf}}
 \hfill
-\subfloat[\centering\label{fig:supp_conflict_abstention}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_b_conflict_abstention_limits.pdf}}
+\subfloat[\centering\label{fig:supp_conflict_abstention}]{\includegraphics[width=0.48\linewidth]{figs_main/fig26_b_conflict_abstention_limits.pdf}}
 \hfill
-\subfloat[\centering\label{fig:supp_object_intervals_panel}]{\includegraphics[width=0.32\linewidth]{figs_main/fig26_c_object_level_bootstrap_intervals.pdf}}
+\subfloat[\centering\label{fig:supp_object_intervals_panel}]{\includegraphics[width=0.48\linewidth]{figs_main/fig26_c_object_level_bootstrap_intervals.pdf}}
 %\end{adjustwidth}
 \caption{Object-level audit outcomes computed from enhanced prediction exports. (\textbf{a}) Object-level audit outcomes. (\textbf{b}) Conflict and abstention limits. (\textbf{c}) Object-level bootstrap intervals. The panels separate coverage, conflict, abstention, covered accuracy, covered fidelity, and bootstrap uncertainty so that predictive correctness and faithfulness to the frozen base model are not conflated.\label{fig:supp_object_audit_group}}
 \end{figure}
@@ -110,7 +110,7 @@ The AwA2 dataset provides 2048-dimensional ResNet-101 vectors and semantic proto
 \subsection{SUN Attribute Database}
 \label{subsec:supp_sun}
 
-SUN acts as a scene-understanding stress test, containing 102 attributes over 700+ categories \cite{Patterson2014SUN,SUNAttributesWebsite}. SEMTRA yields low coverage (0.0760) and covered fidelity (0.0918) here (Table~\ref{tab:supp_sun_summary}), exposing the global symbolic template's limitations on fine-grained scene data. High conflict and abstention are prevalent in specific hierarchical categories (Table~\ref{tab:supp_sun_category_diagnostics}, Figure~\ref{fig:supp_sun_conflict_map}), demonstrating that semantic auditability is tightly coupled with concept granularity.
+SUN acts as a scene-understanding stress test, containing 102 attributes over 700+ categories \cite{Patterson2014SUN,SUNAttributesWebsite}. SEMTRA yields low coverage (0.0760) and covered fidelity (0.0918) here (Table~\ref{tab:supp_sun_summary}), exposing the global symbolic template's limitations on fine-grained scene data. High conflict and abstention are prevalent in specific hierarchical categories (Figure~\ref{fig:supp_sun_conflict_map}), demonstrating that semantic auditability is tightly coupled with concept granularity.
 
 \begin{table}[H]
 \caption{SUN xlsa17 semantic-transition and rulebook audit summary.\label{tab:supp_sun_summary}}
@@ -126,23 +126,23 @@ Seen-test rulebook audit & 2580 & 645 & -- & 0.0760 & 0.0918 \\
 \end{tabularx}
 \end{table}
 
-\begin{table}[H]
-\caption{SUN low-coverage category diagnostics.\label{tab:supp_sun_category_diagnostics}}
-\centering
-\small
-\begin{tabularx}{\textwidth}{lRCCc}
-\toprule
-\textbf{Category} & \textbf{Objects} & \textbf{Coverage} & \textbf{Conflict} & \textbf{Covered fidelity} \\
-\midrule
-abbey & 4 & 0.0000 & 1.0000 & -- \\
-access\_road & 4 & 0.0000 & 1.0000 & -- \\
-airfield & 4 & 0.0000 & 1.0000 & -- \\
-airplane\_cabin & 4 & 0.0000 & 1.0000 & -- \\
-airport/airport & 4 & 0.0000 & 1.0000 & -- \\
-airport/entrance & 4 & 0.0000 & 1.0000 & -- \\
-\bottomrule
-\end{tabularx}
-\end{table}
+% \begin{table}[H]
+% \caption{SUN low-coverage category diagnostics.\label{tab:supp_sun_category_diagnostics}}
+% \centering
+% \small
+% \begin{tabularx}{\textwidth}{lRCCc}
+% \toprule
+% \textbf{Category} & \textbf{Objects} & \textbf{Coverage} & \textbf{Conflict} & \textbf{Covered fidelity} \\
+% \midrule
+% abbey & 4 & 0.0000 & 1.0000 & -- \\
+% access\_road & 4 & 0.0000 & 1.0000 & -- \\
+% airfield & 4 & 0.0000 & 1.0000 & -- \\
+% airplane\_cabin & 4 & 0.0000 & 1.0000 & -- \\
+% airport/airport & 4 & 0.0000 & 1.0000 & -- \\
+% airport/entrance & 4 & 0.0000 & 1.0000 & -- \\
+% \bottomrule
+% \end{tabularx}
+% \end{table}
 
 \begin{figure}[H]
 %\centering
@@ -329,11 +329,11 @@ The seed-wise Protocol B summary shows moderate continuous semantic transfer and
 
 \begin{figure}[H]
 \centering
-\subfloat[\centering\label{fig:supp_protocol_b_seed_metrics}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_a_protocol_b_seed_metrics.pdf}}
+\subfloat[\centering\label{fig:supp_protocol_b_seed_metrics}]{\includegraphics[width=0.48\linewidth]{figs_main/fig29_a_protocol_b_seed_metrics.pdf}}
 \hfill
-\subfloat[\centering\label{fig:supp_transfer_accuracy_mae}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_b_transfer_accuracy_vs_mae.pdf}}
+\subfloat[\centering\label{fig:supp_transfer_accuracy_mae}]{\includegraphics[width=0.48\linewidth]{figs_main/fig29_b_transfer_accuracy_vs_mae.pdf}}
 \hfill
-\subfloat[\centering\label{fig:supp_protocol_b_failures}]{\includegraphics[width=0.32\linewidth]{figs_main/fig29_c_per_class_protocol_b_failures.pdf}}
+\subfloat[\centering\label{fig:supp_protocol_b_failures}]{\includegraphics[width=0.48\linewidth]{figs_main/fig29_c_per_class_protocol_b_failures.pdf}}
 \caption{Protocol B semantic-transfer diagnostics. The panels summarize seed-level variation, accuracy-versus-MAE behavior, and per-class failure modes for bat, giraffe, dolphin, and sheep.\label{fig:supp_protocol_b_group}}
 \end{figure}
 

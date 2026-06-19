@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  18 JUN 2026 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  19 JUN 2026 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1510,13 +1510,13 @@ Package epstopdf Info: Source file: <Definitions/logo-mdpi.eps>
 i-eps-converted-to.pdf Definitions/logo-mdpi.eps>
 (epstopdf)             \includegraphics on input line 93.
 Package epstopdf Info: Output file is already uptodate.
-<Definitions/logo-mdpi-eps-converted-to.pdf, id=201, 74.2775pt x 49.18375pt>
+<Definitions/logo-mdpi-eps-converted-to.pdf, id=197, 74.2775pt x 49.18375pt>
 File: Definitions/logo-mdpi-eps-converted-to.pdf Graphic file (type pdf)
 <use Definitions/logo-mdpi-eps-converted-to.pdf>
 Package pdftex.def Info: Definitions/logo-mdpi-eps-converted-to.pdf  used on in
 put line 93.
 (pdftex.def)             Requested size: 42.96877pt x 28.45274pt.
-<Definitions/logo-orcid.pdf, id=203, 102.3825pt x 102.3825pt>
+<Definitions/logo-orcid.pdf, id=199, 102.3825pt x 102.3825pt>
 File: Definitions/logo-orcid.pdf Graphic file (type pdf)
 <use Definitions/logo-orcid.pdf>
 Package pdftex.def Info: Definitions/logo-orcid.pdf  used on input line 93.
@@ -1578,12 +1578,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [4]
-<../figs_main/fig01_semtra.pdf, id=323, 483.92044pt x 180.23943pt>
-File: ../figs_main/fig01_semtra.pdf Graphic file (type pdf)
-<use ../figs_main/fig01_semtra.pdf>
-Package pdftex.def Info: ../figs_main/fig01_semtra.pdf  used on input line 205.
-
-(pdftex.def)             Requested size: 525.52245pt x 195.75026pt.
+<figs_main/fig01_semtra.pdf, id=321, 1325.91356pt x 740.04483pt>
+File: figs_main/fig01_semtra.pdf Graphic file (type pdf)
+<use figs_main/fig01_semtra.pdf>
+Package pdftex.def Info: figs_main/fig01_semtra.pdf  used on input line 177.
+(pdftex.def)             Requested size: 525.52245pt x 293.31386pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1592,7 +1591,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[5 <../figs_main/fig01_semtra.pdf>]
+[5 <./figs_main/fig01_semtra.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1601,6 +1600,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [6]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 277.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1609,9 +1611,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [7]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 305.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1632,108 +1631,108 @@ pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.1})
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.424 \State
+l.396 \State
              \textbf{Input:} Discretized symbolic states $\mathbf{S}$, decis...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.2}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.425 \State
+l.397 \State
              \textbf{Output:} Conflict-aware production rulebook $\Rule$ and...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.3}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.426 \State
+l.398 \State
              Establish the indiscernibility equivalence relations $IND(P)$ a...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.4}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.427 \State
+l.399 \State
              Aggregate objects into information granules and isolate the det...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.5}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.428 \State
+l.400 \State
              Formulate the comprehensive discernibility matrix $M$, populati...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.6}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.429 \State
+l.401 \State
              Execute the weighted heuristic search to extract constrained re...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.7}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.430 \State
+l.402 \State
              Synthesize the discrete granules and reducts into the formal lo...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.8}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431 \State
+l.403 \State
              Compile the accepted rules into the global conflict-aware ruleb...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.9}) 
 has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \For
+l.404 \For
           {\textbf{each} unseen test instance}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.10})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.433     \State
+l.405     \State
                  Attempt to match the instance against the rulebook antecede...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.11})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.434     \If
+l.406     \If
              {multiple conflicting rules are activated}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.12})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.435         \State
+l.407         \State
                      Resolve the boundary conflict by maximizing the integra...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.13})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.436     \ElsIf
+l.408     \ElsIf
                 {no exact rule conditions are satisfied}
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.14})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.437         \State
+l.409         \State
                      Execute soft matching by minimizing the symbolic Hammin...
 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.15})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.438     \EndIf
+l.410     \EndIf
                 
 pdfTeX warning (ext4): destination with the same identifier (name{ALG@line.16})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.439 \EndFor
+l.411 \EndFor
              
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1759,6 +1758,104 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [12]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 511.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 511.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 511.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 511.
+
+Overfull \hbox (3.77817pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/b/n/9 (-20) RMSE| 
+ []
+
+
+Overfull \hbox (13.0831pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/b/n/9 (-20) Runtime 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.1573| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.7759| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.1941| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.0451| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.2583| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.1176| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.0027| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 2.8573| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.2355| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.4497| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.0915| 
+ []
+
+
+Overfull \hbox (2.06718pt too wide) in paragraph at lines 539--539
+ []|\T1/ppl/m/n/9 (-20) 0.6914| 
+ []
+
+<figs_main/fig05_transition_salience.pdf, id=482, 257.9598pt x 250.42146pt>
+File: figs_main/fig05_transition_salience.pdf Graphic file (type pdf)
+<use figs_main/fig05_transition_salience.pdf>
+Package pdftex.def Info: figs_main/fig05_transition_salience.pdf  used on input
+ line 548.
+(pdftex.def)             Requested size: 189.28882pt x 183.76141pt.
+<figs_main/fig06_attribute_error.pdf, id=483, 257.69394pt x 278.86395pt>
+File: figs_main/fig06_attribute_error.pdf Graphic file (type pdf)
+<use figs_main/fig06_attribute_error.pdf>
+Package pdftex.def Info: figs_main/fig06_attribute_error.pdf  used on input lin
+e 550.
+(pdftex.def)             Requested size: 189.28882pt x 204.84126pt.
+<figs_main/fig24_attribute_salience_error_scatter.pdf, id=484, 256.99817pt x 19
+8.01805pt>
+File: figs_main/fig24_attribute_salience_error_scatter.pdf Graphic file (type p
+df)
+<use figs_main/fig24_attribute_salience_error_scatter.pdf>
+Package pdftex.def Info: figs_main/fig24_attribute_salience_error_scatter.pdf  
+used on input line 552.
+(pdftex.def)             Requested size: 189.28882pt x 145.85423pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1767,27 +1864,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [13]
-<../figs_main/fig05_transition_salience.pdf, id=506, 257.9598pt x 250.42146pt>
-File: ../figs_main/fig05_transition_salience.pdf Graphic file (type pdf)
-<use ../figs_main/fig05_transition_salience.pdf>
-Package pdftex.def Info: ../figs_main/fig05_transition_salience.pdf  used on in
-put line 576.
-(pdftex.def)             Requested size: 189.28882pt x 183.76141pt.
-<../figs_main/fig06_attribute_error.pdf, id=507, 257.69394pt x 278.86395pt>
-File: ../figs_main/fig06_attribute_error.pdf Graphic file (type pdf)
-<use ../figs_main/fig06_attribute_error.pdf>
-Package pdftex.def Info: ../figs_main/fig06_attribute_error.pdf  used on input 
-line 578.
-(pdftex.def)             Requested size: 189.28882pt x 204.84126pt.
-<../figs_main/fig24_attribute_salience_error_scatter.pdf, id=508, 256.99817pt x
- 198.01805pt>
-File: ../figs_main/fig24_attribute_salience_error_scatter.pdf Graphic file (typ
-e pdf)
-<use ../figs_main/fig24_attribute_salience_error_scatter.pdf>
-Package pdftex.def Info: ../figs_main/fig24_attribute_salience_error_scatter.pd
-f  used on input line 580.
-(pdftex.def)             Requested size: 236.61554pt x 182.3208pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1795,54 +1871,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[14 <../figs_main/fig05_transition_salience.pdf> <../figs_main/fig06_attribute_
-error.pdf> <../figs_main/fig24_attribute_salience_error_scatter.pdf>]
-<../figs_main/fig19_baseline_tradeoff_scatter.pdf, id=547, 258.14452pt x 192.15
-425pt>
-File: ../figs_main/fig19_baseline_tradeoff_scatter.pdf Graphic file (type pdf)
-<use ../figs_main/fig19_baseline_tradeoff_scatter.pdf>
-Package pdftex.def Info: ../figs_main/fig19_baseline_tradeoff_scatter.pdf  used
- on input line 648.
-(pdftex.def)             Requested size: 307.59659pt x 228.98012pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[16 <../figs_main/fig19_baseline_tradeoff_scatter.pdf>]
-<../figs_main/fig07_wedd_threshold_example.pdf, id=585, 258.18329pt x 181.68709
+[14 <./figs_main/fig05_transition_salience.pdf> <./figs_main/fig06_attribute_er
+ror.pdf> <./figs_main/fig24_attribute_salience_error_scatter.pdf>]
+<figs_main/fig19_baseline_tradeoff_scatter.pdf, id=532, 258.14452pt x 192.15425
 pt>
-File: ../figs_main/fig07_wedd_threshold_example.pdf Graphic file (type pdf)
-<use ../figs_main/fig07_wedd_threshold_example.pdf>
-Package pdftex.def Info: ../figs_main/fig07_wedd_threshold_example.pdf  used on
- input line 742.
-(pdftex.def)             Requested size: 173.42336pt x 122.04297pt.
-<../figs_main/fig09_rule_support_confidence.pdf, id=586, 258.29262pt x 187.2616
-7pt>
-File: ../figs_main/fig09_rule_support_confidence.pdf Graphic file (type pdf)
-<use ../figs_main/fig09_rule_support_confidence.pdf>
-Package pdftex.def Info: ../figs_main/fig09_rule_support_confidence.pdf  used o
-n input line 743.
-(pdftex.def)             Requested size: 173.42336pt x 125.7361pt.
-<../figs_main/fig15_coverage_abstention_tradeoff.pdf, id=587, 258.06238pt x 186
-.6053pt>
-File: ../figs_main/fig15_coverage_abstention_tradeoff.pdf Graphic file (type pd
-f)
-<use ../figs_main/fig15_coverage_abstention_tradeoff.pdf>
-Package pdftex.def Info: ../figs_main/fig15_coverage_abstention_tradeoff.pdf  u
-sed on input line 744.
-(pdftex.def)             Requested size: 173.42336pt x 125.40929pt.
+File: figs_main/fig19_baseline_tradeoff_scatter.pdf Graphic file (type pdf)
+<use figs_main/fig19_baseline_tradeoff_scatter.pdf>
+Package pdftex.def Info: figs_main/fig19_baseline_tradeoff_scatter.pdf  used on
+ input line 620.
+(pdftex.def)             Requested size: 276.04744pt x 205.49452pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1851,9 +1888,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[17]
-Underfull \hbox (badness 10000) in alignment at lines 809--809
-[][] 
+[15 <./figs_main/fig19_baseline_tradeoff_scatter.pdf>]
+Overfull \hbox (3.45491pt too wide) in paragraph at lines 677--677
+ []|\T1/ppl/b/n/10 (-20) Coverage| 
  []
 
 
@@ -1863,13 +1900,54 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[18 <../figs_main/fig07_wedd_threshold_example.pdf> <../figs_main/fig09_rule_su
-pport_confidence.pdf> <../figs_main/fig15_coverage_abstention_tradeoff.pdf>]
-<../figs_main/fig05_use-case.pdf, id=677, 271.09499pt x 271.09499pt>
-File: ../figs_main/fig05_use-case.pdf Graphic file (type pdf)
-<use ../figs_main/fig05_use-case.pdf>
-Package pdftex.def Info: ../figs_main/fig05_use-case.pdf  used on input line 84
-7.
+[16]
+<figs_main/fig07_wedd_threshold_example.pdf, id=572, 258.18329pt x 181.68709pt>
+
+File: figs_main/fig07_wedd_threshold_example.pdf Graphic file (type pdf)
+<use figs_main/fig07_wedd_threshold_example.pdf>
+Package pdftex.def Info: figs_main/fig07_wedd_threshold_example.pdf  used on in
+put line 714.
+(pdftex.def)             Requested size: 189.28882pt x 133.20987pt.
+<figs_main/fig09_rule_support_confidence.pdf, id=573, 258.29262pt x 187.26167pt
+>
+File: figs_main/fig09_rule_support_confidence.pdf Graphic file (type pdf)
+<use figs_main/fig09_rule_support_confidence.pdf>
+Package pdftex.def Info: figs_main/fig09_rule_support_confidence.pdf  used on i
+nput line 716.
+(pdftex.def)             Requested size: 189.28882pt x 137.23706pt.
+<figs_main/fig15_coverage_abstention_tradeoff.pdf, id=574, 408.0752pt x 256.486
+71pt>
+File: figs_main/fig15_coverage_abstention_tradeoff.pdf Graphic file (type pdf)
+<use figs_main/fig15_coverage_abstention_tradeoff.pdf>
+Package pdftex.def Info: figs_main/fig15_coverage_abstention_tradeoff.pdf  used
+ on input line 718.
+(pdftex.def)             Requested size: 189.28882pt x 118.97546pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[17 <./figs_main/fig07_wedd_threshold_example.pdf> <./figs_main/fig09_rule_supp
+ort_confidence.pdf> <./figs_main/fig15_coverage_abstention_tradeoff.pdf>]
+Overfull \hbox (8.30196pt too wide) in alignment at lines 814--814
+[][][][] 
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[18]
+<figs_main/fig05_use-case.pdf, id=663, 271.09499pt x 271.09499pt>
+File: figs_main/fig05_use-case.pdf Graphic file (type pdf)
+<use figs_main/fig05_use-case.pdf>
+Package pdftex.def Info: figs_main/fig05_use-case.pdf  used on input line 821.
 (pdftex.def)             Requested size: 394.35522pt x 394.35585pt.
 
 
@@ -1887,7 +1965,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[20 <../figs_main/fig05_use-case.pdf>]
+[20 <./figs_main/fig05_use-case.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1896,22 +1974,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [21]
-<../figs_main/fig22_synthetic_uncertainty_bands.pdf, id=723, 258.09372pt x 186.
-67754pt>
-File: ../figs_main/fig22_synthetic_uncertainty_bands.pdf Graphic file (type pdf
-)
-<use ../figs_main/fig22_synthetic_uncertainty_bands.pdf>
-Package pdftex.def Info: ../figs_main/fig22_synthetic_uncertainty_bands.pdf  us
-ed on input line 998.
-(pdftex.def)             Requested size: 323.37416pt x 233.92174pt.
-<../figs_main/fig13_synthetic_threshold_recovery.pdf, id=725, 258.04713pt x 180
-.96074pt>
-File: ../figs_main/fig13_synthetic_threshold_recovery.pdf Graphic file (type pd
-f)
-<use ../figs_main/fig13_synthetic_threshold_recovery.pdf>
-Package pdftex.def Info: ../figs_main/fig13_synthetic_threshold_recovery.pdf  u
-sed on input line 1006.
-(pdftex.def)             Requested size: 323.37416pt x 226.78572pt.
+<figs_main/fig22_synthetic_uncertainty_bands.pdf, id=740, 258.09372pt x 186.677
+54pt>
+File: figs_main/fig22_synthetic_uncertainty_bands.pdf Graphic file (type pdf)
+<use figs_main/fig22_synthetic_uncertainty_bands.pdf>
+Package pdftex.def Info: figs_main/fig22_synthetic_uncertainty_bands.pdf  used 
+on input line 994.
+(pdftex.def)             Requested size: 189.28882pt x 136.91722pt.
+<figs_main/fig13_synthetic_threshold_recovery.pdf, id=741, 258.04713pt x 180.96
+074pt>
+File: figs_main/fig13_synthetic_threshold_recovery.pdf Graphic file (type pdf)
+<use figs_main/fig13_synthetic_threshold_recovery.pdf>
+Package pdftex.def Info: figs_main/fig13_synthetic_threshold_recovery.pdf  used
+ on input line 996.
+(pdftex.def)             Requested size: 189.28882pt x 132.74911pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1920,7 +1996,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[22]
+[22 <./figs_main/fig22_synthetic_uncertainty_bands.pdf> <./figs_main/fig13_synt
+hetic_threshold_recovery.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1928,8 +2005,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[23 <../figs_main/fig22_synthetic_uncertainty_bands.pdf> <../figs_main/fig13_sy
-nthetic_threshold_recovery.pdf>]
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1962,6 +2038,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [27]
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1275 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1275 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1275 \begin{equation}
+                       
+pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1275 \begin{equation}
+                       
+Overfull \hbox (3.16667pt too wide) in paragraph at lines 1296--1296
+ []|\T1/ppl/b/n/10 (-20) Abstention| 
+ []
+
+(main.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1970,30 +2075,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
 [28]
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1264 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1264 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1264 \begin{equation}
-                       
-pdfTeX warning (ext4): destination with the same identifier (name{equation.1}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1264 \begin{equation}
-                        (main.bbl
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -2025,16 +2106,16 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CFF824E03DC86BF2B88E7C3EA7EA6655;12236.
+(rerunfilecheck)             Checksum: BD2DCFFB4ED3AE210108A22CEAF38143;11841.
  ) 
 Here is how much of TeX's memory you used:
- 36865 strings out of 467509
- 698669 string characters out of 5408780
- 1200044 words of memory out of 5000000
- 64707 multiletter control sequences out of 15000+600000
- 716213 words of font info for 510 fonts, out of 8000000 for 9000
+ 36864 strings out of 467509
+ 697532 string characters out of 5408780
+ 1201040 words of memory out of 5000000
+ 64681 multiletter control sequences out of 15000+600000
+ 717305 words of font info for 527 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,14n,121p,1797b,933s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,14n,121p,1797b,977s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss
 0800.pk><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmex10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -2049,9 +2130,9 @@ sers/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C
 :/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb
 ><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a
 .pfb>
-Output written on main.pdf (31 pages, 741625 bytes).
+Output written on main.pdf (31 pages, 1857386 bytes).
 PDF statistics:
- 1002 PDF objects out of 1200 (max. 8388607)
+ 1015 PDF objects out of 1200 (max. 8388607)
  204 named destinations out of 1000 (max. 500000)
- 112078 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 112070 words of extra memory for PDF output out of 128383 (max. 10000000)
 

@@ -1,159 +1,162 @@
 \begin{thebibliography}{999}
 
-\bibitem[Longo et~al.(2024)Longo, Brcic, Cabitza, Choi, Confalonieri, Ser,
+\bibitem[Longo et~al.(2024)Longo, Brcic, Cabitza, Choi, Confalonieri, Del~Ser,
   Guidotti, Hayashi, Herrera, Holzinger, Jiang, Khosravi, Lecue, Malgieri,
   P{\'a}ez, Samek, Schneider, Speith, and Stumpf]{Longo2024XAI}
-Longo, L.; Brcic, M.; Cabitza, F.; Choi, J.; Confalonieri, R.; Ser, J.D.;
+Longo, L.; Brcic, M.; Cabitza, F.; Choi, J.; Confalonieri, R.; Del~Ser, J.;
   Guidotti, R.; Hayashi, Y.; Herrera, F.; Holzinger, A.;  et~al.
-\newblock {Explainable artificial intelligence ({XAI}) 2.0: A manifesto of open
-  challenges and interdisciplinary research directions}.
+\newblock Explainable artificial intelligence ({XAI}) 2.0: A manifesto of open
+  challenges and interdisciplinary research directions.
 \newblock {\em Inf. Fusion} {\bf 2024}, {\em 106},~102301.
-\newblock Article number 102301,
-  {\url{https://doi.org/10.1016/j.inffus.2024.102301}}.
+\newblock {\url{https://doi.org/10.1016/j.inffus.2024.102301}}.
 
 \bibitem[Mersha et~al.(2024)Mersha, Lam, Wood, AlShami, and
   Kalita]{Mersha2024XAISurvey}
 Mersha, M.; Lam, K.N.; Wood, J.; AlShami, A.K.; Kalita, J.
-\newblock {Explainable artificial intelligence: A survey of needs, techniques,
-  applications, and future direction}.
+\newblock Explainable artificial intelligence: A survey of needs, techniques,
+  applications, and future direction.
 \newblock {\em Neurocomputing} {\bf 2024}, {\em 599},~128111.
-\newblock Article number 128111,
-  {\url{https://doi.org/10.1016/j.neucom.2024.128111}}.
+\newblock {\url{https://doi.org/10.1016/j.neucom.2024.128111}}.
 
 \bibitem[Radiuk et~al.(2024)Radiuk, Barmak, Manziuk, and
   Krak]{Radiuk2024TransitionMatrix}
 Radiuk, P.; Barmak, O.; Manziuk, E.; Krak, I.
-\newblock {Explainable deep learning: A visual analytics approach with
-  transition matrices}.
+\newblock Explainable deep learning: A visual analytics approach with
+  transition matrices.
 \newblock {\em Mathematics} {\bf 2024}, {\em 12},~1024.
-\newblock Article number 1024, {\url{https://doi.org/10.3390/math12071024}}.
+\newblock {\url{https://doi.org/10.3390/math12071024}}.
 
 \bibitem[Barmak et~al.(2024)Barmak, Krak, Yakovlev, Manziuk, Radiuk, and
   Kuznetsov]{Barmak2024TowardTransition}
 Barmak, O.; Krak, I.; Yakovlev, S.; Manziuk, E.; Radiuk, P.; Kuznetsov, V.
-\newblock {Toward explainable deep learning in healthcare through transition
-  matrix and user-friendly features}.
+\newblock Toward explainable deep learning in healthcare through transition
+  matrix and user-friendly features.
 \newblock {\em Front. Artif. Intell.} {\bf 2024}, {\em 7},~1482141.
-\newblock Article number 1482141,
-  {\url{https://doi.org/10.3389/frai.2024.1482141}}.
+\newblock {\url{https://doi.org/10.3389/frai.2024.1482141}}.
 
 \bibitem[Radiuk et~al.(2026)Radiuk, Barmak, Bedratyuk, and
   Krak]{Radiuk2026EquivariantTransition}
 Radiuk, P.; Barmak, O.; Bedratyuk, L.; Krak, I.
-\newblock {Equivariant transition matrices for explainable deep learning: A
-  {Lie} group linearization approach}.
+\newblock Equivariant transition matrices for explainable deep learning: A
+  {Lie} group linearization approach.
 \newblock {\em Mach. Learn. Knowl. Extraction} {\bf 2026}, {\em 8},~92.
-\newblock Article number 92, {\url{https://doi.org/10.3390/make8040092}}.
+\newblock {\url{https://doi.org/10.3390/make8040092}}.
 
 \bibitem[Pawlak(1982)]{Pawlak1982RoughSets}
 Pawlak, Z.
-\newblock {Rough sets}.
+\newblock Rough sets.
 \newblock {\em Int. J. Comput. Inf. Sci.} {\bf 1982}, {\em 11},~341--356.
 \newblock {\url{https://doi.org/10.1007/BF01001956}}.
 
 \bibitem[Pawlak(1991)]{Pawlak1991RoughSets}
 Pawlak, Z.
-\newblock {\em {Rough sets: Theoretical aspects of reasoning about data}};
+\newblock {\em Rough sets: Theoretical aspects of reasoning about data};
   Vol.~9, {\em Theory and Decision Library D}, Kluwer Academic Publishers:
   Dordrecht, The Netherlands,  1991.
 \newblock {\url{https://doi.org/10.1007/978-94-011-3534-4}}.
 
-\bibitem[Salih et~al.(2025)Salih, Raisi-Estabragh, Galazzo, Radeva, Petersen,
-  Lekadir, and Menegaz]{Salih2025SHAPLIME}
-Salih, A.M.; Raisi-Estabragh, Z.; Galazzo, I.B.; Radeva, P.; Petersen, S.E.;
-  Lekadir, K.; Menegaz, G.
-\newblock {A perspective on explainable artificial intelligence methods: {SHAP}
-  and {LIME}}.
+\bibitem[Salih et~al.(2025)Salih, Raisi-Estabragh, Boscolo~Galazzo, Radeva,
+  Petersen, Lekadir, and Menegaz]{Salih2025SHAPLIME}
+Salih, A.M.; Raisi-Estabragh, Z.; Boscolo~Galazzo, I.; Radeva, P.; Petersen,
+  S.E.; Lekadir, K.; Menegaz, G.
+\newblock A perspective on explainable artificial intelligence methods: {SHAP}
+  and {LIME}.
 \newblock {\em Adv. Intell. Syst.} {\bf 2025}, {\em 7},~2400304.
-\newblock Article number 2400304,
-  {\url{https://doi.org/10.1002/aisy.202400304}}.
+\newblock {\url{https://doi.org/10.1002/aisy.202400304}}.
 
-\bibitem[Bobek and Nalepa(2025)]{Bobek2025LUX}
-Bobek, S.; Nalepa, G.J.
-\newblock {Local universal rule-based explainer ({LUX})}.
-\newblock {\em SoftwareX} {\bf 2025}, {\em 30},~102102.
-\newblock Article number 102102,
-  {\url{https://doi.org/10.1016/j.softx.2025.102102}}.
+\bibitem[Kovalchuk et~al.(2025)Kovalchuk, Barmak, Radiuk, Klymenko, and
+  Krak]{Kovalchuk2025Transparent}
+Kovalchuk, O.; Barmak, O.; Radiuk, P.; Klymenko, L.; Krak, I.
+\newblock Towards transparent AI in medicine: ECG-based arrhythmia detection
+  with explainable deep learning.
+\newblock {\em Technologies} {\bf 2025}, {\em 13},~34.
+\newblock {\url{https://doi.org/10.3390/technologies13010034}}.
 
-\bibitem[Kozielski et~al.(2025)Kozielski, Sikora, and
-  Wawrowski]{Kozielski2025RuleConsistency}
-Kozielski, M.; Sikora, M.; Wawrowski, {\L}.
-\newblock {Towards consistency of rule-based explainer and black box model:
-  Fusion of rule induction and {XAI}-based feature importance}.
-\newblock {\em Knowl.-Based Syst.} {\bf 2025}, {\em 311},~113092.
-\newblock Article number 113092,
-  {\url{https://doi.org/10.1016/j.knosys.2025.113092}}.
+\bibitem[Radiuk et~al.(2025)Radiuk, Rusyn, Melnychenko, Perzynski, Sachenko,
+  Svystun, and Savenko]{Radiuk2025Criticality}
+Radiuk, P.; Rusyn, B.; Melnychenko, O.; Perzynski, T.; Sachenko, A.; Svystun,
+  S.; Savenko, O.
+\newblock Criticality assessment of wind turbine defects via multispectral UAV
+  fusion and fuzzy logic.
+\newblock {\em Energies} {\bf 2025}, {\em 18},~4523.
+\newblock {\url{https://doi.org/10.3390/en18174523}}.
 
 \bibitem[Nicolson et~al.(2025)Nicolson, Schut, Noble, and Gal]{Nicolson2025CAV}
 Nicolson, A.; Schut, L.; Noble, J.A.; Gal, Y.
-\newblock {Explaining explainability: Recommendations for effective use of
-  concept activation vectors}.
-\newblock {\em Trans. Mach. Learn. Res.} {\bf 2025}.
+\newblock Explaining explainability: Recommendations for effective use of
+  concept activation vectors.
+\newblock {\em Trans. Mach. Learn. Res.} {\bf 2025}, {\em 2025},~1--21.
 
 \bibitem[Srivastava et~al.(2024)Srivastava, Yan, and
   Weng]{Srivastava2024VLGCBM}
 Srivastava, D.; Yan, G.; Weng, T.W.
-\newblock {{VLG-CBM}: Training concept bottleneck models with vision-language
-  guidance}.
+\newblock {VLG-CBM}: Training concept bottleneck models with vision-language
+  guidance.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2024, Vol.~37.
+  Systems 37; Globerson, A.; Mackey, L.; Belgrave, D.; Fan, A.; Paquet, U.;
+  Tomczak, J.; Zhang, C., Eds., Red Hook, NY, USA,  2024; Vol.~37, pp.
+  79057--79094.
+\newblock {\url{https://doi.org/10.52202/079017-2510}}.
 
-\bibitem[Zarlenga et~al.(2022)Zarlenga, Barbiero, Ciravegna, Marra, Giannini,
-  Diligenti, Shams, Precioso, Melacci, Weller, Li{\`o}, and
+\bibitem[Espinosa~Zarlenga et~al.(2022)Espinosa~Zarlenga, Barbiero, Ciravegna,
+  Marra, Giannini, Diligenti, Shams, Precioso, Melacci, Weller, Li{\`o}, and
   Jamnik]{Zarlenga2022ConceptEmbedding}
-Zarlenga, M.E.; Barbiero, P.; Ciravegna, G.; Marra, G.; Giannini, F.;
+Espinosa~Zarlenga, M.; Barbiero, P.; Ciravegna, G.; Marra, G.; Giannini, F.;
   Diligenti, M.; Shams, Z.; Precioso, F.; Melacci, S.; Weller, A.;  et~al.
-\newblock {Concept embedding models: Beyond the accuracy-explainability
-  trade-off}.
+\newblock Concept embedding models: Beyond the accuracy-explainability
+  trade-off.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2022, Vol.~35, pp. 21400--21413.
+  Systems 35; Koyejo, S.; Mohamed, S.; Agarwal, A.; Belgrave, D.; Cho, K.; Oh,
+  A., Eds., Red Hook, NY, USA,  2022; Vol.~35, pp. 21400--21413.
 
 \bibitem[Y{\"u}ksekg{\"o}n{\"u}l et~al.(2023)Y{\"u}ksekg{\"o}n{\"u}l, Wang, and
   Zou]{Yuksekgonul2023PostHocCBM}
 Y{\"u}ksekg{\"o}n{\"u}l, M.; Wang, M.; Zou, J.
-\newblock {Post-hoc concept bottleneck models}.
+\newblock Post-hoc concept bottleneck models.
 \newblock In Proceedings of the 11th International Conference on Learning
-  Representations, Kigali, Rwanda,  2023.
+  Representations ({ICLR} 2023), Kigali, Rwanda,  2023.
 
 \bibitem[Mienye and Jere(2024)]{Mienye2024DecisionTrees}
 Mienye, I.D.; Jere, N.R.
-\newblock {A survey of decision trees: Concepts, algorithms, and applications}.
+\newblock A survey of decision trees: Concepts, algorithms, and applications.
 \newblock {\em IEEE Access} {\bf 2024}, {\em 12},~86716--86727.
 \newblock {\url{https://doi.org/10.1109/ACCESS.2024.3416838}}.
 
 \bibitem[Bollaert et~al.(2025)Bollaert, Palangeti{\'c}, Cornelis, Greco, and
   S{\l}owi{\'n}ski]{Bollaert2024FRRI}
 Bollaert, H.; Palangeti{\'c}, M.; Cornelis, C.; Greco, S.; S{\l}owi{\'n}ski, R.
-\newblock {{FRRI}: A novel algorithm for fuzzy-rough rule induction}.
+\newblock {FRRI}: A novel algorithm for fuzzy-rough rule induction.
 \newblock {\em Inf. Sci.} {\bf 2025}, {\em 686},~121362.
-\newblock Article number 121362,
-  {\url{https://doi.org/10.1016/j.ins.2024.121362}}.
+\newblock {\url{https://doi.org/10.1016/j.ins.2024.121362}}.
 
 \bibitem[Zhang et~al.(2024)Zhang, Li, Wu, Li, Lin, Hu, Li, and
   Jiang]{Zhang2024DissectBlackBox}
 Zhang, Y.; Li, R.; Wu, N.; Li, Q.; Lin, X.; Hu, Y.; Li, T.; Jiang, Y.
-\newblock {Dissect black box: Interpreting for rule-based explanations in
-  unsupervised anomaly detection}.
+\newblock Dissect black box: Interpreting for rule-based explanations in
+  unsupervised anomaly detection.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2024, Vol.~37.
+  Systems 37; Globerson, A.; Mackey, L.; Belgrave, D.; Fan, A.; Paquet, U.;
+  Tomczak, J.; Zhang, C., Eds., Red Hook, NY, USA,  2024; Vol.~37, pp.
+  84169--84196.
+\newblock {\url{https://doi.org/10.52202/079017-2675}}.
 
 \bibitem[{\c{S}}enozan and Soylu(2024)]{SenozanSoylu2024Discretization}
 {\c{S}}enozan, H.; Soylu, B.
-\newblock {A flexible non-monotonic discretization method for pre-processing in
-  supervised learning}.
+\newblock A flexible non-monotonic discretization method for pre-processing in
+  supervised learning.
 \newblock {\em Pattern Recognit. Lett.} {\bf 2024}, {\em 181},~77--85.
 \newblock {\url{https://doi.org/10.1016/j.patrec.2024.03.024}}.
 
 \bibitem[Biroli and M{\'e}zard(2026)]{Biroli2026KDEHighDim}
 Biroli, G.; M{\'e}zard, M.
-\newblock {Kernel density estimators in large dimensions}.
+\newblock Kernel density estimators in large dimensions.
 \newblock {\em SIAM J. Math. Data Sci.} {\bf 2026}, {\em 8},~46--76.
 \newblock {\url{https://doi.org/10.1137/24M1703677}}.
 
 \bibitem[Xian et~al.(2019)Xian, Lampert, Schiele, and Akata]{Xian2019AwA2}
 Xian, Y.; Lampert, C.H.; Schiele, B.; Akata, Z.
-\newblock {Zero-shot learning: A comprehensive evaluation of the good, the bad
-  and the ugly}.
+\newblock Zero-shot learning: A comprehensive evaluation of the good, the bad
+  and the ugly.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2019}, {\em
   41},~2251--2265.
 \newblock {\url{https://doi.org/10.1109/TPAMI.2018.2857768}}.
@@ -168,61 +171,67 @@ Lampert, C.H.; Pucher, D.; Dostal, J.
 \bibitem[Lampert et~al.(2009)Lampert, Nickisch, and
   Harmeling]{Lampert2009Attribute}
 Lampert, C.H.; Nickisch, H.; Harmeling, S.
-\newblock {Learning to detect unseen object classes by between-class attribute
-  transfer}.
-\newblock In Proceedings of the 2009 IEEE Conference on Computer Vision and
-  Pattern Recognition, Miami, Florida, USA,  2009; pp. 951--958.
+\newblock Learning to detect unseen object classes by between-class attribute
+  transfer.
+\newblock In Proceedings of the 2009 {IEEE} Conference on Computer Vision and
+  Pattern Recognition ({CVPR} 2009), Miami, FL, USA,  2009; pp. 951--958.
 \newblock {\url{https://doi.org/10.1109/CVPRW.2009.5206594}}.
 
 \bibitem[Lampert et~al.(2014)Lampert, Nickisch, and
   Harmeling]{Lampert2014Attribute}
 Lampert, C.H.; Nickisch, H.; Harmeling, S.
-\newblock {Attribute-based classification for zero-shot visual object
-  categorization}.
+\newblock Attribute-based classification for zero-shot visual object
+  categorization.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2014}, {\em
   36},~453--465.
 \newblock {\url{https://doi.org/10.1109/TPAMI.2013.140}}.
 
 \bibitem[Verma and Rai(2017)]{Verma2017GFZSL}
 Verma, V.K.; Rai, P.
-\newblock {A simple exponential family framework for zero-shot learning}.
+\newblock A simple exponential family framework for zero-shot learning.
 \newblock In Proceedings of the Machine Learning and Knowledge Discovery in
-  Databases: European Conference, {ECML PKDD} 2017, Proceedings, Part II; Ceci,
-  M.; Hollm{\'e}n, J.; Todorovski, L.; Vens, C.; D{\v{z}}eroski, S., Eds.,
-  Cham, Switzerland,  2017; pp. 792--808.
+  Databases: European Conference, {ECML PKDD} 2017, Skopje, Macedonia,
+  September 18--22, 2017, Proceedings, Part {II}; Ceci, M.; Hollm{\'e}n, J.;
+  Todorovski, L.; Vens, C.; D{\v{z}}eroski, S., Eds., Cham, Switzerland,  2017;
+  Vol. 10535, {\em Lecture Notes in Computer Science}, pp. 792--808.
 \newblock {\url{https://doi.org/10.1007/978-3-319-71246-8_48}}.
 
 \bibitem[Xian et~al.(2019)Xian, Sharma, Schiele, and Akata]{Xian2019Fvaegan}
 Xian, Y.; Sharma, S.; Schiele, B.; Akata, Z.
-\newblock {{f-VAEGAN-D2}: A feature generating framework for any-shot
-  learning}.
-\newblock In Proceedings of the 2019 IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition, Long Beach, California, USA,  2019; pp. 10275--10284.
+\newblock {f-VAEGAN-D2}: A feature generating framework for any-shot learning.
+\newblock In Proceedings of the 2019 {IEEE/CVF} Conference on Computer Vision
+  and Pattern Recognition ({CVPR} 2019), Long Beach, CA, USA,  2019; pp.
+  10275--10284.
+\newblock {\url{https://doi.org/10.1109/CVPR.2019.01052}}.
 
 \bibitem[Huynh and Elhamifar(2020)]{Huynh2020DAZLE}
 Huynh, D.; Elhamifar, E.
-\newblock {Fine-grained generalized zero-shot learning via dense
-  attribute-based attention}.
-\newblock In Proceedings of the 2020 IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition, Seattle, Washington, USA,  2020; pp. 4483--4493.
+\newblock Fine-grained generalized zero-shot learning via dense attribute-based
+  attention.
+\newblock In Proceedings of the 2020 {IEEE/CVF} Conference on Computer Vision
+  and Pattern Recognition ({CVPR} 2020), Seattle, WA, USA,  2020; pp.
+  4483--4493.
+\newblock {\url{https://doi.org/10.1109/CVPR42600.2020.00454}}.
 
 \bibitem[Xu et~al.(2020)Xu, Xian, Wang, Schiele, and Akata]{Xu2020APN}
 Xu, W.; Xian, Y.; Wang, J.; Schiele, B.; Akata, Z.
-\newblock {Attribute prototype network for zero-shot learning}.
+\newblock Attribute prototype network for zero-shot learning.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2020, Vol.~33, pp. 21969--21980.
+  Systems 33; Larochelle, H.; Ranzato, M.; Hadsell, R.; Balcan, M.F.; Lin,
+  H.T., Eds., Red Hook, NY, USA,  2020; Vol.~33, pp. 21969--21980.
 
 \bibitem[Han et~al.(2021)Han, Fu, Chen, and Yang]{Han2021CEGZSL}
 Han, Z.; Fu, Z.; Chen, S.; Yang, J.
-\newblock {Contrastive embedding for generalized zero-shot learning}.
-\newblock In Proceedings of the 2021 IEEE/CVF Conference on Computer Vision and
-  Pattern Recognition, Nashville, Tennessee, USA,  2021; pp. 2371--2381.
+\newblock Contrastive embedding for generalized zero-shot learning.
+\newblock In Proceedings of the 2021 {IEEE/CVF} Conference on Computer Vision
+  and Pattern Recognition ({CVPR} 2021), Nashville, TN, USA,  2021; pp.
+  2371--2381.
 
 \bibitem[Chen et~al.(2022)Chen, Hong, Liu, Xie, Sun, Li, Peng, Lu, and
   You]{Chen2022TransZero}
 Chen, S.; Hong, Z.; Liu, Y.; Xie, G.S.; Sun, B.; Li, H.; Peng, Q.; Lu, K.; You,
   X.
-\newblock {{TransZero}: Attribute-guided transformer for zero-shot learning}.
+\newblock {TransZero}: Attribute-guided transformer for zero-shot learning.
 \newblock {\em Proc. AAAI Conf. Artif. Intell.} {\bf 2022}, {\em 36},~330--338.
 \newblock {\url{https://doi.org/10.1609/aaai.v36i1.19909}}.
 
@@ -230,16 +239,17 @@ Chen, S.; Hong, Z.; Liu, Y.; Xie, G.S.; Sun, B.; Li, H.; Peng, Q.; Lu, K.; You,
   Shao]{Chen2023TransZeroPlus}
 Chen, S.; Hong, Z.; Hou, W.; Xie, G.S.; Song, Y.; Zhao, J.; You, X.; Yan, S.;
   Shao, L.
-\newblock {{TransZero++}: Cross attribute-guided transformer for zero-shot
-  learning}.
+\newblock {TransZero++}: Cross attribute-guided transformer for zero-shot
+  learning.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2023}, {\em
   45},~12805--12821.
 \newblock {\url{https://doi.org/10.1109/TPAMI.2022.3229526}}.
 
-\bibitem[Naeem et~al.(2024)Naeem, Xian, Gool, and Tombari]{Naeem2024I2DFormer}
-Naeem, M.F.; Xian, Y.; Gool, L.V.; Tombari, F.
-\newblock {{I2DFormer+}: Learning image to document summary attention for
-  zero-shot image classification}.
+\bibitem[Naeem et~al.(2024)Naeem, Xian, Van~Gool, and
+  Tombari]{Naeem2024I2DFormer}
+Naeem, M.F.; Xian, Y.; Van~Gool, L.; Tombari, F.
+\newblock {I2DFormer+}: Learning image to document summary attention for
+  zero-shot image classification.
 \newblock {\em Int. J. Comput. Vis.} {\bf 2024}, {\em 132},~3806--3822.
 \newblock {\url{https://doi.org/10.1007/s11263-024-02053-3}}.
 
@@ -247,73 +257,74 @@ Naeem, M.F.; Xian, Y.; Gool, L.V.; Tombari, F.
   Corrado, and Dean]{Norouzi2014ConSE}
 Norouzi, M.; Mikolov, T.; Bengio, S.; Singer, Y.; Shlens, J.; Frome, A.;
   Corrado, G.S.; Dean, J.
-\newblock {Zero-shot learning by convex combination of semantic embeddings}.
+\newblock Zero-shot learning by convex combination of semantic embeddings.
 \newblock In Proceedings of the 2nd International Conference on Learning
-  Representations. OpenReview.net,  2014.
+  Representations ({ICLR} 2014), Banff, AB, Canada,  2014.
 
 \bibitem[Socher et~al.(2013)Socher, Ganjoo, Manning, and Ng]{Socher2013CMT}
 Socher, R.; Ganjoo, M.; Manning, C.D.; Ng, A.Y.
-\newblock {Zero-shot learning through cross-modal transfer}.
+\newblock Zero-shot learning through cross-modal transfer.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2013, Vol.~26, pp. 935--943.
+  Systems 26; Burges, C.J.C.; Bottou, L.; Welling, M.; Ghahramani, Z.;
+  Weinberger, K.Q., Eds., Red Hook, NY, USA,  2013; Vol.~26, pp. 935--943.
 
 \bibitem[Zhang and Saligrama(2015)]{Zhang2015SSE}
 Zhang, Z.; Saligrama, V.
-\newblock {Zero-shot learning via semantic similarity embedding}.
-\newblock In Proceedings of the 2015 IEEE International Conference on Computer
-  Vision, Santiago, Chile,  2015; pp. 4166--4174.
+\newblock Zero-shot learning via semantic similarity embedding.
+\newblock In Proceedings of the 2015 {IEEE} International Conference on
+  Computer Vision ({ICCV} 2015), Santiago, Chile,  2015; pp. 4166--4174.
 \newblock {\url{https://doi.org/10.1109/ICCV.2015.474}}.
 
 \bibitem[Akata et~al.(2016)Akata, Perronnin, Harchaoui, and
   Schmid]{Akata2016ALE}
 Akata, Z.; Perronnin, F.; Harchaoui, Z.; Schmid, C.
-\newblock {Label-embedding for image classification}.
+\newblock Label-embedding for image classification.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2016}, {\em
   38},~1425--1438.
 \newblock {\url{https://doi.org/10.1109/TPAMI.2015.2487986}}.
 
 \bibitem[Akata et~al.(2015)Akata, Reed, Walter, Lee, and Schiele]{Akata2015SJE}
 Akata, Z.; Reed, S.; Walter, D.; Lee, H.; Schiele, B.
-\newblock {Evaluation of output embeddings for fine-grained image
-  classification}.
-\newblock In Proceedings of the 2015 IEEE Conference on Computer Vision and
-  Pattern Recognition, Boston, Massachusetts, USA,  2015; pp. 2927--2936.
+\newblock Evaluation of output embeddings for fine-grained image
+  classification.
+\newblock In Proceedings of the 2015 {IEEE} Conference on Computer Vision and
+  Pattern Recognition ({CVPR} 2015), Boston, MA, USA,  2015; pp. 2927--2936.
 \newblock {\url{https://doi.org/10.1109/CVPR.2015.7298911}}.
 
 \bibitem[Romera-Paredes and Torr(2015)]{RomeraParedes2015ESZSL}
 Romera-Paredes, B.; Torr, P.H.S.
-\newblock {An embarrassingly simple approach to zero-shot learning}.
+\newblock An embarrassingly simple approach to zero-shot learning.
 \newblock In Proceedings of the 32nd International Conference on Machine
-  Learning, Lille, France,  2015; Vol.~37, {\em Proceedings of Machine Learning
-  Research}, pp. 2152--2161.
+  Learning ({ICML} 2015); Bach, F.; Blei, D., Eds., Lille, France,  2015;
+  Vol.~37, {\em Proceedings of Machine Learning Research}, pp. 2152--2161.
 
 \bibitem[Changpinyo et~al.(2016)Changpinyo, Chao, Gong, and
   Sha]{Changpinyo2016SYNC}
 Changpinyo, S.; Chao, W.L.; Gong, B.; Sha, F.
-\newblock {Synthesized classifiers for zero-shot learning}.
-\newblock In Proceedings of the 2016 IEEE Conference on Computer Vision and
-  Pattern Recognition, Las Vegas, Nevada, USA,  2016; pp. 5327--5336.
+\newblock Synthesized classifiers for zero-shot learning.
+\newblock In Proceedings of the 2016 {IEEE} Conference on Computer Vision and
+  Pattern Recognition ({CVPR} 2016), Las Vegas, NV, USA,  2016; pp. 5327--5336.
 \newblock {\url{https://doi.org/10.1109/CVPR.2016.575}}.
 
 \bibitem[Kodirov et~al.(2017)Kodirov, Xiang, and Gong]{Kodirov2017SAE}
 Kodirov, E.; Xiang, T.; Gong, S.
-\newblock {Semantic autoencoder for zero-shot learning}.
-\newblock In Proceedings of the Proceedings of the IEEE Conference on Computer
-  Vision and Pattern Recognition, Honolulu, Hawaii, USA,  2017; pp. 3174--3183.
+\newblock Semantic autoencoder for zero-shot learning.
+\newblock In Proceedings of the 2017 {IEEE} Conference on Computer Vision and
+  Pattern Recognition ({CVPR} 2017), Honolulu, HI, USA,  2017; pp. 3174--3183.
 \newblock {\url{https://doi.org/10.1109/CVPR.2017.473}}.
 
 \bibitem[Halko et~al.(2011)Halko, Martinsson, and
   Tropp]{Halko2011RandomizedSVD}
 Halko, N.; Martinsson, P.G.; Tropp, J.A.
-\newblock {Finding structure with randomness: Probabilistic algorithms for
-  constructing approximate matrix decompositions}.
+\newblock Finding structure with randomness: Probabilistic algorithms for
+  constructing approximate matrix decompositions.
 \newblock {\em SIAM Rev.} {\bf 2011}, {\em 53},~217--288.
 \newblock {\url{https://doi.org/10.1137/090771806}}.
 
 \bibitem[Patterson et~al.(2014)Patterson, Xu, Su, and Hays]{Patterson2014SUN}
 Patterson, G.; Xu, C.; Su, H.; Hays, J.
-\newblock {The {SUN} attribute database: Beyond categories for deeper scene
-  understanding}.
+\newblock The {SUN} attribute database: Beyond categories for deeper scene
+  understanding.
 \newblock {\em Int. J. Comput. Vis.} {\bf 2014}, {\em 108},~59--81.
 \newblock {\url{https://doi.org/10.1007/s11263-013-0695-z}}.
 
@@ -328,8 +339,8 @@ Patterson, G.; Hays, J.
 \bibitem[Kawahara et~al.(2019{\natexlab{a}})Kawahara, Daneshvar, Argenziano,
   and Hamarneh]{Kawahara2019Derm7pt}
 Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
-\newblock {Seven-point checklist and skin lesion classification using multitask
-  multimodal neural nets}.
+\newblock Seven-point checklist and skin lesion classification using multitask
+  multimodal neural nets.
 \newblock {\em IEEE J. Biomed. Health Inform.} {\bf 2019}, {\em 23},~538--546.
 \newblock {\url{https://doi.org/10.1109/JBHI.2018.2824327}}.
 
@@ -345,8 +356,9 @@ Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
   Mikolov]{Frome2013DeViSE}
 Frome, A.; Corrado, G.S.; Shlens, J.; Bengio, S.; Dean, J.; Ranzato, M.;
   Mikolov, T.
-\newblock {{DeViSE}: A deep visual-semantic embedding model}.
+\newblock {DeViSE}: A deep visual-semantic embedding model.
 \newblock In Proceedings of the Advances in Neural Information Processing
-  Systems. Curran Associates, Inc.,  2013, Vol.~26, pp. 2121--2129.
+  Systems 26; Burges, C.J.C.; Bottou, L.; Welling, M.; Ghahramani, Z.;
+  Weinberger, K.Q., Eds., Red Hook, NY, USA,  2013; Vol.~26, pp. 2121--2129.
 
 \end{thebibliography}

@@ -2,8 +2,8 @@
 
 \bibitem[Xian et~al.(2019)Xian, Lampert, Schiele, and Akata]{Xian2019AwA2}
 Xian, Y.; Lampert, C.H.; Schiele, B.; Akata, Z.
-\newblock {Zero-shot learning: A comprehensive evaluation of the good, the bad
-  and the ugly}.
+\newblock Zero-shot learning: A comprehensive evaluation of the good, the bad
+  and the ugly.
 \newblock {\em IEEE Trans. Pattern Anal. Mach. Intell.} {\bf 2019}, {\em
   41},~2251--2265.
 \newblock {\url{https://doi.org/10.1109/TPAMI.2018.2857768}}.
@@ -17,8 +17,8 @@ Lampert, C.H.; Pucher, D.; Dostal, J.
 
 \bibitem[Patterson et~al.(2014)Patterson, Xu, Su, and Hays]{Patterson2014SUN}
 Patterson, G.; Xu, C.; Su, H.; Hays, J.
-\newblock {The {SUN} attribute database: Beyond categories for deeper scene
-  understanding}.
+\newblock The {SUN} attribute database: Beyond categories for deeper scene
+  understanding.
 \newblock {\em Int. J. Comput. Vis.} {\bf 2014}, {\em 108},~59--81.
 \newblock {\url{https://doi.org/10.1007/s11263-013-0695-z}}.
 
@@ -33,8 +33,8 @@ Patterson, G.; Hays, J.
 \bibitem[Kawahara et~al.(2019{\natexlab{a}})Kawahara, Daneshvar, Argenziano,
   and Hamarneh]{Kawahara2019Derm7pt}
 Kawahara, J.; Daneshvar, S.; Argenziano, G.; Hamarneh, G.
-\newblock {Seven-point checklist and skin lesion classification using multitask
-  multimodal neural nets}.
+\newblock Seven-point checklist and skin lesion classification using multitask
+  multimodal neural nets.
 \newblock {\em IEEE J. Biomed. Health Inform.} {\bf 2019}, {\em 23},~538--546.
 \newblock {\url{https://doi.org/10.1109/JBHI.2018.2824327}}.
 

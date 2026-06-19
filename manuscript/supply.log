@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  18 JUN 2026 20:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.6.17)  19 JUN 2026 22:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1447,30 +1447,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<../figs_main/fig26_a_object_level_audit_outcomes.pdf, id=60, 256.10144pt x 173
-.67245pt>
-File: ../figs_main/fig26_a_object_level_audit_outcomes.pdf Graphic file (type p
-df)
-<use ../figs_main/fig26_a_object_level_audit_outcomes.pdf>
-Package pdftex.def Info: ../figs_main/fig26_a_object_level_audit_outcomes.pdf  
-used on input line 98.
-(pdftex.def)             Requested size: 126.19655pt x 85.5799pt.
-<../figs_main/fig26_b_conflict_abstention_limits.pdf, id=61, 240.63568pt x 171.
-18448pt>
-File: ../figs_main/fig26_b_conflict_abstention_limits.pdf Graphic file (type pd
-f)
-<use ../figs_main/fig26_b_conflict_abstention_limits.pdf>
-Package pdftex.def Info: ../figs_main/fig26_b_conflict_abstention_limits.pdf  u
-sed on input line 100.
-(pdftex.def)             Requested size: 126.19655pt x 89.77393pt.
-<../figs_main/fig26_c_object_level_bootstrap_intervals.pdf, id=62, 336.60637pt 
-x 227.21886pt>
-File: ../figs_main/fig26_c_object_level_bootstrap_intervals.pdf Graphic file (t
-ype pdf)
-<use ../figs_main/fig26_c_object_level_bootstrap_intervals.pdf>
-Package pdftex.def Info: ../figs_main/fig26_c_object_level_bootstrap_intervals.
-pdf  used on input line 102.
-(pdftex.def)             Requested size: 126.19655pt x 85.18605pt.
+<figs_main/fig26_a_object_level_audit_outcomes.pdf, id=60, 338.59941pt x 229.94
+43pt>
+File: figs_main/fig26_a_object_level_audit_outcomes.pdf Graphic file (type pdf)
+
+<use figs_main/fig26_a_object_level_audit_outcomes.pdf>
+Package pdftex.def Info: figs_main/fig26_a_object_level_audit_outcomes.pdf  use
+d on input line 98.
+(pdftex.def)             Requested size: 189.28882pt x 128.54688pt.
+<figs_main/fig26_b_conflict_abstention_limits.pdf, id=61, 309.69142pt x 222.675
+83pt>
+File: figs_main/fig26_b_conflict_abstention_limits.pdf Graphic file (type pdf)
+<use figs_main/fig26_b_conflict_abstention_limits.pdf>
+Package pdftex.def Info: figs_main/fig26_b_conflict_abstention_limits.pdf  used
+ on input line 100.
+(pdftex.def)             Requested size: 189.28882pt x 136.10387pt.
+<figs_main/fig26_c_object_level_bootstrap_intervals.pdf, id=62, 376.03395pt x 2
+66.33597pt>
+File: figs_main/fig26_c_object_level_bootstrap_intervals.pdf Graphic file (type
+ pdf)
+<use figs_main/fig26_c_object_level_bootstrap_intervals.pdf>
+Package pdftex.def Info: figs_main/fig26_c_object_level_bootstrap_intervals.pdf
+  used on input line 102.
+(pdftex.def)             Requested size: 189.28882pt x 134.06578pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1487,14 +1486,13 @@ Underfull \hbox (badness 10000) in alignment at lines 126--126
 [][][][][][] 
  []
 
-<../figs_main/fig32_b_sun_coverage_conflict_map.pdf, id=79, 275.46407pt x 192.2
-4547pt>
-File: ../figs_main/fig32_b_sun_coverage_conflict_map.pdf Graphic file (type pdf
-)
-<use ../figs_main/fig32_b_sun_coverage_conflict_map.pdf>
-Package pdftex.def Info: ../figs_main/fig32_b_sun_coverage_conflict_map.pdf  us
-ed on input line 149.
-(pdftex.def)             Requested size: 276.04744pt x 192.67032pt.
+<figs_main/fig32_b_sun_coverage_conflict_map.pdf, id=78, 294.74797pt x 230.3304
+9pt>
+File: figs_main/fig32_b_sun_coverage_conflict_map.pdf Graphic file (type pdf)
+<use figs_main/fig32_b_sun_coverage_conflict_map.pdf>
+Package pdftex.def Info: figs_main/fig32_b_sun_coverage_conflict_map.pdf  used 
+on input line 149.
+(pdftex.def)             Requested size: 276.04744pt x 215.73749pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1506,89 +1504,139 @@ LaTeX Font Info:    Font shape `U/msa/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 152.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 152.
-[2 <../figs_main/fig26_a_object_level_audit_outcomes.pdf> <../figs_main/fig26_b
-_conflict_abstention_limits.pdf> <../figs_main/fig26_c_object_level_bootstrap_i
-ntervals.pdf>]
-<../figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf, id=123, 313.74089pt x 
-227.21886pt>
-File: ../figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf Graphic file (type
- pdf)
-<use ../figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf>
-Package pdftex.def Info: ../figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf
-  used on input line 198.
-(pdftex.def)             Requested size: 276.04744pt x 199.9324pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[3 <../figs_main/fig32_b_sun_coverage_conflict_map.pdf>]
-<../figs_main/fig27_a_coverage_by_discretizer.pdf, id=143, 284.63443pt x 181.12
-796pt>
-File: ../figs_main/fig27_a_coverage_by_discretizer.pdf Graphic file (type pdf)
-<use ../figs_main/fig27_a_coverage_by_discretizer.pdf>
-Package pdftex.def Info: ../figs_main/fig27_a_coverage_by_discretizer.pdf  used
- on input line 212.
-(pdftex.def)             Requested size: 189.28882pt x 120.45686pt.
-<../figs_main/fig27_b_accuracy_by_discretizer.pdf, id=144, 284.63443pt x 181.12
-796pt>
-File: ../figs_main/fig27_b_accuracy_by_discretizer.pdf Graphic file (type pdf)
-<use ../figs_main/fig27_b_accuracy_by_discretizer.pdf>
-Package pdftex.def Info: ../figs_main/fig27_b_accuracy_by_discretizer.pdf  used
- on input line 214.
-(pdftex.def)             Requested size: 189.28882pt x 120.45686pt.
-<../figs_main/fig27_c_fidelity_by_discretizer.pdf, id=145, 284.63443pt x 181.12
-796pt>
-File: ../figs_main/fig27_c_fidelity_by_discretizer.pdf Graphic file (type pdf)
-<use ../figs_main/fig27_c_fidelity_by_discretizer.pdf>
-Package pdftex.def Info: ../figs_main/fig27_c_fidelity_by_discretizer.pdf  used
- on input line 215.
-(pdftex.def)             Requested size: 189.28882pt x 120.45686pt.
-<../figs_main/fig27_d_conflict_by_discretizer.pdf, id=146, 284.63443pt x 181.12
-796pt>
-File: ../figs_main/fig27_d_conflict_by_discretizer.pdf Graphic file (type pdf)
-<use ../figs_main/fig27_d_conflict_by_discretizer.pdf>
-Package pdftex.def Info: ../figs_main/fig27_d_conflict_by_discretizer.pdf  used
- on input line 217.
-(pdftex.def)             Requested size: 189.28882pt x 120.45686pt.
-<../figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf, id=147, 292.74432pt x 206
-.83871pt>
-File: ../figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf Graphic file (type pd
+[2 <./figs_main/fig26_a_object_level_audit_outcomes.pdf> <./figs_main/fig26_b_c
+onflict_abstention_limits.pdf> <./figs_main/fig26_c_object_level_bootstrap_inte
+rvals.pdf>]
+<figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf, id=121, 364.93214pt x 266
+.33597pt>
+File: figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf Graphic file (type pd
 f)
-<use ../figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf>
-Package pdftex.def Info: ../figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf  u
-sed on input line 218.
-(pdftex.def)             Requested size: 189.28882pt x 133.74606pt.
-<../figs_main/fig28_a_q_sensitivity.pdf, id=151, 246.85088pt x 187.3258pt>
-File: ../figs_main/fig28_a_q_sensitivity.pdf Graphic file (type pdf)
-<use ../figs_main/fig28_a_q_sensitivity.pdf>
-Package pdftex.def Info: ../figs_main/fig28_a_q_sensitivity.pdf  used on input 
-line 249.
-(pdftex.def)             Requested size: 189.28882pt x 143.64677pt.
-<../figs_main/fig28_b_svd_rank_sensitivity.pdf, id=152, 316.52809pt x 192.24017
+<use figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf>
+Package pdftex.def Info: figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf  u
+sed on input line 198.
+(pdftex.def)             Requested size: 276.04744pt x 201.47865pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[3 <./figs_main/fig32_b_sun_coverage_conflict_map.pdf>]
+<figs_main/fig27_a_coverage_by_discretizer.pdf, id=141, 302.3785pt x 229.53453p
+t>
+File: figs_main/fig27_a_coverage_by_discretizer.pdf Graphic file (type pdf)
+<use figs_main/fig27_a_coverage_by_discretizer.pdf>
+Package pdftex.def Info: figs_main/fig27_a_coverage_by_discretizer.pdf  used on
+ input line 212.
+(pdftex.def)             Requested size: 189.28882pt x 143.68637pt.
+<figs_main/fig27_b_accuracy_by_discretizer.pdf, id=142, 302.3785pt x 229.53453p
+t>
+File: figs_main/fig27_b_accuracy_by_discretizer.pdf Graphic file (type pdf)
+<use figs_main/fig27_b_accuracy_by_discretizer.pdf>
+Package pdftex.def Info: figs_main/fig27_b_accuracy_by_discretizer.pdf  used on
+ input line 214.
+(pdftex.def)             Requested size: 189.28882pt x 143.68637pt.
+<figs_main/fig27_c_fidelity_by_discretizer.pdf, id=143, 302.3785pt x 229.53453p
+t>
+File: figs_main/fig27_c_fidelity_by_discretizer.pdf Graphic file (type pdf)
+<use figs_main/fig27_c_fidelity_by_discretizer.pdf>
+Package pdftex.def Info: figs_main/fig27_c_fidelity_by_discretizer.pdf  used on
+ input line 215.
+(pdftex.def)             Requested size: 189.28882pt x 143.68637pt.
+<figs_main/fig27_d_conflict_by_discretizer.pdf, id=144, 302.3785pt x 229.53453p
+t>
+File: figs_main/fig27_d_conflict_by_discretizer.pdf Graphic file (type pdf)
+<use figs_main/fig27_d_conflict_by_discretizer.pdf>
+Package pdftex.def Info: figs_main/fig27_d_conflict_by_discretizer.pdf  used on
+ input line 217.
+(pdftex.def)             Requested size: 189.28882pt x 143.68637pt.
+<figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf, id=145, 350.43985pt x 244.65
+498pt>
+File: figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf Graphic file (type pdf)
+<use figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf>
+Package pdftex.def Info: figs_main/fig27_e_paired_wedd_mdlp_intervals.pdf  used
+ on input line 218.
+(pdftex.def)             Requested size: 189.28882pt x 132.14905pt.
+<figs_main/fig28_a_q_sensitivity.pdf, id=149, 324.14542pt x 223.2186pt>
+File: figs_main/fig28_a_q_sensitivity.pdf Graphic file (type pdf)
+<use figs_main/fig28_a_q_sensitivity.pdf>
+Package pdftex.def Info: figs_main/fig28_a_q_sensitivity.pdf  used on input lin
+e 249.
+(pdftex.def)             Requested size: 189.28882pt x 130.35243pt.
+<figs_main/fig28_b_svd_rank_sensitivity.pdf, id=150, 331.25095pt x 230.3252pt>
+File: figs_main/fig28_b_svd_rank_sensitivity.pdf Graphic file (type pdf)
+<use figs_main/fig28_b_svd_rank_sensitivity.pdf>
+Package pdftex.def Info: figs_main/fig28_b_svd_rank_sensitivity.pdf  used on in
+put line 251.
+(pdftex.def)             Requested size: 189.28882pt x 131.61357pt.
+<figs_main/fig28_c_confidence_threshold_frontier.pdf, id=151, 331.37244pt x 222
+.97398pt>
+File: figs_main/fig28_c_confidence_threshold_frontier.pdf Graphic file (type pd
+f)
+<use figs_main/fig28_c_confidence_threshold_frontier.pdf>
+Package pdftex.def Info: figs_main/fig28_c_confidence_threshold_frontier.pdf  u
+sed on input line 252.
+(pdftex.def)             Requested size: 189.28882pt x 127.37207pt.
+<figs_main/fig28_d_runtime_summary.pdf, id=152, 335.7299pt x 251.88197pt>
+File: figs_main/fig28_d_runtime_summary.pdf Graphic file (type pdf)
+<use figs_main/fig28_d_runtime_summary.pdf>
+Package pdftex.def Info: figs_main/fig28_d_runtime_summary.pdf  used on input l
+ine 254.
+(pdftex.def)             Requested size: 189.28882pt x 142.01762pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[4 <./figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[5 <./figs_main/fig27_a_coverage_by_discretizer.pdf> <./figs_main/fig27_b_accur
+acy_by_discretizer.pdf> <./figs_main/fig27_c_fidelity_by_discretizer.pdf> <./fi
+gs_main/fig27_d_conflict_by_discretizer.pdf> <./figs_main/fig27_e_paired_wedd_m
+dlp_intervals.pdf>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 18.18796pt, for example:
+(fancyhdr)                \setlength{\headheight}{18.18796pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
+
+[6 <./figs_main/fig28_a_q_sensitivity.pdf> <./figs_main/fig28_b_svd_rank_sensit
+ivity.pdf> <./figs_main/fig28_c_confidence_threshold_frontier.pdf> <./figs_main
+/fig28_d_runtime_summary.pdf>]
+<figs_main/fig29_a_protocol_b_seed_metrics.pdf, id=279, 309.81564pt x 229.42073
 pt>
-File: ../figs_main/fig28_b_svd_rank_sensitivity.pdf Graphic file (type pdf)
-<use ../figs_main/fig28_b_svd_rank_sensitivity.pdf>
-Package pdftex.def Info: ../figs_main/fig28_b_svd_rank_sensitivity.pdf  used on
- input line 251.
-(pdftex.def)             Requested size: 189.28882pt x 114.96658pt.
-<../figs_main/fig28_c_confidence_threshold_frontier.pdf, id=153, 251.47617pt x 
-187.3258pt>
-File: ../figs_main/fig28_c_confidence_threshold_frontier.pdf Graphic file (type
- pdf)
-<use ../figs_main/fig28_c_confidence_threshold_frontier.pdf>
-Package pdftex.def Info: ../figs_main/fig28_c_confidence_threshold_frontier.pdf
-  used on input line 252.
-(pdftex.def)             Requested size: 189.28882pt x 141.00565pt.
-<../figs_main/fig28_d_runtime_summary.pdf, id=154, 311.86575pt x 214.3548pt>
-File: ../figs_main/fig28_d_runtime_summary.pdf Graphic file (type pdf)
-<use ../figs_main/fig28_d_runtime_summary.pdf>
-Package pdftex.def Info: ../figs_main/fig28_d_runtime_summary.pdf  used on inpu
-t line 254.
-(pdftex.def)             Requested size: 189.28882pt x 130.10533pt.
+File: figs_main/fig29_a_protocol_b_seed_metrics.pdf Graphic file (type pdf)
+<use figs_main/fig29_a_protocol_b_seed_metrics.pdf>
+Package pdftex.def Info: figs_main/fig29_a_protocol_b_seed_metrics.pdf  used on
+ input line 332.
+(pdftex.def)             Requested size: 189.28882pt x 140.17047pt.
+<figs_main/fig29_b_transfer_accuracy_vs_mae.pdf, id=280, 295.28099pt x 223.0982
+pt>
+File: figs_main/fig29_b_transfer_accuracy_vs_mae.pdf Graphic file (type pdf)
+<use figs_main/fig29_b_transfer_accuracy_vs_mae.pdf>
+Package pdftex.def Info: figs_main/fig29_b_transfer_accuracy_vs_mae.pdf  used o
+n input line 334.
+(pdftex.def)             Requested size: 189.28882pt x 143.02065pt.
+<figs_main/fig29_c_per_class_protocol_b_failures.pdf, id=281, 367.64415pt x 273
+.69249pt>
+File: figs_main/fig29_c_per_class_protocol_b_failures.pdf Graphic file (type pd
+f)
+<use figs_main/fig29_c_per_class_protocol_b_failures.pdf>
+Package pdftex.def Info: figs_main/fig29_c_per_class_protocol_b_failures.pdf  u
+sed on input line 336.
+(pdftex.def)             Requested size: 189.28882pt x 140.91353pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1597,51 +1645,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[4 <../figs_main/fig33_a_derm7pt_diagnosis_diagnostics.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[5 <../figs_main/fig27_a_coverage_by_discretizer.pdf> <../figs_main/fig27_b_acc
-uracy_by_discretizer.pdf> <../figs_main/fig27_c_fidelity_by_discretizer.pdf> <.
-./figs_main/fig27_d_conflict_by_discretizer.pdf> <../figs_main/fig27_e_paired_w
-edd_mdlp_intervals.pdf>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[6 <../figs_main/fig28_a_q_sensitivity.pdf> <../figs_main/fig28_b_svd_rank_sens
-itivity.pdf> <../figs_main/fig28_c_confidence_threshold_frontier.pdf> <../figs_
-main/fig28_d_runtime_summary.pdf>]
-<../figs_main/fig29_a_protocol_b_seed_metrics.pdf, id=281, 289.20113pt x 179.80
-054pt>
-File: ../figs_main/fig29_a_protocol_b_seed_metrics.pdf Graphic file (type pdf)
-<use ../figs_main/fig29_a_protocol_b_seed_metrics.pdf>
-Package pdftex.def Info: ../figs_main/fig29_a_protocol_b_seed_metrics.pdf  used
- on input line 332.
-(pdftex.def)             Requested size: 126.19655pt x 78.4595pt.
-<../figs_main/fig29_b_transfer_accuracy_vs_mae.pdf, id=282, 278.8581pt x 185.15
-771pt>
-File: ../figs_main/fig29_b_transfer_accuracy_vs_mae.pdf Graphic file (type pdf)
-
-<use ../figs_main/fig29_b_transfer_accuracy_vs_mae.pdf>
-Package pdftex.def Info: ../figs_main/fig29_b_transfer_accuracy_vs_mae.pdf  use
-d on input line 334.
-(pdftex.def)             Requested size: 126.19655pt x 83.792pt.
-<../figs_main/fig29_c_per_class_protocol_b_failures.pdf, id=283, 313.56209pt x 
-229.75359pt>
-File: ../figs_main/fig29_c_per_class_protocol_b_failures.pdf Graphic file (type
- pdf)
-<use ../figs_main/fig29_c_per_class_protocol_b_failures.pdf>
-Package pdftex.def Info: ../figs_main/fig29_c_per_class_protocol_b_failures.pdf
-  used on input line 336.
-(pdftex.def)             Requested size: 126.19655pt x 92.46773pt.
+[7 <./figs_main/fig29_a_protocol_b_seed_metrics.pdf> <./figs_main/fig29_b_trans
+fer_accuracy_vs_mae.pdf> <./figs_main/fig29_c_per_class_protocol_b_failures.pdf
+>]
+<figs_main/fig31_a_portability_coverage_fidelity.pdf, id=340, 292.84486pt x 230
+.33049pt>
+File: figs_main/fig31_a_portability_coverage_fidelity.pdf Graphic file (type pd
+f)
+<use figs_main/fig31_a_portability_coverage_fidelity.pdf>
+Package pdftex.def Info: figs_main/fig31_a_portability_coverage_fidelity.pdf  u
+sed on input line 371.
+(pdftex.def)             Requested size: 276.04744pt x 217.1187pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1650,18 +1664,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[7 <../figs_main/fig29_a_protocol_b_seed_metrics.pdf> <../figs_main/fig29_b_tra
-nsfer_accuracy_vs_mae.pdf> <../figs_main/fig29_c_per_class_protocol_b_failures.
-pdf>]
-<../figs_main/fig31_a_portability_coverage_fidelity.pdf, id=326, 277.74284pt x 
-192.24547pt>
-File: ../figs_main/fig31_a_portability_coverage_fidelity.pdf Graphic file (type
- pdf)
-<use ../figs_main/fig31_a_portability_coverage_fidelity.pdf>
-Package pdftex.def Info: ../figs_main/fig31_a_portability_coverage_fidelity.pdf
-  used on input line 371.
-(pdftex.def)             Requested size: 276.04744pt x 191.08627pt.
-
+[8 <./figs_main/fig31_a_portability_coverage_fidelity.pdf>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1669,15 +1672,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
 
-[8 <../figs_main/fig31_a_portability_coverage_fidelity.pdf>] (supply.bbl
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 18.18796pt, for example:
-(fancyhdr)                \setlength{\headheight}{18.18796pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-6.18796pt}.
-
-[9])
+[9] (supply.bbl)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 18.18796pt, for example:
@@ -1693,25 +1688,25 @@ LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
  ***********
 Package rerunfilecheck Info: File `supply.out' has not changed.
-(rerunfilecheck)             Checksum: F96BA95ACFF14B5BEF56871B23FF4582;2446.
+(rerunfilecheck)             Checksum: B86366FC5B1C82AE85679EBAC937CBAD;2279.
  ) 
 Here is how much of TeX's memory you used:
- 37484 strings out of 467509
- 750430 string characters out of 5408780
- 1210194 words of memory out of 5000000
- 65794 multiletter control sequences out of 15000+600000
+ 37445 strings out of 467509
+ 748062 string characters out of 5408780
+ 1212194 words of memory out of 5000000
+ 65756 multiletter control sequences out of 15000+600000
  679734 words of font info for 291 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 123i,13n,121p,1005b,1362s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 123i,13n,121p,1005b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\radiu\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi375\ecss
 0800.pk><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
 palatino/uplb8a.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type1/u
 rw/palatino/uplr8a.pfb><C:/Users/radiu/AppData/Local/Programs/MiKTeX/fonts/type
 1/urw/palatino/uplri8a.pfb>
-Output written on supply.pdf (10 pages, 621112 bytes).
+Output written on supply.pdf (10 pages, 622314 bytes).
 PDF statistics:
- 409 PDF objects out of 1000 (max. 8388607)
- 62 named destinations out of 1000 (max. 500000)
+ 425 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
  69327 words of extra memory for PDF output out of 74296 (max. 10000000)
 

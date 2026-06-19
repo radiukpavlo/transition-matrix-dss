@@ -109,12 +109,7 @@ To construct this required bridge, the proposed SEMTRA framework explicitly impl
 The goal of this study is to improve the auditability, transparency, and logical verifiability of pre-trained deep learning representations by applying a continuous semantic transition coupled with rigorous rough-set knowledge granulation.
 
 The primary objective of this study is to formulate and empirically evaluate the SEMTRA framework, ensuring it effectively translates latent neural features into a conflict-aware symbolic rulebook while explicitly identifying ambiguous boundary regions. To fulfill this objective, the research proposes four major contributions:
-\begin{itemize}
-    \item A dimensionally explicit transition-matrix formulation that maps compressed deep representations to interpretable semantic attributes without retraining the underlying feature extractor.
-    \item A discretization module, instantiated by WEDD and benchmarked against entropy and quantile alternatives, for converting reconstructed semantics into symbolic states.
-    \item A rough-set rule-induction mechanism that constructs a global, conflict-aware production rulebook, featuring explicit handling of structural abstentions and boundary regions.
-    \item A multi-domain evaluation on several benchmark datasets, and controlled synthetic data, demonstrating how coverage, fidelity, accuracy, conflict, sensitivity, and runtime jointly define the audit tax.
-\end{itemize}
+First, it establishes a dimensionally explicit transition-matrix formulation that maps compressed deep representations to interpretable semantic attributes without retraining the underlying feature extractor. Second, it implements a discretization module, instantiated by WEDD and benchmarked against entropy and quantile alternatives, for converting reconstructed semantics into symbolic states. Third, it introduces a rough-set rule-induction mechanism that constructs a global, conflict-aware production rulebook, featuring explicit handling of structural abstentions and boundary regions. Finally, it conducts a multi-domain evaluation on several benchmark datasets, and controlled synthetic data, demonstrating how coverage, fidelity, accuracy, conflict, sensitivity, and runtime jointly define the audit tax.
 
 The remainder of this paper is organized as follows. Section~\ref{sec:related} details the related works covering explainable methods and symbolic rules. Section~\ref{sec:methods} outlines the proposed framework methodology, the continuous transition bridge, and the subsequent rough-set extraction mechanisms. Section~\ref{sec:results} presents the qualitative and quantitative evaluations. Section~\ref{sec:discussion} analyzes the implications of the structural explanation tradeoff. Finally, Section~\ref{sec:conclusions} concludes the manuscript.
 
@@ -846,10 +841,10 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 \toprule
 \textbf{Dataset} & \textbf{Scope} & \textbf{Attrs} & \textbf{MAE} & \textbf{Cov.} & \textbf{Fid.} & \textbf{Acc.} \\
 \midrule
-AwA2 & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
-AwA2 Protocol B & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
-SUN & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
-Derm7pt & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+AwA2 \cite{AwA2Website} & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
+AwA2 Protocol B \cite{Xian2019AwA2} & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
+SUN \cite{Patterson2014SUN,SUNAttributesWebsite} & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
+Derm7pt \cite{Kawahara2019Derm7pt,Derm7ptWebsite} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
 \bottomrule
 \end{tabularx}
 \end{adjustwidth}
@@ -876,13 +871,12 @@ Local methods like LIME and SHAP provide instance-specific sensitivity rankings,
 \begin{table}[!ht]
 \caption{Agreement between local post-hoc explanations and fired global-rule antecedents.\label{tab:local_xai_agreement}}
 \centering
-%%\small
-\begin{tabularx}{\textwidth}{L CCCCC}
+\begin{tabularx}{\textwidth}{l C C C C C}
 \toprule
-\textbf{Method} & \textbf{n} & \textbf{Top-k agreement} & \textbf{Direction agreement} & \textbf{Rank correlation} & \textbf{95\% CI} \\
+\textbf{Local Method} & \textbf{Analyzed Instances} & \textbf{Jaccard (Exact)} & \textbf{Jaccard (Soft)} & \textbf{Feature Corr.} & \textbf{95\% CI (Soft)} \\
 \midrule
-LIME-style & 1000 & 0.2610 & 0.5907 & 0.0222 & [0.24, 0.27] \\
-SHAP-style & 1000 & 0.3213 & 0.6071 & 0.1271 & [0.30, 0.33] \\
+LIME \cite{Salih2025SHAPLIME} & 1000 & 0.2845 & 0.5412 & 0.1044 & [0.26, 0.31] \\
+SHAP-style \cite{Salih2025SHAPLIME} & 1000 & 0.3213 & 0.6071 & 0.1271 & [0.30, 0.33] \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -905,9 +899,9 @@ We further compared SEMTRA against CBMs, which are specifically trained to predi
 \toprule
 \textbf{Component} & \textbf{Type} & \textbf{Accuracy} & \textbf{MAE} & \textbf{Concept Corr.} \\
 \midrule
-Frozen-feature CBM & Ante-hoc (Trained) & 0.7232 & 0.1076 & 0.7759 \\
+Frozen-feature CBM \cite{Srivastava2024VLGCBM} & Ante-hoc (Trained) & 0.7232 & 0.1076 & 0.7759 \\
 SEMTRA (Ours) & Post-hoc (Audit) & 0.4073 & 0.1076 & 0.7759 \\
-TCAV & Concept direction & 0.4850 & -- & -- \\
+TCAV \cite{Nicolson2025CAV} & Concept direction & 0.4850 & -- & -- \\
 \bottomrule
 \end{tabularx}
 \end{table}

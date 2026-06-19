@@ -12,12 +12,16 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import sys
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR.parent / "core") not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR.parent / "core"))
 from figure_style import apply_nature_style, save_nature_figure, style_axis
 
 
@@ -27,7 +31,7 @@ def load_json(path: Path) -> dict:
 
 
 def ensure_dirs(root: Path) -> Tuple[Path, Path, Path]:
-    figs = root / "figs"
+    figs = root / "figs_main"
     tables = root / "tables"
     audit = root / "audit"
     figs.mkdir(exist_ok=True)

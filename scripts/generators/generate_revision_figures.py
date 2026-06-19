@@ -23,7 +23,7 @@ def main():
     ap.add_argument('--seed', type=int, default=42)
     ap.add_argument('--n_components', type=int, default=64)
     args=ap.parse_args()
-    out=Path(args.out).resolve(); art=ensure_dir(out/'artifacts'/'awa2'); figs=ensure_dir(out/'figs')
+    out=Path(args.out).resolve(); art=ensure_dir(out/'artifacts'/'awa2'); figs=ensure_dir(out/'figs_main')
     apply_style()
     # Coverage-abstention-confidence tradeoff. Recompute inference as the rule-confidence cutoff changes.
     cache=load_cache(out,args.awa2_zip,n_components=args.n_components,seed=args.seed)

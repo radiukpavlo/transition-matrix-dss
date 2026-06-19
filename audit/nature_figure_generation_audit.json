@@ -18,8 +18,8 @@
     {
       "figure": "82_fig_1_orig.pdf",
       "exports": [
-        "figs\\82_fig_1_orig.pdf",
-        "figs\\82_fig_1_orig.svg"
+        "figs_main\\82_fig_1_orig.pdf",
+        "figs_main\\82_fig_1_orig.svg"
       ],
       "sources": [],
       "font_profile": {
@@ -42,8 +42,8 @@
     {
       "figure": "fig01_framework_pipeline.pdf",
       "exports": [
-        "figs\\fig01_framework_pipeline.pdf",
-        "figs\\fig01_framework_pipeline.svg"
+        "figs_main\\fig01_framework_pipeline.pdf",
+        "figs_main\\fig01_framework_pipeline.svg"
       ],
       "sources": [],
       "font_profile": {
@@ -66,8 +66,8 @@
     {
       "figure": "fig02_matrix_alignment.pdf",
       "exports": [
-        "figs\\fig02_matrix_alignment.pdf",
-        "figs\\fig02_matrix_alignment.svg"
+        "figs_main\\fig02_matrix_alignment.pdf",
+        "figs_main\\fig02_matrix_alignment.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_summary.json"
@@ -92,8 +92,8 @@
     {
       "figure": "fig03_awa2_class_distribution.pdf",
       "exports": [
-        "figs\\fig03_awa2_class_distribution.pdf",
-        "figs\\fig03_awa2_class_distribution.svg"
+        "figs_main\\fig03_awa2_class_distribution.pdf",
+        "figs_main\\fig03_awa2_class_distribution.svg"
       ],
       "sources": [
         "artifacts\\awa2\\awa2_protocol_a_splits.csv"
@@ -118,8 +118,8 @@
     {
       "figure": "fig04_svd_retained_variance.pdf",
       "exports": [
-        "figs\\fig04_svd_retained_variance.pdf",
-        "figs\\fig04_svd_retained_variance.svg"
+        "figs_main\\fig04_svd_retained_variance.pdf",
+        "figs_main\\fig04_svd_retained_variance.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_transition_metrics.json"
@@ -144,8 +144,8 @@
     {
       "figure": "fig05_transition_salience.pdf",
       "exports": [
-        "figs\\fig05_transition_salience.pdf",
-        "figs\\fig05_transition_salience.svg"
+        "figs_main\\fig05_transition_salience.pdf",
+        "figs_main\\fig05_transition_salience.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"
@@ -170,8 +170,8 @@
     {
       "figure": "fig05_use-case.pdf",
       "exports": [
-        "figs\\fig05_use-case.pdf",
-        "figs\\fig05_use-case.svg"
+        "figs_main\\fig05_use-case.pdf",
+        "figs_main\\fig05_use-case.svg"
       ],
       "sources": [],
       "font_profile": {
@@ -194,8 +194,8 @@
     {
       "figure": "fig06_attribute_error.pdf",
       "exports": [
-        "figs\\fig06_attribute_error.pdf",
-        "figs\\fig06_attribute_error.svg"
+        "figs_main\\fig06_attribute_error.pdf",
+        "figs_main\\fig06_attribute_error.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"
@@ -220,8 +220,8 @@
     {
       "figure": "fig07_wedd_threshold_example.pdf",
       "exports": [
-        "figs\\fig07_wedd_threshold_example.pdf",
-        "figs\\fig07_wedd_threshold_example.svg"
+        "figs_main\\fig07_wedd_threshold_example.pdf",
+        "figs_main\\fig07_wedd_threshold_example.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_wedd_thresholds.csv"
@@ -246,8 +246,8 @@
     {
       "figure": "fig08_granules_summary.pdf",
       "exports": [
-        "figs\\fig08_granules_summary.pdf",
-        "figs\\fig08_granules_summary.svg"
+        "figs_main\\fig08_granules_summary.pdf",
+        "figs_main\\fig08_granules_summary.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_summary.json"
@@ -272,8 +272,8 @@
     {
       "figure": "fig09_rule_support_confidence.pdf",
       "exports": [
-        "figs\\fig09_rule_support_confidence.pdf",
-        "figs\\fig09_rule_support_confidence.svg"
+        "figs_main\\fig09_rule_support_confidence.pdf",
+        "figs_main\\fig09_rule_support_confidence.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_rulebook.csv"
@@ -298,8 +298,8 @@
     {
       "figure": "fig10_awa2_ablation_accuracy.pdf",
       "exports": [
-        "figs\\fig10_awa2_ablation_accuracy.pdf",
-        "figs\\fig10_awa2_ablation_accuracy.svg"
+        "figs_main\\fig10_awa2_ablation_accuracy.pdf",
+        "figs_main\\fig10_awa2_ablation_accuracy.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_wedd_rule_ablation.csv"
@@ -324,8 +324,8 @@
     {
       "figure": "fig11_protocol_b_unseen_accuracy.pdf",
       "exports": [
-        "figs\\fig11_protocol_b_unseen_accuracy.pdf",
-        "figs\\fig11_protocol_b_unseen_accuracy.svg"
+        "figs_main\\fig11_protocol_b_unseen_accuracy.pdf",
+        "figs_main\\fig11_protocol_b_unseen_accuracy.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_b_unseen_per_class.csv"
@@ -350,8 +350,8 @@
     {
       "figure": "fig12_synthetic_degradation.pdf",
       "exports": [
-        "figs\\fig12_synthetic_degradation.pdf",
-        "figs\\fig12_synthetic_degradation.svg"
+        "figs_main\\fig12_synthetic_degradation.pdf",
+        "figs_main\\fig12_synthetic_degradation.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
@@ -376,8 +376,8 @@
     {
       "figure": "fig13_synthetic_threshold_recovery.pdf",
       "exports": [
-        "figs\\fig13_synthetic_threshold_recovery.pdf",
-        "figs\\fig13_synthetic_threshold_recovery.svg"
+        "figs_main\\fig13_synthetic_threshold_recovery.pdf",
+        "figs_main\\fig13_synthetic_threshold_recovery.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
@@ -402,8 +402,8 @@
     {
       "figure": "fig14_representative_rule_traces.pdf",
       "exports": [
-        "figs\\fig14_representative_rule_traces.pdf",
-        "figs\\fig14_representative_rule_traces.svg"
+        "figs_main\\fig14_representative_rule_traces.pdf",
+        "figs_main\\fig14_representative_rule_traces.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_representative_traces.csv"
@@ -428,8 +428,8 @@
     {
       "figure": "fig15_coverage_abstention_tradeoff.pdf",
       "exports": [
-        "figs\\fig15_coverage_abstention_tradeoff.pdf",
-        "figs\\fig15_coverage_abstention_tradeoff.svg"
+        "figs_main\\fig15_coverage_abstention_tradeoff.pdf",
+        "figs_main\\fig15_coverage_abstention_tradeoff.svg"
       ],
       "sources": [
         "artifacts\\awa2\\coverage_abstention_tradeoff.csv"
@@ -454,8 +454,8 @@
     {
       "figure": "fig16_rule_stability_noise.pdf",
       "exports": [
-        "figs\\fig16_rule_stability_noise.pdf",
-        "figs\\fig16_rule_stability_noise.svg"
+        "figs_main\\fig16_rule_stability_noise.pdf",
+        "figs_main\\fig16_rule_stability_noise.svg"
       ],
       "sources": [
         "artifacts\\awa2\\rule_stability_noise.csv"
@@ -480,8 +480,8 @@
     {
       "figure": "fig17_results_dashboard.pdf",
       "exports": [
-        "figs\\fig17_results_dashboard.pdf",
-        "figs\\fig17_results_dashboard.svg"
+        "figs_main\\fig17_results_dashboard.pdf",
+        "figs_main\\fig17_results_dashboard.svg"
       ],
       "sources": [
         "artifacts\\awa2\\base_predictor_metrics.json",
@@ -510,8 +510,8 @@
     {
       "figure": "fig18_sota_awA2_context.pdf",
       "exports": [
-        "figs\\fig18_sota_awA2_context.pdf",
-        "figs\\fig18_sota_awA2_context.svg"
+        "figs_main\\fig18_sota_awA2_context.pdf",
+        "figs_main\\fig18_sota_awA2_context.svg"
       ],
       "sources": [
         "tables\\sota_quantitative_comparison.csv"
@@ -536,8 +536,8 @@
     {
       "figure": "fig19_baseline_tradeoff_scatter.pdf",
       "exports": [
-        "figs\\fig19_baseline_tradeoff_scatter.pdf",
-        "figs\\fig19_baseline_tradeoff_scatter.svg"
+        "figs_main\\fig19_baseline_tradeoff_scatter.pdf",
+        "figs_main\\fig19_baseline_tradeoff_scatter.svg"
       ],
       "sources": [
         "artifacts\\awa2\\symbolic_baselines_metrics.csv"
@@ -562,8 +562,8 @@
     {
       "figure": "fig20_explainability_quality_matrix.pdf",
       "exports": [
-        "figs\\fig20_explainability_quality_matrix.pdf",
-        "figs\\fig20_explainability_quality_matrix.svg"
+        "figs_main\\fig20_explainability_quality_matrix.pdf",
+        "figs_main\\fig20_explainability_quality_matrix.svg"
       ],
       "sources": [
         "artifacts\\awa2\\symbolic_baselines_metrics.csv"
@@ -588,8 +588,8 @@
     {
       "figure": "fig21_rule_inference_flow_funnel.pdf",
       "exports": [
-        "figs\\fig21_rule_inference_flow_funnel.pdf",
-        "figs\\fig21_rule_inference_flow_funnel.svg"
+        "figs_main\\fig21_rule_inference_flow_funnel.pdf",
+        "figs_main\\fig21_rule_inference_flow_funnel.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_rule_metrics.json",
@@ -615,8 +615,8 @@
     {
       "figure": "fig22_synthetic_uncertainty_bands.pdf",
       "exports": [
-        "figs\\fig22_synthetic_uncertainty_bands.pdf",
-        "figs\\fig22_synthetic_uncertainty_bands.svg"
+        "figs_main\\fig22_synthetic_uncertainty_bands.pdf",
+        "figs_main\\fig22_synthetic_uncertainty_bands.svg"
       ],
       "sources": [
         "artifacts\\synthetic\\synthetic_summary_by_noise.csv"
@@ -641,8 +641,8 @@
     {
       "figure": "fig23_protocol_b_perclass_errors.pdf",
       "exports": [
-        "figs\\fig23_protocol_b_perclass_errors.pdf",
-        "figs\\fig23_protocol_b_perclass_errors.svg"
+        "figs_main\\fig23_protocol_b_perclass_errors.pdf",
+        "figs_main\\fig23_protocol_b_perclass_errors.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_b_unseen_per_class.csv"
@@ -667,8 +667,8 @@
     {
       "figure": "fig24_attribute_salience_error_scatter.pdf",
       "exports": [
-        "figs\\fig24_attribute_salience_error_scatter.pdf",
-        "figs\\fig24_attribute_salience_error_scatter.svg"
+        "figs_main\\fig24_attribute_salience_error_scatter.pdf",
+        "figs_main\\fig24_attribute_salience_error_scatter.svg"
       ],
       "sources": [
         "artifacts\\awa2\\protocol_a_attribute_errors_and_salience.csv"

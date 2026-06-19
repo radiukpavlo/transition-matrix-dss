@@ -155,6 +155,7 @@ def polish_figure(fig) -> None:
         legend = ax.get_legend()
         if legend is not None:
             legend.set_frame_on(False)
+    fig.tight_layout(pad=0.5)
 
 
 def save(fig, stem: str, conclusion: str, source_data: str, archetype: str) -> None:

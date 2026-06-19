@@ -117,7 +117,7 @@ class NatureFigureGenerator:
         self.root = root
         self.formats = formats
         self.dpi = dpi
-        self.figs = root / "figs"
+        self.figs = root / "figs_main"
         self.audit: list[dict[str, Any]] = []
         self.sources: dict[str, list[str]] = {}
         self.current_profile: FigureFontProfile | None = None

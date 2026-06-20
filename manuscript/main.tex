@@ -736,7 +736,7 @@ To test whether the transition matrix $\matT$ transfers semantic structure beyon
 \subsubsection{Contextual Performance and Semantic Integrity}
 \label{subsubsec:semantic_integrity}
 
-\revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{The semantic-transfer result is contextualized against established and more recent ZSL baselines in Table~\ref{tab:sota_quantitative_comparison}. The SEMTRA continuous prototype variant achieved $44.02\% \pm 1.22\%$ unseen-object accuracy across five seeds under the object-level xlsa17 split, and the class-averaged contextual table reports $48.43\%$ for the transition prototype. Because SEMTRA is optimized for auditability and not for predictive ZSL optimization, the baseline values are included only to orient the difficulty of the split.}}
+\revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{The semantic-transfer result is contextualized against established and more recent ZSL baselines in Table~\ref{tab:sota_quantitative_comparison}. To ensure the benchmark context remains current, we incorporate modern architectures (e.g., TransZero and I2DFormer+) from the 2019--2024 literature directly into the quantitative comparisons. The SEMTRA continuous prototype variant achieved $44.02\% \pm 1.22\%$ unseen-object accuracy across five seeds under the object-level xlsa17 split, and the class-averaged contextual table reports $48.43\%$ for the transition prototype. Because SEMTRA is optimized for auditability and not for predictive ZSL optimization, the baseline values are included only to orient the difficulty of the split.}}
 
 \begin{table}[!ht]
 \caption{Contextual quantitative comparison with published AwA2 zero-shot baselines. Source and scope: published ZSL for baselines and object accuracy across five seeds for our approach. SEMTRA values are semantic-transfer validation outputs, not leaderboard claims. \label{tab:sota_quantitative_comparison}}
@@ -759,6 +759,8 @@ ESZSL~\cite{RomeraParedes2015ESZSL} & Linear semantic embedding & 58.60 \\
 SYNC~\cite{Changpinyo2016SYNC} & Synthesized classifiers & 46.60 \\
 SAE~\cite{Kodirov2017SAE} & Semantic autoencoder & 54.10 \\
 GFZSL~\cite{Verma2017GFZSL} & Generative & 63.80 \\
+TransZero~\cite{Chen2022TransZero} & Attribute-guided transformer & 70.10 \\
+I2DFormer+~\cite{Naeem2024I2DFormer} & Image-to-document attention & 76.50 \\
 Ours: semantic transition & Post-hoc bridge & $44.02 \pm 1.22$ \\
 Ours: symbolic template & Post-hoc rule & $23.48 \pm 1.70$ \\
 \bottomrule

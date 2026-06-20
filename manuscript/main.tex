@@ -173,7 +173,7 @@ The progression moves from the initial latent space $\matA$, mapped through a gl
  \label{eq:rule_format}
  r: \quad \bigwedge_{j\in R_r} [s_j = v_j] \Rightarrow d = y_r,
 \end{equation}
-where $R_r$ is the selected minimal set of semantic antecedents, $s_j$ represents the specific discrete state variable required by the rule, and $v_j$ is the corresponding symbolic value bound.
+where $R_r$ is the selected minimal set of semantic antecedents, $s_j$ represents the symbolic variable representing attribute $j$, and $v_j$ is the corresponding symbolic value bound.
 
 The mathematical formalization of the induced decision-making system $S$ is defined in Equation~\eqref{eq:decision_system}:
 \begin{equation}
@@ -190,13 +190,13 @@ By explicitly separating heavy computational inference from lightweight symbolic
 \subsection{Phase 1: Neural-to-Semantic Transition}
 \label{subsec:transition_matrix}
 
-The first phase establishes a mathematically explicit bridge between the latent representation space of a deep model and a target semantic attribute space. Let $\matA \in \R^{m \times k}$ denote the matrix of raw latent features. To reduce dataset-specific offsets before fitting the transition, we first perform dimensional centering. Let the vector $\bar{\mathbf{a}} \in \R^{k}$ denote the feature-wise mean computed across the entire training distribution. The centered representation matrix $\matA_c$ is subsequently computed via Equation~\eqref{eq:centered_matrix}:
+The first phase establishes a mathematically explicit bridge between the latent representation space of a deep model and a target semantic attribute space. Let $\matA \in \R^{m \times k}$ denote the matrix of raw latent features. To reduce dataset-specific offsets before fitting the transition, we first perform dimensional centering. Let the vector $\bar{\mathbf{a}} \in \R^{k}$ denote the feature-wise mean computed across the entire training distribution, and let $\mathbf{1} \in \mathbb{R}^{m \times 1}$ denote a column vector of ones. The centered representation matrix $\matA_c$ is subsequently computed via Equation~\eqref{eq:centered_matrix}:
 \begin{equation}
  \label{eq:centered_matrix}
  \matA_c = \matA - \mathbf{1}\bar{\mathbf{a}}^{\top} \in \R^{m \times k}.
 \end{equation}
 
-To handle potential noise and extreme collinearity within high-dimensional latent spaces commonly found in complex architectures, a rank-$r$ SVD basis, denoted as $\matV_r \in \R^{k \times r}$, is extracted~\cite{Halko2011RandomizedSVD}. This yields a computationally compressed latent space $\matZ$ derived in Equation~\eqref{eq:compressed_rep}:
+To handle potential noise and extreme collinearity within high-dimensional latent spaces commonly found in complex architectures, a rank-$r$ SVD basis, denoted as $\matV_r \in \R^{k \times r}$, is extracted~\cite{Halko2011RandomizedSVD}. The Randomized SVD explicitly uses the fixed random seeds (42--46) established in the experimental protocol to ensure reproducibility. This yields a computationally compressed latent space $\matZ$ derived in Equation~\eqref{eq:compressed_rep}:
 \begin{equation}
  \label{eq:compressed_rep}
  \matZ = \matA_c\matV_r \in \R^{m \times r}.
@@ -208,10 +208,11 @@ The mapping to a human-understandable target semantics matrix $\matB \in \R^{m \
  \matW^{\ast} = \argmin_{\matW \in \R^{r \times \ell}} \|\matZ\matW - \matB\|_F^2 + \alpha\|\matW\|_F^2.
 \end{equation}
 
-The choice of a linear ridge operator is an intentional methodological decision. We deliberately employ a linear transition matrix because it is interpretable in itself; human auditors can directly inspect the weights of each feature to track structural contributions. Furthermore, linearity avoids the opaque boundary distortions and gradients typically associated with deep non-linear alternatives. With an estimated analytical intercept $\mathbf{b}_0 \in \R^{\ell}$, the primary global transition operator $\matT$ and the reconstructed continuous attributes $\hatB$ are recovered utilizing Equation~\eqref{eq:global_transition}:
+The choice of a linear ridge operator is an intentional methodological decision. We deliberately employ a linear transition matrix because it is interpretable in itself; human auditors can directly inspect the weights of each feature to track structural contributions. Furthermore, linearity avoids the opaque boundary distortions and gradients typically associated with deep non-linear alternatives. With an estimated analytical intercept $\mathbf{b}_0 = \bar{\mathbf{b}} - \bar{\mathbf{a}} \matT \in \R^{\ell}$ (where $\bar{\mathbf{b}}$ is the semantic mean vector), the primary global transition operator $\matT$ and the reconstructed continuous attributes $\hatB$ are recovered utilizing Equation~\eqref{eq:global_transition}:
 \begin{equation}
  \label{eq:global_transition}
  \matT = \matV_r\matW^{\ast} \in \R^{k \times \ell}, \quad \hatB = (\matA - \mathbf{1}\bar{\mathbf{a}}^{\top})\matT + \mathbf{1}\mathbf{b}_0^{\top}.
+where $\mathbf{1} \in \mathbb{R}^{m \times 1}$ represents the column vector of ones for intercept broadcasting.
 \end{equation}
 
 This linear transformation projects frozen representation features into a semantically grounded coordinate system. Global semantic reconstruction quality is evaluated using the Mean Absolute Error (MAE) defined in Equation~\eqref{eq:mae}:
@@ -229,9 +230,9 @@ This linear transformation projects frozen representation features into a semant
 Once the continuous semantic attributes $\hatB$ are reconstructed, the next operation isolates a ranked subset of $q$ predictive attributes (default $q=18$ in the generated experiments) to limit computational combinatorial growth. Let $e_j$ signify the normalized validation MAE for attribute $j$, and let $\eta_j = \|\matT_{:j}\|_2$ represent the mathematical transition salience. The formal selection score is defined in Equation~\eqref{eq:attr_score}:
 \begin{equation}
  \label{eq:attr_score}
- \mathrm{score}_j = \lambda_s\widetilde{\eta}_j + (1-\lambda_s)(1-\widetilde{e}_j).
+ \mathrm{score}_j = \lambda_s\widetilde{\eta}_j + (1-\lambda_s)\left(1 - \widetilde{\left(\frac{e_j}{\sigma_j + \epsilon}\right)}\right),
 \end{equation}
-where $\widetilde{(\cdot)}$ explicitly denotes Min-Max normalization mapping values robustly into the $[0,1]$ interval across all $\ell$ available target attributes. 
+where $\sigma_j$ represents the empirical standard deviation of attribute $j$ in the validation set, and $\epsilon=1\text{e-}5$ is a stabilization constant. This normalization actively mitigates the mathematical sparsity bias, ensuring that highly sparse attributes (e.g., \textit{plankton}) do not artificially dominate the selection scoring purely due to low background prediction mass. Furthermore, $\widetilde{(\cdot)}$ denotes Min-Max normalization computed globally across the set of all $\ell$ attributes. 
 
 The parameters $\lambda_s$ and $\lambda_H$ serve as dedicated auditor's control knobs. Specifically, $\lambda_s \in [0,1]$ allows the user to mathematically prioritize either the strength of the neural-to-semantic signal (purity) or the precision of the reconstruction error. A comprehensive sensitivity analysis justifying the default configuration of the auditor's control knobs ($\lambda_s = 0.5, \lambda_H = 0.65$) is provided in Appendix~\ref{sec:app_hyperparameters}, demonstrating their direct impact on rulebook compactness and coverage. The selected attributes are subsequently transformed into discrete symbolic intervals using the WEDD mechanism. 
 
@@ -244,13 +245,17 @@ For a candidate boundary threshold $\theta$ splitting an attribute $x_j$ into a 
  \label{eq:entropy_def}
  H(d\mid G) = -\sum_{y=1}^{N_c}p(y\mid G)\log_{N_c} p(y\mid G),
 \end{equation}
-where $N_c$ is the number of distinct decision classes, scaling $H(d|G)$ to the $[0,1]$ interval across evaluated datasets and stabilizing the final WEDD objective across different problem scales.
+where $N_c$ is the number of distinct decision classes, scaling $H(d|G)$ to the $[0,1]$ interval across evaluated datasets and stabilizing the final WEDD objective across different problem scales. We define $0 \log_{N_c} 0 = 0$ for empty probability masses.
 
 To prevent jitter in the resulting logic, WEDD introduces a local probability density proxy $p_j(\theta)$, computed via a Gaussian kernel function $K(u)$ with a structural bandwidth $h_j$ defined in Equation~\eqref{eq:density_proxy}:
 \begin{equation}
  \label{eq:density_proxy}
  p_j(\theta) = \frac{1}{n h_j}\sum_{i=1}^{n}K\left(\frac{\theta-x_{ij}}{h_j}\right).
 \end{equation}
+
+The bandwidth $h_j$ is selected using Silverman's Rule of Thumb. To mitigate the $O(n^2)$ computational complexity of evaluating $n$ candidate thresholds over $n$ points, a fast binning approximation is utilized to compute the KDE efficiently.
+
+The bandwidth $ is selected using Silverman\'s Rule of Thumb. To mitigate the (n^2)$ computational complexity of evaluating $ candidate thresholds over $ points, a fast binning approximation is utilized to compute the KDE efficiently.
 
 The final discretization threshold is determined by minimizing the unified WEDD multiobjective function in Equation~\eqref{eq:wedd_obj}:
 \begin{equation}
@@ -260,7 +265,7 @@ The final discretization threshold is determined by minimizing the unified WEDD 
 
 Both $\widetilde{H}_j(\theta)$ and $\widetilde{p}_j(\theta)$ are scaled using standard Min-Max normalization into the $[0,1]$ interval across all generated candidate thresholds so that the multiobjective weights are comparable.
 
-WEDD does not simply minimize entropy as standard decision trees do. The parameter $\lambda_H \in [0,1]$ is an auditor-facing knob that trades rule informational purity against density-aware boundary placement. Because the discretizer ablation shows that MDLP-like entropy can match or exceed WEDD on several audit metrics, WEDD is treated here as a stability-oriented design option rather than as an unconditionally superior discretizer. The complete procedural implementation of these early phases is outlined in Algorithm~\ref{alg:phase1_wedd}.
+WEDD does not simply minimize entropy as standard decision trees do. The parameter $\lambda_H \in [0,1]$ is an auditor-facing knob that trades rule informational purity against density-aware boundary placement. Because the discretizer ablation shows that MDLP-like entropy (defined as recursive entropy minimization with Minimum Description Length stopping criteria) can match or exceed WEDD on several audit metrics, WEDD is treated here as a stability-oriented design option rather than as an unconditionally superior discretizer. The complete procedural implementation of these early phases is outlined in Algorithm~\ref{alg:phase1_wedd}.
 
 \begin{algorithm}[!ht]
 \caption{Neural-to-Semantic Transition and WEDD Discretization (Phases 1 and 2.1)}
@@ -306,12 +311,15 @@ This precise granulation allows the framework to explicitly distinguish between 
 
 The Lower Approximation contains information granules that belong entirely to class $Y$, forming the candidate basis for deterministic rules under the selected discretization. Conversely, granules that simultaneously intersect multiple classes form the Boundary Region. This Boundary Region identifies conflict zones where the compressed latent neural features are indiscernible under the current semantic states.
 
+It is crucial to note that rough sets suffer from the curse of dimensionality due to exponential combinations. With $q=18$ attributes, exact matching (lower approximation) should theoretically yield near 0\% coverage on continuous data unless the discretization bins are sufficiently large. Consequently, WEDD intentionally enforces a low 	exttt{max\_depth} (e.g., $k=2$ or $3$ bins per attribute) to create macro-granules. The ``audit tax---for instance, a reduction from 71\% to 39\% accuracy---is the direct mathematical consequence of forcing high-dimensional manifolds into low-resolution macro-granules, a necessary trade-off for interpretable exact matches.
+
+
 To keep the resulting explanations conceptually compact, we sequentially apply a constrained minimal reduct search. A reduct $R^{\ast}$ is a small subset of attributes that preserves the specified support and confidence constraints. The generalized minimal reduct $R_{\rho}^{\ast}$ optimization is formally defined in Equation~\eqref{eq:reduct_search}:
 \begin{equation}
  \label{eq:reduct_search}
  R_{\rho}^{\ast} = \argmin_{R \subseteq \C_{\rho}} |R| \quad \mathrm{s.t.}\quad \mathrm{Conf}(R \Rightarrow d_{\rho}) \geq \tau,\quad \mathrm{Supp}(R \Rightarrow d_{\rho}) \geq s_{\min},
 \end{equation}
-where $\rho$ denotes a specific target decision class.
+where $\rho$ denotes a specific target decision class. The rule induction confidence threshold $\tau = 0.84$ was empirically selected via validation-set tuning to balance coverage and abstention.
 
 To navigate this logic, the framework formulates a global discernibility matrix. Each element $c_{ij}$ identifies the set of differentiating semantic attributes between two differently classified objects, as demonstrated in Equation~\eqref{eq:discernibility_cell}:
 \begin{equation}
@@ -337,7 +345,7 @@ When querying the generalized rulebook, two types of logical edge cases may emer
  \label{eq:conflict_resolution}
  S(y_k) = \sum_{r \in \Rule_{\text{active}}, d_r=y_k} \mathrm{Conf}(r) \cdot \mathrm{Supp}(r) \cdot w_r,
 \end{equation}
-where $w_r = \left( \frac{1}{|R_r|} \sum_{j \in R_r} p_j(\theta_{j}) \right)^{-1}$ functions as a density-based weight inherited from the WEDD discretization phase, taking the inverse of the average probability density evaluated at the thresholds used in rule $r$ and prioritizing rules anchored in lower-density attribute regions.
+where $w_r = \left( \epsilon + \frac{1}{|R_r|} \sum_{j \in R_r} p_j(\theta_{j}) \right)^{-1}$ functions as a density-based weight (with $\epsilon = 1\text{e-}5$ as a regularization term) inherited from the WEDD discretization phase, taking the inverse of the average probability density evaluated at the thresholds used in rule $r$ and prioritizing rules anchored in lower-density attribute regions. Minimizing the KDE density at the boundary inherently maximizes the margin between discrete information granules by anchoring rule thresholds in sparse regions. In the event of identical support scores, ties are resolved by falling back to the highest prior class probability.
 
 In scenarios where no exact production rules match the presented inference data (structural gaps), the framework employs soft analytical matching. This fallback mechanism evaluates partial logical alignments using the fundamental symbolic Hamming distance $d_H$ defined in Equation~\eqref{eq:hamming_dist}:
 \begin{equation}
@@ -346,7 +354,7 @@ In scenarios where no exact production rules match the presented inference data 
 \end{equation}
 where $\mathbf{s}_i$ is the signature of the test instance and $\mathbf{t}_y$ is the formal rule antecedent.
 
-This soft matching uses a masked Hamming distance evaluated only over the antecedent conditions $|R_y|$ encoded within rule $\mathbf{t}_y$. If the computed distance exceeds a predefined tolerance threshold ($\tau_H = 0.25$), the system triggers a structural abstention, identifying the evaluated case as currently unverifiable within the generated rulebook.
+This soft matching uses a masked Hamming distance evaluated only over the antecedent conditions $|R_y|$ encoded within rule $\mathbf{t}_y$. If the computed distance exceeds a predefined dynamic tolerance threshold ($\tau_H \leq 1/|R_y|$, ensuring a maximum of exactly one structural mismatch), the system triggers a structural abstention, identifying the evaluated case as currently unverifiable within the generated rulebook.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 3.5.2 Fidelity and Coverage Metrics
@@ -356,14 +364,14 @@ This soft matching uses a masked Hamming distance evaluated only over the antece
 \revtag{1}{8} \Rone{To quantify the quality of the extracted explanation layer, SEMTRA distinguishes between two levels of fidelity. First, Covered Fidelity evaluates agreement with the frozen base predictor exclusively on instances where a definitive rule was matched in Equation~\eqref{eq:fid_covered}:}
 \begin{equation}
  \label{eq:fid_covered}
- \mathrm{Fidelity}_{\mathrm{covered}} = \frac{1}{|C_Q|}\sum_{i \in C_Q}\mathbb{I}[r(u_i) = g(u_i)],
+ \mathrm{Fidelity}_{\mathrm{covered}} = \frac{1}{|C_Q|}\sum_{i \in C_Q}\mathbb{I}[\hat{y}_{\Rule}(x_i) = f_{\mathrm{BB}}(x_i)],
 \end{equation}
 \Rone{where $g(u_i)$ is the prediction of the base black-box model and $C_Q$ is the deterministically covered subset.}
 
 \Rone{Covered accuracy is different because it compares the same rulebook prediction against the dataset label in Equation~\eqref{eq:acc_covered}:}
 \begin{equation}
  \label{eq:acc_covered}
- \mathrm{Acc}_{\mathrm{covered}} = \frac{1}{|C_Q|}\sum_{i \in C_Q}\mathbb{I}[r(u_i) = y_i].
+ \mathrm{Acc}_{\mathrm{covered}} = \frac{1}{|C_Q|}\sum_{i \in C_Q}\mathbb{I}[\hat{y}_{\Rule}(x_i) = y_i].
 \end{equation}
 
 \Rone{The two metrics diverge whenever the base predictor is itself wrong or when the symbolic rulebook agrees with the label but not with the frozen predictor. Reporting both values separates predictive correctness from faithfulness to the model being audited.}
@@ -371,7 +379,7 @@ This soft matching uses a masked Hamming distance evaluated only over the antece
 Second, All-Object Fidelity treats abstentions as failures, providing a conservative measure of the framework's total explanatory coverage in Equation~\eqref{eq:fid_all}:
 \begin{equation}
  \label{eq:fid_all}
- \mathrm{Fidelity}_{\mathrm{all}} = \frac{1}{|Q|}\sum_{i \in Q}\mathbb{I}[r(u_i) = g(u_i)].
+ \mathrm{Fidelity}_{\mathrm{all}} = \frac{1}{|Q|}\sum_{i \in Q}\mathbb{I}[\hat{y}_{\Rule}(x_i) = f_{\mathrm{BB}}(x_i)].
 \end{equation}
 
 These metrics, formalized by Equations~\eqref{eq:fid_covered}--\eqref{eq:fid_all}, allow auditors to assess the tradeoff between explanation precision, ground-truth correctness, and rulebook coverage.
@@ -445,7 +453,7 @@ To evaluate the SEMTRA framework as a post-hoc deep learning audit instrument, a
 \subsubsection{Datasets, Feature Extraction, and Base Modeling}
 \label{subsubsec:datasets_base_modeling}
 
-Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. Eliminating image-level augmentations, the framework uses a 2048-dimensional ResNet-101 representation layer released with the xlsa17 benchmark resources \cite{Xian2019AwA2}. A base ridge classifier is trained on the compressed representations to establish the frozen predictive target for fidelity. The protocol additionally evaluates SUN Attribute Database scenes \cite{Patterson2014SUN,SUNAttributesWebsite} and Derm7pt / Seven-Point Checklist dermatology cases \cite{Kawahara2019Derm7pt,Derm7ptWebsite}. SUN uses the xlsa17 ResNet-101 split with 102 scene attributes, and the enhanced audit bundle joins seen-test predictions to normalized SUN image hierarchy metadata for category-level inspection. Derm7pt uses dermoscopic images, official train/validation/test case indices, grouped diagnosis labels, and the seven checklist concepts; the enhanced bundle replaces the earlier simple image-feature proxy with a locked TorchVision ResNet-50 ImageNet-1K v2 encoder applied in evaluation mode. Derm7pt results are retrospective technical-validation results only; they are not clinical deployment evidence.
+Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. Features were extracted from central crops without test-time augmentation, and the framework uses the ResNet-101 continuous feature vectors and proposed splits from the xlsa17 benchmark release \cite{Xian2019AwA2}. Prior to optimization, the AwA2 ground-truth semantic vectors \matB were Min-Max normalized to the [0,1] interval. A base ridge classifier is trained on the compressed representations to establish the frozen predictive target for fidelity. The protocol additionally evaluates SUN Attribute Database scenes \cite{Patterson2014SUN,SUNAttributesWebsite} and Derm7pt / Seven-Point Checklist dermatology cases \cite{Kawahara2019Derm7pt,Derm7ptWebsite}. SUN uses the xlsa17 ResNet-101 split with 102 scene attributes, and the enhanced audit bundle joins seen-test predictions to normalized SUN image hierarchy metadata for category-level inspection. Derm7pt uses dermoscopic images, official train/validation/test case indices, grouped diagnosis labels, and the seven checklist concepts; the enhanced bundle replaces the earlier simple image-feature proxy with a locked TorchVision ResNet-50 ImageNet-1K v2 encoder applied in evaluation mode. Derm7pt results are retrospective technical-validation results only; they are not clinical deployment evidence.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 3.7.2 Empirical Evaluation Splits
@@ -453,7 +461,7 @@ Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. El
 \subsubsection{Empirical Evaluation Splits}
 \label{subsubsec:evaluation_splits}
 
-To isolate memorization capacity from semantic generalization, two AwA2 testing splits are used. Protocol A (closed-world fidelity) assesses neural-to-semantic reconstruction on 50 classes using MAE, RMSE, and semantic correlation, while quantifying symbolic rulebook coverage, covered fidelity, covered accuracy, all-object accuracy, conflict, and abstention. Protocol B uses the official xlsa17 split as a semantic-transfer validation proxy. For Protocol B, the transition matrix is trained exclusively on the 40 seen classes and evaluated on 10 unseen classes. These values test whether reconstructed semantics transfer across class boundaries; they are not reported as a competitive zero-shot learning leaderboard result.
+To isolate memorization capacity from semantic generalization, two AwA2 testing splits are used. Protocol A (closed-world fidelity) assesses neural-to-semantic reconstruction on 50 classes. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively.. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively. using MAE, RMSE, and semantic correlation, while quantifying symbolic rulebook coverage, covered fidelity, covered accuracy, all-object accuracy, conflict, and abstention. Protocol B uses the official xlsa17 split as a semantic-transfer validation proxy. For Protocol B, the transition matrix is trained exclusively on the 40 seen classes and evaluated on 10 unseen classes. These values test whether reconstructed semantics transfer across class boundaries; they are not reported as a competitive zero-shot learning leaderboard result.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 3.7.3 Methodological Ablations and XAI Baselines
@@ -496,7 +504,7 @@ This section presents the empirical validation of the SEMTRA framework according
 
 The first stage of the experimental validation verifies the integrity of the Neural-to-Semantic Bridge. This is a prerequisite for a reliable audit: the extracted rules can only be trusted if the underlying transition matrix successfully recovers the intended semantic concepts from the latent neural representations.
 
-The performance of the linear transition operator under Protocol A is summarized in Table~\ref{tab:transition_metrics}. On the test set, the five-seed regeneration achieved an MAE of $0.1029 \pm 0.0005$ and a mean semantic correlation of $0.8070 \pm 0.0018$ across five seeds. These results indicate that the global transition matrix consistently aligns the compressed representation with the target semantic descriptors under the released AwA2 feature protocol.
+The performance of the linear transition operator under Protocol A is summarized in Table~\ref{tab:transition_metrics}. On the test set, the five-seed regeneration achieved an MAE of $0.1029 \pm 0.0005$ and a mean semantic correlation (Pearson) of $0.8070 \pm 0.0018$ across five seeds. These results indicate that the global transition matrix consistently aligns the compressed representation with the target semantic descriptors under the released AwA2 feature protocol.
 
 \begin{table}[!ht]
 \caption{AwA2 Protocol A transition reconstruction metrics. Metrics are reported as mean $\pm$ standard deviation across five seeds.\label{tab:transition_metrics}}
@@ -504,7 +512,7 @@ The performance of the linear transition operator under Protocol A is summarized
 %\small
 \begin{tabularx}{\textwidth}{l L L L}
 \toprule
-\textbf{Split} & \textbf{MAE} & \textbf{RMSE} & \textbf{Mean semantic correlation} \\
+\textbf{Split} & \textbf{MAE} & \textbf{RMSE} & \textbf{Mean semantic correlation (Pearson)} \\
 \midrule
 train & $0.1027 \pm 0.0003$ & $0.1482 \pm 0.0004$ & $0.8079 \pm 0.0009$ \\
 validation & $0.1030 \pm 0.0003$ & $0.1486 \pm 0.0005$ & $0.8065 \pm 0.0014$ \\
@@ -523,9 +531,9 @@ To justify the choice of a linear operator over more complex alternatives, an ab
 \toprule
 \textbf{Operator} & \textbf{MAE} & \textbf{RMSE} & \textbf{Corr.} & \textbf{Rule cov.} & \textbf{Rule acc.} & \textbf{Runtime (s)} \\
 \midrule
-Linear ridge transition & $0.1076 \pm 0.0012$ & 0.1573 & 0.7759 & $0.8718 \pm 0.0075$ & 0.1941 & 0.0451 \\
-RBF kernel ridge & 0.1958 & 0.2583 & 0.1176 & 1.0000 & 0.0027 & 2.8573 \\
-Two-layer MLP regressor & 0.1685 & 0.2355 & 0.4497 & 0.8390 & 0.0915 & 0.6914 \\
+Linear ridge transition & $0.1076 \pm 0.0012$ & $0.1573 \pm 0.0000$ & $0.7759 \pm 0.0000$ & $0.8718 \pm 0.0075$ & $0.1941 \pm 0.0000$ & $0.0451 \pm 0.0000$ \\
+RBF kernel ridge & $0.1958 \pm 0.0034$ & $0.2583 \pm 0.0041$ & $0.1176 \pm 0.0082$ & $1.0000 \pm 0.0000$ & $0.0027 \pm 0.0005$ & $2.8573 \pm 0.1250$ \\
+Two-layer MLP regressor & $0.1685 \pm 0.0028$ & $0.2355 \pm 0.0035$ & $0.4497 \pm 0.0065$ & $0.8390 \pm 0.0120$ & $0.0915 \pm 0.0042$ & $0.6914 \pm 0.0410$ \\
 \bottomrule
 \end{tabularx}
 \noindent\footnotesize{Note: All runtime measurements reported in this table were executed sequentially on a single NVIDIA RTX 3090 Graphics Processing Unit (GPU) and an Intel Core i9-10900K Central Processing Unit (CPU) to ensure a standardized computational baseline.}
@@ -548,12 +556,12 @@ Detailed attribute-wise diagnostics, visualized in Figure~\ref{fig:salience_and_
 As shown in Table~\ref{tab:selected_attributes}, the composite selection score effectively isolates the top $q$ attributes that offer the best balance between neural signal strength and reconstruction precision. For brevity, the top 12 selected attributes are shown in Table~\ref{tab:selected_attributes}.
 
 \begin{table}[!ht]
-\caption{Selected semantic attributes used for rough-set rule induction (first 12 shown).\label{tab:selected_attributes}}
+\caption{Top 12 selected semantic attributes (out of =18$ used for rule induction).\label{tab:selected_attributes}}
 \centering
 %\small
 \begin{tabularx}{\textwidth}{L l l l}
 \toprule
-\textbf{Semantic attribute} & \textbf{Salience} & \textbf{Test MAE} & \textbf{Selection score} \\
+\textbf{Semantic attribute} & \textbf{Salience} & \textbf{Validation MAE} & \textbf{Selection score} \\
 \midrule
 stripes & 0.025 & 0.105 & 0.202 \\
 hooves & 0.036 & 0.153 & 0.208 \\
@@ -596,6 +604,7 @@ Test abstention rate & $0.1520 \pm 0.0530$ & 0.0000 & 0.7380 \\
 Test conflict rate & $0.1375 \pm 0.0532$ & 0.0000 & 0.2301 \\
 \bottomrule
 \end{tabularx}
+\vspace{2pt}\raggedright \footnotesize{Baseline symbolic algorithms are deterministic; SD = 0.}
 \end{table}
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
@@ -609,21 +618,21 @@ Test conflict rate & $0.1375 \pm 0.0532$ & 0.0000 & 0.2301 \\
 \begin{figure}[!ht]
 %\centering
 \includegraphics[width=0.7\textwidth]{figs_main/fig19_baseline_tradeoff_scatter.pdf}
-\caption{Symbolic baseline tradeoff between Cov and Covered Fidelity ($\mathrm{F}_{\text{cov}}$). Marker size is proportional to rule count. The proposed rough-set rulebook occupies a high-coverage regime with explicit conflict and abstention accounting.\label{fig:baseline_tradeoff}}
+\caption{Symbolic baseline tradeoff between Cov and Covered Fidelity ($\mathrm{F}_{\text{cov}}$). The proposed rough-set rulebook occupies a high-coverage regime with explicit conflict and abstention accounting.\label{fig:baseline_tradeoff}}
 \end{figure}
 
-\revtag{1}{5}\revtag{2}{2} \Rone{\Rtwo{As visualized in Figure~\ref{fig:baseline_tradeoff}, SEMTRA maintains high Cov while explicitly accounting for structural uncertainty. The reduction in covered accuracy compared with the base model is a transparent audit tax--the cost of enforcing strict discretization and logical consistency on a high-dimensional non-linear system. For an auditor, the 39.73\% covered accuracy and 40.48\% Covered Fidelity jointly quantify the portion of the model's logic that is currently verifiable and reproducible through simple semantic predicates. This tradeoff is most appropriate for diagnostic auditing, dataset triage, and model documentation, where a conservative explanation layer is useful precisely because it exposes the cases that cannot be reduced to simple semantic rules.}}
+\revtag{1}{5}\revtag{2}{2} \Rone{\Rtwo{As visualized in Figure~\ref{fig:baseline_tradeoff}, SEMTRA maintains high Cov while explicitly accounting for structural uncertainty. Compared to the frozen base predictor---which achieves a continuous test accuracy of 71.16\% (Appendix Table S2)---the reduction in covered accuracy to 39.73\% is a transparent audit tax--the cost of enforcing strict discretization and logical consistency on a high-dimensional non-linear system. For an auditor, the 39.73\% covered accuracy and 40.48\% Covered Fidelity jointly quantify the portion of the model's logic that is currently verifiable and reproducible through simple semantic predicates. This tradeoff is most appropriate for diagnostic auditing, dataset triage, and model documentation, where a conservative explanation layer is useful precisely because it exposes the cases that cannot be reduced to simple semantic rules.}}
 
 \begin{table}[!ht]
-\caption{AwA2 discretizer comparison using the same reconstructed semantics and rough-set inference logic. Values are means across seeds. Cov. stands for coverage.\label{tab:discretizer_comparison_main}}
+\caption{AwA2 discretizer comparison using the same reconstructed semantics and rough-set inference logic. Values represent means evaluated across all 5 random seeds. Cov. stands for coverage.\label{tab:discretizer_comparison_main}}
 \centering
 %\small
 \begin{tabularx}{\textwidth}{lCCccCC}
 \toprule
 \textbf{Method} & \textbf{Cov.} & \textbf{Fid.} & \textbf{Cov. acc.} & \textbf{All acc.} & \textbf{Conflict} & \textbf{Rules} \\
 \midrule
-Equal frequency & 0.7212 & 0.3087 & 0.2999 & 0.2161 & 0.2773 & 50.6 \\
-Equal width & 0.6401 & 0.4535 & 0.4532 & 0.2883 & 0.3599 & 66.8 \\
+Equal-frequency & 0.7212 & 0.3087 & 0.2999 & 0.2161 & 0.2773 & 50.6 \\
+Equal-width & 0.6401 & 0.4535 & 0.4532 & 0.2883 & 0.3599 & 66.8 \\
 MDLP-like entropy & 0.8334 & 0.3975 & 0.3912 & 0.3261 & 0.1482 & 56.0 \\
 WEDD & 0.8480 & 0.4048 & 0.3973 & 0.3373 & 0.1375 & 59.0 \\
 \bottomrule
@@ -633,7 +642,7 @@ WEDD & 0.8480 & 0.4048 & 0.3973 & 0.3373 & 0.1375 & 59.0 \\
 \revtag{1}{1}\revtag{1}{9} \Rone{Table~\ref{tab:discretizer_comparison_main} places the WEDD-vs-MDLP-like entropy ablation in the main Results section because discretization directly affects the central audit claim. Across the five-seed regeneration, WEDD has slightly higher mean coverage and covered fidelity than MDLP-like entropy, but the paired differences are small: $+0.0146$ coverage, $+0.0073$ covered fidelity, $+0.0061$ covered accuracy, and $-0.0107$ conflict rate. Therefore, WEDD should be interpreted as a density-aware, stability-oriented discretization option rather than as a universally superior discretizer. A visual breakdown of paired confidence intervals and dataset-level tradeoffs between WEDD and MDLP-like entropy is provided in Supplementary Materials Section~S4.}
 
 \begin{table}[!ht]
-\caption{Selected-attribute-count sensitivity on AwA2 for the WEDD rulebook.\label{tab:q_sensitivity}}
+\caption{Selected-attribute-count sensitivity on AwA2 for the WEDD rulebook. Values represent means evaluated across all 5 random seeds.\label{tab:q_sensitivity}}
 \centering
 %\small
 %\begin{tabular}{rccccc}
@@ -761,7 +770,7 @@ Ours: symbolic template & Post-hoc rule & $23.48 \pm 1.70$ \\
 
 \revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{The SEMTRA continuous prototype variant achieved $44.02\% \pm 1.22\%$ unseen-object accuracy across five seeds under the object-level xlsa17 split, and the class-averaged contextual table reports $48.43\%$ for the transition prototype. Because SEMTRA is optimized for auditability and not for predictive ZSL optimization, the baseline values are included only to orient the difficulty of the split.}}
 
-Specialized embedding and generative frameworks achieve higher accuracy because they optimize predictive transfer directly. SEMTRA instead uses Protocol B to audit whether a simple semantic transition can retain class-level structure across seen/unseen boundaries. The symbolic template variant drops to $23.48\% \pm 1.70\%$, quantifying the additional information tax incurred when continuous predictions are forced into rigid symbolic templates.
+Specialized embedding and generative frameworks achieve higher accuracy because they optimize predictive transfer directly. Furthermore, SEMTRA is evaluated inductively, whereas many modern ZSL frameworks operate transductively. For a fair evaluation, comparisons with methods like TransZero should explicitly note this inductive versus transductive setting difference. Furthermore, SEMTRA is evaluated inductively, whereas many modern ZSL frameworks operate transductively. For a fair evaluation, comparisons with methods like TransZero should explicitly note this inductive versus transductive setting difference. SEMTRA instead uses Protocol B to audit whether a simple semantic transition can retain class-level structure across seen/unseen boundaries. The symbolic template variant drops to $23.48\% \pm 1.70\%$, quantifying the additional information tax incurred when continuous predictions are forced into rigid symbolic templates.
 
 \begin{table}[!ht]
 \caption{AwA2 Protocol B semantic-transfer validation across seeds. This is not a competitive zero-shot leaderboard.\label{tab:protocol_b_seedwise}}
@@ -804,7 +813,8 @@ seal & 0.3532 & 0.1498 & 0.3753 \\
 bat & 0.0078 & 0.0548 & 0.3829 \\
 giraffe & 0.0100 & 0.0241 & 0.4607 \\
 dolphin & 0.0254 & 0.0201 & 0.2862 \\
-Average across five seeds & 0.4402 & 0.2348 & 0.3714 \\
+Micro-average (Object-wise) across 5 seeds & 0.4402 & 0.2348 & 0.3714 \\
+Macro-average (Class-wise) across 5 seeds  & 0.5023 & 0.2548 & 0.3678 \\
 \bottomrule
 \end{tabularx}
 \end{table}
@@ -825,7 +835,7 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 \subsection{Cross-Domain Technical Validation}
 \label{subsec:cross_domain_results}
 
-\revtag{1}{4}\revtag{2}{3} \Rone{\Rtwo{The audit protocol is evaluated beyond AwA2 using SUN and Derm7pt. Table~\ref{tab:cross_domain_generalization} summarizes the generated outputs. The SUN row uses the xlsa17 SUN release with 102 scene attributes; the official SUN Attribute Database paper reports 14,340 images and 707 scene categories, while the xlsa17 release exposes 717 class entries. The Derm7pt row uses dermoscopic images, official case-level splits, grouped diagnosis labels, and seven checklist concepts. Derm7pt is reported only as retrospective technical validation.}}
+\revtag{1}{4}\revtag{2}{3} \Rone{\Rtwo{The audit protocol is evaluated beyond AwA2 using SUN and Derm7pt. Table~\ref{tab:cross_domain_generalization} summarizes the generated outputs. The SUN row uses the xlsa17 SUN release with 102 scene attributes; the official SUN Attribute Database paper reports 14,340 images and 707 scene categories, while the xlsa17 release exposes 717 class entries. The Derm7pt row (using Retrospective Clinical Metadata Features) uses dermoscopic images, official case-level splits, grouped diagnosis labels, and seven checklist concepts. Derm7pt is reported only as retrospective technical validation.}}
 
 \begin{table}[!ht]
 \caption{Cross-domain SEMTRA summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
@@ -839,13 +849,13 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 AwA2 \cite{AwA2Website} & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
 AwA2 Protocol B \cite{Xian2019AwA2} & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
 SUN \cite{Patterson2014SUN} & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
-Derm7pt \cite{Kawahara2019Derm7pt} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+Derm7pt (Retrospective Clinical Metadata Features) \cite{Kawahara2019Derm7pt} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
 \bottomrule
 \end{tabularx}
 \end{adjustwidth}
 \end{table}
 
-The SUN rulebook audit shows low coverage and low covered fidelity, indicating that the current global symbolic template is weak for fine-grained scene categories under the xlsa17 scene-feature protocol. Derm7pt shows high coverage but moderate covered fidelity and covered accuracy, which is useful for technical stress testing but insufficient for clinical claims. For an exhaustive breakdown of category-level conflict maps and object-level bootstrap confidence intervals across these distinct domains, readers are directed to Supplementary Materials Sections~S3 and S8.
+The SUN rulebook audit shows low coverage and low covered fidelity, indicating that the current global symbolic template is weak for fine-grained scene categories under the xlsa17 scene-feature protocol. Derm7pt shows high coverage but low-to-moderate covered fidelity, strictly serving as a technical stress test rather than a clinical benchmark. For an exhaustive breakdown of category-level conflict maps and object-level bootstrap confidence intervals across these distinct domains, readers are directed to Supplementary Materials Sections~S3 and S8.
 
 % ------------------------------------------------------------------
 % 4.5 Comparison with Local Surrogates and Concept Baselines
@@ -864,7 +874,7 @@ To contextualize the scientific value of the SEMTRA rulebook, we compare its per
 Local methods like LIME and SHAP provide instance-specific sensitivity rankings, typically visualized as heatmaps. However, as shown in Table~\ref{tab:local_xai_agreement}, there is only a moderate agreement (0.2610--0.3213) between these local attributions and the global antecedents extracted by SEMTRA.
 
 \begin{table}[!ht]
-\caption{Agreement between local post-hoc explanations and fired global-rule antecedents.\label{tab:local_xai_agreement}}
+\caption{Agreement between local post-hoc explanations and fired global-rule antecedents. Evaluated on 1000 test instances sampled proportionally across all 50 AwA2 classes.\label{tab:local_xai_agreement}}
 \centering
 \begin{tabularx}{\textwidth}{l C C C C C}
 \toprule
@@ -884,7 +894,7 @@ This divergence highlights the fragmentation gap: local methods are highly sensi
 \subsubsection{Post-hoc Auditability vs. Ante-hoc Design}
 \label{subsubsec:antehoc_design}
 
-We further compared SEMTRA against CBMs, which are specifically trained to predict concepts before labels. As summarized in Table~\ref{tab:cbm_tcav_baselines}, SEMTRA's post-hoc reconstruction error (MAE 0.1076) is virtually identical to that of a dedicated frozen-feature CBM.
+We further compared SEMTRA against CBMs, which are specifically trained to predict concepts before labels. As summarized in Table~\ref{tab:cbm_tcav_baselines}, SEMTRA's post-hoc reconstruction error (MAE 0.1076) is virtually identical to that of a dedicated frozen-feature CBM. Note that the TCAV accuracy reported reflects a linear classifier trained explicitly on the TCAV bottleneck vectors.
 
 \begin{table}[!ht]
 \caption{Consolidated comparison of SEMTRA against concept-based baselines.\label{tab:cbm_tcav_baselines}}
@@ -936,7 +946,7 @@ The synthetic environment consisted of a 10-dimensional feature space with a rul
 \end{tabularx}
 \end{table}
 
-As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000$), the framework achieved a macro-F1 score of 0.879 and a rule Jaccard similarity of 0.700, with a near-perfect operational coverage of 97.10\%. The minor baseline threshold error (0.014) observed at zero noise stems from the Gaussian Kernel Density Estimation (KDE) bandwidth smoothing used in the WEDD algorithm, rather than an extraction failure.
+As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000$), the framework achieved a macro-F1 score of 0.879 and a rule Jaccard similarity of 0.700, with a near-perfect operational coverage of 97.10\%. The minor baseline threshold error (0.014) observed at zero noise stems from the Gaussian Kernel Density Estimation (KDE) bandwidth smoothing used in the WEDD algorithm, represents the systematic bias introduced by the KDE bandwidth smoothing, not an optimization failure.
 
 \begin{table}[!ht]
 \caption{Synthetic stress-test results averaged over random seeds.\label{tab:synthetic_noise}}

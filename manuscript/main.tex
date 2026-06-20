@@ -385,7 +385,7 @@ Second, All-Object Fidelity treats abstentions as failures, providing a conserva
  \mathrm{Fidelity}_{\mathrm{all}} = \frac{1}{|Q|}\sum_{i \in Q}\mathbb{I}[r(u_i) = g(u_i)].
 \end{equation}
 
-This metric family, formalized by Equations~\eqref{eq:fid_covered}--\eqref{eq:fid_all}, allows auditors to assess the tradeoff between explanation precision, ground-truth correctness, and rulebook coverage.
+These metrics, formalized by Equations~\eqref{eq:fid_covered}--\eqref{eq:fid_all}, allow auditors to assess the tradeoff between explanation precision, ground-truth correctness, and rulebook coverage.
 
 Finally, the entire sequential progression, from granulation to conclusive inference, is synthesized in Algorithm~\ref{alg:phase2_roughset}.
 
@@ -819,7 +819,7 @@ Average across five seeds & 0.4402 & 0.2348 & 0.3714 \\
 \begin{figure}[!ht]
 %\centering
 \includegraphics[width=1.0\linewidth]{figs_main/fig05_use-case.pdf}
-\caption{Conceptual comparison between local explainable surrogate pixel-level attribution methods and the proposed global explainable rulebook. The figure is illustrative: it contrasts explanation object types and conflict accounting, not measured predictive performance.\label{fig:conc_comparison}}
+\caption{Conceptual comparison between local explainable surrogate pixel-level attribution methods and the proposed global explainable rulebook. The figure is illustrative: it contrasts explanation object types and conflict accounting, not measured predictive performance. Quantitative comparisons of agreement are provided in Table~\ref{tab:local_xai_agreement}.\label{fig:conc_comparison}}
 \end{figure}
 
 Protocol B therefore validates the transition matrix as a semantic-transfer diagnostic. It also exposes where symbolic transfer fails, which is central to SEMTRA's audit purpose.
@@ -843,8 +843,8 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 \midrule
 AwA2 \cite{AwA2Website} & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
 AwA2 Protocol B \cite{Xian2019AwA2} & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
-SUN \cite{Patterson2014SUN,SUNAttributesWebsite} & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
-Derm7pt \cite{Kawahara2019Derm7pt,Derm7ptWebsite} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+SUN \cite{Patterson2014SUN} & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
+Derm7pt \cite{Kawahara2019Derm7pt} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
 \bottomrule
 \end{tabularx}
 \end{adjustwidth}
@@ -965,29 +965,6 @@ As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000
 \label{subsubsec:robustness}
 
 The stability of the framework was tested by injecting increasing levels of semantic noise ($\sigma \in [0,0.20]$). As visualized in Figure~\ref{fig:synthetic_diagnosis}a, the operational coverage remained relatively stable as noise increased, indicating that the WEDD thresholds were not dominated by small perturbations in this synthetic setting. While the exact threshold recovery error inevitably fluctuates (Figure~\ref{fig:synthetic_diagnosis}b), the framework maintained a macro-F1 score above 0.838 throughout the tested noise range.
-
-% \begin{figure}[!ht]
-% %\centering
-% \includegraphics[width=0.82\textwidth]{figs_main/fig22_synthetic_uncertainty_bands.pdf}
-% \caption{Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range.\label{fig:synthetic_uncertainty}}
-% \end{figure}
-
-% \begin{figure}[H]
-% \centering
-% \subfloat[\centering\label{fig:a_synthetic_macro_f1}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_a_synthetic_macro_f1.pdf}}
-% \hfill
-% \subfloat[\centering\label{fig:b_synthetic_rule_recovery}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_b_synthetic_rule_recovery.pdf}}\\
-% \subfloat[\centering\label{fig:c_synthetic_coverage}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_c_synthetic_coverage.pdf}}
-% \hfill
-% \subfloat[\centering\label{fig:d_synthetic_threshold_error}]{\includegraphics[width=0.48\linewidth]{figs_main/fig30_d_synthetic_threshold_error.pdf}}
-% \caption{Synthetic benchmark with 95\% confidence bands across seeds. Macro-F1, rule-recovery Jaccard, and coverage remain high across the tested semantic-noise range.\label{fig:synthetic_uncertainty}}
-% \end{figure}
-
-% \begin{figure}[!ht]
-% %\centering
-% \includegraphics[width=0.82\textwidth]{figs_main/fig13_synthetic_threshold_recovery.pdf}
-% \caption{Synthetic threshold recovery error across noise levels.\label{fig:threshold_recovery}}
-% \end{figure}
 
 \begin{figure}[!ht]
 \centering

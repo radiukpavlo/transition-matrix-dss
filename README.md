@@ -1,114 +1,110 @@
-# SEMTRA: Semantic Transition Matrix and Rough-Set Rules for Explainable AI
+# SEMTRA: Global Semantic Transition and Rough-Set Rules for Auditable Post-hoc Explainability
 
-<p align="center">
-  <img src="figs/framework_animation.svg" alt="XAI Decision Support System Framework" width="100%">
-</p>
+[![Preprint](https://img.shields.io/badge/Preprint-10.20944%2Fpreprints202606.0230.v1-blue)](https://www.preprints.org/manuscript/202606.0230)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## A Transition-Matrix and Rough-Set Rule Induction Framework for Explainable AI (XAI)
-
-This repository contains the official reproduction package, computed result artifacts, figure and table generators, and auditing manifests for the research study:
-
-> **SEMTRA: Semantic Transition Matrix and Rough-Set Rules for Explainable AI**
-> 
-> *An explainable AI paradigm that maps continuous deep latent representations onto human-understandable concept attributes, resolves vagueness using rough-set theory, and induces discrete, noise-robust decision rules.*
+This repository contains the official implementation, reproduction assets, computed result artifacts, figure and table generators, and quality gates auditing suite for the **SEMTRA** explainable AI (XAI) framework.
 
 ---
 
 ## 🔬 Core Scientific Contribution
 
-Deep neural networks achieve high classification accuracy but suffer from a "semantic gap" due to their opaque latent representations. Concept Bottleneck Models (CBMs) attempt to map latents to semantic attributes, but often introduce significant vagueness and drop in prediction accuracy. 
+SEMTRA introduces an explainable AI paradigm designed to bridge the semantic gap in deep neural representations through a post-hoc, concept-based symbolic translation pipeline. Instead of modifying core model weights (which often degrades performance) or relying solely on local attribution maps (which fail to define general policies), SEMTRA builds a global, auditable explanation layer.
 
-Our framework addresses this by:
-1. **Semantic Mapping via Transition Matrix ($T$)**: Linearly projecting high-dimensional latent vectors ($X$) onto a human-interpretable concept space ($C = X \cdot T$).
-2. **Vagueness Resolution via Rough-Set Approximations**: Calculating lower bounds ($\underline{B}X$) and upper bounds ($\overline{B}X$) on concept activations to delineate sharp, deterministic logic from highly uncertain/noisy concepts.
-3. **Symbolic Rule Induction**: Automatically generating traceable, Boolean decision rules directly from approximations (e.g., `IF (swims AND flippers AND NOT fish) ⇒ Killer Whale`). 
-4. **Resilience to Noise**: Exhibiting high tolerance to attribute labeling noise and representation drift, as demonstrated on Animals with Attributes 2 (AwA2) and synthetic datasets.
+### Technical Architecture
+1. **Global Semantic Transition Matrix ($T$)**: Projects high-dimensional latent vectors ($X$) from standard vision backbones (e.g., ResNet-101/50) onto a continuous human-understandable concept space ($C = X \cdot T$), capturing global feature-attribute correlations.
+2. **Vagueness Resolution via Rough-Set Approximations**: Concept projections are discretized using the Weighted Entropy-Density Discretization (WEDD) algorithm. Rough-Set Theory then defines upper ($\overline{B}X$) and lower ($\underline{B}X$) approximations of classes, separating sharp deterministic logical rules from highly vague boundary regions.
+3. **Audit-Ready Rulebooks**: Induces noise-robust, traceable Boolean decision rules (e.g., `IF (swims AND flippers AND NOT fish) ⇒ Killer Whale`) that are equipped with explicit support, confidence, conflict, and abstention handling to support thorough post-hoc auditing.
 
----
+### Figure 1: SEMTRA Framework Pipeline
+The end-to-end flow from raw inputs and continuous representations to transition projection, discretization, rough-set approximations, and the final symbolic audit trail:
+- [View Figure 1 PDF](./manuscript/figs_archived/fig01_semtra.pdf)
+- Embedded diagram:
+![SEMTRA Framework Pipeline](./manuscript/figs_archived/fig01_semtra.pdf)
 
-## 📁 Repository Structure & Tracking Policy
-
-This repository is designed to separate reproducible source code and auditable public outcomes from local private data and manuscript workspaces. Under our active **[Gitignore Configuration](.gitignore)**, directories are governed by a strict tracking policy:
-
-### 🟢 Tracked in Version Control
-These directories house the public-facing reproducibility package:
-* [scripts/](./scripts) — Full experiment runners, figure/table generation, and package audits.
-* [artifacts/](./artifacts) — Public computed result metrics, rulebooks, and thresholds.
-* [figs/](./figs) — Publication-ready vector diagrams (PDF, SVG) and dynamic assets.
-* [tables/](./tables) — Output LaTeX tables and raw CSV summaries.
-* [audit/](./audit) — Comprehensive logs, manifests, PDF renders, and quality gate metrics.
-* [docs/](./docs) — Detailed project structures and user manuals.
-* [source_notes/](./source_notes) — Technical details regarding dataset boundaries and AwA2 split handling.
-* `revision_report.md` — Matrix detailing response to reviewer issues.
-
-### 🔴 Ignored Local Workspace (Local Only)
-These folders are configured in `.gitignore` and are **never** committed to version control:
-* `manuscript/` — Contains MDPI TeX sources, templates, and LaTeX build byproducts (fully ignored).
-* `data/` — Contains raw local datasets (`data/raw/` for downloaded archives like `awa2.zip`) and local notes (`data/private/`).
-* `.venv/`, `__pycache__/`, `.pytest_cache/` — Virtual environments and compiler caches.
-* Developer specific files (credentials, VS Code `.vscode/`, PyCharm `.idea/`, general backups `*.bak`).
+### Figure 5: Conceptual Use-Case Mapping
+Comparison between local single-case surrogates (which lack a reusable global policy) and the SEMTRA global semantic rulebook (which makes coverage and failure modes explicit):
+- [View Figure 5 PDF](./manuscript/figs_archived/fig05_use-case.pdf)
+- Embedded diagram:
+![Surrogate vs. Global Rulebook](./manuscript/figs_archived/fig05_use-case.pdf)
 
 ---
 
-## ⚙️ Quick Setup
+## 📁 Repository Structure & Figure Archive Policy
 
-This project requires **Python 3.10** or newer. Set up a virtual environment and install standard dependencies:
+- [scripts/core/](./scripts/core) — Core logic libraries (e.g., [figure_style.py](./scripts/core/figure_style.py)).
+- [scripts/generators/](./scripts/generators) — Python figure and table generators.
+- [manuscript/figs_archived/](./manuscript/figs_archived) — **Unified Figure Archive**. In accordance with submission policies, all generated publication figures are stored exclusively in this folder in PDF format only. SVGs and other image formats are disabled.
+- [artifacts/](./artifacts) — Precomputed public experiment results (AwA2, SUN, Derm7pt, synthetic).
+- [tables/](./tables) — Exported LaTeX table files and CSV matrices.
+- [audit/](./audit) — Automated quality check logs and claim gate manifests.
 
-### On Unix/macOS:
-```bash
+---
+
+## ⚙️ Reproducibility and Execution Guide
+
+### Environment Setup
+This codebase requires **Python 3.10** or higher. We recommend using a clean virtual environment:
+
+```powershell
+# Windows
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+# Linux/macOS
 python3 -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### On Windows PowerShell:
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-pip install -r requirements.txt
+### 1. Quick Asset Rebuild (From Existing Artifacts)
+To regenerate all figures inside `manuscript/figs_archived/` using the audited public experiment results:
+
+```bash
+# Regenerates Figures 1-24
+.venv/Scripts/python scripts/generators/generate_nature_figures.py
+
+# Regenerates Figures 25-34 (Revision v4 details)
+.venv/Scripts/python scripts/generators/generate_revision_v4_figures.py
+```
+
+### 2. Full Experiment Replication (From Raw Data)
+To re-run all baseline comparisons, discretization sweeps, noise ablations, and rulebook inductions:
+
+1. Place the raw benchmark archives into local directories:
+   - `data/raw/awa2.zip` (Animals with Attributes 2)
+   - `data/raw/xlsa17.zip` (Zero-shot learning benchmark package)
+2. Run the unified experiments orchestrator:
+   ```bash
+   .venv/Scripts/python run_experiments.py --awa2_zip data/raw/awa2.zip --xlsa17_zip data/raw/xlsa17.zip --out . --seed 42
+   ```
+
+### 3. Package Verification & Quality Gates
+To run the automated consistency audit and verify package integrity:
+```bash
+.venv/Scripts/python scripts/utils/audit_revision_package.py
 ```
 
 ---
 
-## 🚀 Running Experiments & Rebuilding Assets
+## ✍️ Citation & Preprint
 
-### Option A: Quick Rebuild (Generates Figures & Tables from Artifacts)
-If you wish to regenerate the enhanced figures and tables using the pre-computed public results (stored under `artifacts/`):
-```bash
-python scripts/generate_enhanced_results.py --root .
+If you use this work or codebase in your research, please cite the following preprint:
+
+```bibtex
+@article{radiuk2026semtra,
+  title     = {SEMTRA: Global Semantic Transition and Rough-Set Rules for Auditable Post-hoc Explainability},
+  author    = {Radiuk, Pavlo and Barmak, Oleksander and Krak, Iurii},
+  journal   = {Preprints},
+  year      = {2026},
+  pages     = {202606.0230},
+  doi       = {10.20944/preprints202606.0230.v1},
+  url       = {https://www.preprints.org/manuscript/202606.0230}
+}
 ```
-This script reads the checked-in metrics and saves updated publication-ready figures to `figs/` and LaTeX tables to `tables/`.
 
-### Option B: Full Experiment Replication
-To rerun all baseline comparisons, ablations, stability benchmarks, and rule induction from scratch, place the raw dataset archives inside the local ignored folder:
-* `data/raw/awa2.zip` (Animals with Attributes 2 dataset)
-* `data/raw/xlsa17.zip` (Standard Zero-Shot learning benchmarks)
-
-Then execute the orchestration pipeline:
-```bash
-python scripts/run_revision_experiments.py \
-  --awa2_zip data/raw/awa2.zip \
-  --xlsa17_zip data/raw/xlsa17.zip \
-  --out . \
-  --seed 42 \
-  --local_sample_size 1000
-```
-*Note: This calls the base CNN feature extractors, concept projection models, rough-set boundary estimators, symbolic rule engines, and outputs updated files into `artifacts/`, `figs/`, `tables/`, and `audit/`.*
-
----
-
-## 🔍 Reproducibility & Package Auditing
-
-To maintain high scientific integrity, this package implements automated reproducibility quality gates under the [audit/](./audit) directory:
-
-- [audit/revision_initial_audit.json](./audit/revision_initial_audit.json) — Records the exact state of result artifacts before revisions.
-- [audit/reviewer_response_matrix.csv](./audit/reviewer_response_matrix.csv) — A structured CSV tracking the status of all revision additions.
-- [audit/revision_final_audit.json](./audit/revision_final_audit.json) — Final execution quality gate metrics and file integrity checks.
-- [audit/enhanced_pdf_renders/](./audit/enhanced_pdf_renders) — Contains high-resolution PNG snapshots of rendered manuscript sheets for visual quality assurance.
-
-You can verify the package integrity at any time by running:
-```bash
-python scripts/audit_revision_package.py
-```
+Detailed document access is available via [Preprints.org Manuscript 202606.0230](https://www.preprints.org/manuscript/202606.0230).

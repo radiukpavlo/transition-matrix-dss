@@ -68,7 +68,7 @@ artifacts/_tmp_xlsa17/
 artifacts/**/_tmp/
 
 # Manuscript (ignore all files and folders related to the manuscript)
-manuscript/
+
 
 # OS and editor files
 .DS_Store
@@ -123,3 +123,4 @@ pnpm-debug.log*
 # Response to Reviewer Artifacts
 source_notes/
 audit/
+reports/

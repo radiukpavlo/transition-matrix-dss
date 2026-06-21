@@ -21,13 +21,13 @@ SEMTRA introduces an explainable AI paradigm designed to bridge the semantic gap
 The end-to-end flow from raw inputs and continuous representations to transition projection, discretization, rough-set approximations, and the final symbolic audit trail:
 - [View Figure 1 PDF](./manuscript/figs_archived/fig01_semtra.pdf)
 - Embedded diagram:
-![SEMTRA Framework Pipeline](./manuscript/figs_archived/fig01_semtra.pdf)
+![SEMTRA Framework Pipeline](./manuscript/figs_archived/fig01_semtra.png)
 
 ### Figure 5: Conceptual Use-Case Mapping
 Comparison between local single-case surrogates (which lack a reusable global policy) and the SEMTRA global semantic rulebook (which makes coverage and failure modes explicit):
 - [View Figure 5 PDF](./manuscript/figs_archived/fig05_use-case.pdf)
 - Embedded diagram:
-![Surrogate vs. Global Rulebook](./manuscript/figs_archived/fig05_use-case.pdf)
+![Surrogate vs. Global Rulebook](./manuscript/figs_archived/fig05_use-case.png)
 
 ---
 

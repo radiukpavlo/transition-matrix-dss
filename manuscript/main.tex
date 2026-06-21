@@ -86,7 +86,7 @@
 % ==================================================================
 % ABSTRACT AND KEYWORDS
 % ==================================================================
-\abstract{Deep learning architectures generate highly effective but difficult-to-audit latent representations, creating a practical gap between predictive performance and verifiable explanations. Existing post-hoc techniques often produce fragmented local attributions rather than dataset-level rulebooks. In this work, we propose Global SEMantic TRAnsition (SEMTRA), a post-hoc framework that maps frozen representation features into semantic attributes, discretizes those attributes, and induces rough-set production rules with explicit coverage, conflict, fidelity, and abstention reporting. Evaluated on the AwA2 Protocol A, the semantic transition achieved a mean absolute error of 0.1029 ± 0.0005. The extracted rulebook covered 84.80\% of test instances, yielding a covered accuracy of 39.73\% and a covered fidelity to the base predictor of 40.48\%. Under the Protocol B split, continuous semantic-prototype transfer reached an unseen-object accuracy of 44.02\% ± 1.22\% as a semantic-transfer validation. Cross-domain validations using SUN and Derm7pt demonstrated that the audit protocol is portable yet strongly dataset-dependent. \revtag{1}{2} \Rone{In the controlled synthetic benchmark, SEMTRA achieved a macro-F1 score of 0.879 at zero semantic noise and degraded to 0.838 at the highest evaluated noise level.} Ultimately, SEMTRA serves as a transparent audit layer to expose the verifiable logical subset of a model, rather than replacing the underlying predictor.}
+\abstract{Deep learning architectures generate highly effective but difficult-to-audit latent representations, creating a practical gap between predictive performance and verifiable explanations. Existing post-hoc techniques often produce fragmented local attributions rather than dataset-level rulebooks. In this work, we propose Global SEMantic TRAnsition (SEMTRA), a post-hoc framework that maps frozen representation features into semantic attributes, discretizes those attributes, and induces rough-set production rules with explicit coverage, conflict, fidelity, and abstention reporting. Evaluated on the Animals with Attributes 2 (AwA2) Protocol A, the semantic transition achieved a Mean Absolute Error (MAE) of 0.1029 ± 0.0005. The extracted rulebook covered 84.80\% of test instances, yielding a covered accuracy of 39.73\% and a covered fidelity to the base predictor of 40.48\%. Under the Protocol B split, continuous semantic-prototype transfer reached an unseen-object accuracy of 44.02\% ± 1.22\% as a semantic-transfer validation. Cross-domain validations using SUN and Derm7pt demonstrated that the audit protocol is portable yet strongly dataset-dependent. \revtag{1}{2} \Rone{In the controlled synthetic benchmark, SEMTRA achieved a macro-F1 score of 0.879 at zero semantic noise and degraded to 0.838 at the highest evaluated noise level.} Ultimately, SEMTRA serves as a transparent audit layer to expose the verifiable logical subset of a model, rather than replacing the underlying predictor.}
 
 \keyword{explainable artificial intelligence (XAI); transition matrix; semantic attributes; rough sets; production rules; discretization; zero-shot learning}
 
@@ -98,7 +98,7 @@
 \section{Introduction}
 \label{sec:introduction}
 
-Deep learning architectures have become strong baselines for visual recognition because they compress high-dimensional observations into effective latent representations. However, this compression mechanism creates a black-box effect. Neural features are optimized primarily for predictive success rather than for human interpretability. As automated systems enter safety-sensitive decision workflows, the demand for transparency has shifted from heuristic approximations toward more reproducible and mathematically specified explanations. The recent manifesto detailing the evolution of artificial intelligence frameworks emphasizes the critical need for verifiable symbolic knowledge \cite{Longo2024XAI}. Current approaches addressing this transparency demand fall into diverse methodological categories. A comprehensive survey of modern explainable frameworks illustrates a prominent divide between local diagnostic techniques and globally interpretable model designs \cite{Mersha2024XAISurvey}.
+Deep learning architectures have become strong baselines for visual recognition because they compress high-dimensional observations into effective latent representations. However, this compression mechanism creates a black-box effect. Neural features are optimized primarily for predictive success rather than for human interpretability. As automated systems enter safety-sensitive decision workflows, the demand for transparency has shifted from heuristic approximations toward more reproducible and mathematically specified explanations. The recent manifesto detailing the evolution of Artificial Intelligence (AI) frameworks emphasizes the critical need for verifiable symbolic knowledge \cite{Longo2024XAI}. Current approaches addressing this transparency demand fall into diverse methodological categories. A comprehensive survey of modern explainable frameworks illustrates a prominent divide between local diagnostic techniques and globally interpretable model designs \cite{Mersha2024XAISurvey}.
 
 The problem under consideration is the difficulty of systematically translating compressed latent neural coordinates into a global, conflict-aware rulebook without heavily retraining or modifying the underlying feature extractor. Instance-based post-hoc explanations generate input-specific attribution maps, but they usually do not produce a reusable logic policy for dataset-level auditing. Conversely, interpretable-by-design architectures require predefined concept vocabularies and costly structural re-engineering of existing high-performance networks. It is highly important to present novel scientific contributions to address this problem, thereby closing the interpretability gap that complicates routine model verification and clinical decision-support auditing.
 
@@ -124,7 +124,7 @@ The remainder of this paper is organized as follows. Section~\ref{sec:related} d
 
 \subsection{Local Post-hoc Explanation}
 \label{subsec:local_explanation}
-Local post-hoc interpretation approaches estimate decision boundaries in the immediate vicinity of individual input samples to generate explanations. Highly ubiquitous frameworks, such as Shapley Additive Explanations and Local Interpretable Model-agnostic Explanations, heavily rely on perturbed neighborhood samples to construct sparse additive feature attributions \cite{Salih2025SHAPLIME}. In high-stakes medical domains, recent advancements deploy specialized explainable deep learning layers to make complex time-series predictions such as arrhythmia detection transparent \cite{Kovalchuk2025Transparent}. Concurrently, in critical industrial monitoring scenarios, novel fusion methodologies integrate multispectral observation rankings with fuzzy logic to evaluate defect severity \cite{Radiuk2025Criticality}. However, even optimized local methodologies fail to yield the exhaustive, dataset-wide conflict resolution protocols essential for comprehensive global diagnostic auditing.
+Local post-hoc interpretation approaches estimate decision boundaries in the immediate vicinity of individual input samples to generate explanations. Highly ubiquitous frameworks, such as Shapley Additive Explanations (SHAP) and Local Interpretable Model-agnostic Explanations (LIME), heavily rely on perturbed neighborhood samples to construct sparse additive feature attributions \cite{Salih2025SHAPLIME}. In high-stakes medical domains, recent advancements deploy specialized explainable deep learning layers to make complex time-series predictions such as arrhythmia detection transparent \cite{Kovalchuk2025Transparent}. Concurrently, in critical industrial monitoring scenarios, novel fusion methodologies integrate multispectral observation rankings with fuzzy logic to evaluate defect severity \cite{Radiuk2025Criticality}. However, even optimized local methodologies fail to yield the exhaustive, dataset-wide conflict resolution protocols essential for comprehensive global diagnostic auditing.
 
 \subsection{Concept-based and Ante-hoc Models}
 \label{subsec:concept_explanation}
@@ -136,15 +136,15 @@ Concept-based techniques aim to directly augment numerical latent features with 
 
 \subsection{Semantic Transfer as a Validation Proxy}
 \label{subsec:semantic_transfer}
-\revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{Continuous semantic transfer evaluation serves as a robust mechanism to assess whether a given methodology successfully captures generalized conceptual structures. For instance, the AwA2 benchmark facilitates rigorous testing of continuous semantic projection between seen domains and unseen domains \cite{Xian2019AwA2}. This foundational repository provides standardized imagery accompanied by precise numeric class-level semantic prototype vectors \cite{AwA2Website}. Historically, the Direct Attribute Prediction mechanisms established baseline predictive benchmarks through probabilistic semantic mappings \cite{Lampert2009Attribute}. Subsequent Indirect Attribute Prediction formulations refined structural relationships among intermediate variables to better generalize conceptual knowledge \cite{Lampert2014Attribute}.}}
+\revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{Continuous semantic transfer evaluation serves as a robust mechanism to assess whether a given methodology successfully captures generalized conceptual structures. For instance, the AwA2 benchmark facilitates rigorous testing of continuous semantic projection between seen domains and unseen domains \cite{Xian2019AwA2}. This foundational repository provides standardized imagery accompanied by precise numeric class-level semantic prototype vectors \cite{AwA2Website}. Historically, the Direct Attribute Prediction (DAP) mechanisms established baseline predictive benchmarks through probabilistic semantic mappings \cite{Lampert2009Attribute}. Subsequent Indirect Attribute Prediction (IAP) formulations refined structural relationships among intermediate variables to better generalize conceptual knowledge \cite{Lampert2014Attribute}.}}
 
-To continuously elevate zero-shot classification performance, researchers have developed various embedding and generative architectures. Generative frameworks improve zero-shot accuracy by synthesizing pseudo-samples derived from target attribute distributions \cite{Verma2017GFZSL}. This feature generation capability has been formally extended to broader any-shot settings \cite{Xian2019Fvaegan}. Dense attribute attention mechanisms localize discriminative semantic evidence more explicitly during processing \cite{Huynh2020DAZLE}. Attribute prototype networks operate similarly to establish stable classification boundaries \cite{Xu2020APN}. Contrastive learning systems further improve visual-semantic alignment through robust structural objectives \cite{Han2021CEGZSL}. Transformer architectures increasingly guide global representations across predefined semantic constraints \cite{Chen2022TransZero}. Refined variations of this approach apply cross-attribute awareness to capture complex semantic dependencies \cite{Chen2023TransZeroPlus}. Moreover, modern mechanisms leverage textual document summaries to reliably align conceptual spaces \cite{Naeem2024I2DFormer}.
+To continuously elevate Zero-Shot Learning (ZSL) classification performance, researchers have developed various embedding and generative architectures. A Generative Framework for Zero-Shot Learning (GFZSL) improves zero-shot accuracy by synthesizing pseudo-samples derived from target attribute distributions \cite{Verma2017GFZSL}. This feature generation capability has been formally extended to broader any-shot settings \cite{Xian2019Fvaegan}. Dense attribute attention mechanisms localize discriminative semantic evidence more explicitly during processing \cite{Huynh2020DAZLE}. Attribute prototype networks operate similarly to establish stable classification boundaries \cite{Xu2020APN}. Contrastive learning systems further improve visual-semantic alignment through robust structural objectives \cite{Han2021CEGZSL}. Transformer architectures increasingly guide global representations across predefined semantic constraints \cite{Chen2022TransZero}. Refined variations of this approach apply cross-attribute awareness to capture complex semantic dependencies \cite{Chen2023TransZeroPlus}. Moreover, modern mechanisms leverage textual document summaries to reliably align conceptual spaces \cite{Naeem2024I2DFormer}.
 
-Diverse analytical methodologies calculate probabilistic convex combinations utilizing fixed semantic embeddings \cite{Norouzi2014ConSE}. Cross-modal transfer architectures project comprehensive textual descriptions directly into visual coordinates \cite{Socher2013CMT}. Structured optimization strategies strategically apply semantic similarity embedding paradigms \cite{Zhang2015SSE}. Specialized label-embedding operations successfully isolate relevant conceptual boundaries \cite{Akata2016ALE}. Structured joint formulations enhance fundamental metric alignment loops \cite{Akata2015SJE}. Visual-semantic models explicitly align deep spatial features across distinct domain manifolds \cite{Frome2013DeViSE}. Fast linear regularizations provide mathematically simple yet functionally effective prediction limits \cite{RomeraParedes2015ESZSL}. Other frameworks synthesize artificial class weights to hallucinate unobserved semantic targets \cite{Changpinyo2016SYNC}. Semantic autoencoder architectures strictly enforce constraints that preserve inherent topology within projection spaces \cite{Kodirov2017SAE}. Because these projection realms remain highly dimensional, robust implementations rely heavily on efficient randomized singular-value decompositions \cite{Halko2011RandomizedSVD}. 
+Diverse analytical methodologies calculate probabilistic Convex combinations of Semantic Embeddings (CONSE) \cite{Norouzi2014ConSE}. Cross-Modal Transfer (CMT) architectures project comprehensive textual descriptions directly into visual coordinates \cite{Socher2013CMT}. Structured optimization strategies strategically apply Semantic Similarity Embedding (SSE) paradigms \cite{Zhang2015SSE}. Specialized Attribute Label Embedding (ALE) operations successfully isolate relevant conceptual boundaries \cite{Akata2016ALE}. Structured Joint Embedding (SJE) formulations enhance fundamental metric alignment loops \cite{Akata2015SJE}. Deep Visual-Semantic Embedding (DEVISE) models explicitly align deep spatial features across distinct domain manifolds \cite{Frome2013DeViSE}. Embarrassingly Simple Zero-Shot Learning (ESZSL) via fast linear regularizations provides mathematically simple yet functionally effective prediction limits \cite{RomeraParedes2015ESZSL}. Other frameworks use Synthesized Classifiers (SYNC) with artificial class weights to hallucinate unobserved semantic targets \cite{Changpinyo2016SYNC}. Semantic Autoencoder (SAE) architectures strictly enforce constraints that preserve inherent topology within projection spaces \cite{Kodirov2017SAE}. Because these projection realms remain highly dimensional, robust implementations rely heavily on efficient randomized Singular-Value Decompositions (SVDs) \cite{Halko2011RandomizedSVD}. 
 
-The broader scene understanding field expanded evaluation domains through large-scale attribute databases \cite{Patterson2014SUN}. The comprehensive structured metadata supporting these visual environments remains actively maintained and accessible online \cite{SUNAttributesWebsite}. In the medical context, specialized clinical benchmarks utilize structured dermoscopic assessment criteria \cite{Kawahara2019Derm7pt}. Such repositories supply the standardized diagnostic verification frameworks required for robust testing \cite{Derm7ptWebsite}.
+The broader scene understanding field expanded evaluation domains through large-scale attribute databases, such as the Scene Understanding (SUN) dataset \cite{Patterson2014SUN}. The comprehensive structured metadata supporting these visual environments remains actively maintained and accessible online \cite{SUNAttributesWebsite}. In the medical context, specialized clinical benchmarks utilize structured dermoscopic assessment criteria \cite{Kawahara2019Derm7pt}. Such repositories supply the standardized diagnostic verification frameworks required for robust testing \cite{Derm7ptWebsite}.
 
-Despite noticeable advancements in explainable artificial intelligence (XAI), a scientific gap persists in the systematic bridging of latent features and transparent decision logic without sacrificing auditability. Existing post-hoc methods typically generate fragmented visual attributions that fail to establish global rules, while interpretable-by-design architectures demand costly model retraining. Furthermore, traditional heuristic rule inducers forcefully dictate boundary classifications, consistently neglecting the structural indiscernibility inherent in complex deep representations. The proposed research contributions directly address these omissions by decoupling the heavy computational inference of a neural network from a lightweight symbolic extraction layer. By leveraging an explicitly defined continuous transition matrix in conjunction with density-aware discretization and formal rough-set granulation, the presented methodology yields a verified framework capable of extracting honest, conflict-aware diagnostic policies.
+Despite noticeable advancements in Explainable Artificial Intelligence (XAI), a scientific gap persists in the systematic bridging of latent features and transparent decision logic without sacrificing auditability. Existing post-hoc methods typically generate fragmented visual attributions that fail to establish global rules, while interpretable-by-design architectures demand costly model retraining. Furthermore, traditional heuristic rule inducers forcefully dictate boundary classifications, consistently neglecting the structural indiscernibility inherent in complex deep representations. The proposed research contributions directly address these omissions by decoupling the heavy computational inference of a neural network from a lightweight symbolic extraction layer. By leveraging an explicitly defined continuous transition matrix in conjunction with density-aware discretization and formal rough-set granulation, the presented methodology yields a verified framework capable of extracting honest, conflict-aware diagnostic policies.
 
 % ==================================================================
 % SECTION 3: Materials and methods
@@ -168,7 +168,7 @@ The SEMTRA framework is structurally designed as a modular, post-hoc audit pipel
 \end{adjustwidth}
 \end{figure}
 
-The progression moves from the initial latent space $\matA$, mapped through a global transition matrix $\matT$, to reconstruct continuous semantics $\matB$. Subsequently, these semantics are discretized through the WEDD mechanism to induce compact symbolic production rules $\Rule$. To avoid notational ambiguity, the matrix of all discretized states is denoted as $\mathbf{S}$, with individual symbolic states for object $i$ and attribute $j$ defined as $s_{ij}$. The output of the framework follows the standardized rule format $r$ as presented in Equation~\eqref{eq:rule_format}:
+The progression moves from the initial latent space $\matA$, mapped through a global transition matrix $\matT$, to reconstruct continuous semantics $\matB$. Subsequently, these semantics are discretized through the Weighted Entropy-Density Discretization (WEDD) mechanism to induce compact symbolic production rules $\Rule$. To avoid notational ambiguity, the matrix of all discretized states is denoted as $\mathbf{S}$, with individual symbolic states for object $i$ and attribute $j$ defined as $s_{ij}$. The output of the framework follows the standardized rule format $r$ as presented in Equation~\eqref{eq:rule_format}:
 \begin{equation}
  \label{eq:rule_format}
  r: \quad \bigwedge_{j\in R_r} [s_j = v_j] \Rightarrow d = y_r,
@@ -212,10 +212,11 @@ The choice of a linear ridge operator is an intentional methodological decision.
 \begin{equation}
  \label{eq:global_transition}
  \matT = \matV_r\matW^{\ast} \in \R^{k \times \ell}, \quad \hatB = (\matA - \mathbf{1}\bar{\mathbf{a}}^{\top})\matT + \mathbf{1}\mathbf{b}_0^{\top}.
-where $\mathbf{1} \in \mathbb{R}^{m \times 1}$ represents the column vector of ones for intercept broadcasting.
 \end{equation}
+where $\mathbf{1} \in \mathbb{R}^{m \times 1}$ represents the column vector of ones for intercept broadcasting.
 
-This linear transformation projects frozen representation features into a semantically grounded coordinate system. Global semantic reconstruction quality is evaluated using the Mean Absolute Error (MAE) defined in Equation~\eqref{eq:mae}:
+
+This linear transformation projects frozen representation features into a semantically grounded coordinate system. Global semantic reconstruction quality is evaluated using the MAE defined in Equation~\eqref{eq:mae}:
 \begin{equation}
  \label{eq:mae}
  \mathrm{MAE}_Q = \frac{1}{|Q|\ell} \sum_{i \in Q} \sum_{j=1}^{\ell} |\hat{b}_{ij} - b_{ij}|.
@@ -253,9 +254,7 @@ To prevent jitter in the resulting logic, WEDD introduces a local probability de
  p_j(\theta) = \frac{1}{n h_j}\sum_{i=1}^{n}K\left(\frac{\theta-x_{ij}}{h_j}\right).
 \end{equation}
 
-The bandwidth $h_j$ is selected using Silverman's Rule of Thumb. To mitigate the $O(n^2)$ computational complexity of evaluating $n$ candidate thresholds over $n$ points, a fast binning approximation is utilized to compute the KDE efficiently.
-
-The bandwidth $ is selected using Silverman\'s Rule of Thumb. To mitigate the (n^2)$ computational complexity of evaluating $ candidate thresholds over $ points, a fast binning approximation is utilized to compute the KDE efficiently.
+The bandwidth $h_j$ is selected using Silverman's Rule of Thumb. To mitigate the $O(n^2)$ computational complexity of evaluating $n$ candidate thresholds over $n$ points, a fast binning approximation is utilized to compute the Kernel Density Estimation (KDE) efficiently.
 
 The final discretization threshold is determined by minimizing the unified WEDD multiobjective function in Equation~\eqref{eq:wedd_obj}:
 \begin{equation}
@@ -265,7 +264,7 @@ The final discretization threshold is determined by minimizing the unified WEDD 
 
 Both $\widetilde{H}_j(\theta)$ and $\widetilde{p}_j(\theta)$ are scaled using standard Min-Max normalization into the $[0,1]$ interval across all generated candidate thresholds so that the multiobjective weights are comparable.
 
-WEDD does not simply minimize entropy as standard decision trees do. The parameter $\lambda_H \in [0,1]$ is an auditor-facing knob that trades rule informational purity against density-aware boundary placement. Because the discretizer ablation shows that MDLP-like entropy (defined as recursive entropy minimization with Minimum Description Length stopping criteria) can match or exceed WEDD on several audit metrics, WEDD is treated here as a stability-oriented design option rather than as an unconditionally superior discretizer. The complete procedural implementation of these early phases is outlined in Algorithm~\ref{alg:phase1_wedd}.
+WEDD does not simply minimize entropy as standard decision trees do. The parameter $\lambda_H \in [0,1]$ is an auditor-facing knob that trades rule informational purity against density-aware boundary placement. Because the discretizer ablation shows that Minimum Description Length Principle (MDLP)-like entropy (defined as recursive entropy minimization with MDLP stopping criteria) can match or exceed WEDD on several audit metrics, WEDD is treated here as a stability-oriented design option rather than as an unconditionally superior discretizer. The complete procedural implementation of these early phases is outlined in Algorithm~\ref{alg:phase1_wedd}.
 
 \begin{algorithm}[!ht]
 \caption{Neural-to-Semantic Transition and WEDD Discretization (Phases 1 and 2.1)}
@@ -319,7 +318,9 @@ To keep the resulting explanations conceptually compact, we sequentially apply a
  \label{eq:reduct_search}
  R_{\rho}^{\ast} = \argmin_{R \subseteq \C_{\rho}} |R| \quad \mathrm{s.t.}\quad \mathrm{Conf}(R \Rightarrow d_{\rho}) \geq \tau,\quad \mathrm{Supp}(R \Rightarrow d_{\rho}) \geq s_{\min},
 \end{equation}
-where $\rho$ denotes a specific target decision class. The rule induction confidence threshold $\tau = 0.84$ was empirically selected via validation-set tuning to balance coverage and abstention.
+where $\rho$ denotes a specific target decision class.
+
+The rule induction confidence threshold $\tau = 0.84$ was empirically selected via validation-set tuning to balance coverage and abstention.
 
 To navigate this logic, the framework formulates a global discernibility matrix. Each element $c_{ij}$ identifies the set of differentiating semantic attributes between two differently classified objects, as demonstrated in Equation~\eqref{eq:discernibility_cell}:
 \begin{equation}
@@ -345,7 +346,9 @@ When querying the generalized rulebook, two types of logical edge cases may emer
  \label{eq:conflict_resolution}
  S(y_k) = \sum_{r \in \Rule_{\text{active}}, d_r=y_k} \mathrm{Conf}(r) \cdot \mathrm{Supp}(r) \cdot w_r,
 \end{equation}
-where $w_r = \left( \epsilon + \frac{1}{|R_r|} \sum_{j \in R_r} p_j(\theta_{j}) \right)^{-1}$ functions as a density-based weight (with $\epsilon = 1\text{e-}5$ as a regularization term) inherited from the WEDD discretization phase, taking the inverse of the average probability density evaluated at the thresholds used in rule $r$ and prioritizing rules anchored in lower-density attribute regions. Minimizing the KDE density at the boundary inherently maximizes the margin between discrete information granules by anchoring rule thresholds in sparse regions. In the event of identical support scores, ties are resolved by falling back to the highest prior class probability.
+where $w_r = \left( \epsilon + \frac{1}{|R_r|} \sum_{j \in R_r} p_j(\theta_{j}) \right)^{-1}$ functions as a density-based weight (with $\epsilon = 1\text{e-}5$ as a regularization term) inherited from the WEDD discretization phase, taking the inverse of the average probability density evaluated at the thresholds used in rule $r$ and prioritizing rules anchored in lower-density attribute regions. 
+
+Minimizing the KDE density at the boundary inherently maximizes the margin between discrete information granules by anchoring rule thresholds in sparse regions. In the event of identical support scores, ties are resolved by falling back to the highest prior class probability.
 
 In scenarios where no exact production rules match the presented inference data (structural gaps), the framework employs soft analytical matching. This fallback mechanism evaluates partial logical alignments using the fundamental symbolic Hamming distance $d_H$ defined in Equation~\eqref{eq:hamming_dist}:
 \begin{equation}
@@ -419,7 +422,7 @@ Finally, the entire sequential progression, from granulation to conclusive infer
 \subsection{Evaluation Metrics for Auditability}
 \label{subsec:eval_metrics}
 
-To evaluate SEMTRA as an audit framework, we supplement standard predictive accuracy with a multi-dimensional suite of metrics focused on auditability, quantifying the tradeoff between extracted logic complexity and agreement with the frozen base model. Rulebook Coverage (Cov.) represents explanation ``breadth,'' measuring the percentage of tested instances $Q$ receiving a deterministic symbolic explanation defined in Equation~\eqref{eq:coverage}:
+To evaluate SEMTRA as an audit framework, we supplement standard predictive accuracy with a multi-dimensional suite of metrics focused on auditability, quantifying the tradeoff between extracted logic complexity and agreement with the frozen base model. Rulebook Coverage (Cov) represents explanation ``breadth,'' measuring the percentage of tested instances $Q$ receiving a deterministic symbolic explanation defined in Equation~\eqref{eq:coverage}:
 \begin{equation}
  \label{eq:coverage}
  \mathrm{Cov} = \frac{|C_Q|}{|Q|}.
@@ -453,7 +456,7 @@ To evaluate the SEMTRA framework as a post-hoc deep learning audit instrument, a
 \subsubsection{Datasets, Feature Extraction, and Base Modeling}
 \label{subsubsec:datasets_base_modeling}
 
-Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. Features were extracted from central crops without test-time augmentation, and the framework uses the ResNet-101 continuous feature vectors and proposed splits from the xlsa17 benchmark release \cite{Xian2019AwA2}. Prior to optimization, the AwA2 ground-truth semantic vectors \matB were Min-Max normalized to the [0,1] interval. A base ridge classifier is trained on the compressed representations to establish the frozen predictive target for fidelity. The protocol additionally evaluates SUN Attribute Database scenes \cite{Patterson2014SUN,SUNAttributesWebsite} and Derm7pt / Seven-Point Checklist dermatology cases \cite{Kawahara2019Derm7pt,Derm7ptWebsite}. SUN uses the xlsa17 ResNet-101 split with 102 scene attributes, and the enhanced audit bundle joins seen-test predictions to normalized SUN image hierarchy metadata for category-level inspection. Derm7pt uses dermoscopic images, official train/validation/test case indices, grouped diagnosis labels, and the seven checklist concepts; the enhanced bundle replaces the earlier simple image-feature proxy with a locked TorchVision ResNet-50 ImageNet-1K v2 encoder applied in evaluation mode. Derm7pt results are retrospective technical-validation results only; they are not clinical deployment evidence.
+Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. Features were extracted from central crops without test-time augmentation, and the framework uses the Residual Network-101 (ResNet-101) continuous feature vectors and proposed splits from the xlsa17 benchmark release \cite{Xian2019AwA2}. Prior to optimization, the AwA2 ground-truth semantic vectors $\matB$ were Min-Max normalized to the $[0,1]$ interval. A base ridge classifier is trained on the compressed representations to establish the frozen predictive target for fidelity. The protocol additionally evaluates SUN Attribute Database scenes \cite{Patterson2014SUN,SUNAttributesWebsite} and Derm7pt / Seven-Point Checklist dermatology cases \cite{Kawahara2019Derm7pt,Derm7ptWebsite}. SUN uses the xlsa17 ResNet-101 split with 102 scene attributes, and the enhanced audit bundle joins seen-test predictions to normalized SUN image hierarchy metadata for category-level inspection. Derm7pt uses dermoscopic images, official train/validation/test case indices, grouped diagnosis labels, and the seven checklist concepts; the enhanced bundle replaces the earlier simple image-feature proxy with a locked TorchVision ResNet-50 ImageNet-1K v2 encoder applied in evaluation mode. Derm7pt results are retrospective technical-validation results only; they are not clinical deployment evidence.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 3.7.2 Empirical Evaluation Splits
@@ -461,7 +464,7 @@ Primary real-world evaluations utilize the AwA2~\cite{AwA2Website} benchmark. Fe
 \subsubsection{Empirical Evaluation Splits}
 \label{subsubsec:evaluation_splits}
 
-To isolate memorization capacity from semantic generalization, two AwA2 testing splits are used. Protocol A (closed-world fidelity) assesses neural-to-semantic reconstruction on 50 classes. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively.. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively. using MAE, RMSE, and semantic correlation, while quantifying symbolic rulebook coverage, covered fidelity, covered accuracy, all-object accuracy, conflict, and abstention. Protocol B uses the official xlsa17 split as a semantic-transfer validation proxy. For Protocol B, the transition matrix is trained exclusively on the 40 seen classes and evaluated on 10 unseen classes. These values test whether reconstructed semantics transfer across class boundaries; they are not reported as a competitive zero-shot learning leaderboard result.
+To isolate memorization capacity from semantic generalization, two AwA2 testing splits are used. Protocol A (closed-world fidelity) assesses neural-to-semantic reconstruction on 50 classes. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively.. The dataset uses a standard 60\%/20\%/20\% split for training, validation, and testing, respectively. using MAE, Root Mean Square Error (RMSE), and semantic correlation, while quantifying symbolic rulebook coverage, covered fidelity, covered accuracy, all-object accuracy, conflict, and abstention. Protocol B uses the official xlsa17 split as a semantic-transfer validation proxy. For Protocol B, the transition matrix is trained exclusively on the 40 seen classes and evaluated on 10 unseen classes. These values test whether reconstructed semantics transfer across class boundaries; they are not reported as a competitive zero-shot learning leaderboard result.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 3.7.3 Methodological Ablations and XAI Baselines
@@ -521,21 +524,23 @@ test & $0.1029 \pm 0.0005$ & $0.1484 \pm 0.0007$ & $0.8070 \pm 0.0018$ \\
 \end{tabularx}
 \end{table}
 
-To justify the choice of a linear operator over more complex alternatives, an ablation study was performed (Table~\ref{tab:transition_operator_ablation}). While non-linear regressors (e.g., two-layer MLP) marginally improve reconstruction in some metrics, they introduce significant black-box opacity into the transition itself. The linear ridge transition maintains a high correlation (0.7759) and significantly higher rule coverage ($0.8718 \pm 0.0075$) compared to non-linear variants, establishing it as the most defensible choice for an auditable framework. The near-zero rule accuracy (0.0027) for the RBF kernel ridge indicates that severe overfitting in the high-dimensional latent space collapsed the global semantic mapping entirely, underscoring the fragility of unregularized non-linear projections.
+To justify the choice of a linear operator over more complex alternatives, an ablation study was performed (Table~\ref{tab:transition_operator_ablation}). While non-linear regressors (e.g., two-layer Multi-Layer Perceptron (MLP)) marginally improve reconstruction in some metrics, they introduce significant black-box opacity into the transition itself. The linear ridge transition maintains a high correlation (0.7759) and significantly higher rule coverage ($0.8718 \pm 0.0075$) compared to non-linear variants, establishing it as the most defensible choice for an auditable framework. The near-zero rule accuracy (0.0027) for the Radial Basis Function (RBF) kernel ridge indicates that severe overfitting in the high-dimensional latent space collapsed the global semantic mapping entirely, underscoring the fragility of unregularized non-linear projections.
 
 \begin{table}[!ht]
+\begin{adjustwidth}{-\extralength}{0cm}
 \caption{Semantic reconstruction and rule-transfer ablation for linear and nonlinear operators. Means $\pm$ standard deviations across 5 seeds are provided for the proposed linear operator.\label{tab:transition_operator_ablation}}
 %\centering
 \small
-\begin{tabularx}{\textwidth}{l c C C c C C}
+\begin{tabularx}{\fulllength}{L c c c c c c}
 \toprule
-\textbf{Operator} & \textbf{MAE} & \textbf{RMSE} & \textbf{Corr.} & \textbf{Rule cov.} & \textbf{Rule acc.} & \textbf{Runtime (s)} \\
+\textbf{Operator} & \textbf{MAE} & \textbf{RMSE} & \textbf{Corr.} & \textbf{Cov} & \textbf{Rule acc.} & \textbf{Runtime (s)} \\
 \midrule
 Linear ridge transition & $0.1076 \pm 0.0012$ & $0.1573 \pm 0.0000$ & $0.7759 \pm 0.0000$ & $0.8718 \pm 0.0075$ & $0.1941 \pm 0.0000$ & $0.0451 \pm 0.0000$ \\
 RBF kernel ridge & $0.1958 \pm 0.0034$ & $0.2583 \pm 0.0041$ & $0.1176 \pm 0.0082$ & $1.0000 \pm 0.0000$ & $0.0027 \pm 0.0005$ & $2.8573 \pm 0.1250$ \\
 Two-layer MLP regressor & $0.1685 \pm 0.0028$ & $0.2355 \pm 0.0035$ & $0.4497 \pm 0.0065$ & $0.8390 \pm 0.0120$ & $0.0915 \pm 0.0042$ & $0.6914 \pm 0.0410$ \\
 \bottomrule
 \end{tabularx}
+\end{adjustwidth}
 \noindent\footnotesize{Note: All runtime measurements reported in this table were executed sequentially on a single NVIDIA RTX 3090 Graphics Processing Unit (GPU) and an Intel Core i9-10900K Central Processing Unit (CPU) to ensure a standardized computational baseline.}
 \end{table}
 
@@ -556,7 +561,7 @@ Detailed attribute-wise diagnostics, visualized in Figure~\ref{fig:salience_and_
 As shown in Table~\ref{tab:selected_attributes}, the composite selection score effectively isolates the top $q$ attributes that offer the best balance between neural signal strength and reconstruction precision. For brevity, the top 12 selected attributes are shown in Table~\ref{tab:selected_attributes}.
 
 \begin{table}[!ht]
-\caption{Top 12 selected semantic attributes (out of =18$ used for rule induction).\label{tab:selected_attributes}}
+\caption{Top 12 selected semantic attributes (out of $q=18$ used for rule induction)\label{tab:selected_attributes}}
 \centering
 %\small
 \begin{tabularx}{\textwidth}{L l l l}
@@ -593,7 +598,7 @@ The core objective of the SEMTRA framework is to transform the continuous semant
 %\small
 \begin{tabularx}{\textwidth}{lLLL}
 \toprule
-\textbf{Metric} & \textbf{Value (Ours)} & \textbf{CART baseline} & \textbf{Separate-and-conquer} \\
+\textbf{Metric} & \textbf{Value (Ours)} & \textbf{Classification and Regression Trees (CART) baseline} & \textbf{Separate-and-conquer} \\
 \midrule
 Number of rules & $59.00 \pm 2.55$ & 53 & 197 \\
 Test coverage & $0.8480 \pm 0.0530$ & 1.0000 & 0.2620 \\
@@ -624,12 +629,12 @@ Test conflict rate & $0.1375 \pm 0.0532$ & 0.0000 & 0.2301 \\
 \revtag{1}{5}\revtag{2}{2} \Rone{\Rtwo{As visualized in Figure~\ref{fig:baseline_tradeoff}, SEMTRA maintains high Cov while explicitly accounting for structural uncertainty. Compared to the frozen base predictor---which achieves a continuous test accuracy of 71.16\% (Appendix Table S2)---the reduction in covered accuracy to 39.73\% is a transparent audit tax--the cost of enforcing strict discretization and logical consistency on a high-dimensional non-linear system. For an auditor, the 39.73\% covered accuracy and 40.48\% Covered Fidelity jointly quantify the portion of the model's logic that is currently verifiable and reproducible through simple semantic predicates. This tradeoff is most appropriate for diagnostic auditing, dataset triage, and model documentation, where a conservative explanation layer is useful precisely because it exposes the cases that cannot be reduced to simple semantic rules.}}
 
 \begin{table}[!ht]
-\caption{AwA2 discretizer comparison using the same reconstructed semantics and rough-set inference logic. Values represent means evaluated across all 5 random seeds. Cov. stands for coverage.\label{tab:discretizer_comparison_main}}
+\caption{AwA2 discretizer comparison using the same reconstructed semantics and rough-set inference logic. Values represent means evaluated across all 5 random seeds.\label{tab:discretizer_comparison_main}}
 \centering
 %\small
 \begin{tabularx}{\textwidth}{lCCccCC}
 \toprule
-\textbf{Method} & \textbf{Cov.} & \textbf{Fid.} & \textbf{Cov. acc.} & \textbf{All acc.} & \textbf{Conflict} & \textbf{Rules} \\
+\textbf{Method} & \textbf{Cov} & \textbf{Fid.} & \textbf{Cov acc.} & \textbf{All acc.} & \textbf{Conflict} & \textbf{Rules} \\
 \midrule
 Equal-frequency & 0.7212 & 0.3087 & 0.2999 & 0.2161 & 0.2773 & 50.6 \\
 Equal-width & 0.6401 & 0.4535 & 0.4532 & 0.2883 & 0.3599 & 66.8 \\
@@ -739,7 +744,7 @@ To test whether the transition matrix $\matT$ transfers semantic structure beyon
 \revtag{1}{7}\revtag{2}{4} \Rone{\Rtwo{The semantic-transfer result is contextualized against established and more recent ZSL baselines in Table~\ref{tab:sota_quantitative_comparison}. To ensure the benchmark context remains current, we incorporate modern architectures (e.g., TransZero and I2DFormer+) from the 2019--2024 literature directly into the quantitative comparisons.}} 
 
 \begin{table}[!ht]
-\caption{Contextual quantitative comparison with published AwA2 zero-shot baselines. Source and scope: published ZSL for baselines and object accuracy across five seeds for our approach. SEMTRA values are semantic-transfer validation outputs, not leaderboard claims. \label{tab:sota_quantitative_comparison}}
+\caption{Contextual quantitative comparison with published Zero-Shot Learning (ZSL) baselines. Source and scope: published ZSL for baselines and object accuracy across five seeds for our approach. SEMTRA values are semantic-transfer validation outputs, not leaderboard claims. \label{tab:sota_quantitative_comparison}}
 %\begin{adjustwidth}{-\extralength}{0cm}
 \centering
 %scriptsize
@@ -799,7 +804,7 @@ Unseen semantic MAE & 0.1888 $\pm$ 0.0004 \\
 \caption{Official AwA2 xlsa17 unseen-class transfer results (SEMTRA).\label{tab:protocol_b}}
 \centering
 %\small
-\begin{tabularx}{\textwidth}{l l l l}
+\begin{tabularx}{\textwidth}{L l l l}
 \toprule
 \textbf{Unseen class} & \textbf{Prototype acc.} & \textbf{Symbolic template acc.} & \textbf{Mean Hamming} \\
 \midrule
@@ -838,18 +843,18 @@ Protocol B therefore validates the transition matrix as a semantic-transfer diag
 \revtag{1}{4}\revtag{2}{3} \Rone{\Rtwo{The audit protocol is evaluated beyond AwA2 using SUN and Derm7pt. Table~\ref{tab:cross_domain_generalization} summarizes the generated outputs. The SUN row uses the xlsa17 SUN release with 102 scene attributes; the official SUN Attribute Database paper reports 14,340 images and 707 scene categories, while the xlsa17 release exposes 717 class entries. The Derm7pt row (using Retrospective Clinical Metadata Features) uses dermoscopic images, official case-level splits, grouped diagnosis labels, and seven checklist concepts. Derm7pt is reported only as retrospective technical validation.}}
 
 \begin{table}[!ht]
-\caption{Cross-domain SEMTRA summary. Derm7pt is retrospective technical validation only.\label{tab:cross_domain_generalization}}
+\caption{Cross-domain SEMTRA summary. Derm7pt is retrospective technical validation only with clinical metadata features.\label{tab:cross_domain_generalization}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
 %\scriptsize
 \begin{tabularx}{\fulllength}{l>{\raggedright\arraybackslash}Xrcccc}
 \toprule
-\textbf{Dataset} & \textbf{Scope} & \textbf{Attrs} & \textbf{MAE} & \textbf{Cov.} & \textbf{Fid.} & \textbf{Acc.} \\
+\textbf{Dataset} & \textbf{Scope} & \textbf{Attrs} & \textbf{MAE} & \textbf{Cov} & \textbf{Fid.} & \textbf{Acc.} \\
 \midrule
 AwA2 \cite{AwA2Website} & Protocol A closed-world audit & 85 & 0.1029 & 0.8480 & 0.4048 & 0.3973 \\
 AwA2 Protocol B \cite{Xian2019AwA2} & official xlsa17 semantic-transfer validation & 85 & 0.1888 & -- & -- & 0.4402 \\
 SUN \cite{Patterson2014SUN} & xlsa17 SUN unseen transfer and seen-test audit & 102 & 0.0683 & 0.0760 & 0.0918 & 0.0714 \\
-Derm7pt (Retrospective Clinical Metadata Features) \cite{Kawahara2019Derm7pt} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
+Derm7pt \cite{Kawahara2019Derm7pt} & official test split; retrospective technical validation & 7 & 0.2433 & 0.9241 & 0.5288 & 0.4219 \\
 \bottomrule
 \end{tabularx}
 \end{adjustwidth}
@@ -863,7 +868,7 @@ The SUN rulebook audit shows low coverage and low covered fidelity, indicating t
 \subsection{Comparison with Local Surrogates and Concept Baselines}
 \label{subsec:results_local_concepts}
 
-To contextualize the scientific value of the SEMTRA rulebook, we compare its performance against two dominant paradigms in XAI: local post-hoc attributions (LIME/SHAP) and interpretable-by-design concept models (CBMs).
+To contextualize the scientific value of the SEMTRA rulebook, we compare its performance against two dominant paradigms in XAI: local post-hoc attributions (LIME/SHAP) and interpretable-by-design concept models.
 
 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 % 4.5.1 The Fragmentation Gap: SEMTRA vs. Local Surrogates
@@ -894,7 +899,7 @@ This divergence highlights the fragmentation gap: local methods are highly sensi
 \subsubsection{Post-hoc Auditability vs. Ante-hoc Design}
 \label{subsubsec:antehoc_design}
 
-We further compared SEMTRA against CBMs, which are specifically trained to predict concepts before labels. As summarized in Table~\ref{tab:cbm_tcav_baselines}, SEMTRA's post-hoc reconstruction error (MAE 0.1076) is virtually identical to that of a dedicated frozen-feature CBM. Note that the TCAV accuracy reported reflects a linear classifier trained explicitly on the TCAV bottleneck vectors.
+We further compared SEMTRA against Concept Bottleneck Models (CBMs), which are specifically trained to predict concepts before labels. As summarized in Table~\ref{tab:cbm_tcav_baselines}, SEMTRA's post-hoc reconstruction error (MAE 0.1076) is virtually identical to that of a dedicated frozen-feature CBM. Note that the Testing with Concept Activation Vectors (TCAV) accuracy reported reflects a linear classifier trained explicitly on the TCAV bottleneck vectors.
 
 \begin{table}[!ht]
 \caption{Consolidated comparison of SEMTRA against concept-based baselines.\label{tab:cbm_tcav_baselines}}
@@ -946,7 +951,7 @@ The synthetic environment consisted of a 10-dimensional feature space with a rul
 \end{tabularx}
 \end{table}
 
-As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000$), the framework achieved a macro-F1 score of 0.879 and a rule Jaccard similarity of 0.700, with a near-perfect operational coverage of 97.10\%. The minor baseline threshold error (0.014) observed at zero noise stems from the Gaussian Kernel Density Estimation (KDE) bandwidth smoothing used in the WEDD algorithm, represents the systematic bias introduced by the KDE bandwidth smoothing, not an optimization failure.
+As summarized in Table~\ref{tab:synthetic_noise}, at zero noise ($\sigma = 0.000$), the framework achieved a macro-F1 score of 0.879 and a rule Jaccard similarity of 0.700, with a near-perfect operational coverage of 97.10\%. The minor baseline threshold error (0.014) observed at zero noise stems from the Gaussian KDE bandwidth smoothing used in the WEDD algorithm, represents the systematic bias introduced by the KDE bandwidth smoothing, not an optimization failure.
 
 \begin{table}[!ht]
 \caption{Synthetic stress-test results averaged over random seeds.\label{tab:synthetic_noise}}
@@ -990,7 +995,7 @@ The synthetic results demonstrate that the core mathematical machinery of SEMTRA
 \subsection{The Scientific Value of Global Auditability}
 \label{subsec:scientific_value}
 
-The overarching objective of this manuscript is to establish a reproducible, post-hoc analytical pathway that maps semantically opaque neural representations into globally auditable symbolic knowledge. The current trajectory of artificial intelligence inherently demands verifiable symbolic knowledge in high-stakes decision-making workflows, as emphasized by the XAI 2.0 manifesto \cite{Longo2024XAI}. However, the modern interpretability landscape is characterized by a methodological schism \cite{Mersha2024XAISurvey}. On the one hand, local post-hoc explanations, such as LIME and SHAP \cite{Salih2025SHAPLIME}, dominate the field but routinely produce fragmented, instance-specific visual heatmaps. On the other side, interpretable-by-design architectures, such as Concept Bottleneck Models (CBMs) \cite{Srivastava2024VLGCBM}, provide structural transparency but require costly retraining and structural re-engineering of existing high-performance networks. 
+The overarching objective of this manuscript is to establish a reproducible, post-hoc analytical pathway that maps semantically opaque neural representations into globally auditable symbolic knowledge. The current trajectory of AI inherently demands verifiable symbolic knowledge in high-stakes decision-making workflows, as emphasized by the XAI 2.0 manifesto \cite{Longo2024XAI}. However, the modern interpretability landscape is characterized by a methodological schism \cite{Mersha2024XAISurvey}. On the one hand, local post-hoc explanations, such as LIME and SHAP \cite{Salih2025SHAPLIME}, dominate the field but routinely produce fragmented, instance-specific visual heatmaps. On the other side, interpretable-by-design architectures, such as CBMs \cite{Srivastava2024VLGCBM}, provide structural transparency but require costly retraining and structural re-engineering of existing high-performance networks. 
 
 The proposed SEMTRA framework effectively bridges this fragmentation gap by operating over frozen representations to generate a globally applicable rulebook. As empirically observed in Section~\ref{subsec:results_local_concepts} and Table~\ref{tab:local_xai_agreement}, local surrogate attributions demonstrate only moderate agreement with our globally extracted logical antecedents. This divergence underscores a critical advantage of our approach: rather than offering an unstable, locally perturbed approximation of importance, SEMTRA explicitly extracts the stable, dataset-wide logical policies that the network utilizes. By structuring the output as formal production rules (Equation~\eqref{eq:rule_format}), the framework shifts the explanation paradigm from localized diagnostic hints to a systematic, reusable audit artifact.
 
@@ -1011,7 +1016,7 @@ When visually similar but taxonomically distinct classes map into overlapping se
 \subsection{Linear Transition as a Defensive Choice}
 \label{subsec:linear_transition}
 
-The strategic implementation of a globally linear ridge-regression operator (Equation~\eqref{eq:ridge_opt}) serves as a deliberate, defensive safeguard optimized for maximum algebraic transparency. Previous analytical investigations have validated the efficacy of continuous transition matrices in structured visual analytics \cite{Radiuk2024TransitionMatrix} and complex healthcare diagnostics \cite{Barmak2024TowardTransition}. Furthermore, \revtag{1}{3} \Rone{unlike the Equivariant Transition Matrix (ETM) which strictly prioritizes geometric consistency under predefined Lie-group transformations \cite{Radiuk2026EquivariantTransition}, SEMTRA is exclusively tailored for semantic-to-symbolic rule extraction and granular logic reporting (Table~\ref{tab:etm_semtra_comparison})}.
+The strategic implementation of a globally linear ridge-regression operator (Equation~\eqref{eq:ridge_opt}) serves as a deliberate, defensive safeguard optimized for maximum algebraic transparency. Previous analytical investigations have validated the efficacy of continuous transition matrices in structured visual analytics \cite{Radiuk2024TransitionMatrix} and complex healthcare diagnostics \cite{Barmak2024TowardTransition}. Furthermore, \revtag{1}{3} \Rone{unlike the ETM which strictly prioritizes geometric consistency under predefined Lie-group transformations \cite{Radiuk2026EquivariantTransition}, SEMTRA is exclusively tailored for semantic-to-symbolic rule extraction and granular logic reporting (Table~\ref{tab:etm_semtra_comparison})}.
 
 The ablation studies detailed in Table~\ref{tab:transition_operator_ablation} empirically justify this linear constraint. While complex non-linear regressors marginally minimize continuous reconstruction errors, they simultaneously introduce severe black-box opacity into the transition bridge, thereby degrading downstream rule coverage and interpretability. By maintaining linearity, the neural-to-semantic transition weights remain mathematically transparent, allowing human auditors to directly trace and stress-test the origin of semantic derivations.
 
@@ -1036,7 +1041,7 @@ These limitations define a clear trajectory for future research. Open questions 
 \section{Conclusions}
 \label{sec:conclusions}
 
-In this work, we proposed the SEMTRA framework to translate uninterpretable neural representations into auditable, rough-set production rules. It effectively bridges the transparency gap in deep learning by establishing explicit metrics for coverage, fidelity, and conflict reporting. Evaluated on the AwA2 Protocol A, the semantic transition achieved a test mean absolute error of 0.1029 ± 0.0005. The induced rulebook covered 84.80\% of instances, successfully reproducing base predictor decisions with a covered fidelity of 40.48\% and a covered accuracy of 39.73\%. Under the Protocol B split, continuous semantic transfer achieved 44.02\% unseen-object accuracy, serving as a robust diagnostic of conceptual transfer. \revtag{1}{2} \Rone{On controlled synthetic data, the framework reached a macro-F1 score of 0.879 at zero noise and 0.838 under maximum noise, directly validating the rule extraction engine.} Despite these achievements, the framework remains highly dependent on predefined concept dictionaries, and sequential error propagation limits overall performance in complex cross-domain applications like SUN and Derm7pt.
+In this work, we proposed the SEMTRA framework to translate uninterpretable neural representations into auditable, rough-set production rules. It effectively bridges the transparency gap in deep learning by establishing explicit metrics for coverage, fidelity, and conflict reporting. Evaluated on the AwA2 Protocol A, the semantic transition achieved a test MAE of 0.1029 ± 0.0005. The induced rulebook covered 84.80\% of instances, successfully reproducing base predictor decisions with a covered fidelity of 40.48\% and a covered accuracy of 39.73\%. Under the Protocol B split, continuous semantic transfer achieved 44.02\% unseen-object accuracy, serving as a robust diagnostic of conceptual transfer. \revtag{1}{2} \Rone{On controlled synthetic data, the framework reached a macro-F1 score of 0.879 at zero noise and 0.838 under maximum noise, directly validating the rule extraction engine.} Despite these achievements, the framework remains highly dependent on predefined concept dictionaries, and sequential error propagation limits overall performance in complex cross-domain applications like SUN and Derm7pt.
 
 Future research should address these challenges by investigating instance-level semantic supervision, developing search-efficient rough-set combinatorial algorithms, and establishing domain-specific validations to safely deploy transparent audit layers in critical environments.
 
@@ -1066,29 +1071,29 @@ The following abbreviations are used in this manuscript:
 \\
 \noindent
 \begin{tabular}{@{}p{2cm}l}
+Abs & Structural Abstention Rate\\
 AI & Artificial Intelligence\\
 AUROC & Area Under the Receiver Operating Characteristic\\
 AwA2 & Animals with Attributes 2\\
 CART & Classification and Regression Trees\\
-CBM & Concept Bottleneck Model\\
 Cov & Rulebook Coverage\\
-CPU & Central Processing Unit\\
 CR & Conflict Rate\\
-DAP & Direct Attribute Prediction\\
 ECE & Expected Calibration Error\\
-GFZSL & Generative Framework for Zero-Shot Learning\\
-GPU & Graphics Processing Unit\\
-IAP & Indirect Attribute Prediction\\
-ILSVRC & ImageNet Large Scale Visual Recognition Challenge\\
+ETM & Equivariant Transition Matrix\\
+KDE & Kernel Density Estimation\\
 LIME & Local Interpretable Model-agnostic Explanations\\
 MAE & Mean Absolute Error\\
 MDLP & Minimum Description Length Principle\\
 MLP & Multi-Layer Perceptron\\
+PCA & Principal Component Analysis\\
 RBF & Radial Basis Function\\
 ResNet & Residual Network\\
 RMSE & Root Mean Square Error\\
-SEMTRA & global SEMantic TRAnsition\\
+SEMTRA & Global Semantic Transition\\
 SHAP & Shapley Additive Explanations\\
+SJE & Structured Joint Embedding\\
+SSE & Semantic Similarity Embedding\\
+SUN & Scene Understanding\\
 SVD & Singular-Value Decomposition\\
 TCAV & Testing with Concept Activation Vectors\\
 WEDD & Weighted Entropy-Density Discretization\\
@@ -1111,11 +1116,11 @@ ZSL & Zero-Shot Learning
 \section{ETM vs SEMTRA comparison}
 \label{sec:etm_vs_semtra}
 
-\begin{table}[!ht]
+\begin{table}[H]
 \caption{Comparison of the prior ETM framework and the present SEMTRA framework.\label{tab:etm_semtra_comparison}}
 \begin{adjustwidth}{-\extralength}{0cm}
 \centering
-\small
+\scriptsize
 \begin{tabularx}{\fulllength}{l L L L}
 \toprule
 \textbf{Dimension} & \textbf{ETM \cite{Radiuk2026EquivariantTransition}} & \textbf{SEMTRA} & \textbf{Relationship} \\
@@ -1151,7 +1156,7 @@ The feature extractor utilizes the released ResNet-101 representation natively p
 \toprule
 \textbf{Component} & \textbf{Value} & \textbf{Implementation detail} \\
 \midrule
-Feature extractor & ResNet-101 features & ILSVRC-pretrained representation layer; no image-level augmentation in this package \\
+Feature extractor & ResNet-101 features & ImageNet Large Scale Visual Recognition Challenge (ILSVRC)-pretrained representation layer; no image-level augmentation in this package \\
 Feature dimension & 2048 & Global average/penultimate representation coordinates \\
 Auxiliary compression & 64 & Principal Component Analysis (PCA) reduced to 64 components retaining 95\% variance \\
 Base predictor & Ridge classifier & Trained on variance-screened representation coordinates \\
@@ -1246,12 +1251,12 @@ Furthermore, Table~\ref{tab:rule_stability} rigorously reports the operational r
 where $\widehat{s}_j$ is the empirical standard deviation of reconstructed semantic attribute $j$ on the test split.
 
 \begin{table}[!ht]
-\caption{Rule consistency under semantic-representation perturbations. Cov. stands for coverage.\label{tab:rule_stability}}
+\caption{Rule consistency under semantic-representation perturbations.\label{tab:rule_stability}}
 \centering
 %\small
 \begin{tabularx}{\textwidth}{c CCCCCC}
 \toprule
-\textbf{Sigma} & \textbf{Rule consistency} & \textbf{Decision consistency} & \textbf{Cov.} & \textbf{Cov. change} & \textbf{Abstention} & \textbf{Conflict} \\
+\textbf{Sigma} & \textbf{Rule consistency} & \textbf{Decision consistency} & \textbf{Cov} & \textbf{Cov change} & \textbf{Abstention} & \textbf{Conflict} \\
 \midrule
 0.0000 & 1.0000 & 1.0000 & 0.8796 & 0.0000 & 0.1204 & 0.1180 \\
 0.0100 & 0.9745 & 0.9663 & 0.8792 & -0.0004 & 0.1208 & 0.1183 \\

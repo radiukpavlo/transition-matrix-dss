@@ -721,7 +721,7 @@ class NatureFigureGenerator:
 def main() -> None:
     parser = argparse.ArgumentParser(description="Generate Nature-style manuscript figures from public artifacts.")
     parser.add_argument("--root", type=Path, default=Path.cwd())
-    parser.add_argument("--formats", nargs="+", default=["pdf", "svg"], choices=["pdf", "svg", "png"])
+    parser.add_argument("--formats", nargs="+", default=["pdf"], choices=["pdf", "svg", "png"])
     parser.add_argument("--dpi", type=int, default=600)
     args = parser.parse_args()
     generator = NatureFigureGenerator(args.root.resolve(), tuple(args.formats), args.dpi)

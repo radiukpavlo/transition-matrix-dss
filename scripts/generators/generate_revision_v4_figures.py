@@ -28,7 +28,7 @@ plt.rcParams["ytick.major.width"] = 0.6
 
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "figs_main"
+OUT = ROOT / "manuscript" / "figs_archived"
 TEXT_SCALE = 1.12
 
 PALETTE = {

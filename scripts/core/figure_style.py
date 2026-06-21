@@ -162,7 +162,13 @@ def save_nature_figure(
         stem = base.with_suffix("")
     else:
         stem = base
-    stem.parent.mkdir(parents=True, exist_ok=True)
+    
+    root = Path(__file__).resolve().parents[2]
+    target_dir = root / "manuscript" / "figs_archived"
+    target_dir.mkdir(parents=True, exist_ok=True)
+    stem = target_dir / stem.name
+    
+    formats = ("pdf",)
     for ax in fig.axes:
         ax.set_title("")
         for text in ax.findobj(Text):

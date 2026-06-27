@@ -68,7 +68,7 @@ artifacts/_tmp_xlsa17/
 artifacts/**/_tmp/
 
 # Manuscript (ignore all files and folders related to the manuscript)
-
+manuscript/odt/_conversion_work/
 
 # OS and editor files
 .DS_Store

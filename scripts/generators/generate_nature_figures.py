@@ -551,17 +551,60 @@ class NatureFigureGenerator:
     def fig19_tradeoff(self) -> None:
         profile = self.set_figure_profile("fig19_baseline_tradeoff_scatter.pdf")
         df = pd.read_csv(self.source("artifacts", "awa2", "symbolic_baselines_metrics.csv"))
-        fig, ax = plt.subplots(figsize=nature_size(89, 66))
-        sizes = np.clip(df["rule_count"], 28, 180)
-        ax.scatter(df["coverage"], df["covered_fidelity_to_base"], s=sizes, color=[PALETTE["teal"], PALETTE["blue"], PALETTE["orange"]][: len(df)], alpha=0.78, edgecolor=PALETTE["black"], linewidth=0.35)
-        offsets = [(-22, 14), (-60, -18), (10, 10)]
-        for offset, (_, row) in zip(offsets, df.iterrows()):
-            ax.annotate(clean_label(format_method(row["method"]), 14), (row["coverage"], row["covered_fidelity_to_base"]), xytext=offset, textcoords="offset points", fontsize=profile.annotation_pt, arrowprops=dict(arrowstyle="-", linewidth=0.45, color=PALETTE["mid"]))
+        fig = plt.figure(figsize=nature_size(155, 74))
+        gs = fig.add_gridspec(1, 2, width_ratios=[2.35, 1.55], wspace=0.18)
+        ax = fig.add_subplot(gs[0, 0])
+        label_ax = fig.add_subplot(gs[0, 1])
+        label_ax.axis("off")
+
+        ids = ["A", "B", "C"]
+        colors = [PALETTE["teal"], PALETTE["blue"], PALETTE["orange"]][: len(df)]
+        sizes = np.interp(df["rule_count"], (df["rule_count"].min(), df["rule_count"].max()), (95, 285))
+        ax.scatter(
+            df["coverage"],
+            df["covered_fidelity_to_base"],
+            s=sizes,
+            color=colors,
+            alpha=0.82,
+            edgecolor=PALETTE["black"],
+            linewidth=0.45,
+            zorder=3,
+        )
+        for point_id, color, (_, row) in zip(ids, colors, df.iterrows()):
+            ax.text(
+                row["coverage"],
+                row["covered_fidelity_to_base"],
+                point_id,
+                ha="center",
+                va="center",
+                fontsize=profile.annotation_pt * 0.92,
+                fontweight="bold",
+                color=contrast_text_color(color),
+                zorder=4,
+            )
+
+        label_ax.text(0.00, 0.98, "Methods and tradeoff metrics", ha="left", va="top", fontsize=profile.emphasis_pt, fontweight="bold", color=PALETTE["black"])
+        label_ax.text(0.00, 0.88, "Bubble area scales with rule count.", ha="left", va="top", fontsize=profile.small_pt, color=PALETTE["dark"])
+        for i, (point_id, color, (_, row)) in enumerate(zip(ids, colors, df.iterrows())):
+            y = 0.74 - i * 0.25
+            method = format_method(row["method"]).replace("rough-set", "SEMTRA rough-set")
+            label_ax.text(0.00, y, f"{point_id}. {method}", ha="left", va="top", fontsize=profile.annotation_pt, fontweight="bold", color=color)
+            label_ax.text(
+                0.04,
+                y - 0.075,
+                f"Cov={row['coverage']:.3f}; $\\mathrm{{F}}_{{\\text{{cov}}}}$={row['covered_fidelity_to_base']:.3f}\n"
+                f"covered acc={row['accuracy_covered']:.3f}; rules={int(row['rule_count'])}",
+                ha="left",
+                va="top",
+                fontsize=profile.small_pt,
+                color=PALETTE["black"],
+                linespacing=1.25,
+            )
         ax.set_xlabel(r"Rulebook Coverage ($\mathrm{Cov}$)")
         ax.set_ylabel(r"Covered Fidelity ($\mathrm{F}_{\text{cov}}$)")
-        ax.set_xlim(0, 1.04)
-        ax.set_ylim(0, max(df["covered_fidelity_to_base"]) + 0.12)
-        style_axis(ax, "y")
+        ax.set_xlim(0, 1.05)
+        ax.set_ylim(0, max(df["covered_fidelity_to_base"]) + 0.16)
+        style_axis(ax, "both")
         self.save(fig, "fig19_baseline_tradeoff_scatter.pdf", [self.source("artifacts", "awa2", "symbolic_baselines_metrics.csv")])
 
     def fig20_heatmap(self) -> None:
@@ -648,15 +691,62 @@ class NatureFigureGenerator:
     def fig24_salience_error(self) -> None:
         profile = self.set_figure_profile("fig24_attribute_salience_error_scatter.pdf")
         df = pd.read_csv(self.source("artifacts", "awa2", "protocol_a_attribute_errors_and_salience.csv"))
-        fig, ax = plt.subplots(figsize=nature_size(89, 68))
-        ax.scatter(df["test_mae"], df["salience"], s=13, color=PALETTE["blue"], alpha=0.62, edgecolor=PALETTE["black"], linewidth=0.2)
-        top = df.sort_values("score", ascending=False).head(6)
-        offsets = [(8, 10), (8, -16), (-48, 12), (-52, -14), (10, 20), (-56, 0)]
-        for offset, (_, row) in zip(offsets, top.iterrows()):
-            ax.annotate(clean_label(row["attribute"], 10), (row["test_mae"], row["salience"]), xytext=offset, textcoords="offset points", fontsize=profile.annotation_pt, arrowprops=dict(arrowstyle="-", linewidth=0.4, color=PALETTE["mid"]))
-        ax.set_xlabel("Attribute test MAE")
-        ax.set_ylabel("Transition salience")
-        style_axis(ax, "y")
+        fig = plt.figure(figsize=nature_size(172, 88))
+        gs = fig.add_gridspec(1, 2, width_ratios=[2.25, 1.55], wspace=0.18)
+        ax = fig.add_subplot(gs[0, 0])
+        label_ax = fig.add_subplot(gs[0, 1])
+        label_ax.axis("off")
+
+        top = df.sort_values("score", ascending=False).head(10).copy()
+        top["rank"] = np.arange(1, len(top) + 1)
+        top_indices = set(top.index)
+        background = df.loc[~df.index.isin(top_indices)]
+        ax.scatter(background["test_mae"], background["salience"], s=16, color=PALETTE["blue"], alpha=0.45, edgecolor=PALETTE["black"], linewidth=0.18, zorder=2)
+        ax.scatter(top["test_mae"], top["salience"], s=30, color=PALETTE["orange"], alpha=0.86, edgecolor=PALETTE["black"], linewidth=0.3, zorder=3)
+
+        rank_offsets = {
+            "ocean": (12, 12),
+            "water": (13, -12),
+            "flippers": (-22, 11),
+            "swims": (17, 14),
+            "hands": (12, -16),
+            "plankton": (-18, 12),
+            "skimmer": (18, -12),
+            "small": (15, 10),
+            "paws": (12, 12),
+            "jungle": (-18, -15),
+        }
+        for _, row in top.iterrows():
+            offset = rank_offsets.get(str(row["attribute"]), (8, 8))
+            ax.annotate(
+                f"{int(row['rank'])}",
+                (row["test_mae"], row["salience"]),
+                xytext=offset,
+                textcoords="offset points",
+                ha="center",
+                va="center",
+                fontsize=profile.small_pt,
+                fontweight="bold",
+                color=PALETTE["black"],
+                bbox=dict(boxstyle="circle,pad=0.16", facecolor="white", edgecolor=PALETTE["orange"], linewidth=0.55),
+                arrowprops=dict(arrowstyle="-", linewidth=0.35, color=PALETTE["mid"], shrinkA=0, shrinkB=2),
+                zorder=5,
+            )
+
+        label_ax.text(0.00, 0.98, "Top salience-error attributes", ha="left", va="top", fontsize=profile.emphasis_pt, fontweight="bold", color=PALETTE["black"])
+        label_ax.text(0.00, 0.90, "Ranked by joint high salience and reconstruction error.", ha="left", va="top", fontsize=profile.small_pt, color=PALETTE["dark"], wrap=True)
+        for _, row in top.iterrows():
+            y = 0.79 - (int(row["rank"]) - 1) * 0.073
+            label_ax.text(0.00, y, f"{int(row['rank'])}. {row['attribute']}", ha="left", va="top", fontsize=profile.annotation_pt, fontweight="bold", color=PALETTE["orange"])
+            label_ax.text(0.37, y, f"MAE={row['test_mae']:.3f}; salience={row['salience']:.3f}", ha="left", va="top", fontsize=profile.small_pt, color=PALETTE["black"])
+        ax.axvline(float(df["test_mae"].median()), color=PALETTE["mid"], linestyle=":", linewidth=0.55, zorder=1)
+        ax.axhline(float(df["salience"].median()), color=PALETTE["mid"], linestyle=":", linewidth=0.55, zorder=1)
+        ax.text(0.975, 0.96, "higher error\nhigher salience", transform=ax.transAxes, ha="right", va="top", fontsize=profile.small_pt, color=PALETTE["dark"])
+        ax.set_xlabel("Attribute test MAE (lower is better)")
+        ax.set_ylabel("Transition salience (higher influence)")
+        ax.set_xlim(max(0, float(df["test_mae"].min()) - 0.015), float(df["test_mae"].max()) + 0.015)
+        ax.set_ylim(max(0, float(df["salience"].min()) - 0.003), float(df["salience"].max()) + 0.004)
+        style_axis(ax, "both")
         self.save(fig, "fig24_attribute_salience_error_scatter.pdf", [self.source("artifacts", "awa2", "protocol_a_attribute_errors_and_salience.csv")])
 
     def run(self) -> None:

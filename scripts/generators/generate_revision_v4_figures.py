@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import textwrap
 
 import matplotlib
 
@@ -497,16 +498,94 @@ def fig31_subfigures() -> None:
     cross["plot_dataset"] = cross["dataset"].replace({"AwA2 Protocol B": "AwA2 B"})
     metric = read_csv("outputs/revision_v3/statistics/object_level_metric_summary.csv")
     colors = {"AwA2": PALETTE["blue"], "SUN": PALETTE["teal"], "Derm7pt": PALETTE["violet"]}
+    scope_summary = {
+        "AwA2": "scope: closed-world object audit",
+        "SUN": "scope: scene transfer and seen-test audit",
+        "Derm7pt": "scope: retrospective technical validation",
+    }
 
     cm = cross.dropna(subset=["coverage"]).copy()
-    fig, ax = fig_ax(4.0, 3.1, left=0.15, right=0.95, bottom=0.16, top=0.84)
-    for _, row in cm.iterrows():
-        ax.scatter(row["coverage"], row["covered_fidelity"], s=30 + row["attributes"] * 0.9, color=colors.get(row["dataset"], PALETTE["neutral2"]), alpha=0.85, edgecolor="white", linewidth=0.6)
-        ax.text(row["coverage"] + 0.015, row["covered_fidelity"], row["dataset"], fontsize=6.4, va="center")
+    fig, (ax, label_ax) = plt.subplots(
+        1,
+        2,
+        figsize=(6.7, 3.15),
+        gridspec_kw={"width_ratios": [2.35, 1.55], "wspace": 0.20},
+    )
+    fig.subplots_adjust(left=0.10, right=0.97, bottom=0.17, top=0.92)
+    label_ax.axis("off")
+
+    ids = ["A", "B", "C"]
+    size_min, size_max = float(cm["attributes"].min()), float(cm["attributes"].max())
+    if size_min == size_max:
+        sizes = np.repeat(170.0, len(cm))
+    else:
+        sizes = np.interp(cm["attributes"], (size_min, size_max), (95, 245))
+    for point_id, size, (_, row) in zip(ids, sizes, cm.iterrows()):
+        color = colors.get(row["dataset"], PALETTE["neutral2"])
+        ax.scatter(
+            row["coverage"],
+            row["covered_fidelity"],
+            s=size,
+            color=color,
+            alpha=0.88,
+            edgecolor=PALETTE["black"],
+            linewidth=0.45,
+            zorder=3,
+        )
+        ax.text(
+            row["coverage"],
+            row["covered_fidelity"],
+            point_id,
+            ha="center",
+            va="center",
+            fontsize=6.4,
+            fontweight="bold",
+            color="white",
+            zorder=4,
+        )
+
+    label_ax.text(0.00, 0.98, "Portability metrics", ha="left", va="top", fontsize=8.2, fontweight="bold", color=PALETTE["black"])
+    label_ax.text(
+        0.00,
+        0.88,
+        "Bubble area scales with semantic attribute count.",
+        ha="left",
+        va="top",
+        fontsize=5.9,
+        color=PALETTE["neutral3"],
+    )
+    label_y = [0.76, 0.50, 0.24]
+    for y, point_id, (_, row) in zip(label_y, ids, cm.iterrows()):
+        color = colors.get(row["dataset"], PALETTE["neutral2"])
+        label_ax.text(0.00, y, f"{point_id}. {row['dataset']}", ha="left", va="top", fontsize=6.9, fontweight="bold", color=color)
+        label_ax.text(
+            0.04,
+            y - 0.070,
+            f"Cov={row['coverage']:.3f}; $\\mathrm{{F}}_{{\\text{{cov}}}}$={row['covered_fidelity']:.3f}\n"
+            f"covered acc={row['covered_accuracy']:.3f}; MAE={row['transition_mae']:.3f}\n"
+            f"n={int(row['objects']):,}; attrs={int(row['attributes'])}",
+            ha="left",
+            va="top",
+            fontsize=5.75,
+            color=PALETTE["black"],
+            linespacing=1.20,
+        )
+        label_ax.text(
+            0.04,
+            y - 0.205,
+            scope_summary.get(str(row["dataset"]), textwrap.fill(str(row["scope"]), 38)),
+            ha="left",
+            va="top",
+            fontsize=5.2,
+            color=PALETTE["neutral3"],
+            linespacing=1.13,
+        )
     ax.set_xlim(0, 1.05)
     ax.set_ylim(0, 0.82)
+    ax.grid(True, axis="both", color=PALETTE["neutral1"], linewidth=0.45, alpha=0.65)
+    ax.set_axisbelow(True)
     set_title(ax, "Coverage-fidelity portability map")
-    style_axis(ax, xlabel="Coverage", ylabel="Covered fidelity")
+    style_axis(ax, xlabel=r"Coverage ($\mathrm{Cov}$)", ylabel=r"Covered fidelity ($\mathrm{F}_{\text{cov}}$)")
     save(fig, "fig31_a_portability_coverage_fidelity", "Cross-domain portability must be gated by coverage and fidelity.", "outputs/revision_v1/statistics/cross_domain_generalization.csv", "quantitative subfigure")
 
     fig, ax = fig_ax(4.0, 3.1, left=0.15, right=0.95, bottom=0.24, top=0.84)

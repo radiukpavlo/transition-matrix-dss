@@ -1,0 +1,41 @@
+% -----------------------------------------------------------------------------
+% KhNU Beamer Theme
+% -----------------------------------------------------------------------------
+% Adapted for Khmelnytskyi National University.
+% Licensed under the Creative Commons Attribution-ShareAlike 4.0
+% International License (CC BY-SA 4.0).
+%
+% Original author: Michael Wiedau
+% -----------------------------------------------------------------------------
+
+\ProvidesPackage{beamerfontthemeKhNU}
+
+% Load Helvetica for sans-serif
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Structure font
+\setbeamerfont{structure}{family=\sffamily,series=\mdseries}
+
+% Titles
+\setbeamerfont{title}{size=\LARGE,series=\bfseries,parent=structure}
+\setbeamerfont{subtitle}{size=\normalsize,parent=title}
+
+% Info boxes
+\setbeamerfont{date}{size=\scriptsize,series=\mdseries,parent=structure}
+\setbeamerfont{author}{size=\large,series=\mdseries,parent=structure}
+\setbeamerfont{institute}{size=\scriptsize,series=\mdseries,parent=structure}
+
+% TOC fonts
+\setbeamerfont{section in toc}{size=\large,series=\bfseries,parent=structure}
+\setbeamerfont{section in head/foot}{size=\tiny,parent=structure}
+\setbeamerfont{subsection in toc}{size=\small,series=\mdseries,parent={section in toc}}
+
+% Frame titles
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries,parent=structure}
+\setbeamerfont{framesubtitle}{parent=frametitle,size=\large}
+
+% Misc
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamerfont{item}{parent=structure,series=\mdseries}
+\setbeamerfont{block title}{size=\normalsize,series=\mdseries,parent={structure,block body}}

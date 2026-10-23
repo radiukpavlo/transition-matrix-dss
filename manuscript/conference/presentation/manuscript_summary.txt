@@ -1,0 +1,148 @@
+# Headings
+1. L1 Introduction
+2. L1 Related Works
+3. L1 Methods
+4. L2 Phase 1: Neural-to-Semantic Transition
+5. L2 Phase 2.1: Stable Discretization (WEDD)
+6. L2 Phase 2.2: Knowledge Granulation and Rule Induction
+7. L2 Conflict-Aware Inference and Auditing
+8. L1 Experimental Results
+9. L2 Semantic-Space Reconstruction (Protocol A) and Rulebook Property Analysis
+10. L2 Robustness to Semantic Noise (Synthetic Benchmark)
+11. L2 Visualization of Audit Results and Rule Interpretation
+12. L1 Discussion
+13. L1 Conclusion
+14. L1 Declaration on Generative AI
+15. L1 References
+
+# Captions
+
+# Tables
+Table object 1: Tabelle2 (1 x 2)
+ | © 2026 Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+
+Table object 2: Tabelle4 (1 x 2)
+formula | (1)
+
+Table object 3: Table6 (1 x 2)
+formula | (2)
+
+Table object 4: Tabelle3 (4 x 4)
+Split | MAE | RMSE | Mean semantic correlation
+train | 0.1027 ± 0.0003 | 0.1482 ± 0.0004 | 0.8079 ± 0.0009
+validation | 0.1030 ± 0.0003 | 0.1486 ± 0.0005 | 0.8065 ± 0.0014
+test | 0.1029 ± 0.0005 | 0.1484 ± 0.0007 | 0.8070 ± 0.0018
+
+Table object 5: Table1 (8 x 4)
+Metric | Value (ours) | CART baseline | Separate-and-conquer
+Number of rules | 59.00 ± 2.55 | 53 | 197
+Test coverage | 0.8480 ± 0.0530 | 1.0000 | 0.2620
+Covered accuracy | 0.3973 ± 0.0109 | 0.4129 | 0.6334
+Covered fidelity to base | 0.4048 ± 0.0078 | - | -
+Average conditions per rule | 4.0397 ± 0.0543 | 7.0000 | 3.2589
+Test abstention rate | 0.1520 ± 0.0530 | 0.0000 | 0.7380
+Test conflict rate | 0.1375 ± 0.0532 | 0.0000 | 0.2301
+
+Table object 6: Table2 (4 x 6)
+Noise (σ) | MAE | Threshold error | Rule Jaccard | Macro-F1 | Coverage
+0.000 | 0.000 | 0.014 | 0.700 | 0.879 | 0.971
+0.100 | 0.021 | 0.018 | 0.763 | 0.881 | 0.962
+0.200 | 0.041 | 0.017 | 0.743 | 0.838 | 0.952
+
+Table object 7: Table3 (4 x 7)
+Rule | Antecedent | Numeric bounds | Class | Support | Conf. | 
+R0001 | paws=s2 AND hunter=s2 AND small=s0 AND yellow=s2 | paws≥ 0.40; hunter≥ 0.40; small<0.15; yellow≥ 0.40 | tiger | 115 | 0.896 | 
+R0003 | stripes=s1 AND hooves=s3 AND paws=s0 AND hands=s0 AND small=s1 AND yellow=s1 | stripes∈[0.15,0.40]; hooves≥ 0.70; paws<0.15; hands<0.15; small∈[0.15,0.40]; yellow∈[0.15,0.40] | antelope | 132 | 0.871 | 
+R0004 | hunter=s0 AND water=s0 AND small=s0 AND jungle=s2 AND yellow=s1 | hunter<0.15; water<0.15; small<0.15; jungle≥ 0.40; yellow∈[0.15,0.40] | zebra | 434 | 0.866 | 
+
+Table object 8: Table4 (1 x 2)
+(a) | (b)
+
+Table object 9: Table5 (5 x 9)
+Case | Object | True | Pred. | Mode | Rule | Support | Conf. | Antecedent states
+correct exact | 5083 | collie | collie | exact | R0027 | 1675 | 0.208 | stripes=s0; hooves=s0; swims=s1; paws=s3; longneck=s0; hunter=s1; ocean=s1; quadrapedal=s3
+abstention | 24024 | ox | abstain | exact | R0029 | 2820 | 0.195 | stripes=s0; hooves=s2; swims=s1; paws=s0; longneck=s1; hunter=s0; ocean=s1; quadrapedal=s2
+fallback error or boundary | 16781 | hamster | mole | fallback | - | - | - | stripes=s0; hooves=s1; swims=s1; paws=s2; longneck=s0; hunter=s0; ocean=s1; quadrapedal=s2
+Case | Object | True | Pred. | Mode | Rule | Support | Conf. | Antecedent states
+
+
+# Figures
+1. Pictures/10000001000000FC000000F80911DDBA.png
+2. Pictures/100000010000080000000800F3D2ABE1.png
+3. Pictures/1000FDD800000C020000042B2282F5F3.emf
+4. Pictures/10000001000000AE0000003CE7A5A449.png
+5. ./ObjectReplacements/Object 5
+6. ./ObjectReplacements/Object 6
+7. Pictures/1017D3340000888600004C3386AA263B.svg
+8. Pictures/10000000000003B20000021049596181.png
+9. ./ObjectReplacements/Object 2
+10. ./ObjectReplacements/Object 1
+11. ./ObjectReplacements/Object 4
+12. ./ObjectReplacements/Object 3
+13. ./ObjectReplacements/Object 8
+14. Pictures/1000EB4C00001AAF000013E465592C43.svg
+15. Pictures/1000000100000183000001214047F1B7.png
+16. Pictures/1000CD3500001AAA000019E3F9511E9C.svg
+17. Pictures/1000000100000183000001785196B1BA.png
+18. Pictures/1000E2CE00001AA300001CD193180243.svg
+19. Pictures/1000000100000183000001A260821B7F.png
+20. Pictures/100187E200001AAD00001351DC3A34E6.svg
+21. Pictures/100000010000018300000118AC6CB07A.png
+
+# Equations
+## Object 4/content.xml
+p ~ j ( θ ) {widetilde p}_j(%theta)
+## Object 1/content.xml
+H ~ j ( θ ) {widetilde H}_j(%theta)
+## Object 5/content.xml
+A ∈ ℝ m × k A ∈ ℝ^m × k
+## Object 6/content.xml
+B ∈ ℝ m × l B ∈ ℝ^m × l
+## Object 2/content.xml
+J j ( θ ) = λ H H ~ j ( θ ) + ( 1 − λ H ) p ~ j ( θ ) J_j(%theta) = %lambda_H {widetilde H}_j(%theta) + (1 - %lambda_H) {widetilde p}_j(%theta)
+## Object 3/content.xml
+r : ⋀ j ∈ R r [ s j = v j ] → d = y r . r : oper ⋀ from {j in R_r} left [ s_j = v_j right ] Rightarrow d = y_r .
+## Object 8/content.xml
+S ( y k ) S(y_k)
+
+# First Paragraphs
+Auditable Decision-Making in Intelligent Cyber-Physical Systems Using Semantic Transition and Rough Sets⋆ICyberPhyS-2026: 3rd International Workshop on Intelligent & CyberPhysical Systems, July 2, 2026, Khmelnytskyi, Ukraine
+ICyberPhyS-2026: 3rd International Workshop on Intelligent & CyberPhysical Systems, July 2, 2026, Khmelnytskyi, Ukraine
+Pavlo Radiuk1,∗,†, Oleksander Barmak1,† and Iurii Krak3,†
+1 Khmelnytskyi National University, 11, Institutes str., Khmelnytskyi, 29016, Ukraine
+2 Taras Shevchenko National University of Kyiv, 64/13, Volodymyrska str., Kyiv, 01601, Ukraine
+3 Glushkov Cybernetics Institute, 40, Glushkov Ave., Kyiv, 03187, Ukraine
+Abstract
+Intelligent cyber-physical systems (CPS) increasingly rely on deep learning, but the opaque nature of these models introduces critical safety risks. Current local explainability methods fail to provide the verified, global decision logic required for reliable control systems, creating a significant barrier to safe deployment. In this paper, we propose the application of the SEMTRA (Global SEMantic TRAnsition) framework as a post-hoc layer for the quantitative auditing of control systems. The framework leverages Weighted Entropy-Density Discretization and rough set theory to extract physical semantic attributes, implementing an honest silence mechanism that explicitly identifies boundary conflicts and triggers failsafe transitions instead of making overconfident predictions. Experimental evaluations demonstrate a mean absolute error of 0.1029 for neural-to-semantic transitions, achieving a substantial logical coverage of 84.80% on test instances. Synthetic stress testing validates the robustness of the extracted rules against semantic noise, maintaining a Macro-F1 score of 0.838. By formalizing the concept of the audit tax, this approach provides a reliable, mathematically grounded tool for deploying auditable artificial intelligence, enabling engineers to inspect structural failures, ensure operational transparency, and guarantee safety in complex industrial environments.
+Keywords
+Explainable AI (XAI), cyber-physical systems, rough sets, model auditing, production rules, semantic transition 1⋆ Corresponding author.† These authors contributed equally.radiukp@khmnu.edu.ua( P. Radiuk); barmako@khmnu.edu.ua(O. Barmak); iurii.krak@knu.ua(I. Krak) A white letter on a black background Description automatically generated with low confidence0000-0003-3609-112X( P. Radiuk); (O. Barmak); 0000-0003-0739-9678 (I. Krak)0000-0002-8043-0785© 2026 Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+⋆ Corresponding author.
+† These authors contributed equally.
+radiukp@khmnu.edu.ua( P. Radiuk); barmako@khmnu.edu.ua(O. Barmak); iurii.krak@knu.ua(I. Krak)
+A white letter on a black background Description automatically generated with low confidence0000-0003-3609-112X( P. Radiuk); (O. Barmak); 0000-0003-0739-9678 (I. Krak)0000-0002-8043-0785
+© 2026 Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+© 2026 Copyright for this paper by its authors. Use permitted under Creative Commons License Attribution 4.0 International (CC BY 4.0).
+Modern intelligent cyber-physical systems (CPS), including autonomous vehicles and medical monitoring platforms, rely extensively on deep learning models for sensor fusion and decision-making. Despite their remarkable predictive performance, the inherent opacity of these architectures introduces severe safety risks. Consequently, the implementation of explainable artificial intelligence has emerged as a fundamental requirement for deploying such systems in highly regulated environments [1]. Furthermore, recent systematic syntheses on trustworthy artificial intelligence emphasize that transparency artifacts must provide actionable accountability and verifiable reasoning rather than merely serving as decorative interpretability elements [2].
+The problem under consideration is the profound inability of prevailing local explanation techniques to supply verified, reusable, and globally consistent decision logic for cyber-physical systems. Traditional local methods often generate isolated saliency maps that fail to satisfy rigorous truthfulness and reliability requirements, a critical limitation frequently observed in clinical diagnostic evaluations [3]. Therefore, a correct operational decision within a safety-critical CPS necessitates a mathematically stable bridge between high-dimensional neural representations and physically meaningful semantic variables. Preliminary investigations into transition matrices have demonstrated that linear mappings can successfully elucidate deep feature spaces without modifying the weights of the underlying network [4, 5]. In parallel, theoretical advancements in geometric representation learning dictate that such transformations should maintain structural consistency under valid physical object deformations [6].
+Addressing this problem highlights the importance of presenting novel scientific contributions that explicitly manage structural uncertainty. In technical control domains, deterministic classification labels are frequently insufficient. For instance, recent CPS-oriented research on photovoltaic control similarly demonstrates that expert-rule subsystems can generate transparent operating-mode decisions, while neural networks assess their optimality and support real-time correction under variable environmental conditions [7]. Integrating fuzzy logic principles offers a robust mathematical avenue for safety-oriented assessments under ambiguous or noisy conditions [8]. Therefore, formulating a global post-hoc auditing layer that structurally identifies boundary conflicts and intentionally abstains from unreliable predictions is of paramount importance for the safe deployment of intelligent CPS.
+The goal of this study is to improve the interpretability, auditability, and safety of intelligent cyber-physical systems by establishing a mathematically transparent post-hoc framework that translates uninterpretable latent neural features into explicit, conflict-aware symbolic rulebooks.
+To achieve this goal, the explicit objective of this study is to develop and validate the SEMTRA (Global SEMantic TRAnsition) framework as a non-destructive auditing layer for existing neural controllers. The major contributions of this work are as follows:
+We establish a linear transition-matrix formulation that maps compressed deep representations into physically interpretable semantic attributes without requiring the underlying controller to be retrained.
+We implement a stable Weighted Entropy-Density Discretization (WEDD) module that balances entropy reduction with local data density to convert continuous signals into robust symbolic states.
+We propose a rough-set rule-induction mechanism that forms a global rulebook featuring explicit management of structural failures, conflict regions, and algorithmic abstention.
+The remainder of this paper is structured as follows. Section 2 reviews related work in concept-based modeling, rule induction, and semantic transfer. Section 3 details the architecture of the proposed SEMTRA framework. Section 4 presents empirical evaluation results on benchmark datasets and synthetic stress tests. Section 5 analyzes the practical implications for cyber-physical systems. Section 6 concludes the paper and outlines future research directions.
+Medical image analysis reviews show that local post-hoc explanations can support model inspection but cannot serve as standalone clinical evidence [9]. Broader evaluations of black-box models report the same limitation: isolated attribution maps rarely provide reproducible decision policies for complex automated systems [10]. Recent electrocardiogram studies, therefore, argue that explanation artifacts should correspond to established domain knowledge rather than to statistical saliency alone [11]. Concept-based methods address this issue by mapping internal neural activations to human-understandable variables [12]. Ante-hoc approaches, including vision-language-guided concept bottleneck models, embed this alignment during training [13], whereas concept embedding models preserve predictive performance while representing high-level semantic factors [14]. For deployed cyber-physical systems, however, post-hoc concept bottleneck models are often more practical because they can generate concept-level explanations without redesigning validated predictors [15]. This transition perspective can be further strengthened by Lie group formulations that enforce equivariant transition matrices within post hoc explanation layers [5].
+Moving from continuous concepts to actionable decisions requires symbolic extraction. Decision trees remain a standard baseline for converting continuous inputs into hierarchical branching rules [16]. However, they usually force deterministic decisions even when sensory evidence is contradictory. Rule-oriented anomaly-detection frameworks emphasize that opaque model behavior must be decomposed into inspectable structures to improve transparency [17]. Fuzzy-rough rule induction addresses boundary uncertainty by using graded lower and upper approximations, thereby reducing overconfident decisions in ambiguous regions [18]. The quality of these rules depends strongly on discretization. Flexible non-monotonic discretization better reflects supervised structure than rigid monotonic cuts [19], while kernel density estimators can help place boundaries away from sparse regions in high-dimensional semantic spaces [20].
+Semantic attribute transfer offers a controlled benchmark for evaluating post-hoc explanation frameworks. Foundational visual recognition studies showed that unseen classes can be identified by transferring knowledge from shared human-defined attributes [21]. This paradigm formalized the use of intermediate semantic vocabularies in predictive modeling [22]. Later methods, including attribute-guided transformers, improved visual-semantic alignment by linking localized visual evidence to target attributes [23]. Related attention-based approaches further demonstrated the predictive value of external semantic guidance [24], while cross-attribute transformer architectures refined compatibility between visual features and semantic descriptions [25]. For reproducible validation, the AwA2 collection [12] remains a widely used benchmark, as it provides expert-defined semantic prototypes for zero-shot visual categorization.
+Despite this progress, important gaps remain. Current post-hoc concept bottleneck models largely rely on continuous intermediate representations and do not provide a discrete symbolic layer for explicit logical reasoning [26, 27]. Standard rule-extraction algorithms also tend to force decisions at structural boundaries, omitting formal abstention mechanisms needed for CPS safety. The proposed study addresses these gaps by combining Weighted Entropy-Density Discretization for noise-robust symbolic states with rough-set granulation for conflict-aware rule induction. When contradictory semantic evidence is detected, the resulting rulebook activates an honest silence protocol rather than producing an overconfident output. By formalizing the audit tax and mapping compressed neural features to a transparent global rulebook without retraining, this work provides a verifiable auditing mechanism that purely predictive or local explanation methods cannot deliver.
+The proposed SEMTRA framework is designed as a modular post-hoc auditing pipeline that operates on top of a frozen neural-network feature extractor. The architecture consists of two main stages: neural-to-semantic transformation and semantic-to-symbol granulation (see Figure 1).
+The first stage creates a mathematically transparent bridge between the latent space and the target space of semantic attributes . For this purpose, SEMTRA uses a linear ridge-regression operator, which avoids the complex nonlinear distortions inherent in deep networks. The result is a global transition matrix T, in which each weight can be directly inspected by an auditor to evaluate the influence of specific neural features on the physical characteristics of the object.
+Figure 1: Conceptual SEMTRA architecture: from the latent space of a neural network to a verified rulebook.
+To convert continuous attribute values into symbolic states, SEMTRA applies Weighted Entropy-Density Discretization (WEDD). Unlike standard decision trees, WEDD minimizes the combined objective function, as shown in Equation (1):
+formula
+(1)
+where is information entropy and is a proxy for local probability density, estimated through Kernel Density Estimation (KDE).
+This approach places decision thresholds in sparse regions of the semantic space, increasing the system's robustness to small sensor-noise perturbations.
+Based on the discretized states S, SEMTRA forms an indiscernibility relation. Objects with identical semantic signatures but different target classes form a boundary region. Using the principles of rough-set lower approximation, SEMTRA induces a rulebook R as follows:
+formula
+(2)
